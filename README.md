@@ -9,4 +9,4 @@ Discord? Questwalker#5433\
 Email? [QuestwalkerKO@gmail.com](mailto:questwalkerko@gmail.com)\
 Youtube? [Questwalker](https://www.youtube.com/channel/UCTA45ILB7_G_AlH1RfcJWxg)
 
-[Check out the changelog here.](questwalker.github.io/votv-map/changelog)
+[Check out the changelog here.](https://questwalker.github.io/votv-map/changelog)
