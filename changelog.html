@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOTV Map Changelog</title>
+    <style>
+        html, body {
+            color-scheme: dark;
+            font-family: monospace;
+            height: 100%;
+            margin: 0;
+        }
+
+        div {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<div>
+<noscript><u>Hello! This page is full functional with no-script, but feel free to enable it if you need to better understand the dates listed below. Additionally, all CSS and JS are all contained in this one page, so feel free to audit it yourself.</u><br><br></noscript>
+
+<span class="time">5/15/2023 1684130400000</span>: Development on VOTV map started (slowly)<br><br>
+
+<span class="time">5/18/2023 1684440018046</span>: VOTV map became public on github.io<br><br>
+
+<span class="time">5/18/2023 1684453321842</span>: Some updates to introduce touchscreen functionality and to better accommodate small sized screens.<br><br>
+
+<span class="time">5/19/2023 1684562278630</span>: (Hopefully) An improvement to the map panning system, which should also fix some bugs with mobile/touchscreen.<br><br>
+
+<span class="time">5/20/2023 1684568020687</span>: Small css tweak and added some functionality to the changelog.<br><br>
+
+<span class="time">5/20/2023 1684577875713</span>: Added points for the green, red, and blue argemia plushies and the unknown rozital technology<br><br>
+
+<span class="time">5/21/2023 1684654285561</span>: Added points for the glowing blue, cyan, and magenta plushes and the antibreather plushie. Also added points for all 21 chicken burgers, but they'll be disabled until I add a system to more easily navigate the map's points.<br><br>
+
+<span class="time">5/21/2023 1684703990099</span>: Somehow messed up the name of the antibreather plush, and didn't attach images to it either. Don't know how I did that. In other news, a canvas is coming soon.<br><br>
+
+<span class="time">5/21/2023 1684713991486</span>: A canvas has been added! Additionally, the lines for the outer fence and the stonehenge fence have been added too. An icon for the shovel has also been added.<br><br>
+
+<span class="time">5/21/2023 1684719779874</span>: Touchscreen bug found and fixed. Made the information pane flicker whenever a point was clicked on.<br><br>
+
+<span class="time">5/22/2023 1684746455772</span>: Added a bunch of points to the map.<br><br>
+
+<span class="time">5/28/2023 1685257100333</span>: Added a point for the green locker and added a little additonal functionality to the line-drawing function. Most importantly, added the "Points" tab where you can browse and disable/enable certain points on the map. I honestly don't know how relaiable this is.<br><br>
+
+<span class="time">7/26/2023 1685257100333</span>: I've procrastinated for a while and now two updates have been added to the game. Time to fix that, eh? Migrated this website to separate repository because I didn't understand how github pages works. 
+
+Features/bugs to add/fix:<br>
+ > Add a favicon?<br>
+ > Map scaling; Map zoom in & out with pinching or scrolling<br>
+ > Somehow get a orthographic picture of the map to use instead of the current grayscale one.<br>
+ > Add a marker for the green locker (DONE)<br>
+ > Investigate the monoliths and mark their locations<br>
+ > A tab in the information pane to allow browsing and hiding/showing of individual types of points and locating of those points (DONE)<br>
+ > when contained points are all set to hidden or shown manually, display the change on the button<br>
+ > when contained points are a mixture of hidden and shown, display '[/]' with a slight gray<br>
+ > when a [/] is clicked, hide all<br>
+ > Indicator (highlight the point?) to show when a point is selected.<br>
+ > Select points from the points tab<br>
+ > Add next and previous buttons on the image preview (to accommodate touch screen users)<br>
+ > A small field where a user can input their own coordinates and get a marker on the map of where they are<br>
+ > Locations of papers<br>
+</div>
+<script>
+    Array.from(document.getElementsByClassName('time')).forEach(element => {
+        let datetime = new Date(parseInt(element.innerHTML.split(' ')[1]))
+        let timezoneCode = datetime.toLocaleTimeString(undefined, {timeZoneName: 'short'}).split(' ')[2]
+        element.innerHTML = `${datetime.getMonth()+1}/${datetime.getDate()}/${datetime.getFullYear()} ${datetime.getHours().toString().padStart(2, '0')}:${datetime.getMinutes().toString().padStart(2, '0')}` // ''
+    });
+</script>
+</body>
+</html>

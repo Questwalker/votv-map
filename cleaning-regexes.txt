@@ -1,0 +1,7 @@
+manually remove all comments first
+
+",( )*\n(    )*"
+", "
+
+"\n(    )*"
+""

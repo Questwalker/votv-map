@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A map for game Voices of the Void">
+    <meta property="og:title" content="VotV Map">
+    <meta property="og:description" content="A map for game Voices of the Void">
+    <meta property="og:url" content="https://questwalker.github.io/votv-map/">
+    <title>VotV Map</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="display_image_container" class="unselectable hidden" onclick="hidePreview()">
+        <img id="display_image"></div>
+    </div>
+    <div id="container">
+        <div id="page_container" class="flex_box">
+            <div id="map_pane" class="col unselectable" oncontextmenu="return false;">
+                <div id="map_container" style="left: 5px; top: 5px;">
+                    <canvas id="map_canvas" width="896" height="896"></canvas>
+                    <img id="map_image" src="./map.png"/>
+                </div>
+            </div>
+            <div id="information_pane" class="col">
+                <div id="information_tabs">
+                    <div id="information_tab_info" onclick="tabClicked(this)" class="information_tab unselectable tab_selected">Info</div>
+                    <div id="information_tab_points" onclick="tabClicked(this)" class="information_tab unselectable">Points</div>
+                </div>
+                <div id="information_pane_content">
+                    <div id="information_pane_body">
+                        <div id="information_pane_info" class>
+                            <h1 id="information_header">Select a Point</h1>
+                            <p id="information_coords"></p>
+                            <p id="information_text">Click on a point on the map to see some information about what it is and where it's located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.</p>
+                            <div id="information_images"></div>
+                        </div>
+                        <div id="information_pane_points" class="hidden">
+                        </div>
+                    </div>
+                    <div id="information_pane_footer">
+                        <div id="credits">
+                        <div>Check me out / Contact me at:</div>
+                        <div class="link"><a title="GitHub">G:</a>&nbsp;<a href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a></div>
+                        <div><a title="Discord">D:</a>&nbsp;Questwalker#5433</div>
+                        <div><a title="Email">E:</a>&nbsp;questwalkerko@gmail.com</div>
+                        <br>
+                        <div class="link"><a href="./changelog" target="_blank" rel="noopener noreferrer">Check out the changelog here.</a></div>
+                        <br></div>
+                        <div onclick="centerMap()" style="cursor: default"><u>[Click here]</u> to center the map.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
