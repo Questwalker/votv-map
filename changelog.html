@@ -43,10 +43,24 @@
 
 <span class="time">5/22/2023 1684746455772</span>: Added a bunch of points to the map.<br><br>
 
-<span class="time">5/28/2023 1685257100333</span>: Added a point for the green locker and added a little additonal functionality to the line-drawing function. Most importantly, added the "Points" tab where you can browse and disable/enable certain points on the map. I honestly don't know how reliable this is.<br><br>
+<span class="time">5/28/2023 1685257100333</span>: Added a point for the green locker and added a little additional functionality to the line-drawing function. Most importantly, added the "Points" tab where you can browse and disable/enable certain points on the map. I honestly don't know how reliable this is.<br><br>
 
-<span class="time">7/26/2023 1690396296876</span>: I've procrastinated for a while and now two updates have been added to the game. Time to fix that, eh? Migrated this website to separate repository because I didn't understand how github pages works. A bit messy of a move and there are still some unfinished bits that were accidentally published. Will be fixed soon. Added and updated a README.<br><br>
+<span class="time">7/26/2023 1690396296876</span>: I've procrastinated for a while and now two updates have been added to the game. Time to fix that, eh? Migrated this website to separate repository to make my github cleaner. A bit messy of a move and there are still some unfinished bits that were accidentally published. Will be fixed soon. Added and updated a README.<br><br>
 
+<span class="time">8/1/2023 1690937005250</span>: Massive changes:<br>
+ - Updated the images and information for Metal Tile #5<br>
+ - Updated the images, icon, and information for the EMF Detector<br>
+ - Added the fence that is the in northeast corner of the map<br>
+ - Updated the box of bones image<br>
+ - Updated the images and information for Metal Tile #6<br>
+ - 2 shovels have been added to the map<br>
+ - stonehenge shovel image has been updated<br>
+ - radioactive capsule images updated<br>
+ - changed rozital image<br>
+ - Added the transformers and the power lines to the map<br>
+Unfortunately, some things could not be checked since this update has broken digging somewhat. (Things not appearing when dug up)<br>
+Not 100% sure everything is fixed here, but I need to push this update out soon.<br>
+<br>
 Features/bugs to add/fix:<br>
  > Add a favicon?<br>
  > Map scaling; Map zoom in & out with pinching or scrolling<br>
@@ -60,12 +74,17 @@ Features/bugs to add/fix:<br>
  > Add next and previous buttons on the image preview (to accommodate touch screen users)<br>
  > A small field where a user can input their own coordinates and get a marker on the map of where they are<br>
  > Locations of papers<br>
+ > Show what category the point is in in the information tab.<br>
+ > Little tab placed above points when you click on them.<br>
+ > Points in the points tab should be clickable. Clicking them should open the information tab and show the indicator tab above the point.<br>
+ > A selected point should have its z-index changed so it lays on top of all other points<br>
+ > Find a better way to store the point data for the map (instead of just embedding it in the main script).
 </div>
 <script>
     Array.from(document.getElementsByClassName('time')).forEach(element => {
         let datetime = new Date(parseInt(element.innerHTML.split(' ')[1]))
         let timezoneCode = datetime.toLocaleTimeString(undefined, {timeZoneName: 'short'}).split(' ')[2]
-        element.innerHTML = `${datetime.getMonth()+1}/${datetime.getDate()}/${datetime.getFullYear()} ${datetime.getHours().toString().padStart(2, '0')}:${datetime.getMinutes().toString().padStart(2, '0')}` // ''
+        element.innerHTML = `${datetime.getMonth()+1}/${datetime.getDate()}/${datetime.getFullYear()} ${datetime.getHours().toString().padStart(2, '0')}:${datetime.getMinutes().toString().padStart(2, '0')}`
     });
 </script>
 </body>
