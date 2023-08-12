@@ -433,7 +433,7 @@ const points = [
     },
     {
         "name": "Basalt Pillars",
-        "description": "<div style=\"color: red;\">WARNING: THIS CAN RUIN YOUR SAVE</div><br>Can be found with the metal detector. Once dug up, it'll slowly grow out of the ground and start spreading. <u>The pillars have high durability, but they can be destroyed with a crowbar or shovel.</u>",
+        "description": "<div style=\"color: red;\">WARNING: THIS CAN RUIN YOUR SAVE</div><br>Can be found with the metal detector. Once dug up, it'll slowly grow out of the ground and start spreading. They will slowly spread in your direction. <u>The pillars have high durability, but they can be destroyed with a crowbar or shovel.</u>",
         "related_images" : ['./images/basalt_pillars_1.png', './images/basalt_pillars_2.png'],
         "category": "",
         "icon": "./icons/basalt_pillar.png",
@@ -464,9 +464,9 @@ const points = [
     {
         "name": "Well",
         "description": "",
-        "related_images" : [],
+        "related_images" : ['./images/well_1.png','./images/well_2.png'],
         "category": "",
-        "icon": "./icons/debug.png",
+        "icon": "./icons/well.png",
         "positioning": "poitioned_on_top",
         "xPos": 564.4,
         "yPos": 265.7
@@ -476,7 +476,7 @@ const points = [
         "description": "",
         "related_images" : [],
         "category": "",
-        "icon": "./icons/debug.png",
+        "icon": "./icons/barrel.png",
         "positioning": "poitioned_on_top",
         "xPos": 570.6,
         "yPos": -517.2
@@ -486,10 +486,20 @@ const points = [
         "description": "",
         "related_images" : [],
         "category": "",
-        "icon": "./icons/debug.png",
+        "icon": "./icons/car.png",
         "positioning": "poitioned_on_top",
-        "xPos": -209.7,
-        "yPos": 307.6
+        "xPos": -210.3,
+        "yPos": 306.8
+    },
+    {
+        "name": "Bunker",
+        "description": "",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/bunker.png",
+        "positioning": "poitioned_on_top",
+        "xPos": 60.25,
+        "yPos": 625.5
     },
     // Chicken Burgers
     // {
