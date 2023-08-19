@@ -1268,3 +1268,14 @@ document.addEventListener('keydown', (event) => {
         }
     }
 });
+
+// Resizing the browser should re-center the map
+var previousSize = 0
+const incrementPoint = () => {
+    let size = screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
+    if (size != previousSize) {
+        previousSize = size
+        centerMap()
+    };
+};
+setInterval(incrementPoint, 20);
