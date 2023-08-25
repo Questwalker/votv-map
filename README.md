@@ -5,7 +5,7 @@ A map for the game [Voices of the Void](https://mrdrnose.itch.io/votv) by [MrDrN
 This project is a work of my own and is unofficial.
 
 Check me out / Contact me at:\
-Discord? Questwalker#5433\
+Discord? questwalker\
 Email? [QuestwalkerKO@gmail.com](mailto:questwalkerko@gmail.com)\
 Youtube? [Questwalker](https://www.youtube.com/channel/UCTA45ILB7_G_AlH1RfcJWxg)
 
