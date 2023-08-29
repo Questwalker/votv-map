@@ -729,7 +729,7 @@ const points = [
         "description": "Target with <i>sv.target TF_0</i>.<br>The building is chaotically filled with supplies and explosive items.",
         "related_images" : [],
         "category": "Transformers",
-        "icon": "./icons/transformer.png",
+        "icon": "./icons/transformer0.png",
         "positioning": "poitioned_on_top",
         "xPos": 396.7,
         "yPos": 199.4
@@ -739,7 +739,7 @@ const points = [
         "description": "Target with <i>sv.target TF_1</i>.<br>The building is empty. There are two benches outside.",
         "related_images" : [],
         "category": "Transformers",
-        "icon": "./icons/transformer.png",
+        "icon": "./icons/transformer1.png",
         "positioning": "poitioned_on_top",
         "xPos": -550,
         "yPos": 232.3
@@ -749,7 +749,7 @@ const points = [
         "description": "Target with <i>sv.target TF_2</i>.<br>The building is clean, with an empty shelf and 3 supply boxes. There are two benches outside.",
         "related_images" : [],
         "category": "Transformers",
-        "icon": "./icons/transformer.png",
+        "icon": "./icons/transformer2.png",
         "positioning": "poitioned_on_top",
         "xPos": -399.3,
         "yPos": -473.6
@@ -889,13 +889,39 @@ const lines = [
         "fill": undefined,
         "coordinates": [[700, -331.4], [695.9, -340.1], [693.5, -342.8], [690.7, -344.5], [680.3, -344.8], [675, -346.3], [659.8, -368.6], [652.6, -383], [645.6, -401.6], [638.9, -422.5], [633.7, -431.1], [623.9, -441.3], [614.7, -451.3], [607.1, -462.4], [599.7, -477.9], [591, -509.2], [589.2, -544.8], [587.7, -558.4], [581.5, -575.6], [572.4, -588.5], [570, -593], [568, -599.8], [565.3, -616.7], [562.9, -643.5], [562.5, -671.7], [563.5, -680.6], [565.3, -687], [589, -700]]
         
-    }
+    },
     // ,{
     //     "color": "rgb(255, 50, 255)",
     //     "linethickness": 1,
     //     "fill": "rgba(255, 0, 255, 0.5)",
     //     "coordinates": [[-150, -150], [-150, -50], [-50, -50], [-50, -150]]
     // }
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[-400.2, 497.7], [-376.6, 508.7]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[-223.2, 285.1], [-197.3, 282.8]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[-76.9, 11.7], [-51, 11.8]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[116.2, -121.9], [120.7, -96.3]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[274.2, -360], [295.5, -345]]
+    }
+
 ]
 // console.log(JSON.stringify(points));
 var map_container = document.getElementById('map_container');
