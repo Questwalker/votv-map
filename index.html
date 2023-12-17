@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A map for game Voices of the Void">
-    <meta property="og:title" content="VotV Map">
-    <!-- <meta property="og:image" content="./images/map.png"> -->
-    <!-- <meta property="og:image:type" content="image/png"> -->
-    <!-- <meta property="og:image:width" content="896"> -->
-    <!-- <meta property="og:image:height" content="896"> -->
-    <!-- <meta property="og:image:alt" content="A preview image of the map"> -->
-    <!-- <meta property="og:description" content="A map for game Voices of the Void, complete with panning functionality, a plethora of points for everything in the game, and even coordinates and pictures for each item."> -->
-    <meta property="og:description" content="A map for game Voices of the Void, complete with a plethora of markers for everything in the game and even coordinates and pictures for each item.">
+    <title>Voices of the Void Map</title>
+    <meta name="description" content="A map for game Voices of the Void (VotV)">
+    <meta property="og:title" content="Voices of the Void Map">
+    <meta name="og:description" content="A map for game Voices of the Void (VotV)">
     <meta property="og:url" content="https://questwalker.github.io/votv-map/">
-    <title>VotV Map</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="points.js"></script>
+    <script src="lines.js"></script>
 </head>
 <body>
     <div id="display_image_container" class="unselectable hidden" onclick="hidePreview()">
-        <img id="display_image"></div>
+        <img id="display_image">
     </div>
     <div id="container">
         <div id="page_container" class="flex_box">
@@ -48,9 +44,9 @@
                     <div id="information_pane_footer">
                         <div id="credits">
                         <div>Check me out / Contact me at:</div>
-                        <div class="link"><a title="GitHub">G:</a>&nbsp;<a href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a></div>
-                        <div><a title="Discord">D:</a>&nbsp;questwalker</div>
-                        <div><a title="Email">E:</a>&nbsp;questwalkerko@gmail.com</div>
+                        <div class="link"><span title="GitHub">G:</span>&nbsp;<a href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a></div>
+                        <div><span title="Discord">D:</span>&nbsp;questwalker</div>
+                        <div><span title="Email">E:</span>&nbsp;questwalkerko@gmail.com</div>
                         <br>
                         <div class="link"><a href="./changelog" target="_blank" rel="noopener noreferrer">Check out the changelog here.</a></div>
                         <br></div>

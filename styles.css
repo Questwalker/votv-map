@@ -23,6 +23,7 @@ body {
 #map_pane {
     border: 1px solid green;
     flex: 0.785;
+    cursor: grab;
 }
 
 #information_pane {
@@ -39,7 +40,6 @@ body {
 
 #map_container {
     position: relative;
-    cursor: grab;
     width: fit-content;
     /* transform: scale(50%); */
 }
