@@ -261,13 +261,13 @@ const points = [
     // metal tiles
     {
         "name": "Metal Tile #1",
-        "description": "Found on top of the base. You can get on top of the base by using the ladder on the south of the base.",
-        "related_images" : ['./images/tile1_1.png', './images/tile1_2.png', './images/tile1_3.png'],
+        "description": "Hidden in an outdoor alcove on the side of the base. You can get it by dropping down from the roof.",
+        "related_images" : ['./images/tile1_1.png', './images/tile1_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
         "positioning": "positioned_above",
-        "xPos": 0,
-        "yPos": -9
+        "xPos": -9,
+        "yPos": 3
     },
     {
         "name": "Metal Tile #2",
@@ -277,17 +277,17 @@ const points = [
         "icon": "./icons/metal_tile.png",
         "positioning": "positioned_above",
         "xPos": -68.5,
-        "yPos": 16
+        "yPos": 16.2
     },
     {
         "name": "Metal Tile #3",
-        "description": "This is, by far, the hardest tile to find. If you don't have a digital map, I recommend you: <br><br>1. go to quebec.<br>2. reset your compass with <i>sv.target reset</i>.<br>3. go below quebec and orient yourself to what is seen in the first image below.<br>4. walk forward until you are around halfway in between quebec and sierra. you should find yourself in a clearing similar to what is seen in image 2, 3, and 4 (note the 3 trees next to eachother).<br>5. continue searching in that area until you find the key.",
-        "related_images" : ['./images/tile3_1.png', './images/tile3_2.png', './images/tile3_3.png', './images/tile3_4.png'],
+        "description": "If you don't have a digital map, I recommend you: <br><br>1. reset your compass with <i>sv.target reset</i>.<br>2. go to transformer 1 and walk up against the northeast corner of the fence.<br>3. orient yourself to what is seen in the first image below.<br>4. walk forward until you find yourself in the middle of a clearing.<br>5. search the area until you find the key on the ground.",
+        "related_images" : ['./images/tile3_1.png', './images/tile3_2.png', './images/tile3_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
         "positioning": "positioned_above",
         "xPos": -464,
-        "yPos": 173
+        "yPos": 173.4
     },
     {
         "name": "Metal Tile #4",
@@ -317,7 +317,7 @@ const points = [
         "icon": "./icons/metal_tile.png",
         "positioning": "positioned_above",
         "xPos": -372,
-        "yPos": 702.6
+        "yPos": 702.55
     },
     {
         "name": "Metal Tile #7",
@@ -331,7 +331,7 @@ const points = [
     },
     {
         "name": "Metal Tile #8",
-        "description": "Found behind the top room of uniform. Once you are near the doors, crouch under the railing and walk around the platform to find it.",
+        "description": "Found behind the server room of uniform. Once you are near the doors, crouch under the railing and walk around the platform to find it.",
         "related_images" : ['./images/tile8_1.png', './images/tile8_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
