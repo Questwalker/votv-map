@@ -67,7 +67,7 @@ body {
     transform-origin: bottom center;
 }
 
-.poitioned_on_top {
+.positioned_on_top {
     transform: translate(-50%, -50%);
     transform-origin: center;
 }
