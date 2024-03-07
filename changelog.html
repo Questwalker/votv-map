@@ -48,16 +48,16 @@
 <span class="time">7/26/2023 1690396296876</span>: I've procrastinated for a while and now two updates have been added to the game. Time to fix that, eh? Migrated this website to separate repository to make my github cleaner. A bit messy of a move and there are still some unfinished bits that were accidentally published. Will be fixed soon. Added and updated a README.<br><br>
 
 <span class="time">8/1/2023 1690937005250</span>: Massive changes:<br>
- - Updated the images and information for Metal Tile #5<br>
- - Updated the images, icon, and information for the EMF Detector<br>
- - Added the fence that is the in northeast corner of the map<br>
- - Updated the box of bones image<br>
- - Updated the images and information for Metal Tile #6<br>
- - 2 shovels have been added to the map<br>
- - stonehenge shovel image has been updated<br>
- - radioactive capsule images updated<br>
- - changed rozital image<br>
- - Added the transformers and the power lines to the map<br>
+- Updated the images and information for Metal Tile #5<br>
+- Updated the images, icon, and information for the EMF Detector<br>
+- Added the fence that is the in northeast corner of the map<br>
+- Updated the box of bones image<br>
+- Updated the images and information for Metal Tile #6<br>
+- 2 shovels have been added to the map<br>
+- stonehenge shovel image has been updated<br>
+- radioactive capsule images updated<br>
+- changed rozital image<br>
+- Added the transformers and the power lines to the map<br>
 Unfortunately, some things could not be checked since this update has broken digging somewhat. (Things not appearing when dug up)<br>
 Not 100% sure everything is fixed here, but I need to push this update out soon.<br><br>
 
@@ -65,34 +65,48 @@ Not 100% sure everything is fixed here, but I need to push this update out soon.
 
 <span class="time">8/19/2023 1692472159806</span>: Map re-centers itself when browser zooms in and out.<br><br>
 
-<span class="time">8/29/2023 1693347631000</span>: Added numbers to the tranformer icons and added lines for the bridges. Also added a sheet with various different letters to the github. Horizontal line. Working on revamping the current movement code.<br><br>
+<span class="time">8/29/2023 1693347631000</span>: Added numbers to the transformer icons and added lines for the bridges. Also added a sheet with various different letters to the github. Horizontal line. Working on revamping the current movement code.<br><br>
 
 <span class="time">12/17/2023 1702849239333</span>: I'm free and its time to to update this again. Halloween pumpkins added and transformer descriptions updated. Separated the point and line data from the main script for organization. Got some ideas in the backlog and made the map a little easier to move. Some code is clean but others is messy, and I desperately need to clean up the point/line code.<br><br>
 
-<span class="time">3/5/2024 1709631848390</span>: The new version 7 update has come out. I feel a bit apprehensive about updating the map, because this update is still in alpha and things are subject to change, but I've decided to go ahead anyway. The images and descriptions for some of the metal tiles have been updated. I've chosen to not update some images because there wasn't enough of a difference to justify changing them (Metal tile #7 for example). I've also removed the old-assets folder from the project because it was just taking up space. More updates are to come.
+<span class="time">3/5/2024 1709631848390</span>: The new version 7 update has come out. I feel a bit apprehensive about updating the map, because this update is still in alpha and things are subject to change, but I've decided to go ahead anyway. The images and descriptions for some of the metal tiles have been updated. I've chosen to not update some images because there wasn't enough of a difference to justify changing them (Metal tile #7 for example). I've also removed the old-assets folder from the project because it was just taking up space. More updates are to come.<br><br>
+
+<span class="time">3/7/2024 1709803937393</span>: A little bit of work. Added:<br>
+- Updated descriptions for Metal Tile #9, Glowing Blue Argemia, Antibreather Plush, Picnic<br>
+- Updated images for Glowing Blue Argemia, Antibreather Plush<br>
+- Moved point for Antibreather Plush, readjusted point for Glowing Cyan Argemia plush<br>
+- Added points for Pickaxe, Candle Holder, Argemia Mug, Gravesite, and Fishing Supplies<br>
+- Removed point for the drive next to the base (the drive actually still exists, but it cannot be dug up normally without getting out of bounds)<br>
+- Added lines for the ritual area.<br>
+- Tweaked the width required to switch ui arrangement<br>
+- Tidied up the borders around the tabs<br>
+- Created all the points and assets for the rune slabs and runes, but decided against adding them in this update, at least for now.<br>
+I added a line for the world border in the last update, but the canvas was actually too small to show it. I've tripled the canvas size now and tweaked the script and styling to work with it, but this could've introduced some bugs I haven't noticed.<br>
+Next up, I really want to work on cleaning up the points UI and rewriting the point/line reference system, so I'll do that if nothing else gets in my way.<br><br>
 
 <hr>
 Features/bugs to add/fix:<br>
- > Add a favicon?<br>
- > Map scaling; Map zoom in & out with pinching or scrolling<br>
- > Somehow get a orthographic picture of the map to use instead of the current grayscale one.<br>
- > Investigate the monoliths and mark their locations<br>
- > when contained points are all set to hidden or shown manually, display the change on the button<br>
- > when contained points are a mixture of hidden and shown, display '[/]' with a slight gray<br>
- > when a [/] is clicked, hide all<br>
- > Indicator (highlight the point?) to show when a point is selected.<br>
- > Select points from the points tab<br>
- > Add next and previous buttons on the image preview (to accommodate touch screen users)<br>
- > A small field where a user can input their own coordinates and get a marker on the map of where they are<br>
- > Locations of papers<br>
- > Show what category the point is in in the information tab.<br>
- > Little tab placed above points when you click on them.<br>
- > Points in the points tab should be clickable. Clicking them should open the information tab and show the indicator tab above the point.<br>
- > A selected point should have its z-index changed so it lays on top of all other points<br>
- > Be able to mark spoiler text, similar to discord<br>
- > I could add points for various event locations, like what I did with the picnic<br>
- > <b>Major rework of points lines and references code needed.</b><br>
- > Setting to swap satelite dish names to the old ones in a settings menu?
+> Add a favicon?<br>
+> Map scaling; Map zoom in & out with pinching or scrolling<br>
+> Somehow get a orthographic picture of the map to use instead of the current grayscale one.<br>
+> Investigate the monoliths and mark their locations<br>
+> when contained points are all set to hidden or shown manually, display the change on the button<br>
+> when contained points are a mixture of hidden and shown, display button with a slight gray<br>
+> ^ when a gray button is clicked, hide all<br>
+> <b>Indicator (highlight the point?) to show when a point is selected.</b><br>
+> Select points from the points tab<br>
+> Add next and previous buttons on the image preview (to accommodate touch screen users)<br>
+> A small field where a user can input their own coordinates and get a marker on the map of where they are<br>
+> Locations of papers<br>
+> Show what category the point is in in the information tab.<br>
+> Little tab placed above points when you click on them.<br>
+> Points in the points tab should be clickable. Clicking them should open the information tab and show the indicator tab above the point.<br>
+> A selected point should have its z-index changed so it lays on top of all other points<br>
+> Be able to mark spoiler text, similar to discord<br>
+> I could add points for various event locations, like what I did with the picnic<br>
+> <b>Major rework of points lines and references code needed.</b><br>
+> Setting to swap satellite dish names to the old ones in a settings menu?<br>
+> A button to minimize the sidebar
 </div>
 <script>
     Array.from(document.getElementsByClassName('time')).forEach(element => {

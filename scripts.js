@@ -27,8 +27,8 @@ var drag = {
 // ensure that the map centers in the map_pane when the page is loaded
 
 function centerMap() {
-    map_container.style.left = Math.floor((map_pane.offsetWidth - map_image.offsetWidth) / 2).toString() + 'px'
-    map_container.style.top = Math.floor((map_pane.offsetHeight - map_image.offsetHeight) / 2).toString() + 'px'
+    map_container.style.left = Math.floor((map_pane.offsetWidth - map_image.offsetWidth) / 2 - 896).toString() + 'px'
+    map_container.style.top = Math.floor((map_pane.offsetHeight - map_image.offsetHeight) / 2 - 896).toString() + 'px'
 };
 window.addEventListener('load', centerMap, false);
 
@@ -41,8 +41,8 @@ points.forEach((data, pointindex) => {
     let pointelement = document.createElement('img');
     pointelement.classList.add('image_label')
     pointelement.classList.add(data.positioning)
-    pointelement.style.left = (((data.xPos+745)/1490)*currentSize).toString()+'px';
-    pointelement.style.top = (((data.yPos+745)/1490)*currentSize).toString()+'px';
+    pointelement.style.left = ((((data.xPos+745)/1490)*currentSize)+896).toString()+'px';
+    pointelement.style.top = ((((data.yPos+745)/1490)*currentSize)+896).toString()+'px';
     pointelement.dataset.pointindex = pointindex
     pointelement.ondragstart = () => { return false; }
     pointelement.src = data.icon
@@ -191,9 +191,9 @@ lines.forEach((data, lineindex) => {
     ctx.beginPath();
     data['coordinates'].forEach((coords, index) => {
         if (index == 0) {
-            ctx.moveTo(((coords[0]+745)/1490)*currentSize, ((coords[1]+745)/1490)*currentSize);
+            ctx.moveTo(((coords[0]+745)/1490)*currentSize+896, ((coords[1]+745)/1490)*currentSize+896);
         } else {
-            ctx.lineTo(((coords[0]+745)/1490)*currentSize, ((coords[1]+745)/1490)*currentSize);
+            ctx.lineTo(((coords[0]+745)/1490)*currentSize+896, ((coords[1]+745)/1490)*currentSize+896);
         }
     })
     if (!(data['fill'] == undefined)) {

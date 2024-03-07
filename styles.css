@@ -22,14 +22,13 @@ body {
 
 #map_pane {
     border: 1px solid green;
+    border-right: 0;
     flex: 0.785;
     cursor: grab;
 }
 
 #information_pane {
-    border-top: 1px solid #008000;
-    border-right: 1px solid green;
-    border-bottom: 1px solid green;
+    border: 1px solid green;
     flex: 0.215;
 }
 
@@ -96,16 +95,14 @@ body {
     min-height: calc(100% - 48px);
 }
 
-/* #information_pane_info {
-    padding-top: 12px;
-} */
-
 .information_tab {
-    border-right: 1px solid green;
-    border-left: 1px solid green;
     text-align: center;
     flex: 1;
     cursor: pointer;
+}
+
+#information_tab_info {
+    border-right: 1px solid green;
 }
 
 .tab_selected {
@@ -220,7 +217,7 @@ body {
     max-height: 1.2em;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 650px) {
     #page_container {
         flex-flow: column;
     }

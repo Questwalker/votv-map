@@ -17,7 +17,7 @@ const points = [
     //     "xPos": 213.4,
     //     "yPos": 541.8
     // },
-    // satellites
+    // Satellites
     {
         "name": "Papa",
         "description": "",
@@ -258,7 +258,7 @@ const points = [
         "xPos": -500,
         "yPos": 0
     },
-    // metal tiles
+    // Metal Tiles
     {
         "name": "Metal Tile #1",
         "description": "Hidden in an outdoor alcove on the side of the base. You can get it by dropping down from the roof.",
@@ -341,7 +341,7 @@ const points = [
     },
     {
         "name": "Metal Tile #9",
-        "description": "No, seriously. This marker isn't placed wrong. Go past the fence and keep going until you hit the corner between the northern and eastern invisible walls.",
+        "description": "This marker isn't placed wrong. Go past the fence and keep going until you hit the corner between the northern and eastern invisible walls.",
         "related_images" : ['./images/tile9_1.png', './images/tile9_2.png', './images/tile9_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
@@ -382,8 +382,8 @@ const points = [
     },
     {
         "name": "Glowing Blue Argemia",
-        "description": "Found atop a white cube in the sky. You can get it by either knocking it off with a drone, or going to it yourself using a flying machine glitch. The plushie is stuck firmly to the cube, so knocking it off by drone will take multiple attempts and you may lose it when it falls. You can check out different flying machine designs on the <a href=\"https://discord.gg/WKBvqu4tjV\" target=\"_blank\" rel=\"noopener noreferrer\">discord</a>.",
-        "related_images" : ['./images/glowingBlueArgemia_1.png', './images/glowingBlueArgemia_2.png', './images/glowingBlueArgemia_3.png'],
+        "description": "Found on top of an invisible platform in the sky. The item is fixed so only player interaction can move it. You can reach it by climbing the invisible wall with a hook.",
+        "related_images" : ['./images/glowingBlueArgemia_1.png', './images/glowingBlueArgemia_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_blue_argemia.png",
         "positioning": "positioned_on_top",
@@ -397,35 +397,35 @@ const points = [
         "category": "Plushes",
         "icon": "./icons/glowing_cyan_argemia.png",
         "positioning": "positioned_on_top",
-        "xPos": -630,
-        "yPos": 189.6
+        "xPos": -630.4,
+        "yPos": 190.1
     },
     {
         "name": "Glowing Magenta Argemia",
-        "description": "The plush's spawn location is located near the top of the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter that spawning location's hitbox. The usual method is placing a drone around (34.8, -36.8) and then having the drone fly up. When the plush spawns, it will fall and you may not notice it. I recommend placing a camera down below and constantly flicking to it to see if the plush has spawned. You may need to repeat this method multiple times to get it. Good luck.",
+        "description": "The plush's spawn location is located around the top of the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter that spawning location's hitbox. The usual method is placing a drone around (35.18, -36.85) and then having the drone straight fly up. Make sure you are looking down and holding up your digital map to get the most accurate coordinates. If you face east, your coordinate accuracy should be around ±0.04.<br><br>When the plush spawns, it will fall and you may not notice it. I recommend placing a camera down below and occasionally flicking to it to see if the plush has spawned. You might not succeed on your first try. Good luck.",
         "related_images" : ['./images/glowingMagentaArgemia_1.png', './images/glowingMagentaArgemia_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_magenta_argemia.png",
         "positioning": "positioned_on_top",
-        "xPos": 34.8,
-        "yPos": -36.8
+        "xPos": 35.18,
+        "yPos": -36.85
     },
     {
         "name": "Antibreather Plush",
-        "description": "Appears in the antibreather cave at 3:33am in-game. In order for it to spawn, you must be in the cave when the time passes. The plush won't disappear, but the plush only spawns in once, so don't lose it.",
+        "description": "Appears in the nest in the antibreather cave at 3:33am in-game. In order for it to spawn, you must be in the cave when the time passes. The plush won't disappear, but the plush only spawns in once, so don't lose it.<br>To open the cave, you need to be in the cave entrance when either wolfgang or the antibreather goes through it.",
         "related_images" : ['./images/antibreatherPlush_1.png', './images/antibreatherPlush_2.png'],
         "category": "Plushes",
         "icon": "./icons/antibreather_plush.png",
         "positioning": "positioned_on_top",
-        "xPos": -652.7,
-        "yPos": -598.8
+        "xPos": -672.7,
+        "yPos": -567
     },
     // Points of interest
     {
         "name": "Unknown Rozital Technology",
         "description": "Found situated between two rocks, and will do nothing until you discover a signal.<br>Once the <i>lifecrystal</i> signal has been downloaded and processed to level 3, an event will occur the next night that features a purple laser coming down from the sky onto the technology. After the event, the technology will glow a subtle pink, and after approaching, will begin to spin and click before flying into the air and disappearing in a flash of light.<br>Whether the technology was supposed to originate from the laser, or that the laser simply \'activated\' the technology is unknown.",
         "related_images" : ['./images/rozital_1.png', './images/rozital_2.png', './images/rozital_3.png', './images/rozital_4.png'],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/rozital.png",
         "positioning": "positioned_on_top",
         "xPos": 637,
@@ -445,7 +445,7 @@ const points = [
         "name": "Green Locker",
         "description": "Insert all 9 metal tiles and press the button.",
         "related_images" : ['./images/green_locker_1.png'],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/green_locker.png",
         "positioning": "positioned_on_top",
         "xPos": 614.8,
@@ -455,7 +455,7 @@ const points = [
         "name": "Old Shack",
         "description": "A dilapidated, old shack sits in the middle of the woods, and inside, a scorch mark stains the smooth dirt ground. From the mark sprouts a vibrant red tree.<br>The air is strong here...",
         "related_images" : [],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/shack.png",
         "positioning": "positioned_on_top",
         "xPos": 408.5,
@@ -465,7 +465,7 @@ const points = [
         "name": "Well",
         "description": "",
         "related_images" : ['./images/well_1.png','./images/well_2.png'],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/well.png",
         "positioning": "positioned_on_top",
         "xPos": 564.4,
@@ -475,7 +475,7 @@ const points = [
         "name": "Nuclear Barrels",
         "description": "",
         "related_images" : [],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/barrel.png",
         "positioning": "positioned_on_top",
         "xPos": 570.6,
@@ -485,7 +485,7 @@ const points = [
         "name": "Abandoned Car",
         "description": "",
         "related_images" : [],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/car.png",
         "positioning": "positioned_on_top",
         "xPos": -210.3,
@@ -495,7 +495,7 @@ const points = [
         "name": "Bunker",
         "description": "",
         "related_images" : [],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/bunker.png",
         "positioning": "positioned_on_top",
         "xPos": 60.25,
@@ -503,13 +503,23 @@ const points = [
     },
     {
         "name": "Picnic",
-        "description": "Appears on day 10. No spoilers on what it is yet :)",
+        "description": "Appears on day 10",
         "related_images" : [],
-        "category": "",
+        "category": "Points of Interest",
         "icon": "./icons/picnic_blanket.png",
         "positioning": "positioned_on_top",
         "xPos": -199,
         "yPos": -483
+    },
+    {
+        "name": "Gravesite",
+        "description": "",
+        "related_images" : [],
+        "category": "Points of Interest",
+        "icon": "./icons/grave.png",
+        "positioning": "positioned_on_top",
+        "xPos": -347.4,
+        "yPos": -565.4
     },
     // Chicken Burgers
     // {
@@ -947,16 +957,6 @@ const points = [
         "yPos": -42.1
     },
     {
-        "name": "Drive",
-        "description": "Can be dug up in the corner between the building and the driveway",
-        "related_images" : ['./images/drive_1.png'],
-        "category": "",
-        "icon": "./icons/level_0_drive.png",
-        "positioning": "positioned_on_top",
-        "xPos": 10.7,
-        "yPos": 9.7
-    },
-    {
         "name": "Box of bones",
         "description": "Can be dug up next to the boulder in the middle of the grassy circle. An old wooden box containing a 9 bones and a skull. The box is breakable",
         "related_images" : ['./images/box_of_bones_1.png'],
@@ -985,5 +985,45 @@ const points = [
         "positioning": "positioned_on_top",
         "xPos": -622.1,
         "yPos": -31.4
+    },
+    {
+        "name": "Pickaxe",
+        "description": "Stuck in the ground next to a underwater branch.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/pickaxe.png",
+        "positioning": "positioned_on_top",
+        "xPos": 391.6,
+        "yPos": -384.3
+    },
+    {
+        "name": "Candle Holder",
+        "description": "An old style candle holder you can dig up from inside a log. It is a Youtuber easter egg created in reference to the Youtuber <a href=\"https://www.youtube.com/channel/UCnCmb1vpv90EeSX5g7K4UYQ\" target=\"_blank\" rel=\"noopener noreferrer\">The Librarian</a>. You can light it with a lighter!",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/candle.png",
+        "positioning": "positioned_on_top",
+        "xPos": 378.5,
+        "yPos": -461
+    },
+    {
+        "name": "Argemia Mug",
+        "description": "Located on top of the power pole, a basic white mug with a portrait of Argemia Armuntela on the side. The item is fixed so only player interaction can move it. You can use a hook to climb the pole.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/argemug.png",
+        "positioning": "positioned_on_top",
+        "xPos": -59.3,
+        "yPos": -295
+    },
+    {
+        "name": "Fishing Supplies",
+        "description": "An old box containing a bunch of fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/old_wooden_box.png",
+        "positioning": "positioned_on_top",
+        "xPos": 175.8,
+        "yPos": -460.6
     }
 ]
