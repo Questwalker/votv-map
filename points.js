@@ -1018,10 +1018,10 @@ const points = [
     },
     {
         "name": "Fishing Supplies",
-        "description": "An old box containing a bunch of fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.",
-        "related_images" : [],
+        "description": "Needs to be dug up with a shovel.<br>An old box containing a bunch of fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.",
+        "related_images" : ['./images/fishingSupplies.png'],
         "category": "",
-        "icon": "./icons/old_wooden_box.png",
+        "icon": "./icons/fishermans_box.png",
         "positioning": "positioned_on_top",
         "xPos": 175.8,
         "yPos": -460.6
