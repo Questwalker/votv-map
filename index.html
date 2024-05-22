@@ -13,22 +13,21 @@
     <script src="lines.js"></script>
 </head>
 <body>
-    <div id="display_image_container" class="unselectable hidden" onclick="hidePreview()">
+    <div id="display_image_container" class="unselectable hidden">
         <img id="display_image">
     </div>
     <div id="container">
         <div id="page_container" class="flex_box">
             <div id="map_pane" class="col unselectable" oncontextmenu="return false;">
                 <div id="map_container" style="left: 5px; top: 5px;">
-                    <!-- <div style="width: 10px; height: 10px; left: 700px; top: 300px; position: absolute; background-color: white;"></div> -->
-                    <canvas id="map_canvas" width="2688" height="2688"></canvas> <!--  896  1792  2688  -->
+                    <canvas id="map_canvas" width="2688" height="2688"></canvas>
                     <img id="map_image" src="./map.png" style="position: relative; left: 896px; top: 896px;"/>
                 </div>
             </div>
             <div id="information_pane" class="col">
                 <div id="information_tabs">
-                    <div id="information_tab_info" onclick="tabClicked(this)" class="information_tab unselectable tab_selected">Info</div>
-                    <div id="information_tab_points" onclick="tabClicked(this)" class="information_tab unselectable">Points</div>
+                    <div id="information_tab_info" class="information_tab unselectable tab_selected">Info</div>
+                    <div id="information_tab_points" class="information_tab unselectable">Points</div>
                 </div>
                 <div id="information_pane_content">
                     <div id="information_pane_body">
@@ -43,19 +42,21 @@
                     </div>
                     <div id="information_pane_footer">
                         <div id="credits">
-                        <div>Check me out / Contact me at:</div>
+                        <div>Check me out / Contact me at / Feedback:</div>
                         <div class="link"><span title="GitHub">G:</span>&nbsp;<a href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a></div>
                         <div><span title="Discord">D:</span>&nbsp;questwalker</div>
                         <div><span title="Email">E:</span>&nbsp;questwalkerko@gmail.com</div>
                         <br>
                         <div class="link"><a href="./changelog" target="_blank" rel="noopener noreferrer">Check out the changelog here.</a></div>
                         <br></div>
-                        <div onclick="centerMap()" style="cursor: default"><u>[Click here]</u> to center the map.</div>
+                        <div id="center_button"><u>[Click here]</u> to center the map.</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="map_movement.js"></script>
+    <script src="map_points.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

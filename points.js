@@ -258,6 +258,37 @@ const points = [
         "xPos": -500,
         "yPos": 0
     },
+    // Furfur Totems
+    {
+        "name": "Furfur Totem",
+        "description": "",
+        "related_images" : ['./images/furfurA_0_1.png', './images/furfurA_0_2.png'],
+        "category": "Furfur Totems",
+        "icon": "./icons/furfurA_0.png",
+        "positioning": "positioned_on_top",
+        "xPos": -671.8,
+        "yPos": -563.7
+    },
+    {
+        "name": "Furfur Totem",
+        "description": "Can be dug up around the rocks near the fence.",
+        "related_images" : ['./images/furfurA_1_1.png'],
+        "category": "Furfur Totems",
+        "icon": "./icons/furfurA_1.png",
+        "positioning": "positioned_on_top",
+        "xPos": 253,
+        "yPos": 585.1
+    },
+    {
+        "name": "Furfur Totem",
+        "description": "Can be dug up close to the root around 3am.",
+        "related_images" : ['./images/furfurA_2_1.png'],
+        "category": "Furfur Totems",
+        "icon": "./icons/furfurA_2.png",
+        "positioning": "positioned_on_top",
+        "xPos": 391.1,
+        "yPos": -383.7
+    },
     // Metal Tiles
     {
         "name": "Metal Tile #1",
@@ -382,7 +413,7 @@ const points = [
     },
     {
         "name": "Glowing Blue Argemia",
-        "description": "Found on top of an invisible platform in the sky. The item is fixed so only player interaction can move it. You can reach it by climbing the invisible wall with a hook.",
+        "description": "Found on top of an invisible cube in the sky. The item is fixed so only player interaction can move it. You can reach it by climbing the invisible wall with a hook.",
         "related_images" : ['./images/glowingBlueArgemia_1.png', './images/glowingBlueArgemia_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_blue_argemia.png",
@@ -392,7 +423,7 @@ const points = [
     },
     {
         "name": "Glowing Cyan Argemia",
-        "description": "Needs to be dug up using a shovel. You can use a metal detector if you're having any trouble finding it, but it probably won't be nessessary. Be careful to not let the plushie roll down the hill.",
+        "description": "Needs to be dug up using a shovel. You can use a metal detector if you're having any trouble finding it. Be careful to not let the plushie roll down the hill.",
         "related_images" : ['./images/glowingCyanArgemia_1.png', './images/glowingCyanArgemia_2.png', './images/glowingCyanArgemia_3.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_cyan_argemia.png",
@@ -978,7 +1009,7 @@ const points = [
     },
     {
         "name": "EMF Detector",
-        "description": "Right under floodlight on the ground. Toggle on with right click while holding. 4 lights on it indicate how strong the emf is. Example locations for strong EMF is the basement, stonehenge, and the old shack.",
+        "description": "Right under floodlight on the ground. Toggle on with right click while holding. 5 lights on it indicate how strong the emf is. Example locations for strong EMF is the basement, stonehenge, and the old shack.",
         "related_images" : ['./images/emf_detector_1.png'],
         "category": "",
         "icon": "./icons/emf_detector.png",

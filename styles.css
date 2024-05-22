@@ -2,6 +2,7 @@ html {
     color-scheme: dark;
     font-family: monospace;
     height: 100%;
+    background-color: #121212;
 }
 
 body {
@@ -167,6 +168,10 @@ body {
     flex-flow: row;
     border-bottom: 1px solid green;
     height: 24px;
+}
+
+#center_button {
+    cursor: pointer;
 }
 
 
