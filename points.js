@@ -296,39 +296,39 @@ const points = [
         "related_images" : ['./images/tile1_1.png', './images/tile1_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
+        "positioning": "positioned_on_top",
         "xPos": -9,
         "yPos": 3
     },
     {
         "name": "Metal Tile #2",
-        "description": "On top of the truss of the bridge.",
+        "description": "On top of the post of the bridge.",
         "related_images" : ['./images/tile2_1.png', './images/tile2_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
-        "xPos": -68.5,
-        "yPos": 16.2
+        "positioning": "positioned_on_top",
+        "xPos": -77.3,
+        "yPos": 15.1
     },
     {
         "name": "Metal Tile #3",
-        "description": "If you don't have a digital map, I recommend you: <br><br>1. reset your compass with <i>sv.target reset</i>.<br>2. go to transformer 1 and walk up against the northeast corner of the fence.<br>3. orient yourself to what is seen in the first image below.<br>4. walk forward until you find yourself in the middle of a clearing.<br>5. search the area until you find the key on the ground.",
-        "related_images" : ['./images/tile3_1.png', './images/tile3_2.png', './images/tile3_3.png'],
+        "description": "Found at the base of a tree in the wilderness.",
+        "related_images" : ['./images/tile3_1.png', './images/tile3_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
-        "xPos": -464,
-        "yPos": 173.4
+        "positioning": "positioned_on_top",
+        "xPos": -464.3,
+        "yPos": 173.5
     },
     {
         "name": "Metal Tile #4",
-        "description": "Found at the base of a tree to the north of Yankee.",
-        "related_images" : ['./images/tile4_1.png', './images/tile4_2.png', './images/tile4_3.png'],
+        "description": "Found around the rim of the cliff to the north of Yankee.",
+        "related_images" : ['./images/tile4_1.png', './images/tile4_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
-        "xPos": -525,
-        "yPos": -47
+        "positioning": "positioned_on_top",
+        "xPos": -525.3,
+        "yPos": -48
     },
     {
         "name": "Metal Tile #5",
@@ -336,27 +336,27 @@ const points = [
         "related_images" : ['./images/tile5_1.png', './images/tile5_2.png', './images/tile5_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
-        "xPos": -620,
-        "yPos": -28
+        "positioning": "positioned_on_top",
+        "xPos": -615,
+        "yPos": -23
     },
     {
         "name": "Metal Tile #6",
-        "description": "On the roof of the guard's booth. You will need to get outside of the fence to access the guard's booth.",
+        "description": "On the roof of the guard's booth. You can get on top by parkouring on the metal poles nearby.",
         "related_images" : ['./images/tile6_1.png', './images/tile6_2.png', './images/tile6_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
+        "positioning": "positioned_on_top",
         "xPos": -372,
-        "yPos": 702.55
+        "yPos": 702.6
     },
     {
         "name": "Metal Tile #7",
         "description": "Found on the ground next to the green locker.",
-        "related_images" : ['./images/tile7_1.png', './images/tile7_2.png', './images/tile7_3.png'],
+        "related_images" : ['./images/tile7_1.png', './images/tile7_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
+        "positioning": "positioned_on_top",
         "xPos": 616,
         "yPos": 621
     },
@@ -366,9 +366,9 @@ const points = [
         "related_images" : ['./images/tile8_1.png', './images/tile8_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
-        "xPos": 500,
-        "yPos": -3
+        "positioning": "positioned_on_top",
+        "xPos": 500.37,
+        "yPos": -2.7
     },
     {
         "name": "Metal Tile #9",
@@ -376,7 +376,7 @@ const points = [
         "related_images" : ['./images/tile9_1.png', './images/tile9_2.png', './images/tile9_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_above",
+        "positioning": "positioned_on_top",
         "xPos": 874,
         "yPos": -874
     },
@@ -999,13 +999,13 @@ const points = [
     },
     {
         "name": "EMF Detector",
-        "description": "Right under floodlight on the ground. Toggle on with right click while holding. 5 lights on it indicate how strong the emf is. Example locations for strong EMF is the basement, stonehenge, and the old shack.",
+        "description": "Buried close to a floodlight. Toggle on with right click while holding. 5 lights on it indicate how strong the emf is. Example locations for strong EMF is the basement, stonehenge, and the old shack.",
         "related_images" : ['./images/emf_detector_1.png'],
         "category": "",
         "icon": "./icons/emf_detector.png",
         "positioning": "positioned_on_top",
-        "xPos": -622.1,
-        "yPos": -31.4
+        "xPos": -623,
+        "yPos": -33.8
     },
     {
         "name": "Pickaxe",
@@ -1049,10 +1049,10 @@ const points = [
     },
     {
         "name": "Bike Helmet",
-        "description": "The bike helmet protects your head, which can decrease your damage taken from impacts. You can reach it by climbing up or grappeling down the cliff using a hook.",
+        "description": "The bike helmet protects your head, which can decrease your damage taken from impacts. You can reach it by climbing up or grappling down the cliff using a hook.",
         "related_images" : ['./images/helmet1.png', './images/helmet2.png', './images/helmet3.png'],
         "category": "",
-        "icon": "./icons/helmet2.png",
+        "icon": "./icons/helmet.png",
         "positioning": "positioned_on_top",
         "xPos": -50.6,
         "yPos": 630
