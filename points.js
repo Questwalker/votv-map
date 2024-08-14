@@ -775,35 +775,35 @@ const points = [
         "xPos": 64,
         "yPos": 64.3
     },
-    { // TR_0
+    {
         "name": "Transformer #1",
-        "description": "Target with <i>sv.target TF_0</i>.<br>The building is chaotically filled with supplies and explosive items. There is only one bench outside.",
-        "related_images" : [],
-        "category": "Transformers",
-        "icon": "./icons/transformer0.png",
-        "positioning": "positioned_on_top",
-        "xPos": 396.7,
-        "yPos": 199.4
-    },
-    { // TR_1
-        "name": "Transformer #2",
-        "description": "Target with <i>sv.target TF_1</i>.<br>Some trash lays around. A shelf and two supply boxes are in the building. There are two benches outside.",
+        "description": "Target with <i>sv.target TF_1</i>.<br>Supplies and explosive items are strewn throughout the building. Inside, you can find some partially-filled gas cans, a toolbox, and a lighter and molotov recipe on the desk.",
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer1.png",
         "positioning": "positioned_on_top",
-        "xPos": -550,
-        "yPos": 232.3
+        "xPos": 396.1,
+        "yPos": 200
     },
-    { // TR_2
-        "name": "Transformer #3",
-        "description": "Target with <i>sv.target TF_2</i>.<br>There is trash strewn about outside and the building is filled with garbage. There are two benches outside.",
+    {
+        "name": "Transformer #2",
+        "description": "Target with <i>sv.target TF_2</i>.<br>Some trash lays around. You can find scrap and some almost-full gas cans inside. There are two benches outside.",
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer2.png",
         "positioning": "positioned_on_top",
-        "xPos": -399.3,
-        "yPos": -473.6
+        "xPos": -546,
+        "yPos": 234
+    },
+    {
+        "name": "Transformer #3",
+        "description": "Target with <i>sv.target TF_3</i>.<br>Garbage litters the area and the door is boarded up, which forces you to enter with a carefully-placed crouch jump, a crowbar, or by using the vent on the side of the building. A full gas can and some batteries can be found in the supply room.",
+        "related_images" : [],
+        "category": "Transformers",
+        "icon": "./icons/transformer3.png",
+        "positioning": "positioned_on_top",
+        "xPos": -396.5,
+        "yPos": -480.1
     },
     // Halloween Pumpkins
     {
@@ -958,16 +958,6 @@ const points = [
         "yPos": 22.5
     },
     {
-        "name": "Shovel",
-        "description": "Behind the transformer, you can access it by opening the vent on the side of the building.",
-        "related_images" : [],
-        "category": "",
-        "icon": "./icons/shovel.png",
-        "positioning": "positioned_on_top",
-        "xPos": -400.2,
-        "yPos": -473.8
-    },
-    {
         "name": "Cacti",
         "description": "Dug up between the sign pole and the boulder",
         "related_images" : ['./images/cacti_1.png'],
@@ -1056,5 +1046,15 @@ const points = [
         "positioning": "positioned_on_top",
         "xPos": 175.8,
         "yPos": -460.6
+    },
+    {
+        "name": "Bike Helmet",
+        "description": "The bike helmet protects your head, which can decrease your damage taken from impacts. You can reach it by climbing up or grappeling down the cliff using a hook.",
+        "related_images" : ['./images/helmet1.png', './images/helmet2.png', './images/helmet3.png'],
+        "category": "",
+        "icon": "./icons/helmet2.png",
+        "positioning": "positioned_on_top",
+        "xPos": -50.6,
+        "yPos": 630
     }
 ]
