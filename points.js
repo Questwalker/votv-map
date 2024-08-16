@@ -262,7 +262,7 @@ const points = [
     {
         "name": "Furfur Totem",
         "description": "",
-        "related_images" : ['./images/furfurA_0_1.png', './images/furfurA_0_2.png'],
+        "related_images" : ['./images/furfur1_1.png', './images/furfur1_2.png'],
         "category": "Furfur Totems",
         "icon": "./icons/furfurA_0.png",
         "positioning": "positioned_on_top",
@@ -272,7 +272,7 @@ const points = [
     {
         "name": "Furfur Totem",
         "description": "Can be dug up around the rocks near the fence.",
-        "related_images" : ['./images/furfurA_1_1.png'],
+        "related_images" : ['./images/furfur2_1.png'],
         "category": "Furfur Totems",
         "icon": "./icons/furfurA_1.png",
         "positioning": "positioned_on_top",
@@ -282,7 +282,7 @@ const points = [
     {
         "name": "Furfur Totem",
         "description": "Can be dug up close to the root around 3am.",
-        "related_images" : ['./images/furfurA_2_1.png'],
+        "related_images" : ['./images/furfur3_1.png'],
         "category": "Furfur Totems",
         "icon": "./icons/furfurA_2.png",
         "positioning": "positioned_on_top",
@@ -384,7 +384,7 @@ const points = [
     {
         "name": "Green Argemia",
         "description": "Outside of the fence, located on the top of the mountain",
-        "related_images" : ['./images/greenArgemia_1.png', './images/greenArgemia_2.png', './images/greenArgemia_3.png', './images/greenArgemia_4.png'],
+        "related_images" : ['./images/greenArgemia1_1.png', './images/greenArgemia1_2.png', './images/greenArgemia1_3.png'],
         "category": "Plushes",
         "icon": "./icons/green_argemia.png",
         "positioning": "positioned_on_top",
@@ -394,7 +394,7 @@ const points = [
     {
         "name": "Red Argemia",
         "description": "Located in a steep pit next to a donut. Interacting with the donut will teleport you back home.<br>NOTE: The walls of the pit are too steep to allow you to walk out, so you can bring your ATV into the pit or interact with the donut to get out.",
-        "related_images" : ['./images/redArgemia_1.png', './images/redArgemia_2.png', './images/redArgemia_3.png'],
+        "related_images" : ['./images/redArgemia1_1.png', './images/redArgemia1_2.png', './images/redArgemia1_3.png'],
         "category": "Plushes",
         "icon": "./icons/red_argemia.png",
         "positioning": "positioned_on_top",
@@ -404,7 +404,7 @@ const points = [
     {
         "name": "Blue Argemia",
         "description": "At the bottom of the river, near quebec. Depending on your graphics settings, the plush might appear <i>in</i> the ground and may require you to scour the riverbed while crouching to find it.",
-        "related_images" : ['./images/blueArgemia_1.png', './images/blueArgemia_2.png'],
+        "related_images" : ['./images/blueArgemia1_1.png', './images/blueArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/blue_argemia.png",
         "positioning": "positioned_on_top",
@@ -414,7 +414,7 @@ const points = [
     {
         "name": "Glowing Blue Argemia",
         "description": "Found on top of an invisible cube in the sky. The item is fixed so only player interaction can move it. You can reach it by climbing the invisible wall with a hook.",
-        "related_images" : ['./images/glowingBlueArgemia_1.png', './images/glowingBlueArgemia_2.png'],
+        "related_images" : ['./images/glowingBlueArgemia1_1.png', './images/glowingBlueArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_blue_argemia.png",
         "positioning": "positioned_on_top",
@@ -424,17 +424,17 @@ const points = [
     {
         "name": "Glowing Cyan Argemia",
         "description": "Needs to be dug up using a shovel. You can use a metal detector if you're having any trouble finding it. Be careful to not let the plushie roll down the hill.",
-        "related_images" : ['./images/glowingCyanArgemia_1.png', './images/glowingCyanArgemia_2.png', './images/glowingCyanArgemia_3.png'],
+        "related_images" : ['./images/glowingCyanArgemia1_1.png', './images/glowingCyanArgemia1_2.png', './images/glowingCyanArgemia1_3.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_cyan_argemia.png",
         "positioning": "positioned_on_top",
-        "xPos": -630.4,
-        "yPos": 190.1
+        "xPos": -634,
+        "yPos": 181.4
     },
     {
         "name": "Glowing Magenta Argemia",
-        "description": "The plush's spawn location is located around the top of the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter that spawning location's hitbox. The usual method is placing a drone around (35.18, -36.85) and then having the drone straight fly up. Make sure you are looking down and holding up your digital map to get the most accurate coordinates. If you face east, your coordinate accuracy should be around ±0.04.<br><br>When the plush spawns, it will fall and you may not notice it. I recommend placing a camera down below and occasionally flicking to it to see if the plush has spawned. You might not succeed on your first try. Good luck.",
-        "related_images" : ['./images/glowingMagentaArgemia_1.png', './images/glowingMagentaArgemia_2.png'],
+        "description": "The plush's spawn location is located around the top of the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter that spawning location's hitbox. The usual method is placing a drone around (35.18, -36.85) and then having the drone straight fly up. Make sure to use your digital map to get the most accurate coordinates.<br><br>When the plush spawns, it will fall and you may not notice it. Good luck.",
+        "related_images" : ['./images/glowingMagentaArgemia1_1.png', './images/glowingMagentaArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_magenta_argemia.png",
         "positioning": "positioned_on_top",
@@ -444,7 +444,7 @@ const points = [
     {
         "name": "Antibreather Plush",
         "description": "Appears in the nest in the antibreather cave at 3:33am in-game. In order for it to spawn, you must be in the cave when the time passes. The plush won't disappear, but the plush only spawns in once, so don't lose it.<br>To open the cave, you need to be in the cave entrance when either wolfgang or the antibreather goes through it.",
-        "related_images" : ['./images/antibreatherPlush_1.png', './images/antibreatherPlush_2.png'],
+        "related_images" : ['./images/antibreatherPlush1_1.png', './images/antibreatherPlush1_2.png'],
         "category": "Plushes",
         "icon": "./icons/antibreather_plush.png",
         "positioning": "positioned_on_top",
@@ -455,7 +455,7 @@ const points = [
     {
         "name": "Unknown Rozital Technology",
         "description": "Found situated between two rocks, and will do nothing until you discover a signal.<br>Once the <i>lifecrystal</i> signal has been downloaded and processed to level 3, an event will occur the next night that features a purple laser coming down from the sky onto the technology. After the event, the technology will glow a subtle pink, and after approaching, will begin to spin and click before flying into the air and disappearing in a flash of light.<br>Whether the technology was supposed to originate from the laser, or that the laser simply \'activated\' the technology is unknown.",
-        "related_images" : ['./images/rozital_1.png', './images/rozital_2.png', './images/rozital_3.png', './images/rozital_4.png'],
+        "related_images" : ['./images/rozitalTech1_1.png', './images/rozitalTech1_2.png', './images/rozitalTech1_3.png', './images/rozitalTech1_4.png'],
         "category": "Points of Interest",
         "icon": "./icons/rozital.png",
         "positioning": "positioned_on_top",
@@ -465,7 +465,7 @@ const points = [
     {
         "name": "Basalt Pillars",
         "description": "<div style=\"color: red;\">WARNING: THIS CAN RUIN YOUR SAVE</div><br>Can be found with the metal detector. Once dug up, it'll slowly grow out of the ground and start spreading. They will slowly spread in your direction. <u>The pillars have high durability, but they can be destroyed with a crowbar or shovel.</u>",
-        "related_images" : ['./images/basalt_pillars_1.png', './images/basalt_pillars_2.png'],
+        "related_images" : ['./images/basaltPillars1_1.png', './images/basaltPillars1_2.png'],
         "category": "",
         "icon": "./icons/basalt_pillar.png",
         "positioning": "positioned_on_top",
@@ -475,7 +475,7 @@ const points = [
     {
         "name": "Green Locker",
         "description": "Insert all 9 metal tiles and press the button.",
-        "related_images" : ['./images/green_locker_1.png'],
+        "related_images" : ['./images/greenLocker1_1.png'],
         "category": "Points of Interest",
         "icon": "./icons/green_locker.png",
         "positioning": "positioned_on_top",
@@ -495,7 +495,7 @@ const points = [
     {
         "name": "Well",
         "description": "",
-        "related_images" : ['./images/well_1.png','./images/well_2.png'],
+        "related_images" : ['./images/well1_1.png','./images/well1_2.png'],
         "category": "Points of Interest",
         "icon": "./icons/well.png",
         "positioning": "positioned_on_top",
@@ -960,7 +960,7 @@ const points = [
     {
         "name": "Cacti",
         "description": "Dug up between the sign pole and the boulder",
-        "related_images" : ['./images/cacti_1.png'],
+        "related_images" : ['./images/cacti1_1.png'],
         "category": "",
         "icon": "./icons/cacti.png",
         "positioning": "positioned_on_top",
@@ -970,7 +970,7 @@ const points = [
     {
         "name": "Box of Drives",
         "description": "A box containing 8 drives with level 3 signals can be dug up near the pole in the middle of the grassy circle. You can send the drives off for some points or you can keep them, but make sure to check them out on your console at some point :)",
-        "related_images" : ['./images/box_of_drives_1.png'],
+        "related_images" : ['./images/driveBox1_1.png'],
         "category": "",
         "icon": "./icons/drive_box.png",
         "positioning": "positioned_on_top",
@@ -980,7 +980,7 @@ const points = [
     {
         "name": "Box of bones",
         "description": "Can be dug up next to the boulder in the middle of the grassy circle. An old wooden box containing a 9 bones and a skull. The box is breakable",
-        "related_images" : ['./images/box_of_bones_1.png'],
+        "related_images" : ['./images/boneBox1_1.png'],
         "category": "",
         "icon": "./icons/old_wooden_box.png",
         "positioning": "positioned_on_top",
@@ -990,7 +990,7 @@ const points = [
     {
         "name": "Radioactive Capsule",
         "description": "Located in the middle of a dirt patch with a skeleton reaching out placed next to it. Needs a shovel to get it out of the ground",
-        "related_images" : ['./images/radioactive_object_1.png', './images/radioactive_object_2.png', './images/radioactive_object_3.png'],
+        "related_images" : ['./images/radioactiveObject1_1.png', './images/radioactiveObject1_2.png', './images/radioactiveObject1_3.png'],
         "category": "",
         "icon": "./icons/radioactive_canister.png",
         "positioning": "positioned_on_top",
@@ -1000,7 +1000,7 @@ const points = [
     {
         "name": "EMF Detector",
         "description": "Buried close to a floodlight. Toggle on with right click while holding. 5 lights on it indicate how strong the emf is. Example locations for strong EMF is the basement, stonehenge, and the old shack.",
-        "related_images" : ['./images/emf_detector_1.png'],
+        "related_images" : ['./images/emfDetector1_1.png'],
         "category": "",
         "icon": "./icons/emf_detector.png",
         "positioning": "positioned_on_top",
@@ -1039,8 +1039,8 @@ const points = [
     },
     {
         "name": "Fishing Supplies",
-        "description": "Needs to be dug up with a shovel.<br>An old box containing a bunch of fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.",
-        "related_images" : ['./images/fishingSupplies.png'],
+        "description": "Needs to be dug up with a shovel.<br>Located to the right of the wind turbine, an old box containing some fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.",
+        "related_images" : ['./images/fishingSupplies1_1.png'],
         "category": "",
         "icon": "./icons/fishermans_box.png",
         "positioning": "positioned_on_top",
@@ -1050,7 +1050,7 @@ const points = [
     {
         "name": "Bike Helmet",
         "description": "The bike helmet protects your head, which can decrease your damage taken from impacts. You can reach it by climbing up or grappling down the cliff using a hook.",
-        "related_images" : ['./images/helmet1.png', './images/helmet2.png', './images/helmet3.png'],
+        "related_images" : ['./images/helmet1_1.png', './images/helmet1_2.png', './images/helmet1_3.png'],
         "category": "",
         "icon": "./icons/helmet.png",
         "positioning": "positioned_on_top",

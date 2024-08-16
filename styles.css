@@ -51,7 +51,7 @@ body {
 
 #map_canvas {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 .image_label {
@@ -59,7 +59,7 @@ body {
     position: absolute;
     max-width: 2em;
     max-height: 2em;
-    z-index: 3;
+    z-index: 4;
 }
 
 .positioned_above {
