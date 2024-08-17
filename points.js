@@ -959,7 +959,7 @@ const points = [
     },
     {
         "name": "Cacti",
-        "description": "Dug up between the sign pole and the boulder",
+        "description": "Dug up next to the light post",
         "related_images" : ['./images/cacti1_1.png'],
         "category": "",
         "icon": "./icons/cacti.png",
@@ -979,8 +979,8 @@ const points = [
     },
     {
         "name": "Box of bones",
-        "description": "Can be dug up next to the boulder in the middle of the grassy circle. An old wooden box containing a 9 bones and a skull. The box is breakable",
-        "related_images" : ['./images/boneBox1_1.png'],
+        "description": "Can be dug up next to the boulder in the middle of the grassy circle. An old wooden box containing a some bones and a skull. The box is breakable.",
+        "related_images" : ['./images/boneBox1_1.png', './images/boneBox1_2.png', './images/boneBox1_3.png'],
         "category": "",
         "icon": "./icons/old_wooden_box.png",
         "positioning": "positioned_on_top",
