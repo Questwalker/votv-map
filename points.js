@@ -797,7 +797,7 @@ const points = [
     },
     {
         "name": "Transformer #3",
-        "description": "Target with <i>sv.target TF_3</i>.<br>Garbage litters the area and the door is boarded up, which forces you to enter with a carefully-placed crouch jump, a crowbar, or by using the vent on the side of the building. A full gas can and some batteries can be found in the supply room.",
+        "description": "Target with <i>sv.target TF_3</i>.<br>Garbage litters the area and the door is boarded up, which forces you to enter with a carefully-placed crouch jump, a crowbar, or by using the vent on the side of the building. A full gas can and some batteries can be found in the supply room. A cat bed for Maxwell can be found behind a pallet.",
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer3.png",
