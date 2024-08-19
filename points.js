@@ -484,13 +484,23 @@ const points = [
     },
     {
         "name": "Old Shack",
-        "description": "A dilapidated, old shack sits in the middle of the woods, and inside, a scorch mark stains the smooth dirt ground. From the mark sprouts a vibrant red tree.<br>The air is strong here...",
+        "description": "A dilapidated, old shack sits in the middle of the woods, and inside, a scorch mark stains the smooth dirt ground. From the mark sprouts a vibrant blood-red tree.<br>The air is strong here...",
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/shack.png",
         "positioning": "positioned_on_top",
         "xPos": 408.5,
         "yPos": 24.3
+    },
+    {
+        "name": "Abandoned House",
+        "description": "",
+        "related_images" : [],
+        "category": "Points of Interest",
+        "icon": "./icons/house.png",
+        "positioning": "positioned_on_top",
+        "xPos": 662.5,
+        "yPos": -655.5
     },
     {
         "name": "Well",
