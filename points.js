@@ -563,216 +563,196 @@ const points = [
         "yPos": -565.4
     },
     // Chicken Burgers
-    // {
-    //     "name": "Burger #1",
-    //     "description": "Behind the desk with the 6 drives on it",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -8.1,
-    //     "yPos": 3.9
-    // },
-    // {
-    //     "name": "Burger #2",
-    //     "description": "Behind the desk with the drive boxes on it",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -9.5,
-    //     "yPos": 9.6
-    // },
-    // {
-    //     "name": "Burger #3",
-    //     "description": "Next to the server in the corner",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -9.5,
-    //     "yPos": -3.6
-    // },
-    // {
-    //     "name": "Burger #4",
-    //     "description": "Behind the supply crate in the hallway",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -10.4,
-    //     "yPos": -3.8
-    // },
-    // {
-    //     "name": "Burger #5",
-    //     "description": "Under the pipes",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -14.3,
-    //     "yPos": 6.5
-    // },
-    // {
-    //     "name": "Burger #6",
-    //     "description": "Behind the bed in the corner of the room",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -14.3,
-    //     "yPos": 19.5
-    // },
-    // {
-    //     "name": "Burger #7",
-    //     "description": "On top of the tiolet.",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -5.9,
-    //     "yPos": 19.3
-    // },
-    // {
-    //     "name": "Burger #8",
-    //     "description": "Surrounded by supply crates behind a coffee bag",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -7,
-    //     "yPos": 13.3
-    // },
-    // {
-    //     "name": "Burger #9",
-    //     "description": "Behind the stack of pallets",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -4.6,
-    //     "yPos": 16.4
-    // },
-    // {
-    //     "name": "Burger #10",
-    //     "description": "Behind the 2 wooden pallets leaning against the wall",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 6.6,
-    //     "yPos": 19.6
-    // },
-    // {
-    //     "name": "Burger #11",
-    //     "description": "Between the supply crates",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 5.5,
-    //     "yPos": 10.5
-    // },
-    // {
-    //     "name": "Burger #12",
-    //     "description": "On the ground in the corner between the building and the entrance",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -13.8,
-    //     "yPos": -10.4
-    // },
-    // {
-    //     "name": "Burger #13",
-    //     "description": "Under the brige. Depending on your graphics settings, it might appear in the ground and may require you to search while crouching to find it.",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -62,
-    //     "yPos": 12
-    // },
-    // {
-    //     "name": "Burger #14",
-    //     "description": "At the base of a tree located next to where the gravel pathways merge.",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 42.7,
-    //     "yPos": -12
-    // },
-    // {
-    //     "name": "Burger #15",
-    //     "description": "Between 2 large boulders outside",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 11,
-    //     "yPos": 29.7
-    // },
-    // {
-    //     "name": "Burger #16",
-    //     "description": "On the roof",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 3.2,
-    //     "yPos": 17.7
-    // },
-    // {
-    //     "name": "Burger #17",
-    //     "description": "Located on the metal walkways that go around Juliett",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -100.2,
-    //     "yPos": 203.5
-    // },
-    // {
-    //     "name": "Burger #18",
-    //     "description": "Behind the desk",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -621.6,
-    //     "yPos": -28.5
-    // },
-    // {
-    //     "name": "Burger #19",
-    //     "description": "On the ground outside of the cave",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -651.1,
-    //     "yPos": -587.5
-    // },
-    // {
-    //     "name": "Burger #20",
-    //     "description": "On the ground next to the <i>Unknown Rozital Technology</i>.",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 639.2,
-    //     "yPos": 44
-    // },
-    // {
-    //     "name": "Burger #21",
-    //     "description": "Needs to be dug up with a shovel. A metal detector can help in finding it",
-    //     "related_images" : [],
-    //     "category": "Chicken Burgers",
-    //     "icon": "./icons/burger.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 157,
-    //     "yPos": -584
-    // },
+    {
+        "name": "Burger",
+        "description": "On top of the servers.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -8.4,
+        "yPos": 27.5
+    },
+    {
+        "name": "Burger",
+        "description": "Inside the oven.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -14.7,
+        "yPos": 8.8
+    },
+    {
+        "name": "Burger",
+        "description": "On top of the toilet.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -12,
+        "yPos": -0.1
+    },
+    {
+        "name": "Burger",
+        "description": "On the radio tower of top of one of the antennas. You can climb the pole with a hook to reach it.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 21.7,
+        "yPos": -29.5
+    },
+    {
+        "name": "Burger",
+        "description": "Under the basement stairs.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -20.4,
+        "yPos": 27.1
+    },
+    {
+        "name": "Burger",
+        "description": "On the roof, on top of the air conditioning system.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -2.6,
+        "yPos": 27.3
+    },
+    {
+        "name": "Burger",
+        "description": "On top of the Radome.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -10.8,
+        "yPos": 6.4
+    },
+    {
+        "name": "Burger",
+        "description": "On the roof of the garage in a corner.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -14.8,
+        "yPos": 9.7
+    },
+    {
+        "name": "Burger",
+        "description": "On top of one of the stone arches.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 216,
+        "yPos": 541.1
+    },
+    {
+        "name": "Burger",
+        "description": "Inside a large log under some rocks.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 349.1,
+        "yPos": -344.5
+    },
+    {
+        "name": "Burger",
+        "description": "On top of some supply crates in the poly testing area.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 518.5,
+        "yPos": -213.3
+    },
+    {
+        "name": "Burger",
+        "description": "Inside the old shack, in the corner.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 405.6,
+        "yPos": 24.2
+    },
+    {
+        "name": "Burger",
+        "description": "Behind transformer 2, on the ground.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -553.4,
+        "yPos": 236.6
+    },
+    {
+        "name": "Burger",
+        "description": "Located on the metal walkways that go around Juliett.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -100.2,
+        "yPos": 203.5
+    },
+    {
+        "name": "Burger",
+        "description": "On the ground in front of the desk.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -621.6,
+        "yPos": -28.4
+    },
+    {
+        "name": "Burger",
+        "description": "On the ground outside of the cave.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -651.1,
+        "yPos": -587.6
+    },
+    {
+        "name": "Burger",
+        "description": "Inside the cave, in the middle of a pile of mushrooms.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -683.7,
+        "yPos": -581.8
+    },
+    {
+        "name": "Burger",
+        "description": "On the ground next to the <i>Unknown Rozital Technology</i>.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 639.2,
+        "yPos": 44
+    },
+    {
+        "name": "Burger",
+        "description": "Needs to be dug up with a shovel. A metal detector can help in finding it.",
+        "related_images" : [],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 157,
+        "yPos": -584.7
+    },
 // -655.8, -600.2 : Skull
     // Transformers
     {
@@ -816,136 +796,136 @@ const points = [
         "yPos": -480.1
     },
     // Halloween Pumpkins
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>In front of the console.",
-        "related_images" : ['./images/pumpkin0_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 6.7,
-        "yPos": -0.2
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>Hidden in the pile of crates.",
-        "related_images" : ['./images/pumpkin1_0.png', './images/pumpkin1_1.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": -6,
-        "yPos": 10.7
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On top of the truss of the bridge.",
-        "related_images" : ['./images/pumpkin2_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": -64.7,
-        "yPos": 7.5
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On the roof of the base, above the garage.",
-        "related_images" : ['./images/pumpkin3_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 10.2,
-        "yPos": 20.2
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On top of a pole. Good luck. Maybe try stacking some boxes.",
-        "related_images" : ['./images/pumpkin4_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 30,
-        "yPos": -13
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>Resting beside a boulder.",
-        "related_images" : ['./images/pumpkin5_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 265.6,
-        "yPos": -6.7
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>At the bottom of the river.",
-        "related_images" : ['./images/pumpkin6_0.png', './images/pumpkin6_1.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 175.9,
-        "yPos": -126.2
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On top of the hill.",
-        "related_images" : ['./images/pumpkin7_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": -192.5,
-        "yPos": -238.7
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>Behind the top room of Juliett. Crouch under the railing to access.",
-        "related_images" : ['./images/pumpkin8_0.png', './images/pumpkin8_1.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": -103.3,
-        "yPos": 199.5
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On the base of Whiskey.",
-        "related_images" : ['./images/pumpkin9_0.png', './images/pumpkin9_1.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 2.5,
-        "yPos": 503.5
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On the road leading up to Victor.",
-        "related_images" : ['./images/pumpkin10_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 465.8,
-        "yPos": 513.9
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On the border wall.",
-        "related_images" : ['./images/pumpkin11_0.png', './images/pumpkin11_1.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": 534,
-        "yPos": -699.2
-    },
-    {
-        "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>At the checkpoint, next to where you spawn in.",
-        "related_images" : ['./images/pumpkin12_0.png'],
-        "category": "Halloween Pumpkins",
-        "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
-        "xPos": -382,
-        "yPos": 695.75
-    },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>In front of the console.",
+    //     "related_images" : ['./images/pumpkin0_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 6.7,
+    //     "yPos": -0.2
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>Hidden in the pile of crates.",
+    //     "related_images" : ['./images/pumpkin1_0.png', './images/pumpkin1_1.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": -6,
+    //     "yPos": 10.7
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>On top of the truss of the bridge.",
+    //     "related_images" : ['./images/pumpkin2_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": -64.7,
+    //     "yPos": 7.5
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the roof of the base, above the garage.",
+    //     "related_images" : ['./images/pumpkin3_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 10.2,
+    //     "yPos": 20.2
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>On top of a pole. Good luck. Maybe try stacking some boxes.",
+    //     "related_images" : ['./images/pumpkin4_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 30,
+    //     "yPos": -13
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>Resting beside a boulder.",
+    //     "related_images" : ['./images/pumpkin5_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 265.6,
+    //     "yPos": -6.7
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>At the bottom of the river.",
+    //     "related_images" : ['./images/pumpkin6_0.png', './images/pumpkin6_1.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 175.9,
+    //     "yPos": -126.2
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>On top of the hill.",
+    //     "related_images" : ['./images/pumpkin7_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": -192.5,
+    //     "yPos": -238.7
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>Behind the top room of Juliett. Crouch under the railing to access.",
+    //     "related_images" : ['./images/pumpkin8_0.png', './images/pumpkin8_1.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": -103.3,
+    //     "yPos": 199.5
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the base of Whiskey.",
+    //     "related_images" : ['./images/pumpkin9_0.png', './images/pumpkin9_1.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 2.5,
+    //     "yPos": 503.5
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the road leading up to Victor.",
+    //     "related_images" : ['./images/pumpkin10_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 465.8,
+    //     "yPos": 513.9
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the border wall.",
+    //     "related_images" : ['./images/pumpkin11_0.png', './images/pumpkin11_1.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": 534,
+    //     "yPos": -699.2
+    // },
+    // {
+    //     "name": "Pumpkin",
+    //     "description": "Exclusive to the Halloween gamemode.<br><br>At the checkpoint, next to where you spawn in.",
+    //     "related_images" : ['./images/pumpkin12_0.png'],
+    //     "category": "Halloween Pumpkins",
+    //     "icon": "./icons/pumpkin.png",
+    //     "positioning": "positioned_on_top",
+    //     "xPos": -382,
+    //     "yPos": 695.75
+    // },
     // Items of interest
     {
         "name": "Shovel",
@@ -986,6 +966,16 @@ const points = [
         "positioning": "positioned_on_top",
         "xPos": -118.8,
         "yPos": -42.1
+    },
+    {
+        "name": "Drive",
+        "description": "Can be dug up on the gravel between the bunker and the parking lot.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/drive.png",
+        "positioning": "positioned_on_top",
+        "xPos": 15.9,
+        "yPos": 23.5
     },
     {
         "name": "Box of bones",

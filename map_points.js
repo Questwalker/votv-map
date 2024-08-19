@@ -183,7 +183,7 @@ lines.forEach((data, lineindex) => {
 
 // TODO: jesus christ make a better way of doing this
 
-hideCategory(references.category_halloween_pumpkins['60'].entry)
+hideCategory(references.category_chicken_burgers['70'].entry)
 
 
 // console.log(references)
