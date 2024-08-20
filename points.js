@@ -796,136 +796,136 @@ const points = [
         "yPos": -480.1
     },
     // Halloween Pumpkins
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>In front of the console.",
-    //     "related_images" : ['./images/pumpkin0_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 6.7,
-    //     "yPos": -0.2
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>Hidden in the pile of crates.",
-    //     "related_images" : ['./images/pumpkin1_0.png', './images/pumpkin1_1.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -6,
-    //     "yPos": 10.7
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>On top of the truss of the bridge.",
-    //     "related_images" : ['./images/pumpkin2_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -64.7,
-    //     "yPos": 7.5
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the roof of the base, above the garage.",
-    //     "related_images" : ['./images/pumpkin3_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 10.2,
-    //     "yPos": 20.2
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>On top of a pole. Good luck. Maybe try stacking some boxes.",
-    //     "related_images" : ['./images/pumpkin4_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 30,
-    //     "yPos": -13
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>Resting beside a boulder.",
-    //     "related_images" : ['./images/pumpkin5_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 265.6,
-    //     "yPos": -6.7
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>At the bottom of the river.",
-    //     "related_images" : ['./images/pumpkin6_0.png', './images/pumpkin6_1.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 175.9,
-    //     "yPos": -126.2
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>On top of the hill.",
-    //     "related_images" : ['./images/pumpkin7_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -192.5,
-    //     "yPos": -238.7
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>Behind the top room of Juliett. Crouch under the railing to access.",
-    //     "related_images" : ['./images/pumpkin8_0.png', './images/pumpkin8_1.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -103.3,
-    //     "yPos": 199.5
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the base of Whiskey.",
-    //     "related_images" : ['./images/pumpkin9_0.png', './images/pumpkin9_1.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 2.5,
-    //     "yPos": 503.5
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the road leading up to Victor.",
-    //     "related_images" : ['./images/pumpkin10_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 465.8,
-    //     "yPos": 513.9
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>On the border wall.",
-    //     "related_images" : ['./images/pumpkin11_0.png', './images/pumpkin11_1.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 534,
-    //     "yPos": -699.2
-    // },
-    // {
-    //     "name": "Pumpkin",
-    //     "description": "Exclusive to the Halloween gamemode.<br><br>At the checkpoint, next to where you spawn in.",
-    //     "related_images" : ['./images/pumpkin12_0.png'],
-    //     "category": "Halloween Pumpkins",
-    //     "icon": "./icons/pumpkin.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -382,
-    //     "yPos": 695.75
-    // },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>Outside the front door.",
+        "related_images" : ['./images/pumpkin0_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 6.8,
+        "yPos": -0.2
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>Hidden in a locker close to the front door.",
+        "related_images" : ['./images/pumpkin1_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": -6.1,
+        "yPos": 10.7
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>Spawns in the middle of the air and falls into the river.",
+        "related_images" : [],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": -64.7,
+        "yPos": 7.5
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On the parking lot.",
+        "related_images" : ['./images/pumpkin3_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 10.2,
+        "yPos": 20.2
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On top of a pole. Good luck. Maybe try stacking some boxes.",
+        "related_images" : ['./images/pumpkin4_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 30,
+        "yPos": -13
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>Resting beside a boulder.",
+        "related_images" : ['./images/pumpkin5_0.png', './images/pumpkin5_1.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 265.6,
+        "yPos": -6.7
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>At the bottom of the river.",
+        "related_images" : ['./images/pumpkin6_0.png', './images/pumpkin6_1.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 175.9,
+        "yPos": -126.2
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On top of the hill.",
+        "related_images" : ['./images/pumpkin7_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": -191.6,
+        "yPos": -238.2
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>Behind the top room of Juliett. Crouch under the railing to access.",
+        "related_images" : ['./images/pumpkin8_0.png', './images/pumpkin8_1.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": -103.3,
+        "yPos": 199.5
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On the base of Whiskey.",
+        "related_images" : ['./images/pumpkin9_0.png', './images/pumpkin9_1.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 2.5,
+        "yPos": 503.5
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On the road leading up to Victor.",
+        "related_images" : ['./images/pumpkin10_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 465.8,
+        "yPos": 513.9
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On the border wall.",
+        "related_images" : ['./images/pumpkin11_0.png', './images/pumpkin11_1.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 534,
+        "yPos": -699.2
+    },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>At the checkpoint, next to where you spawn in.",
+        "related_images" : ['./images/pumpkin12_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": -382,
+        "yPos": 695.75
+    },
     // Items of interest
     {
         "name": "Shovel",
