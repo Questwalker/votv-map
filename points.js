@@ -403,7 +403,7 @@ const points = [
     },
     {
         "name": "Blue Argemia",
-        "description": "At the bottom of the river, near quebec. Depending on your graphics settings, the plush might appear <i>in</i> the ground and may require you to scour the riverbed while crouching to find it.",
+        "description": "At the bottom of the river, near quebec. Depending on your graphics settings, the plush might appear <i>in</i> the ground and may require you to scour the riverbed to find it.<br><br><u>Note</u>: Due to the map changes in v8.0, the plushie may have been pulled down the river by the current. Make sure to inspect a good distance up-stream if you can't find it.",
         "related_images" : ['./images/blueArgemia1_1.png', './images/blueArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/blue_argemia.png",
@@ -747,7 +747,7 @@ const points = [
     },
     {
         "name": "Transformer #1",
-        "description": "Target with <i>sv.target TF_1</i>.<br>Supplies and explosive items are strewn throughout the building. Inside, you can find some partially-filled gas cans, a toolbox, and a lighter and molotov recipe on the desk.",
+        "description": "Target with <i>sv.target TF_1</i>.<br>Supplies and explosive items are strewn throughout the building. Inside, you can find some partially-filled gas cans and a toolbox, and you can find a lighter and instructions on how to make molotovs on the desk.",
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer1.png",
@@ -767,7 +767,7 @@ const points = [
     },
     {
         "name": "Transformer #3",
-        "description": "Target with <i>sv.target TF_3</i>.<br>Garbage litters the area and the door is boarded up, which forces you to enter with a carefully-placed crouch jump, a crowbar, or by using the vent on the side of the building. A full gas can and some batteries can be found in the supply room. A cat bed for Maxwell can be found behind a pallet.",
+        "description": "Target with <i>sv.target TF_3</i>.<br>Garbage litters the area and the door is boarded up, which forces you to enter with a carefully-placed crouch jump, a crowbar, or by using the vent on the side of the building. A full gas can and some batteries can be found in the supply room, and there's instructions on how to make a cooler under some of the garbage. A cat bed for Maxwell can be found behind a pallet.",
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer3.png",
