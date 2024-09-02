@@ -513,26 +513,6 @@ const points = [
         "yPos": 265.7
     },
     {
-        "name": "Nuclear Barrels",
-        "description": "",
-        "related_images" : [],
-        "category": "Points of Interest",
-        "icon": "./icons/barrel.png",
-        "positioning": "positioned_on_top",
-        "xPos": 570.6,
-        "yPos": -517.2
-    },
-    {
-        "name": "Abandoned Car",
-        "description": "",
-        "related_images" : [],
-        "category": "Points of Interest",
-        "icon": "./icons/car.png",
-        "positioning": "positioned_on_top",
-        "xPos": -210.3,
-        "yPos": 306.8
-    },
-    {
         "name": "Bunker",
         "description": "",
         "related_images" : [],
@@ -544,7 +524,7 @@ const points = [
     },
     {
         "name": "Picnic",
-        "description": "Appears on day 10",
+        "description": "Appears on day 8",
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/picnic_blanket.png",
@@ -946,6 +926,16 @@ const points = [
         "positioning": "positioned_on_top",
         "xPos": 409.1,
         "yPos": 22.5
+    },
+    {
+        "name": "Shovel",
+        "description": "Inside the building. You can break the door by hitting it with a crowbar, shovel, etc.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/shovel.png",
+        "positioning": "positioned_on_top",
+        "xPos": -362,
+        "yPos": 702.6
     },
     {
         "name": "Cacti",
