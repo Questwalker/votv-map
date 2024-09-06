@@ -281,7 +281,7 @@ const points = [
     },
     {
         "name": "Furfur Totem",
-        "description": "Can be dug up close to the root around 3am.",
+        "description": "Can be dug up close to the root around 3am. You may need scuba gear to do it.",
         "related_images" : ['./images/furfur3_1.png'],
         "category": "Furfur Totems",
         "icon": "./icons/furfurA_2.png",
@@ -685,7 +685,7 @@ const points = [
     },
     {
         "name": "Burger",
-        "description": "On the ground in front of the desk.",
+        "description": "On the ground under the generator.",
         "related_images" : [],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
@@ -999,7 +999,7 @@ const points = [
     },
     {
         "name": "Pickaxe",
-        "description": "Stuck in the ground next to a underwater branch.",
+        "description": "Stuck in the ground next to a underwater root. You may need scuba gear to reach it.",
         "related_images" : [],
         "category": "",
         "icon": "./icons/pickaxe.png",
@@ -1039,7 +1039,7 @@ const points = [
     },
     {
         "name": "Bike Helmet",
-        "description": "The bike helmet protects your head, which can decrease your damage taken from impacts. You can reach it by climbing up or grappling down the cliff using a hook.",
+        "description": "The bike helmet protects your head, which can decrease your damage taken from impacts. You can reach it by climbing up or grappling down the cliff using a hook, or by very carefully sliding down.",
         "related_images" : ['./images/helmet1_1.png', './images/helmet1_2.png', './images/helmet1_3.png'],
         "category": "",
         "icon": "./icons/helmet.png",

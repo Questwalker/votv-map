@@ -105,13 +105,15 @@ Also, sidenote, but the drive that was removed in commit <a href="https://github
 Also also, I might look at some javascript libraries so I can make a better changelog page too.<br>
 Also also <i>also</i>, I am hoping to implement some sort of localstorage system soon, so that what points are shown and hidden is saved even when the page is reloaded. Hopefully I'll be able to expand this later on to save various settings and stuff.<br><br>
 
-<span class="time">8/19/2024 1724118419845</span>: Re-added the Halloween pumpkins, and updated all the images for them all.
+<span class="time">8/19/2024 1724118419845</span>: Re-added the Halloween pumpkins, and updated all the images for them all.<br><br>
+
+<span class="time">8/19/2024 1724118419845</span>: Behold! A orthographic map image! I decided to get into Unreal modding and was able to make a small mod that can toggle the camera between orthographic and perspective, change the "zoom" with some hotkeys + modifiers, and can center and rotate the camera with a few other hotkeys. This was my first time ever modding and my first time ever using the Unreal Engine, so I am quite proud it went so well.<br>
+I am somewhat concerned about the visibility of some of the points. I feel like some points have gotten hard to see with the new image. However, I think that the benefits here outweigh the offsets, because I think the map has become <b><i><u>much</u></i></b> more understandable now. Nevertheless, I have done some <i>very</i> small editing to reduce some of the visual noise, especially on the lake.<br>
+I've also adjusted the images and descriptions for some points.
 
 <br><br><hr>
 Features/bugs to add/fix:<br>
 > Add a favicon?<br>
-> Map scaling; Map zoom in & out with pinching or scrolling<br>
-> Get a orthographic picture of the map to use instead of the current grayscale one.<br>
 > Investigate the monoliths and mark their locations<br>
 > when contained points are all set to hidden or shown manually, display the change on the button<br>
 > when contained points are a mixture of hidden and shown, display button with a slight gray<br>
@@ -122,13 +124,15 @@ Features/bugs to add/fix:<br>
 > A small field where a user can input their own coordinates and get a marker on the map of where they are<br>
 > Locations of papers<br>
 > Show what category the point is in the information tab.<br>
-> Little tab placed above points when you click on them.<br>
 > Points in the points tab should be clickable. Clicking them should open the information tab and show the indicator tab above the point.<br>
 > A selected point should have its z-index changed so it lays on top of all other points<br>
 > Be able to mark spoiler text, similar to discord<br>
 > I could add points for various event locations, like what I did with the picnic<br>
 > <b>Major rework of points lines and references code needed.</b><br>
-> A button to minimize the sidebar
+> A button to shrink the sidebar<br>
+> Leaflet rework:<br>
+>&nbsp;&nbsp;Map scaling; Map zoom in & out with pinching or scrolling<br>
+>&nbsp;&nbsp;Little tab placed above points when you click on them.<br>
 </div>
 <script>
     Array.from(document.getElementsByClassName('time')).forEach(element => {
