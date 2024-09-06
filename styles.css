@@ -254,3 +254,25 @@ body {
         display: none;
     }
 }
+
+/* Rainbow link */
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+.rainbow_link {
+    background: linear-gradient(90deg, #9191ff, #18a3ff , #19ff19, #ff51a8, #7e7eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 5s ease-in-out infinite;
+    background-size: 400% 100%;
+    text-decoration-color: green;
+}
