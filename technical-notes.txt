@@ -1,8 +1,0 @@
-
- Naming standard for images belonging to points
-Points images are named using camelCase followed immediately with a number indicating their which number of point it belongs to, followed again with an underscore and another number indicating the image's order in the images. 
-The first number is helpful in case that there happens to be multiple points of the same type (for example, tile1 and tile2), while the second number shows in what order are the images shown if multiple are present. These numbers must always be for the sake or uniformity.
-If an image has been edited, then a unedited version of that image must also be included with the label "-orig" appended to the name.
-
-
-

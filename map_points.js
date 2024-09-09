@@ -1,10 +1,84 @@
 const map_size = 896;
 var references = {}
+// var references = {
+//     "category_satellite_dishes": {
+//         "categoryhead": Object,
+//         "entrycontainer": Object,
+//         1: {
+//             "point": Object,
+//             "entry": Object
+//         },
+//         2: {
+//             "point": Object,
+//             "entry": Object
+//         }
+//     }
+// }
+
+function hideEntries(element) {
+    let entrycontainer = references[element.parentElement.parentElement.id]['entrycontainer']
+    if (entrycontainer.classList.contains('hidden')) {
+        // unhide
+        entrycontainer.classList.remove('hidden')
+        element.innerHTML = '&nbsp;▼'
+    } else {
+        // hide
+        entrycontainer.classList.add('hidden')
+        element.innerHTML = '&nbsp;-'
+    }
+}
+
+function hideCategory(element) {
+    let id = element.parentElement.parentElement.id
+    let force
+    if (element.innerText == '[H]') {
+        // unhide points
+        element.innerText = '[S]'
+        element.classList.remove('gray')
+        force = 'show'
+    } else {
+        // hide points
+        element.innerText = '[H]'
+        element.classList.add('gray')
+        force = 'hide'
+    }
+    Object.keys(references[id]).forEach(key => {
+        if (!isNaN(key) && !isNaN(parseFloat(key))) {
+            // it is a number
+            // TODO: Make this IF statement unnessessary by spliting the pointindexes into a subcategory of references
+            hidePoint(id, key, force=force)
+        }
+    });
+}
+
+function hidePointCommand(element) {
+    hidePoint(element.parentElement.parentElement.parentElement.id, element.dataset.pointindex)
+}
+
+function hidePoint(id, pointindex, force=undefined) {
+    let point = references[id][pointindex]['point']
+    let button = references[id][pointindex]['entry'].querySelector('[data-pointindex]')
+    if ((point.classList.contains('hidden') || force == 'show') && (force != 'hide')) {
+        // unhide point
+        button.innerText = '[S]'
+        button.classList.remove('gray')
+        point.classList.remove('hidden')
+    } else {
+        // hide point
+        button.innerText = '[H]'
+        button.classList.add('gray')
+        point.classList.add('hidden')
+    }
+}
+
+
 
 // creating the points on the map
 points.forEach((data, pointindex) => {
-    let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replace(' ','_') : 'miscellaneous'}`
+    // creates the category tag that the point will be sorted into
+    let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
 
+    // Create element. Add classes, add positioning, add pointindex data, prevent dragging, add icon, and add the element to the website
     let pointelement = document.createElement('img');
     pointelement.classList.add('image_label')
     pointelement.classList.add(data.positioning)
@@ -15,18 +89,24 @@ points.forEach((data, pointindex) => {
     pointelement.src = data.icon
     map_container.appendChild(pointelement)
 
+
+
+
+
     // generate entries for points tab
     //  category detection
-    if (document.getElementById(categoryname) == null) {
-        // doesn't exist, create containing category element
+    if (document.getElementById(categoryname) == null) { // if category entry does not exist yet..
+        // create containing category element
         let parentelement = document.createElement('div')
         parentelement.id = categoryname
 
+        //
         let headelement = document.createElement('div')
         headelement.classList.add('pointlist_category')
 
         // hide / show button
         let headelement_visiblitybutton = document.createElement('div')
+        headelement_visiblitybutton.classList.add('showhidebutton')
         headelement_visiblitybutton.classList.add('pointercursor')
         headelement_visiblitybutton.classList.add('unselectable')
         headelement_visiblitybutton.setAttribute('onclick', "hideCategory(this)")
@@ -81,78 +161,13 @@ points.forEach((data, pointindex) => {
     // store reference, add child
     references[categoryname][pointindex] = {'entry': entryelement, 'point': pointelement}
     references[categoryname]['entrycontainer'].appendChild(entryelement)
+
+
+
+
+
+    
 })
-
-function hideEntries(element) {
-    let entrycontainer = references[element.parentElement.parentElement.id]['entrycontainer']
-    if (entrycontainer.classList.contains('hidden')) {
-        // unhide
-        entrycontainer.classList.remove('hidden')
-        element.innerHTML = '&nbsp;▼'
-    } else {
-        // hide
-        entrycontainer.classList.add('hidden')
-        element.innerHTML = '&nbsp;-'
-    }
-}
-
-// var references = {
-//     "category_satellite_dishes": {
-//         "categoryhead": Object,
-//         "entrycontainer": Object,
-//         1: {
-//             "point": Object,
-//             "entry": Object
-//         },
-//         2: {
-//             "point": Object,
-//             "entry": Object
-//         }
-//     }
-// }
-
-function hideCategory(element) {
-    let id = element.parentElement.parentElement.id
-    let force
-    if (element.innerText == '[H]') {
-        // unhide points
-        element.innerText = '[S]'
-        element.classList.remove('gray')
-        force = 'show'
-    } else {
-        // hide points
-        element.innerText = '[H]'
-        element.classList.add('gray')
-        force = 'hide'
-    }
-    Object.keys(references[id]).forEach(key => {
-        if (!isNaN(key) && !isNaN(parseFloat(key))) {
-            // it is a number
-            // TODO: Make this IF statement unnessessary by spliting the pointindexes into a subcategory of references
-            hidePoint(id, key, force=force)
-        }
-    });
-}
-
-function hidePointCommand(element) {
-    hidePoint(element.parentElement.parentElement.parentElement.id, element.dataset.pointindex)
-}
-
-function hidePoint(id, pointindex, force=undefined) {
-    let point = references[id][pointindex]['point']
-    let button = references[id][pointindex]['entry']//.querySelector('[data-pointindex]')
-    if ((point.classList.contains('hidden') || force == 'show') && (force != 'hide')) {
-        // unhide point
-        button.innerText = '[S]'
-        button.classList.remove('gray')
-        point.classList.remove('hidden')
-    } else {
-        // hide point
-        button.innerText = '[H]'
-        button.classList.add('gray')
-        point.classList.add('hidden')
-    }
-}
 
 lines.forEach((data, lineindex) => {
     ctx.beginPath();
@@ -180,10 +195,7 @@ lines.forEach((data, lineindex) => {
 
 
 // hide categories by default
-
-// TODO: jesus christ make a better way of doing this
-
-hideCategory(references.category_chicken_burgers['70'].entry)
-hideCategory(references.category_halloween_pumpkins['80'].entry)
-
+// TODO: make a better way of doing this
+hideCategory(references.category_chicken_burgers.categoryhead.querySelector('.showhidebutton'))
+hideCategory(references.category_halloween_pumpkins.categoryhead.querySelector('.showhidebutton'))
 // console.log(references)
