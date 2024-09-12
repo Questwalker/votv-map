@@ -403,7 +403,7 @@ const points = [
     },
     {
         "name": "Blue Argemia",
-        "description": "At the bottom of the river, near quebec. Depending on your graphics settings, the plush might appear <i>in</i> the ground and may require you to scour the riverbed to find it.<br><br><u>Note</u>: Due to the map changes in v8.0, the plushie may have been pulled down the river by the current. Make sure to inspect a good distance up-stream if you can't find it.",
+        "description": "In the river near quebec.<br><br><u>Note</u>: Due to the map changes in v8.0, the plushie may have been pulled down the river by the current. Make sure to inspect a good distance up-stream if you can't find it.",
         "related_images" : ['./images/blueArgemia1_1.png', './images/blueArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/blue_argemia.png",
@@ -544,9 +544,9 @@ const points = [
     },
     // Chicken Burgers
     {
-        "name": "Burger",
+        "name": "Burger #1",
         "description": "On top of the servers.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger1_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -554,9 +554,9 @@ const points = [
         "yPos": 27.5
     },
     {
-        "name": "Burger",
+        "name": "Burger #2",
         "description": "Inside the oven.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger2_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -564,9 +564,9 @@ const points = [
         "yPos": 8.8
     },
     {
-        "name": "Burger",
+        "name": "Burger #3",
         "description": "On top of the toilet.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger3_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -574,9 +574,9 @@ const points = [
         "yPos": -0.1
     },
     {
-        "name": "Burger",
+        "name": "Burger #4",
         "description": "On the radio tower of top of one of the antennas. You can climb the pole with a hook to reach it.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger4_0.png", "./burgers/burger4_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -584,9 +584,9 @@ const points = [
         "yPos": -29.5
     },
     {
-        "name": "Burger",
+        "name": "Burger #5",
         "description": "Under the basement stairs.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger5_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -594,9 +594,9 @@ const points = [
         "yPos": 27.1
     },
     {
-        "name": "Burger",
+        "name": "Burger #6",
         "description": "On the roof, on top of the air conditioning system.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger6_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -604,9 +604,9 @@ const points = [
         "yPos": 27.3
     },
     {
-        "name": "Burger",
+        "name": "Burger #7",
         "description": "On top of the Radome.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger7_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -614,9 +614,9 @@ const points = [
         "yPos": 6.4
     },
     {
-        "name": "Burger",
+        "name": "Burger #8",
         "description": "On the roof of the garage in a corner.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger8_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -624,9 +624,9 @@ const points = [
         "yPos": 9.7
     },
     {
-        "name": "Burger",
+        "name": "Burger #9",
         "description": "On top of one of the stone arches.",
-        "related_images" : [],
+        "related_images" : ['./burgers/burger9_0.png'],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -634,9 +634,19 @@ const points = [
         "yPos": 541.1
     },
     {
-        "name": "Burger",
+        "name": "Burger #10",
+        "description": "Under the bridge near the base.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
+        "related_images" : ["./burgers/burger10_0.png"],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": -62.9,
+        "yPos": 12
+    },
+    {
+        "name": "Burger #11",
         "description": "Inside a large log under some rocks.",
-        "related_images" : [],
+        "related_images" : ['./burgers/burger11_0.png', './burgers/burger11_1.png'],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -644,19 +654,19 @@ const points = [
         "yPos": -344.5
     },
     {
-        "name": "Burger",
+        "name": "Burger #12",
         "description": "On top of some supply crates in the poly testing area.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger12_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
         "xPos": 518.5,
-        "yPos": -213.3
+        "yPos": -213.4
     },
     {
-        "name": "Burger",
+        "name": "Burger #13",
         "description": "Inside the old shack, in the corner.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger13_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -664,9 +674,9 @@ const points = [
         "yPos": 24.2
     },
     {
-        "name": "Burger",
-        "description": "Behind transformer 2, on the ground.",
-        "related_images" : [],
+        "name": "Burger #14",
+        "description": "Behind transformer 2, on the roof. Crammed between the wall and some machinery.",
+        "related_images" : ["./burgers/burger14_0.png", "./burgers/burger14_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -674,9 +684,9 @@ const points = [
         "yPos": 236.6
     },
     {
-        "name": "Burger",
+        "name": "Burger #15",
         "description": "Located on the metal walkways that go around Juliett.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger15_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -684,19 +694,19 @@ const points = [
         "yPos": 203.5
     },
     {
-        "name": "Burger",
+        "name": "Burger #16",
         "description": "On the ground under the generator.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger16_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
-        "xPos": -621.6,
-        "yPos": -28.4
+        "xPos": -623,
+        "yPos": -25.7
     },
     {
-        "name": "Burger",
+        "name": "Burger #17",
         "description": "On the ground outside of the cave.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger17_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -704,9 +714,9 @@ const points = [
         "yPos": -587.6
     },
     {
-        "name": "Burger",
+        "name": "Burger #18",
         "description": "Inside the cave, in the middle of a pile of mushrooms.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger18_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -714,9 +724,9 @@ const points = [
         "yPos": -581.8
     },
     {
-        "name": "Burger",
+        "name": "Burger #19",
         "description": "On the ground next to the <i>Unknown Rozital Technology</i>.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger19_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -724,16 +734,25 @@ const points = [
         "yPos": 44
     },
     {
-        "name": "Burger",
+        "name": "Burger #20",
         "description": "Needs to be dug up with a shovel. A metal detector can help in finding it.",
-        "related_images" : [],
+        "related_images" : ["./burgers/burger20_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
         "xPos": 157,
         "yPos": -584.7
     },
-// -655.8, -600.2 : Skull
+    {
+        "name": "Burger #21",
+        "description": "In a group of rocks behind Wiskey.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
+        "related_images" : ["./burgers/burger21_0.png"],
+        "category": "Chicken Burgers",
+        "icon": "./icons/burger.png",
+        "positioning": "positioned_on_top",
+        "xPos": 18.14,
+        "yPos": 529.37
+    },
     // Transformers
     {
         "name": "Power Station",
