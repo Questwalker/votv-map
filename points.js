@@ -546,7 +546,7 @@ const points = [
     {
         "name": "Burger #1",
         "description": "On top of the servers.",
-        "related_images" : ["./images/burger1_0.png"],
+        "related_images" : ["./images/burger1_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -556,7 +556,7 @@ const points = [
     {
         "name": "Burger #2",
         "description": "Inside the oven.",
-        "related_images" : ["./images/burger2_0.png"],
+        "related_images" : ["./images/burger2_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -566,7 +566,7 @@ const points = [
     {
         "name": "Burger #3",
         "description": "On top of the toilet.",
-        "related_images" : ["./images/burger3_0.png"],
+        "related_images" : ["./images/burger3_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -576,7 +576,7 @@ const points = [
     {
         "name": "Burger #4",
         "description": "On the radio tower of top of one of the antennas. You can climb the pole with a hook to reach it.",
-        "related_images" : ["./images/burger4_0.png", "./images/burger4_1.png"],
+        "related_images" : ["./images/burger4_1.png", "./images/burger4_2.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -586,7 +586,7 @@ const points = [
     {
         "name": "Burger #5",
         "description": "Under the basement stairs.",
-        "related_images" : ["./images/burger5_0.png"],
+        "related_images" : ["./images/burger5_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -596,7 +596,7 @@ const points = [
     {
         "name": "Burger #6",
         "description": "On the roof, on top of the air conditioning system.",
-        "related_images" : ["./images/burger6_0.png"],
+        "related_images" : ["./images/burger6_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -606,7 +606,7 @@ const points = [
     {
         "name": "Burger #7",
         "description": "On top of the Radome.",
-        "related_images" : ["./images/burger7_0.png"],
+        "related_images" : ["./images/burger7_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -616,7 +616,7 @@ const points = [
     {
         "name": "Burger #8",
         "description": "On the roof of the garage in a corner.",
-        "related_images" : ["./images/burger8_0.png"],
+        "related_images" : ["./images/burger8_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -626,7 +626,7 @@ const points = [
     {
         "name": "Burger #9",
         "description": "On top of one of the stone arches.",
-        "related_images" : ['./images/burger9_0.png'],
+        "related_images" : ['./images/burger9_1.png'],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -636,7 +636,7 @@ const points = [
     {
         "name": "Burger #10",
         "description": "Under the bridge near the base.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
-        "related_images" : ["./images/burger10_0.png"],
+        "related_images" : ["./images/burger10_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -646,7 +646,7 @@ const points = [
     {
         "name": "Burger #11",
         "description": "Inside the large log under some rocks.",
-        "related_images" : ['./images/burger11_0.png', './images/burger11_1.png'],
+        "related_images" : ['./images/burger11_1.png', './images/burger11_2.png'],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -656,7 +656,7 @@ const points = [
     {
         "name": "Burger #12",
         "description": "On top of some supply crates in the poly testing area.",
-        "related_images" : ["./images/burger12_0.png"],
+        "related_images" : ["./images/burger12_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -666,7 +666,7 @@ const points = [
     {
         "name": "Burger #13",
         "description": "Inside the old shack, in a corner under a table.",
-        "related_images" : ["./images/burger13_0.png"],
+        "related_images" : ["./images/burger13_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -676,7 +676,7 @@ const points = [
     {
         "name": "Burger #14",
         "description": "Behind transformer 2, on the roof. Crammed between the wall and some machinery.",
-        "related_images" : ["./images/burger14_0.png", "./images/burger14_1.png"],
+        "related_images" : ["./images/burger14_1.png", "./images/burger14_2.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -686,7 +686,7 @@ const points = [
     {
         "name": "Burger #15",
         "description": "Located on the metal walkways that go around Juliett.",
-        "related_images" : ["./images/burger15_0.png"],
+        "related_images" : ["./images/burger15_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -696,7 +696,7 @@ const points = [
     {
         "name": "Burger #16",
         "description": "On the ground under the generator.",
-        "related_images" : ["./images/burger16_0.png"],
+        "related_images" : ["./images/burger16_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -706,7 +706,7 @@ const points = [
     {
         "name": "Burger #17",
         "description": "On the ground outside of the cave.",
-        "related_images" : ["./images/burger17_0.png"],
+        "related_images" : ["./images/burger17_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -716,7 +716,7 @@ const points = [
     {
         "name": "Burger #18",
         "description": "Inside the cave, in the middle of a pile of mushrooms.",
-        "related_images" : ["./images/burger18_0.png"],
+        "related_images" : ["./images/burger18_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -726,7 +726,7 @@ const points = [
     {
         "name": "Burger #19",
         "description": "On the ground next to the <i>Unknown Rozital Technology</i>.",
-        "related_images" : ["./images/burger19_0.png"],
+        "related_images" : ["./images/burger19_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -736,7 +736,7 @@ const points = [
     {
         "name": "Burger #20",
         "description": "Needs to be dug up with a shovel. A metal detector can help in finding it.",
-        "related_images" : ["./images/burger20_0.png"],
+        "related_images" : ["./images/burger20_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -746,7 +746,7 @@ const points = [
     {
         "name": "Burger #21",
         "description": "In a group of rocks behind Wiskey.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
-        "related_images" : ["./images/burger21_0.png"],
+        "related_images" : ["./images/burger21_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
@@ -798,7 +798,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>On top of the incinerator.",
-        "related_images" : ['./images/pumpkin0_0.png'],
+        "related_images" : ['./images/pumpkin1_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -808,7 +808,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>In front of the cave entrance.",
-        "related_images" : ['./images/pumpkin1_0.png'],
+        "related_images" : ['./images/pumpkin2_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -818,7 +818,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>At the top of the ladder, inside the wind turbine's nacelle.",
-        "related_images" : ['./images/pumpkin2_0.png'],
+        "related_images" : ['./images/pumpkin3_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -828,7 +828,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>On top of the drain leading into the river.",
-        "related_images" : ['./images/pumpkin3_0.png'],
+        "related_images" : ['./images/pumpkin4_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -848,7 +848,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>Inside the abandoned house.",
-        "related_images" : ['./images/pumpkin5_0.png'],
+        "related_images" : ['./images/pumpkin6_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -858,7 +858,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>Inside the large log under some rocks.",
-        "related_images" : ['./images/pumpkin6_0.png'],
+        "related_images" : ['./images/pumpkin7_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -868,7 +868,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>On the roof of TR_3.",
-        "related_images" : ['./images/pumpkin7_0.png'],
+        "related_images" : ['./images/pumpkin8_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -878,7 +878,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>On top of Stonehenge.",
-        "related_images" : ['./images/pumpkin8_0.png'],
+        "related_images" : ['./images/pumpkin9_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -888,7 +888,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>At the bottom of the well.",
-        "related_images" : ['./images/pumpkin9_0.png'],
+        "related_images" : ['./images/pumpkin10_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -898,7 +898,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>Under the William Statue.",
-        "related_images" : ['./images/pumpkin10_0.png', './images/pumpkin10_1.png'],
+        "related_images" : ['./images/pumpkin11_1.png', './images/pumpkin11_2.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -908,7 +908,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>Outside the construction site cabins.",
-        "related_images" : ['./images/pumpkin11_0.png'],
+        "related_images" : ['./images/pumpkin12_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -918,7 +918,7 @@ const points = [
     {
         "name": "Pumpkin",
         "description": "Exclusive to the Halloween gamemode.<br><br>On top of the utility poles's light.",
-        "related_images" : ['./images/pumpkin12_0.png'],
+        "related_images" : ['./images/pumpkin13_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
         "positioning": "positioned_on_top",
@@ -955,6 +955,26 @@ const points = [
         "positioning": "positioned_on_top",
         "xPos": -362,
         "yPos": 702.6
+    },
+    {
+        "name": "Axe",
+        "description": "Inside the abandoned shack under the bed.",
+        "related_images" : ['./images/axe1_1.png'],
+        "category": "",
+        "icon": "./icons/axe.png",
+        "positioning": "positioned_on_top",
+        "xPos": 406.5,
+        "yPos": 22.5
+    },
+    {
+        "name": "Safe",
+        "description": "Found at the bottom of the lake, it's quite hard to get it out of the water.<br><br>Cracking into the safe is easy.<br>First, grab onto the safe's door and start scrolling in a direction. Go slowly as your mouse wheel can go. As you spin the dial, you will hear clicking. Once you hear a click that is very slightly different, reverse the direction you are scrolling and start spinning in the opposite direction. Continue going back and forth, reversing your scrolling until the safe unlock.<br><br>Inside is a Omega AI Module.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/safe.png",
+        "positioning": "positioned_on_top",
+        "xPos": 404.8,
+        "yPos": -406
     },
     {
         "name": "Cacti",
