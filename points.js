@@ -915,6 +915,16 @@ const points = [
         "xPos": -547,
         "yPos": -56.6
     },
+    {
+        "name": "Pumpkin",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On top of the utility poles's light.",
+        "related_images" : ['./images/pumpkin12_0.png'],
+        "category": "Halloween Pumpkins",
+        "icon": "./icons/pumpkin.png",
+        "positioning": "positioned_on_top",
+        "xPos": 173.9,
+        "yPos": 51.96
+    },
     // Items of interest
     {
         "name": "Shovel",
