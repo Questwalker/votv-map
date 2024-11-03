@@ -917,7 +917,7 @@ const points = [
     },
     {
         "name": "Pumpkin",
-        "description": "Exclusive to the Halloween gamemode.<br><br>On top of the utility poles's light.",
+        "description": "Exclusive to the Halloween gamemode.<br><br>On top of the utility pole's light.",
         "related_images" : ['./images/pumpkin13_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
