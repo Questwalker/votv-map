@@ -119,7 +119,9 @@ I've also adjusted the images and descriptions for some points.<br><br>
 
 <span class="time">11/2/2024 1730534692178</span>: Updated the new Halloween pumpkins for v0.8.1b. Currently the map is missing one pumpkin because I could not find it or get information on it's location. In other news, I'm considering creating a dev branch (however that works) so that I can save my development progress on github and also I won't have to deal with merging issues due to me retroactively making edits to the main branch like I am doing right now, but thats all the news for now. Happy belated Halloween!<br><br>
 
-<span class="time">11/2/2024 1730592735815</span>: Found the last pumpkin! I've realized that I may need to adjust all the electric lines on the map soon, because they might've been moved in the terrian update, but that's for later.
+<span class="time">11/2/2024 1730592735815</span>: Found the last pumpkin! I've realized that I may need to adjust all the electric lines on the map soon, because they might've been moved in the terrian update, but that's for later.<br><br>
+
+<span class="time">11/2/2024 1730600964070</span>: A little bit of cleaning. Some files that were unused were removed and the code was edited to remove some erroneous syntactic leftovers. The old shack and the burger and shovel located in it have been edited to match their new positions, with an all new shack icon too. I've also added a license to the project, GNU-GPLv3. I've meant to do that for a bit, but never got the chance. Axe marker coming soon.
 
 <br><br><hr>
 Features/bugs to add/fix:<br>
@@ -128,8 +130,6 @@ Features/bugs to add/fix:<br>
 > when contained points are all set to hidden or shown manually, display the change on the button<br>
 > when contained points are a mixture of hidden and shown, display button with a slight gray<br>
 > ^ when a gray button is clicked, hide all<br>
-> <b>Indicator (highlight the point?) to show when a point is selected.</b><br>
-> Select points from the points tab<br> <!-- Not needed? -->
 > Add next and previous buttons on the image preview (to accommodate touch screen users)<br>
 > A small field where a user can input their own coordinates and get a marker on the map of where they are<br>
 > Locations of papers<br>
@@ -137,13 +137,14 @@ Features/bugs to add/fix:<br>
 > Points in the points tab should be clickable. Clicking them should open the information tab and show the indicator tab above the point.<br>
 > A selected point should have its z-index changed so it lays on top of all other points<br>
 > Be able to mark spoiler text, similar to discord<br>
-> I could add points for various event locations, like what I did with the picnic<br>
+> Possibly add points for various event locations, like what I did with the picnic<br>
 > <b>Major rework of points lines and references code needed.</b><br>
 > Links to github commits in the changelog<br>
 > A button to shrink the sidebar<br>
 > Leaflet rework:<br>
->&nbsp;&nbsp;Map scaling; Map zoom in & out with pinching or scrolling<br>
->&nbsp;&nbsp;Little tab placed above points when you click on them.<br>
+>&nbsp;&nbsp;Map scaling; Map zoom in & out with pinching or scrolling (Done in development)<br>
+>&nbsp;&nbsp;Little tab placed above points when you click on them. (Done in development)<br>
+>&nbsp;&nbsp;User settings and local storage. (Code done, testing in development)<br>
 </div>
 <script>
     Array.from(document.getElementsByClassName('time')).forEach(element => {

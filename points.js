@@ -484,13 +484,13 @@ const points = [
     },
     {
         "name": "Old Shack",
-        "description": "A dilapidated, old shack sits in the middle of the woods, and inside, a scorch mark stains the smooth dirt ground. From the mark sprouts a vibrant blood-red tree.<br>The air is strong here...",
+        "description": "A dilapidated, old shack sits in the middle of the woods, and inside sprouts a small, blood-red tree.<br>The air feels electric..",
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/shack.png",
         "positioning": "positioned_on_top",
-        "xPos": 408.5,
-        "yPos": 24.3
+        "xPos": 408.45,
+        "yPos": 24.44
     },
     {
         "name": "Abandoned House",
@@ -665,13 +665,13 @@ const points = [
     },
     {
         "name": "Burger #13",
-        "description": "Inside the old shack, in the corner.",
+        "description": "Inside the old shack, in a corner under a table.",
         "related_images" : ["./images/burger13_0.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
         "positioning": "positioned_on_top",
-        "xPos": 405.6,
-        "yPos": 24.2
+        "xPos": 408.95,
+        "yPos": 24.1
     },
     {
         "name": "Burger #14",
@@ -928,7 +928,7 @@ const points = [
     // Items of interest
     {
         "name": "Shovel",
-        "description": "Found leaning on 3 supply boxes next to stonehenge",
+        "description": "Found leaning on 3 supply boxes next to stonehenge.",
         "related_images" : ['./images/shovel1_1.png'],
         "category": "",
         "icon": "./icons/shovel.png",
@@ -938,13 +938,13 @@ const points = [
     },
     {
         "name": "Shovel",
-        "description": "Inside the tree",
+        "description": "Leaning against the wall, next to the red tree.",
         "related_images" : [],
         "category": "",
         "icon": "./icons/shovel.png",
         "positioning": "positioned_on_top",
-        "xPos": 409.1,
-        "yPos": 22.5
+        "xPos": 408.36,
+        "yPos": 20.95
     },
     {
         "name": "Shovel",

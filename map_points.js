@@ -1,4 +1,4 @@
-const map_size = 896;
+const map_size = 896
 var references = {}
 // var references = {
 //     "category_satellite_dishes": {
@@ -48,7 +48,7 @@ function hideCategory(element) {
             // TODO: Make this IF statement unnessessary by spliting the pointindexes into a subcategory of references
             hidePoint(id, key, force=force)
         }
-    });
+    })
 }
 
 function hidePointCommand(element) {
@@ -79,13 +79,13 @@ points.forEach((data, pointindex) => {
     let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
 
     // Create element. Add classes, add positioning, add pointindex data, prevent dragging, add icon, and add the element to the website
-    let pointelement = document.createElement('img');
+    let pointelement = document.createElement('img')
     pointelement.classList.add('image_label')
     pointelement.classList.add(data.positioning)
-    pointelement.style.left = ((((data.xPos + 745) / 1490) * map_size) + 896).toString()+'px';
-    pointelement.style.top = ((((data.yPos + 745) / 1490) * map_size) + 896).toString()+'px';
+    pointelement.style.left = ((((data.xPos + 745) / 1490) * map_size) + 896).toString()+'px'
+    pointelement.style.top = ((((data.yPos + 745) / 1490) * map_size) + 896).toString()+'px'
     pointelement.dataset.pointindex = pointindex
-    pointelement.ondragstart = () => { return false; }
+    pointelement.ondragstart = () => { return false }
     pointelement.src = data.icon
     map_container.appendChild(pointelement)
 
@@ -170,24 +170,24 @@ points.forEach((data, pointindex) => {
 })
 
 lines.forEach((data, lineindex) => {
-    ctx.beginPath();
+    ctx.beginPath()
     data['coordinates'].forEach((coords, index) => {
         if (index == 0) {
-            ctx.moveTo(((coords[0]+745)/1490)*map_size+896, ((coords[1]+745)/1490)*map_size+896);
+            ctx.moveTo(((coords[0]+745)/1490)*map_size+896, ((coords[1]+745)/1490)*map_size+896)
         } else {
-            ctx.lineTo(((coords[0]+745)/1490)*map_size+896, ((coords[1]+745)/1490)*map_size+896);
+            ctx.lineTo(((coords[0]+745)/1490)*map_size+896, ((coords[1]+745)/1490)*map_size+896)
         }
     })
     if (!(data['fill'] == undefined)) {
-        ctx.closePath();
-        ctx.fillStyle = data['fill'];
-        ctx.fill();
+        ctx.closePath()
+        ctx.fillStyle = data['fill']
+        ctx.fill()
     }
-    ctx.lineWidth = data['linethickness'];
-    ctx.strokeStyle = data['color'];
-    ctx.lineCap = "square";
-    ctx.lineJoin = "miter";
-    ctx.stroke();
+    ctx.lineWidth = data['linethickness']
+    ctx.strokeStyle = data['color']
+    ctx.lineCap = "square"
+    ctx.lineJoin = "miter"
+    ctx.stroke()
 })
 
 
