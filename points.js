@@ -953,8 +953,8 @@ const points = [
         "category": "",
         "icon": "./icons/shovel.png",
         "positioning": "positioned_on_top",
-        "xPos": -362,
-        "yPos": 702.6
+        "xPos": -369.12,
+        "yPos": 702.32
     },
     {
         "name": "Cacti",
