@@ -77,7 +77,7 @@ Not 100% sure everything is fixed here, but I need to push this update out soon.
 - Updated descriptions for Metal Tile #9, Glowing Blue Argemia, Antibreather Plush, Picnic<br>
 - Updated images for Glowing Blue Argemia, Antibreather Plush<br>
 - Moved point for Antibreather Plush, readjusted point for Glowing Cyan Argemia plush<br>
-- Added points for Pickaxe, Candle Holder, Argemia Mug, Gravesite, and Fishing Supplies<br>
+- Added points for Pickaxe, Candle Holder, Argemia Mug, Grave site, and Fishing Supplies<br>
 - Removed point for the drive next to the base (the drive actually still exists, but it cannot be dug up normally without getting out of bounds)<br>
 - Added lines for the ritual area.<br>
 - Tweaked the width required to switch ui arrangement<br>
@@ -98,10 +98,10 @@ Next up, I really want to work on cleaning up the points UI and rewriting the po
 - Updated the description and images for the bone box.<br>
 - Updated the description for TR_3 to include info about the cat bed.<br>
 - The abandoned house has been added as a point with an icon, and the description for the old shack was <i>very</i> slightly tweaked.<br>
-This map has had points for all of the chicken burgers for a while now, but they were disabled since they visually polluted the map a lot and I didn't have much of a solution to fix that back then. Now, I have re-added (most) of the chicken burgers with their new descriptions and locations, and I've got them hidden by default using the same method I did with the pumpkins. On the flipside, the pumpkins have not been updated for a while and I anticipate that many of them are incorrect now, so I've disabled them for now. Note that, as of the most current update, two of the burgers have been moved to unknown locations, so there are two missing burger points on the map. I will add those new burgers to the map as soon as they are found.<br>
+This map has had points for all of the chicken burgers for a while now, but they were disabled since they visually polluted the map a lot and I didn't have much of a solution to fix that back then. Now, I have re-added (most) of the chicken burgers with their new descriptions and locations, and I've got them hidden by default using the same method I did with the pumpkins. On the flip side, the pumpkins have not been updated for a while and I anticipate that many of them are incorrect now, so I've disabled them for now. Note that, as of the most current update, two of the burgers have been moved to unknown locations, so there are two missing burger points on the map. I will add those new burgers to the map as soon as they are found.<br>
 Now for another important message: There are no definitive plans yet, but I am looking into third-party javascript libraries than will be able to show a map better than I can. I am aware that my map is currently missing many features, namely, zoom. I have mostly been avoiding trying to improve my map (because javascript is horrible and terrifying), and I know that has been inconveniencing my users, so I will most likely move to using a library (I am currently looking into Leaflet.js) so that I can focus better on improving other parts of the map.<br>
 I am also contemplating moving all image files to the webp format so that they load better and faster without taking up too much bandwidth.<br>
-Also, sidenote, but the drive that was removed in commit <a href="https://github.com/Questwalker/votv-map/commit/720f7906933033a154398f74f218ff8788ec5e89">720f790</a> has been moved to an accessible location now, so I've restored it with a new icon and description!<br>
+Also, side note, but the drive that was removed in commit <a href="https://github.com/Questwalker/votv-map/commit/720f7906933033a154398f74f218ff8788ec5e89">720f790</a> has been moved to an accessible location now, so I've restored it with a new icon and description!<br>
 Also also, I might look at some javascript libraries so I can make a better changelog page too.<br>
 Also also <i>also</i>, I am hoping to implement some sort of localstorage system soon, so that what points are shown and hidden is saved even when the page is reloaded. Hopefully I'll be able to expand this later on to save various settings and stuff.<br><br>
 
@@ -119,11 +119,13 @@ I've also adjusted the images and descriptions for some points.<br><br>
 
 <span class="time">11/2/2024 1730534692178</span>: Updated the new Halloween pumpkins for v0.8.1b. Currently the map is missing one pumpkin because I could not find it or get information on it's location. In other news, I'm considering creating a dev branch (however that works) so that I can save my development progress on github and also I won't have to deal with merging issues due to me retroactively making edits to the main branch like I am doing right now, but thats all the news for now. Happy belated Halloween!<br><br>
 
-<span class="time">11/2/2024 1730592735815</span>: Found the last pumpkin! I've realized that I may need to adjust all the electric lines on the map soon, because they might've been moved in the terrian update, but that's for later.<br><br>
+<span class="time">11/2/2024 1730592735815</span>: Found the last pumpkin! I've realized that I may need to adjust all the electric lines on the map soon, because they might've been moved in the terrain update, but that's for later.<br><br>
 
 <span class="time">11/2/2024 1730600964070</span>: A little bit of cleaning. Some files that were unused were removed and the code was edited to remove some erroneous syntactic leftovers. The old shack and the burger and shovel located in it have been edited to match their new positions, with an all new shack icon too. I've also added a license to the project, GNU-GPLv3. I've meant to do that for a bit, but never got the chance. Axe marker coming soon.<br><br>
 
-<span class="time">11/2/2024 1730608622234</span>: Noticed that I incorrectly named many of the image files. Fixed now. VSCode is garbage so I had to manually rename all of the pumpkin and burger images individually with the command line. Additionally, added markers for the axe in the shack and the safe in the lake. Finally, I've edited the map image to 'soften' up the pixels in lake a little bit. Now it looks a little easier to look at.
+<span class="time">11/2/2024 1730608622234</span>: Noticed that I incorrectly named many of the image files. Fixed now. VSCode is garbage so I had to manually rename all of the pumpkin and burger images individually with the command line. Additionally, added markers for the axe in the shack and the safe in the lake. Finally, I've edited the map image to 'soften' up the pixels in lake a little bit. Now it looks a little easier to look at.<br><br>
+
+<span class="time">11/20/2024 1732130000950</span>: Added markers for 7 of the skulls on the map. While I was at it, I noticed that the radioactive capsule images were extremely old, so I've updated them. In other news, I've created a new <i>dev</i> branch on the project (<a href="https://github.com/Questwalker/votv-map/tree/dev">here</a>). I've created it so people can have a look into the map's development and can see what progress I've been making. I've also added a cool list of tools and such that I use while developing this map to the README, so you can see what I like to use.
 
 <br><br><hr>
 Features/bugs to add/fix:<br>

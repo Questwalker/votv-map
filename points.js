@@ -794,6 +794,77 @@ const points = [
         "xPos": -396.5,
         "yPos": -480.1
     },
+    // Skulls
+    {
+        "name": "Skull",
+        "description": "Behind the boxes in the corner of the basement.",
+        "related_images" : ['./images/skull1_1.png'],
+        "category": "Skulls",
+        "icon": "./icons/skull.png",
+        "positioning": "positioned_on_top",
+        "xPos": -7.25,
+        "yPos": 19.74
+    },
+    {
+        "name": "Skull",
+        "description": "Dug up from under the Unknown Rozital Technology.",
+        "related_images" : ['./images/skull2_1.png'],
+        "category": "Skulls",
+        "icon": "./icons/skull.png",
+        "positioning": "positioned_on_top",
+        "xPos": 637.54,
+        "yPos": 44.2
+    },
+    {
+        "name": "Skull",
+        "description": "At Stonehenge.",
+        "related_images" : ['./images/skull3_1.png'],
+        "category": "Skulls",
+        "icon": "./icons/skull.png",
+        "positioning": "positioned_on_top",
+        "xPos": 212.27,
+        "yPos": 541.1
+    },
+    {
+        "name": "Skull",
+        "description": "Inside the gravel circle.",
+        "related_images" : ['./images/skull4_1.png'],
+        "category": "Skulls",
+        "icon": "./icons/skull.png",
+        "positioning": "positioned_on_top",
+        "xPos": -352,
+        "yPos": 47.4
+    },
+    {
+        "name": "Skull",
+        "description": "Inside the Box of Bones.",
+        "related_images" : ['./images/boneBox1_3.png'],
+        "category": "Skulls",
+        "icon": "./icons/skull.png",
+        "positioning": "positioned_on_top",
+        "xPos": 262,
+        "yPos": -6.5
+    },
+    {
+        "name": "Skull",
+        "description": "Near the radioactive capsule.",
+        "related_images" : ['./images/skull5_1.png'],
+        "category": "Skulls",
+        "icon": "./icons/skull.png",
+        "positioning": "positioned_on_top",
+        "xPos": -570,
+        "yPos": 302.76
+    },
+    {
+        "name": "Skull",
+        "description": "Inside the cave entrance.",
+        "related_images" : ['./images/skull6_1.png'],
+        "category": "Skulls",
+        "icon": "./icons/skull.png",
+        "positioning": "positioned_on_top",
+        "xPos": -655.93,
+        "yPos": -600.3
+    },
     // Halloween Pumpkins
     {
         "name": "Pumpkin",
@@ -1019,7 +1090,7 @@ const points = [
     {
         "name": "Radioactive Capsule",
         "description": "Located in the middle of a dirt patch with a skeleton reaching out placed next to it. Needs a shovel to get it out of the ground",
-        "related_images" : ['./images/radioactiveObject1_1.png', './images/radioactiveObject1_2.png', './images/radioactiveObject1_3.png'],
+        "related_images" : ['./images/radioactiveCapsule1_1.png', './images/radioactiveCapsule1_2.png', './images/radioactiveCapsule1_3.png'],
         "category": "",
         "icon": "./icons/radioactive_canister.png",
         "positioning": "positioned_on_top",
