@@ -1,0 +1,120 @@
+html {
+    color-scheme: dark;
+    font-family: monospace;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Points panel */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.item {
+    height: 45px;
+    box-sizing: border-box;
+    max-width: 50%;
+    flex: 1 1 50%;
+    padding: 5px;
+}
+
+.itembutton {
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 1px solid green;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.itembutton:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+}
+
+.itembuttonactive {
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+.itembuttonactive:hover {
+    background-color: rgba(56, 96, 56, 0.5);
+}
+
+.itembutton_imagecontainer {
+    height: 100%;
+    aspect-ratio: 1;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.itembutton_image {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.itembutton_description {
+    overflow: hidden;
+    text-overflow: clip;
+    padding-left: 5px;
+    padding-top: 1px;
+    white-space: nowrap;
+}
+
+
+
+.selectionheader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* padding-top: 20px; */
+}
+
+.selectiontext {
+    line-height: 130%;
+    text-align: left;
+    font-size: 105%;
+    flex: 1;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 8px;
+    padding-top: 1px;
+    margin-right: 5px;
+}
+
+.selectionbuttons {
+    box-sizing: border-box;
+    border: 1px solid green;
+    text-align: center;
+    margin-right: 5px;
+    padding: 5px;
+    cursor: pointer;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.selectionbuttons:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+}
+
+.selectionbuttons:active {
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+
+
