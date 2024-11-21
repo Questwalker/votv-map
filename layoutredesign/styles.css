@@ -117,7 +117,6 @@ body {
     padding: 8px;
     align-items: center;
 }
-
 .category_parentbutton {
     cursor: pointer;
     padding: 4px;
@@ -141,16 +140,7 @@ body {
 
 
 
-.category_child {
-    display: flex;
-    border: 1px solid green;
-    border-top: 0;
-    margin-left: 8px;
-    padding: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+
 
 
 

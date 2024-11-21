@@ -17,18 +17,6 @@ body {
     display: none;
 }
 
-.selectable {
-    cursor: pointer;
-}
-
-.selectable:hover {
-    background-color: rgba(0, 128, 0, 0.12);
-}
-
-.selected, .selected:hover {
-    background-color: rgba(0, 128, 0, 0.25);
-}
-
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -46,14 +34,62 @@ body {
     display: flex;
 }
 
+.link {
+    color: white !important;
+    text-decoration-color: green;
+}
+
+/* Rainbow Link */
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+.rainbow_link {
+    background: linear-gradient(90deg, #9191ff, #18a3ff , #19ff19, #ff51a8, #7e7eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 5s ease-in-out infinite;
+    background-size: 400% 100%;
+    text-decoration-color: green;
+}
+
+/* Map */
 #map_pane {
     flex: 0.785;
     background-color: transparent;
 }
 
+.leaflet-popup-content-wrapper {
+    border-radius: 0 !important;
+    background: #121212;
+    border: 1px solid green;
+}
+.leaflet-popup-tip {
+    background: #121212;
+    border: 2px solid green;
+    padding: 0;
+}
+.leaflet-popup-content {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 13px;
+}
+.leaflet-container a.leaflet-popup-close-button {
+	color: #8a8a8a;
+}
+.leaflet-container a.leaflet-popup-close-button:hover,
+.leaflet-container a.leaflet-popup-close-button:focus {
+	color: #a7a7a7;
+}
 
-
-/*  Information  */
+/*  Information pane and tabs  */
 #information_pane {
     border-left: 1px solid green;
     flex: 0.215;
@@ -62,10 +98,6 @@ body {
     min-width: 0;
     overflow-y: auto;
 }
-
-
-
-/* Information tabs */
 #information_tabs {
     display: flex;
     flex-direction: row;
@@ -76,15 +108,12 @@ body {
     border-right: 1px solid green;
 }
 .information_tab {
+    cursor: pointer;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
-
-/* Information content */
 #information_content {
     flex: 1;
     margin-left: 12px;
@@ -99,23 +128,10 @@ body {
     padding-left: 4px;
     margin-bottom: 4px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.information_tab:hover {
+    background-color: rgba(0, 128, 0, 0.12);
+    /* background-color: rgba(0, 128, 0, 0.25); */
+}
 
 /* Points content */
 .category_parent {
@@ -126,7 +142,6 @@ body {
     padding: 8px;
     align-items: center;
 }
-
 .category_parentbutton {
     cursor: pointer;
     padding: 4px;
@@ -139,54 +154,6 @@ body {
     text-overflow: ellipsis;
     text-wrap: nowrap;
 }
-
-
-
-
-
-
-
-
-
-
-
-.category_child {
-    display: flex;
-    border: 1px solid green;
-    border-top: 0;
-    margin-left: 8px;
-    padding: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Information footer */
 #information_footer {
@@ -217,58 +184,4 @@ body {
     #credits {
         display: none;
     }
-}
-
-/* Leaflet popup styling */
-.leaflet-popup-content-wrapper {
-    border-radius: 0 !important;
-    background: #121212;
-    border: 1px solid green;
-}
-
-.leaflet-popup-tip {
-    background: #121212;
-    border: 2px solid green;
-    padding: 0;
-}
-
-.leaflet-popup-content {
-    color: #ffffff;
-    font-family: monospace;
-    font-size: 13px;
-}
-
-.leaflet-container a.leaflet-popup-close-button {
-	color: #8a8a8a;
-}
-
-.leaflet-container a.leaflet-popup-close-button:hover,
-.leaflet-container a.leaflet-popup-close-button:focus {
-	color: #a7a7a7;
-}
-
-/* Link stylings */
-.link {
-    color: white !important;
-    text-decoration-color: green;
-}
-
-@keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 100% 0;
-    }
-}
-
-.rainbow_link {
-    background: linear-gradient(90deg, #9191ff, #18a3ff , #19ff19, #ff51a8, #7e7eff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow_animation 5s ease-in-out infinite;
-    background-size: 400% 100%;
-    text-decoration-color: green;
 }
