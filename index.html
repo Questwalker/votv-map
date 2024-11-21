@@ -1,58 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voices of the Void Map</title>
-    <meta name="description" content="A map for game Voices of the Void (VotV)">
-    <meta property="og:title" content="Voices of the Void Map">
-    <meta name="og:description" content="A map for game Voices of the Void (VotV)">
-    <meta property="og:url" content="https://questwalker.github.io/votv-map/">
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <link rel="icon" href="favicon.ico?v"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="styles.css"/>
     <script src="points.js"></script>
     <script src="lines.js"></script>
 </head>
 <body>
-    <div id="display_image_container" class="unselectable hidden">
-        <img id="display_image">
-    </div>
-    <div id="container">
-        <div id="page_container" class="flex_box">
-            <div id="map_pane" class="col unselectable" oncontextmenu="return false;">
-                <div id="map_container" style="left: 5px; top: 5px;">
-                    <canvas id="map_canvas" width="2688" height="2688"></canvas>
-                    <img id="map_image" src="./map2.png" style="position: relative; left: 896px; top: 896px;"/>
-                </div>
+    <div id="page_container">
+        <div id="map_pane"></div>
+        <div id="information_pane">
+            <div id="information_tabs">
+                <div id="information_infotab" class="information_tab selectable">Info</div>
+                <div id="information_pointstab" class="information_tab selectable">Points</div>
             </div>
-            <div id="information_pane" class="col">
-                <div id="information_tabs">
-                    <div id="information_tab_info" class="information_tab unselectable tab_selected">Info</div>
-                    <div id="information_tab_points" class="information_tab unselectable">Points</div>
+            <div id="information_content">
+                <div id="information_info" class="hidden">
+                    <h1 id="information_header">Header</h1>
+                    <p id="information_coords">Coords</p>
+                    <p id="information_text">Text</p>
+                    <div id="information_images"></div>
                 </div>
-                <div id="information_pane_content">
-                    <div id="information_pane_body">
-                        <div id="information_pane_info" class>
-                            <h1 id="information_header">Select a Point</h1>
-                            <p id="information_coords"></p>
-                            <p id="information_text">Click on a point on the map to see some information about what it is and where it's located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.</p>
-                            <div id="information_images"></div>
-                        </div>
-                        <div id="information_pane_points" class="hidden">
-                        </div>
-                    </div>
-                    <div id="information_pane_footer">
-                        <div id="credits">
-                        <div>Check me out / Contact me at:</div>
-                        <div class="link"><span title="GitHub">G:</span>&nbsp;<a href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a></div>
-                        <div><span title="Discord">D:</span>&nbsp;questwalker</div>
-                        <div><span title="Email">E:</span>&nbsp;questwalkerko@gmail.com</div>
-                        <br>
-                        <div class="link"><a href="./changelog" target="_blank" rel="noopener noreferrer">Check out the changelog here.</a></div>
-                        <div><a class="rainbow_link" href="https://forms.gle/3swU2hcG6GxEVFAh7" target="_blank" rel="noopener noreferrer">Send me feedback here!</a></div>
-                        <br></div>
-                        <div id="center_button"><u>[Click here]</u> to center the map.</div>
-                    </div>
-                </div>
+                <div id="information_points" class=""></div>
+            </div>
+            <div id="information_footer">
+                <div id="credits">Check me out / Contact me at:
+                <span title="GitHub">G:</span>&nbsp;<a class="link" href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a><br>
+                <span title="Discord">D:</span>&nbsp;questwalker<br>
+                <span title="Email">E:</span>&nbsp;questwalkerko@gmail.com<br>
+                <br>
+                <a class="link" href="./changelog" target="_blank" rel="noopener noreferrer">Check out the changelog here.</a><br>
+                <a class="rainbow_link" href="https://forms.gle/3swU2hcG6GxEVFAh7" target="_blank" rel="noopener noreferrer">Send me feedback here!</a><br>
+                <br></div>
+                <div id="center_button"><u>[Click here]</u> to center the map.</div>
             </div>
         </div>
     </div>

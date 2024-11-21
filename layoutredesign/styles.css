@@ -66,9 +66,6 @@ body {
 #information_infotab {
     border-right: 1px solid green;
 }
-#information_pointstab {
-    border-right: 1px solid green;
-}
 .information_tab {
     flex: 1;
     display: flex;
@@ -132,9 +129,6 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     text-wrap: nowrap;
-}
-.category_expandbutton {
-    cursor: pointer;
 }
 
 
