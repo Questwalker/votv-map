@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layoutredesign/styles.css">
+</head>
+<body>
+    <div id="page_container">
+        <div id="map_pane">
+            <button onclick="button1()">setup</button>
+            <button onclick="button2()">clear</button>
+            <div id="infor" style="padding-top: 8px;"></div>
+        </div>
+        <div id="information_pane">
+            <div id="information_tabs">
+                <div id="information_infotab" class="information_tab selectable">Info</div>
+                <div id="information_pointstab" class="information_tab selectable">Points</div>
+            </div>
+            <div id="information_content">
+                <div id="information_info" class="hidden">
+                    <h1 id="information_header"></h1>
+                    <p id="information_coords"></p>
+                    <p id="information_text"></p>
+                    <div id="information_images"></div>
+                </div>
+                <div id="information_points" class="hidden">
+
+
+                    <!-- A single category -->
+                    <div id="category__transformers">
+                        <div class="category_parent">
+                            <div class="category_parentbutton">[S]</div>
+                            <div class="category_parentname">Satellite Dishes</div>
+                            <div class="category_expandbutton">&nbsp;v</div>
+                        </div>
+                        <div class="category_children">
+                            <div class="category_child">Power Station</div>
+                            <div class="category_child">Transformer #1</div>
+                            <div class="category_child">Transformer #2</div>
+                            <div class="category_child">Transformer #3</div>
+                        </div>       
+                    </div>
+                    <!------->
+
+
+
+
+                </div>
+            </div>
+            <div id="information_footer">
+                <div id="credits">Check me out / Contact me at:<br>
+                G:&nbsp;https://github.com/Questwalker<br>D:&nbsp;questwalker<br>
+                E:&nbsp;questwalkerko@gmail.com<br><br>Check out the changelog here.<br>
+                Send me feedback here!<br><br></div>[Click here] to center the map.
+            </div>
+        </div>
+    </div>
+    <script src="./layoutredesign/scripts.js"></script>
+    <script src="./layoutredesign/scripts2.js"></script>
+</body>
+</html>
