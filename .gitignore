@@ -1,6 +1,6 @@
 .cache
 .vscode
 new-points
-leaflettest
+leaflettest/assets
 technical-notes
 layoutredesign/*.py
