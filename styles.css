@@ -39,9 +39,13 @@ body {
     text-decoration-color: green;
 }
 
+.gray {
+    color: rgb(150, 150, 150);
+}
+
 /* Rainbow Link */
 @keyframes rainbow_animation {
-    0%,100% {
+    0%, 100% {
         background-position: 0 0;
     }
 
@@ -128,9 +132,14 @@ body {
     padding-left: 4px;
     margin-bottom: 4px;
 }
+.selected_tab {
+    background-color: rgba(0, 128, 0, 0.25);
+}
 .information_tab:hover {
     background-color: rgba(0, 128, 0, 0.12);
-    /* background-color: rgba(0, 128, 0, 0.25); */
+}
+.selected_tab:hover {
+    background-color: rgba(0, 128, 0, 0.19);
 }
 
 /* Points content */

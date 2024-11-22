@@ -2,17 +2,8 @@ var points_section = document.getElementById('information_points')
 var references = {'icons': {}}
 // var references = {
 //     "category__satellite_dishes": {
-//         "menuparent": Object, // The base container that holds both the parent and the children element (has class .category_parent)
-//         "menuchildren": Object, // The container that holds all the children (has class .category_children)
-//         "leafletgroup": Object, // The layergroup that contains all leaflet markers in the category 
-//         1: {
-//             "point": Object,
-//             "entry": Object
-//         },
-//         2: {
-//             "point": Object,
-//             "entry": Object
-//         }
+//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
+//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
 //     },
 //     'icons': {
 //         'burger': `<leaflet icon reference>`
@@ -27,18 +18,46 @@ function convertUnrealToLeaflet([x,y]) {return convertGameToLeaflet(convertUnrea
 function convertLeafletToUnreal([y,x]) {return convertGameToUnreal(convertLeafletToGame([y,x]))}
 function roundNumber(number, digit=0) {return Math.round((number * Math.pow(10, digit)) * (1 + Number.EPSILON)) / Math.pow(10, digit)}
 
-function pointClickEvent(e) {
-    console.log(this.options.pointindex)
+function pointClickEvent() {
+    let data = points[this.options.pointindex]
+    console.log(information_header)
+    information_header.innerHTML = data.name
+    information_coords.innerHTML = `x: <u>${data.xPos}</u>, y: <u>${data.yPos}</u>`
+    information_text.innerHTML = data.description
+    information_images.replaceChildren()
+    if (data.related_images && data.related_images.length) {
+        data.related_images.forEach((link, imageindex) => {
+            let element = document.createElement('img')
+            element.src = link
+            element.onclick = function() { previewImage(element) }
+            element.classList.add('information_image')
+            element.dataset.imageindex = imageindex
+            information_images.appendChild(element)
+        })
+    }
 }
 
-function toggleCategoryButton(e) {
-    console.log(references[this.parentElement.id])
+function toggleCategoryButton() {
+    // Parse and pass information to function
+    setCategoryVisibility(this.parentElement.id, !parseInt(this.dataset.visible), this)
 }
 
-
-
-
-
+function setCategoryVisibility(categoryname, setting=false, button=undefined) {
+    // Hide or show layer and change visibility button (button must exist in the page)
+    if (button == undefined) button = references[categoryname].menuparent.querySelector('.category_parentbutton')
+    let layer = references[categoryname].leafletgroup
+    if (setting) {
+        layer.addTo(map)
+        button.classList.remove('gray')
+        button.innerText = '[S]'
+        button.dataset.visible = 1
+    } else {
+        map.removeLayer(layer)
+        button.classList.add('gray')
+        button.innerText = '[H]'
+        button.dataset.visible = 0
+    }
+}
 
 points.forEach((data, pointindex) => {
     let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
@@ -48,28 +67,31 @@ points.forEach((data, pointindex) => {
         references.icons[data.icon] = L.icon({
             iconUrl: data.icon,
             iconSize: [24, 24],
-        });
+        })
     }
     // If the category hasn't been loaded before, create it and add some basic data
     if (!references[categoryname]) {
-        console.log(categoryname)
-        
-        // <div id="category__transformers" class="category_parent">
-        //     <div class="category_parentbutton">[S]</div>
-        //     <div class="category_parentname">Satellite Dishes</div>
-        // </div>
+        //TODO/DEBUG, Needs to be set based on user settings
+        categoryvisible = (categoryname != 'category_halloween_pumpkins' && categoryname != 'category_chicken_burgers')
 
         // Create generic category container element
         let categorycontainer = document.createElement('div')
         categorycontainer.id = categoryname
         categorycontainer.classList.add('category_parent')
-        points_section.appendChild(categorycontainer)
+        information_points.appendChild(categorycontainer)
 
         // Show/Hide button
         let visibilitybutton = document.createElement('div')
         visibilitybutton.classList.add('category_parentbutton')
         visibilitybutton.classList.add('unselectable')
-        visibilitybutton.innerText = '[S]'
+        if (!categoryvisible) {
+            visibilitybutton.classList.add('gray')
+            visibilitybutton.innerText = '[H]'
+            visibilitybutton.dataset.visible = 0
+        } else {
+            visibilitybutton.innerText = '[S]'
+            visibilitybutton.dataset.visible = 1
+        }
         visibilitybutton.addEventListener('click', toggleCategoryButton)
         categorycontainer.appendChild(visibilitybutton)
 
@@ -79,13 +101,13 @@ points.forEach((data, pointindex) => {
         textlabel.innerText = (data.category != '' && data.category != undefined) ? data.category : 'Miscellaneous'
         categorycontainer.appendChild(textlabel)
 
-        // add references
+        // Add references
         references[categoryname] = {
-            'menuparent': null,
-            'menuchildren': null,
+            'menuparent': categorycontainer,
             'leafletgroup': L.layerGroup()
         }
         layercontrol.addOverlay(references[categoryname].leafletgroup, categoryname) //DEBUG
+        if (categoryvisible) references[categoryname].leafletgroup.addTo(map)
     }
     // Create the marker
     let marker = L.marker(
@@ -102,15 +124,6 @@ points.forEach((data, pointindex) => {
         'offset': [0,3]
     }))
     marker.addTo(references[categoryname].leafletgroup)
-
-
-
-
-
-
-
-
-
 })
 
 
@@ -122,7 +135,7 @@ lines.forEach((data, lineindex) => {
             'weight': data.linethickness,
             'lineCap': 'square',
             'lineJoin': 'miter',
-            'fill': data.fill,
+            'fill': Boolean(data.fill),
             'fillColor': data.fill,
             'interactive': false
         }
