@@ -1,4 +1,3 @@
-var points_section = document.getElementById('information_points')
 var references = {'icons': {}}
 // var references = {
 //     "category__satellite_dishes": {
@@ -18,9 +17,15 @@ function convertUnrealToLeaflet([x,y]) {return convertGameToLeaflet(convertUnrea
 function convertLeafletToUnreal([y,x]) {return convertGameToUnreal(convertLeafletToGame([y,x]))}
 function roundNumber(number, digit=0) {return Math.round((number * Math.pow(10, digit)) * (1 + Number.EPSILON)) / Math.pow(10, digit)}
 
+function mapClickEvent() {
+    information_header.innerHTML = 'Select a Point'
+    information_coords.innerHTML = ''
+    information_text.innerHTML = 'Click on a point on the map to see some information about what it is and where it\'s located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.'
+    information_images.replaceChildren()
+}
+
 function pointClickEvent() {
     let data = points[this.options.pointindex]
-    console.log(information_header)
     information_header.innerHTML = data.name
     information_coords.innerHTML = `x: <u>${data.xPos}</u>, y: <u>${data.yPos}</u>`
     information_text.innerHTML = data.description
@@ -106,7 +111,7 @@ points.forEach((data, pointindex) => {
             'menuparent': categorycontainer,
             'leafletgroup': L.layerGroup()
         }
-        layercontrol.addOverlay(references[categoryname].leafletgroup, categoryname) //DEBUG
+        // layercontrol.addOverlay(references[categoryname].leafletgroup, categoryname) //DEBUG
         if (categoryvisible) references[categoryname].leafletgroup.addTo(map)
     }
     // Create the marker
@@ -126,8 +131,8 @@ points.forEach((data, pointindex) => {
     marker.addTo(references[categoryname].leafletgroup)
 })
 
-
 lines.forEach((data, lineindex) => {
+    let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
     let polygon = L.polyline(data.coordinates.map(convertGameToLeaflet),
         {
             'smoothFactor': 0.5,
@@ -142,13 +147,14 @@ lines.forEach((data, lineindex) => {
     )
     if (data.category) {
         // limitation: the line can only add itself to layers that already exist, otherwise it will error
-        polygon.addTo(references[`category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`].leafletgroup)
+        polygon.addTo(references[categoryname].leafletgroup)
     } else {
         polygon.addTo(map)
     }
 })
 
-
+map.on('click', mapClickEvent)
+mapClickEvent()
 
 
 
