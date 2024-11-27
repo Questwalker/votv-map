@@ -1,201 +1,150 @@
-const map_size = 896
-var references = {}
+var references = {'icons': {}}
 // var references = {
-//     "category_satellite_dishes": {
-//         "categoryhead": Object,
-//         "entrycontainer": Object,
-//         1: {
-//             "point": Object,
-//             "entry": Object
-//         },
-//         2: {
-//             "point": Object,
-//             "entry": Object
-//         }
+//     "category__satellite_dishes": {
+//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
+//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
+//     },
+//     'icons': {
+//         'burger': `<leaflet icon reference>`
 //     }
 // }
 
-function hideEntries(element) {
-    let entrycontainer = references[element.parentElement.parentElement.id]['entrycontainer']
-    if (entrycontainer.classList.contains('hidden')) {
-        // unhide
-        entrycontainer.classList.remove('hidden')
-        element.innerHTML = '&nbsp;▼'
-    } else {
-        // hide
-        entrycontainer.classList.add('hidden')
-        element.innerHTML = '&nbsp;-'
+function mapClickEvent() {
+    // Reset information text when user clicks off a point
+    information_header.innerHTML = 'Select a Point'
+    information_coords.innerHTML = ''
+    information_text.innerHTML = 'Click on a point on the map to see some information about what it is and where it\'s located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.'
+    information_images.replaceChildren()
+}
+
+function pointClickEvent() {
+    // Update information text when point is clicked, and focus on info tab
+    selectTab(0)
+    let data = points[this.options.pointindex]
+    information_header.innerHTML = data.name
+    information_coords.innerHTML = `x: <u>${data.xPos}</u>, y: <u>${data.yPos}</u>`
+    information_text.innerHTML = data.description
+    information_images.replaceChildren()
+    if (data.related_images && data.related_images.length) {
+        data.related_images.forEach((link, imageindex) => {
+            let element = document.createElement('img')
+            element.src = link
+            element.onclick = function() { previewImage(element) }
+            element.classList.add('information_image')
+            element.dataset.pointindex = this.options.pointindex
+            element.dataset.imageindex = imageindex
+            information_images.appendChild(element)
+        })
     }
 }
 
-function hideCategory(element) {
-    let id = element.parentElement.parentElement.id
-    let force
-    if (element.innerText == '[H]') {
-        // unhide points
-        element.innerText = '[S]'
-        element.classList.remove('gray')
-        force = 'show'
-    } else {
-        // hide points
-        element.innerText = '[H]'
-        element.classList.add('gray')
-        force = 'hide'
-    }
-    Object.keys(references[id]).forEach(key => {
-        if (!isNaN(key) && !isNaN(parseFloat(key))) {
-            // it is a number
-            // TODO: Make this IF statement unnessessary by spliting the pointindexes into a subcategory of references
-            hidePoint(id, key, force=force)
-        }
-    })
+function toggleCategoryButton() {
+    // Parse and pass information to function
+    setCategoryVisibility(this.parentElement.id, !parseInt(this.dataset.visible), this)
 }
 
-function hidePointCommand(element) {
-    hidePoint(element.parentElement.parentElement.parentElement.id, element.dataset.pointindex)
-}
-
-function hidePoint(id, pointindex, force=undefined) {
-    let point = references[id][pointindex]['point']
-    let button = references[id][pointindex]['entry'].querySelector('[data-pointindex]')
-    if ((point.classList.contains('hidden') || force == 'show') && (force != 'hide')) {
-        // unhide point
-        button.innerText = '[S]'
+function setCategoryVisibility(categoryname, setting=false, button=undefined) {
+    // Hide or show layer and change visibility button (button must exist in the page)
+    if (button == undefined) button = references[categoryname].menuparent.querySelector('.category_parentbutton')
+    let layer = references[categoryname].leafletgroup
+    if (setting) {
+        layer.addTo(map)
         button.classList.remove('gray')
-        point.classList.remove('hidden')
+        button.innerText = '[S]'
+        button.dataset.visible = 1
     } else {
-        // hide point
-        button.innerText = '[H]'
+        map.removeLayer(layer)
         button.classList.add('gray')
-        point.classList.add('hidden')
+        button.innerText = '[H]'
+        button.dataset.visible = 0
     }
 }
 
-
-
-// creating the points on the map
+// Create markers and categories for each when nessessary
 points.forEach((data, pointindex) => {
-    // creates the category tag that the point will be sorted into
     let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
 
-    // Create element. Add classes, add positioning, add pointindex data, prevent dragging, add icon, and add the element to the website
-    let pointelement = document.createElement('img')
-    pointelement.classList.add('image_label')
-    pointelement.classList.add(data.positioning)
-    pointelement.style.left = ((((data.xPos + 745) / 1490) * map_size) + 896).toString()+'px'
-    pointelement.style.top = ((((data.yPos + 745) / 1490) * map_size) + 896).toString()+'px'
-    pointelement.dataset.pointindex = pointindex
-    pointelement.ondragstart = () => { return false }
-    pointelement.src = data.icon
-    map_container.appendChild(pointelement)
-
-
-
-
-
-    // generate entries for points tab
-    //  category detection
-    if (document.getElementById(categoryname) == null) { // if category entry does not exist yet..
-        // create containing category element
-        let parentelement = document.createElement('div')
-        parentelement.id = categoryname
-
-        //
-        let headelement = document.createElement('div')
-        headelement.classList.add('pointlist_category')
-
-        // hide / show button
-        let headelement_visiblitybutton = document.createElement('div')
-        headelement_visiblitybutton.classList.add('showhidebutton')
-        headelement_visiblitybutton.classList.add('pointercursor')
-        headelement_visiblitybutton.classList.add('unselectable')
-        headelement_visiblitybutton.setAttribute('onclick', "hideCategory(this)")
-        headelement_visiblitybutton.innerText = '[S]'
-        headelement.appendChild(headelement_visiblitybutton)
-
-        // text label
-        let headelement_label = document.createElement('div')
-        headelement_label.classList.add('pointlistentry_name')
-        headelement_label.innerText = (data.category != '' && data.category != undefined) ? data.category : 'Miscellaneous'
-        headelement.appendChild(headelement_label)
-
-        // collapse / expand button
-        let headelement_collapse = document.createElement('div')
-        headelement_collapse.classList.add('pointercursor')
-        headelement_collapse.classList.add('unselectable')
-        headelement_collapse.setAttribute('onclick', "hideEntries(this)")
-        headelement_collapse.innerHTML = '&nbsp;-' // collapsed by default #1/2
-        headelement.appendChild(headelement_collapse)
-
-        parentelement.appendChild(headelement)
-        information_pane_points.appendChild(parentelement)
-        
-        // create container for the entries
-        let entrycontainer = document.createElement('div')
-        entrycontainer.classList.add('hidden') // collapsed by default #2/2
-        parentelement.appendChild(entrycontainer)
-
-        // store reference
-        references[categoryname] = {'categoryhead': headelement, 'entrycontainer': entrycontainer}
+    // If the icon hasn't been loaded before, load it into ref.icons
+    if (!references.icons[data.icon]) {
+        references.icons[data.icon] = L.icon({
+            iconUrl: data.icon,
+            iconSize: [24, 24],
+        })
     }
+    // If the category hasn't been loaded before, create it and add some basic data
+    if (!references[categoryname]) {
+        //TODO: Needs to be set based on user settings
+        categoryvisible = (categoryname != 'category_halloween_pumpkins' && categoryname != 'category_chicken_burgers')
 
-    //  add point to respective category
-    let entryelement = document.createElement('div')
-    entryelement.classList.add('pointlist_entry')
+        // Create generic category container element
+        let categorycontainer = document.createElement('div')
+        categorycontainer.id = categoryname
+        categorycontainer.classList.add('category_parent')
+        information_points.appendChild(categorycontainer)
 
-    // hide / show button
-    let entryelement_visiblitybutton = document.createElement('div')
-    entryelement_visiblitybutton.classList.add('pointercursor')
-    entryelement_visiblitybutton.classList.add('unselectable')
-    entryelement_visiblitybutton.setAttribute('onclick', "hidePointCommand(this)")
-    entryelement_visiblitybutton.dataset.pointindex = pointindex
-    entryelement_visiblitybutton.innerText = '[S]'
-    entryelement.appendChild(entryelement_visiblitybutton)
-
-    // text label
-    let entryelement_label = document.createElement('div')
-    entryelement_label.classList.add('pointlistentry_name')
-    entryelement_label.innerText = data['name']
-    entryelement.appendChild(entryelement_label)
-
-    // store reference, add child
-    references[categoryname][pointindex] = {'entry': entryelement, 'point': pointelement}
-    references[categoryname]['entrycontainer'].appendChild(entryelement)
-
-
-
-
-
-    
-})
-
-lines.forEach((data, lineindex) => {
-    ctx.beginPath()
-    data['coordinates'].forEach((coords, index) => {
-        if (index == 0) {
-            ctx.moveTo(((coords[0]+745)/1490)*map_size+896, ((coords[1]+745)/1490)*map_size+896)
+        // Show/Hide button
+        let visibilitybutton = document.createElement('div')
+        visibilitybutton.classList.add('category_parentbutton')
+        visibilitybutton.classList.add('unselectable')
+        if (!categoryvisible) {
+            visibilitybutton.classList.add('gray')
+            visibilitybutton.innerText = '[H]'
+            visibilitybutton.dataset.visible = 0
         } else {
-            ctx.lineTo(((coords[0]+745)/1490)*map_size+896, ((coords[1]+745)/1490)*map_size+896)
+            visibilitybutton.innerText = '[S]'
+            visibilitybutton.dataset.visible = 1
         }
-    })
-    if (!(data['fill'] == undefined)) {
-        ctx.closePath()
-        ctx.fillStyle = data['fill']
-        ctx.fill()
+        visibilitybutton.addEventListener('click', toggleCategoryButton)
+        categorycontainer.appendChild(visibilitybutton)
+
+        // Text label
+        let textlabel = document.createElement('div')
+        textlabel.classList.add('category_parentname')
+        textlabel.innerText = (data.category != '' && data.category != undefined) ? data.category : 'Miscellaneous'
+        categorycontainer.appendChild(textlabel)
+
+        // Add references
+        references[categoryname] = {
+            'menuparent': categorycontainer,
+            'leafletgroup': L.layerGroup()
+        }
+        if (categoryvisible) references[categoryname].leafletgroup.addTo(map)
     }
-    ctx.lineWidth = data['linethickness']
-    ctx.strokeStyle = data['color']
-    ctx.lineCap = "square"
-    ctx.lineJoin = "miter"
-    ctx.stroke()
+    // Create the marker
+    let marker = L.marker(
+        convertGameToLeaflet([data.xPos,data.yPos]), 
+        {
+            icon: references.icons[data.icon],
+            'pointindex': pointindex
+        }
+    )
+    // Bind click event, add popup, add to category layer
+    marker.on('click', pointClickEvent)
+    marker.addTo(references[categoryname].leafletgroup)
 })
 
+// Create lines
+lines.forEach((data, lineindex) => {
+    let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
+    let polygon = L.polyline(data.coordinates.map(convertGameToLeaflet),
+        {
+            'smoothFactor': 0.5,
+            'color': data.color,
+            'weight': data.linethickness,
+            'lineCap': 'square',
+            'lineJoin': 'miter',
+            'fill': Boolean(data.fill),
+            'fillColor': data.fill,
+            'interactive': false
+        }
+    )
+    if (data.category) {
+        // limitation: the line can only add itself to layers that already exist, otherwise it will error
+        polygon.addTo(references[categoryname].leafletgroup)
+    } else {
+        polygon.addTo(map)
+    }
+})
 
-
-
-
-// hide categories by default
-// TODO: make a better way of doing this
-hideCategory(references.category_chicken_burgers.categoryhead.querySelector('.showhidebutton'))
-hideCategory(references.category_halloween_pumpkins.categoryhead.querySelector('.showhidebutton'))
-// console.log(references)
+map.on('click', mapClickEvent)
+mapClickEvent()

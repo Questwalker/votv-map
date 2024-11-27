@@ -17,16 +17,19 @@ const lines = [
     { // TR_1
         "color": "rgb(81, 83, 80)",
         "linethickness": 2,
+        "category": "Transformers",
         "coordinates": [[64, 64.3], [72.1, 71.5], [174.8, 66.8], [279.8, 67.3], [313.7, 131.2], [400.9, 200.1]]
     },
     { // TR_2
         "color": "rgb(81, 83, 80)",
         "linethickness": 2,
+        "category": "Transformers",
         "coordinates": [[64, 64.3], [49, 71.5], [-92.1, 79.9], [-214.7, 167.5], [-319.8, 254.1], [-426, 276.5], [-541.3, 233.9]]
     },
     { // TR_3
         "color": "rgb(81, 83, 80)",
         "linethickness": 2,
+        "category": "Transformers",
         "coordinates": [[64, 64.3], [63.4, 51.1], [121.8, -43.5], [155.7, -132.5], [158.1, -243.3], [39.9, -290.7], [-58.5, -299.4], [-171.9, -248.1], [-227, -313.9], [-324.2, -345.6], [-391.8, -480]]
     },
     { // Corner Fence
@@ -65,20 +68,20 @@ const lines = [
         "linethickness": 2,
         "coordinates": [[274.2, -360], [295.5, -345]]
     },
-    // ritual area
-    { // small island
+    // Ritual Area
+    { // Small island
         "color": "maroon",
         "linethickness": 2,
         "fill": "maroon",
-        "coordinates": [[2012.25, 2000], [2010, 1997.5], [2007.5, 2000], [2010, 2002.5]]
+        "coordinates": [[2012.25, 2000], [2010, 1997.5], [2007.5, 2000], [2010, 2002.5], [2012.25, 2000]]
     },
-    { // bridge
+    { // Bridge
         "color": "maroon",
         "linethickness": 2,
         "fill": "maroon",
         "coordinates": [[2007.8, 1999], [1999.2, 1999], [1999.2, 2001], [2007.8, 2001], [2007.8, 1999]]
     },
-    { // large island
+    { // Large island
         "color": "maroon",
         "linethickness": 2,
         "fill": "maroon",

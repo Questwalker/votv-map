@@ -1,5 +1,4 @@
 # Voices of the Void Map
- 
 A map for the game [Voices of the Void](https://mrdrnose.itch.io/votv) by [MrDrNose](https://mrdrnose.itch.io/)
 
 This project is a work of my own and is unofficial.

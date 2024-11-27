@@ -125,30 +125,24 @@ I've also adjusted the images and descriptions for some points.<br><br>
 
 <span class="time">11/2/2024 1730608622234</span>: Noticed that I incorrectly named many of the image files. Fixed now. VSCode is garbage so I had to manually rename all of the pumpkin and burger images individually with the command line. Additionally, added markers for the axe in the shack and the safe in the lake. Finally, I've edited the map image to 'soften' up the pixels in lake a little bit. Now it looks a little easier to look at.<br><br>
 
-<span class="time">11/20/2024 1732130000950</span>: Added markers for 7 of the skulls on the map. While I was at it, I noticed that the radioactive capsule images were extremely old, so I've updated them. In other news, I've created a new <i>dev</i> branch on the project (<a href="https://github.com/Questwalker/votv-map/tree/dev">here</a>). I've created it so people can have a look into the map's development and can see what progress I've been making. I've also added a cool list of tools and such that I use while developing this map to the README, so you can see what I like to use.
+<span class="time">11/20/2024 1732130000950</span>: Added markers for 7 of the skulls on the map. While I was at it, I noticed that the radioactive capsule images were extremely old, so I've updated them. In other news, I've created a new <i>dev</i> branch on the project (<a href="https://github.com/Questwalker/votv-map/tree/dev">here</a>). I've created it so people can have a look into the map's development and can see what progress I've been making. I've also added a cool list of tools and such that I use while developing this map to the README, so you can see what I like to use.<br><br>
+
+<span class="time">11/27/2024 1732693018889</span>: After way too long of a time, zooming is now available. The structure of the entire page has been rewritten to be simpler and better made, and the map functionality (which was previously written completely by me) has been replaced with the Leaflet library, which has zooming capability plus a bunch more support for different features. The only notable feature that has changed except that is I've removed the ability to view each of the individual points in the points tab, but I hope it wasn't important enough of a feature to cause any problems. <b>PLEASE SEND ANY FEEDBACK YOU HAVE ABOUT THE WEBSITE TO THE <a href="https://forms.gle/3swU2hcG6GxEVFAh7">FORM</a> SO I CAN SEE IT!</b> I don't know if this website will function perfectly everywhere, so please shoot a response if you experience any issues!
 
 <br><br><hr>
 Features/bugs to add/fix:<br>
 > Add a favicon?<br>
 > Investigate the monoliths and mark their locations<br>
-> when contained points are all set to hidden or shown manually, display the change on the button<br>
-> when contained points are a mixture of hidden and shown, display button with a slight gray<br>
-> ^ when a gray button is clicked, hide all<br>
 > Add next and previous buttons on the image preview (to accommodate touch screen users)<br>
 > A small field where a user can input their own coordinates and get a marker on the map of where they are<br>
 > Locations of papers<br>
 > Show what category the point is in the information tab.<br>
-> Points in the points tab should be clickable. Clicking them should open the information tab and show the indicator tab above the point.<br>
 > A selected point should have its z-index changed so it lays on top of all other points<br>
 > Be able to mark spoiler text, similar to discord<br>
 > Possibly add points for various event locations, like what I did with the picnic<br>
-> <b>Major rework of points lines and references code needed.</b><br>
 > Links to github commits in the changelog<br>
 > A button to shrink the sidebar<br>
-> Leaflet rework:<br>
->&nbsp;&nbsp;Map scaling; Map zoom in & out with pinching or scrolling (Done in development)<br>
->&nbsp;&nbsp;Little tab placed above points when you click on them. (Done in development)<br>
->&nbsp;&nbsp;User settings and local storage. (Code done, testing in development)<br>
+> User settings and local storage. (Code done, testing in development)
 </div>
 <script>
     Array.from(document.getElementsByClassName('time')).forEach(element => {
