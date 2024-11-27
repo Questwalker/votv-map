@@ -9,15 +9,8 @@ var references = {'icons': {}}
 //     }
 // }
 
-function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
-function convertGameToUnreal([x,y]) {return [x * 100, y * 100]}
-function convertGameToLeaflet([x,y]) {return [-y + (mapSize/2), x + (mapSize/2)]}
-function convertLeafletToGame([y,x]) {return [x - mapSize/2, -(y - mapSize/2)]}
-function convertUnrealToLeaflet([x,y]) {return convertGameToLeaflet(convertUnrealToGame([x,y]))}
-function convertLeafletToUnreal([y,x]) {return convertGameToUnreal(convertLeafletToGame([y,x]))}
-function roundNumber(number, digit=0) {return Math.round((number * Math.pow(10, digit)) * (1 + Number.EPSILON)) / Math.pow(10, digit)}
-
 function mapClickEvent() {
+    // Reset information text when user clicks off a point
     information_header.innerHTML = 'Select a Point'
     information_coords.innerHTML = ''
     information_text.innerHTML = 'Click on a point on the map to see some information about what it is and where it\'s located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.'
@@ -25,6 +18,8 @@ function mapClickEvent() {
 }
 
 function pointClickEvent() {
+    // Update information text when point is clicked, and focus on info tab
+    selectTab(0)
     let data = points[this.options.pointindex]
     information_header.innerHTML = data.name
     information_coords.innerHTML = `x: <u>${data.xPos}</u>, y: <u>${data.yPos}</u>`
@@ -36,6 +31,7 @@ function pointClickEvent() {
             element.src = link
             element.onclick = function() { previewImage(element) }
             element.classList.add('information_image')
+            element.dataset.pointindex = this.options.pointindex
             element.dataset.imageindex = imageindex
             information_images.appendChild(element)
         })
@@ -64,6 +60,7 @@ function setCategoryVisibility(categoryname, setting=false, button=undefined) {
     }
 }
 
+// Create markers and categories for each when nessessary
 points.forEach((data, pointindex) => {
     let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
 
@@ -124,13 +121,14 @@ points.forEach((data, pointindex) => {
     )
     // Bind click event, add popup, add to category layer
     marker.on('click', pointClickEvent)
-    marker.bindPopup(L.popup({
+    marker.bindPopup(L.popup({ // Make enable/disableable in user settings?
         'content': data.name,
         'offset': [0,3]
     }))
     marker.addTo(references[categoryname].leafletgroup)
 })
 
+// Create lines
 lines.forEach((data, lineindex) => {
     let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
     let polygon = L.polyline(data.coordinates.map(convertGameToLeaflet),

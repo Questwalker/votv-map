@@ -12,12 +12,15 @@
     <script src="dat_lines.js"></script>
 </head>
 <body>
+    <div id="image_viewer" class="unselectable hidden">
+        <img id="display_image"/>
+    </div>
     <div id="page_container">
         <div id="map_pane"></div>
         <div id="information_pane">
             <div id="information_tabs">
-                <div id="information_infotab" class="information_tab unselectable selected_tab">Info</div>
-                <div id="information_pointstab" class="information_tab unselectable">Points</div>
+                <div id="information_infotab" class="information_tab unselectable selected_tab" data-index="0">Info</div>
+                <div id="information_pointstab" class="information_tab unselectable" data-index="1">Points</div>
             </div>
             <div id="information_content">
                 <div id="information_info" class="">
@@ -41,8 +44,8 @@
             </div>
         </div>
     </div>
+    <script src="scripts.js"></script>
     <script src="map_movement.js"></script>
     <script src="map_points.js"></script>
-    <script src="scripts.js"></script>
 </body>
 </html>

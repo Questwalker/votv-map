@@ -14,7 +14,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .unselectable {
@@ -41,6 +41,10 @@ body {
 
 .gray {
     color: rgb(150, 150, 150);
+}
+
+#center_button {
+    cursor: pointer;
 }
 
 /* Rainbow Link */
@@ -87,6 +91,13 @@ body {
 }
 .leaflet-container a.leaflet-popup-close-button {
 	color: #8a8a8a;
+    /* Unselectable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .leaflet-container a.leaflet-popup-close-button:hover,
 .leaflet-container a.leaflet-popup-close-button:focus {
@@ -193,4 +204,23 @@ body {
     #credits {
         display: none;
     }
+}
+
+/* Image viewer */
+#image_viewer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: -8px;
+    z-index: 1000;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+#display_image {
+    max-height: 80%;
+    max-width: 80%;
+    background-color: rgba(30, 30, 30, 0.4);
 }

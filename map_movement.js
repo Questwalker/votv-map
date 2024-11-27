@@ -1,11 +1,12 @@
 const mapSize = 1489.995 // Size of the map using game units
 const bounds = [[0, 0], [mapSize, mapSize]]
 
+// Overriding leaflet's automatic renderer choice
 // Change based on advanced settings?
 //  Can use L.Browser.canvas and L.Browser.svg to check browser support for renderers
 if (L.Browser.svg) {
-    // Change padding of referer so that polylines don't unload when hidden
-    //  There isn't a better way of doing this..
+    // Change padding on rederer so that polylines don't unload when out of sight
+    //  There really isn't a better way of doing this..
     var renderer = L.svg({padding: 5})
 } else if (L.Browser.canvas) {
     var renderer = L.canvas({padding: 5})
@@ -39,7 +40,7 @@ function mapsizecheck() {
 }
 window.addEventListener('resize', mapsizecheck)
 mapsizecheck()
-map.fitBounds(bounds, {padding: [12, 12]})
+map.fitBounds(bounds, {padding: [19.5, 19.5]})
 
 // var layercontrol = L.control.layers().addTo(map) //DEBUG
 
