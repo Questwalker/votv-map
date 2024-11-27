@@ -121,10 +121,11 @@ points.forEach((data, pointindex) => {
     )
     // Bind click event, add popup, add to category layer
     marker.on('click', pointClickEvent)
-    marker.bindPopup(L.popup({ // Make enable/disableable in user settings?
-        'content': data.name,
-        'offset': [0,3]
-    }))
+    // marker.bindPopup(L.popup({ // Make enable/disableable in user settings?
+    //     'content': data.name,
+    //     'offset': [0,3],
+    //     'autoPan': false
+    // }))
     marker.addTo(references[categoryname].leafletgroup)
 })
 
@@ -162,16 +163,3 @@ mapClickEvent()
 
 // map.addLayer(references.category_miscellaneous.leafletgroup) // needs to be done based on user settings
 // map.removeLayer(references.category_satellite_dishes.leafletgroup) // needs to be done based on user settings
-
-
-
-
-
-// information_coords = document.getElementById('information_coords')
-// function updateCoords(e) {
-//     [x,y] = convertLeafletToGame([e.latlng.lat, e.latlng.lng])
-//     information_coords.innerHTML = `x: <u>${roundNumber(x, 2)}</u><br>y: <u>${roundNumber(y, 2)}</u>`
-// }
-// map.on('mousemove', updateCoords)
-// map.on('click', updateCoords)
-

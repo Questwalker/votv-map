@@ -22,7 +22,7 @@ var map = L.map('map_pane', {
     zoomControl: false,
     zoomDelta: 1,
     zoomSnap: 0,
-    layers: [], // Fetch currently shown layers from user settings and place them here to get them shown on load?
+    layers: [],
     bounceAtZoomLimits: false,
     renderer: renderer
 })
