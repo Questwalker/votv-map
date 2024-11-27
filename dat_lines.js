@@ -42,20 +42,46 @@ const lines = [
         "linethickness": 1,
         "coordinates": [[875, 875], [-875, 875], [-875, -875], [875, -875], [875, 875]]
     },
-    // ritual area
-    { // small island
+    // Bridges
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[-400.2, 497.7], [-376.6, 508.7]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[-223.2, 285.1], [-197.3, 282.8]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[-76.9, 11.7], [-51, 11.8]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[116.2, -121.9], [120.7, -96.3]]
+    },
+    {
+        "color": "#080000",
+        "linethickness": 2,
+        "coordinates": [[274.2, -360], [295.5, -345]]
+    },
+    // Ritual Area
+    { // Small island
         "color": "maroon",
         "linethickness": 2,
         "fill": "maroon",
         "coordinates": [[2012.25, 2000], [2010, 1997.5], [2007.5, 2000], [2010, 2002.5], [2012.25, 2000]]
     },
-    { // bridge
+    { // Bridge
         "color": "maroon",
         "linethickness": 2,
         "fill": "maroon",
         "coordinates": [[2007.8, 1999], [1999.2, 1999], [1999.2, 2001], [2007.8, 2001], [2007.8, 1999]]
     },
-    { // large island
+    { // Large island
         "color": "maroon",
         "linethickness": 2,
         "fill": "maroon",
