@@ -1134,8 +1134,8 @@ const points = [
         "category": "",
         "icon": "./icons/argemug.png",
         "positioning": "positioned_on_top",
-        "xPos": -59.3,
-        "yPos": -295
+        "xPos": -62.2,
+        "yPos": -304.58
     },
     {
         "name": "Fishing Supplies",

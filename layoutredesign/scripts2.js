@@ -29,19 +29,19 @@ function button2() {
 // // window.addEventListener('storage', updateSettings)
 
 
-// if (typeof(Storage) !== "undefined") {
-//     // Check if settings storage exists
-//     if (localStorage.getItem('sitesettings')) {
-//         console.log(JSON.parse(localStorage.getItem('sitesettings')))
-//     } else {
-//         // Settings do not exist
-//         console.log('new user')
-//         localStorage.setItem('sitesettings', '{}')
-//     }
-// } else {
-//     // No support
-//     console.log('Browser does not support Storage')
-// }
+if (typeof(Storage) !== "undefined") {
+    // Check if settings storage exists
+    if (localStorage.getItem('sitesettings')) {
+        console.log(JSON.parse(localStorage.getItem('sitesettings')))
+    } else {
+        // Settings do not exist
+        console.log('new user')
+        localStorage.setItem('sitesettings', '{}')
+    }
+} else {
+    // No support
+    console.log('Browser does not support Storage')
+}
 
 
 

@@ -159,6 +159,14 @@ mapClickEvent()
 
 
 
+// map.on('mousemove', (e) => {
+//     [x,y] = convertLeafletToUnreal([e.latlng.lat, e.latlng.lng])
+//     datatoprint = `${roundNumber(x, 2)}, ${roundNumber(y, 2)}`
+// })
+// map.on('click', (e) => {
+//     datatoprint = convertLeafletToUnreal([e.latlng.lat, e.latlng.lng]).map(roundNumber)
+// })
+
 
 
 // map.addLayer(references.category_miscellaneous.leafletgroup) // needs to be done based on user settings
