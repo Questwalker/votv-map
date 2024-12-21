@@ -14,7 +14,7 @@ if (L.Browser.svg) {
     renderer = undefined
 }
 
-var map = L.map('map_pane', {
+var map = L.map('map_element', {
     crs: L.CRS.Simple,
     maxZoom: 2.6,
     minZoom: -1,

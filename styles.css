@@ -71,7 +71,12 @@ body {
 /* Map */
 #map_pane {
     flex: 0.785;
+    position: relative;
+}
+#map_element {
     background-color: transparent;
+    height: 100%;
+    width: 100%;
 }
 
 .leaflet-popup-content-wrapper {
@@ -153,6 +158,90 @@ body {
     background-color: rgba(0, 128, 0, 0.19);
 }
 
+
+
+
+
+
+
+
+
+
+
+/* Information pane collapse/expand buttons */
+#testingtab {
+    position: absolute;
+    z-index: 900;
+    font-family: monospace;
+    /* line-height: 0; */
+    background-color: #121212;
+    /* background-color: inherit; */
+    display: flex;
+
+    top: 16px;
+    right: 0;
+    border: green solid 1px;
+    border-top: 0;
+    border-right: 0;
+    flex-direction: column;
+}
+#testingtab > svg {
+    border-top: solid green 1px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+#expanded_vertical_button,
+#collapsed_vertical_button {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    #testingtab {
+        top: unset;
+        right: 16px;
+        bottom: 0;
+        border: green solid 1px;
+        border-left: 0;
+        border-bottom: 0;
+        flex-direction: row-reverse;
+    }
+    #testingtab > svg {
+        border-top: 0;
+        border-left: solid green 1px;
+    }
+    #expanded_horizontal_button,
+    #collapsed_horizontal_button {
+        display: none;
+    }
+    #expanded_vertical_button,
+    #collapsed_vertical_button {
+        display: block;
+    }
+}
+
+.zeroflex {
+    flex: 0 !important;
+    display: none !important;
+}
+
+.fullflex {
+    flex: 1 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Points content */
 .category_parent {
     display: flex;
@@ -181,6 +270,7 @@ body {
     margin: 12px;
     margin-top: 6px;
     padding-top: 6px;
+    overflow: auto;
 }
 
 @media (max-width: 650px) {

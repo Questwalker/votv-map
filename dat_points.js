@@ -1,22 +1,4 @@
 const points = [
-    // {
-    //     "name": "",
-    //     "description": "",
-    //     "related_images" : [],
-    //     "icon": "./icons/debug.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": -351.4,
-    //     "yPos": 46.8
-    // },
-    // {
-    //     "name": "",
-    //     "description": "",
-    //     "related_images" : [],
-    //     "icon": "./icons/debug.png",
-    //     "positioning": "positioned_on_top",
-    //     "xPos": 213.4,
-    //     "yPos": 541.8
-    // },
     // Satellites
     {
         "name": "Papa",
@@ -24,7 +6,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/p.png",
-        "positioning": "positioned_on_top",
         "xPos": 300,
         "yPos": 300
     },
@@ -34,7 +15,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/g.png",
-        "positioning": "positioned_on_top",
         "xPos": 200,
         "yPos": 100
     },
@@ -44,7 +24,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/f.png",
-        "positioning": "positioned_on_top",
         "xPos": 200,
         "yPos": 0
     },
@@ -54,7 +33,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/e.png",
-        "positioning": "positioned_on_top",
         "xPos": 200,
         "yPos": -100
     },
@@ -64,7 +42,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/o.png",
-        "positioning": "positioned_on_top",
         "xPos": 300,
         "yPos": -300
     },
@@ -74,7 +51,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/t.png",
-        "positioning": "positioned_on_top",
         "xPos": 500,
         "yPos": -500
     },
@@ -84,7 +60,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/u.png",
-        "positioning": "positioned_on_top",
         "xPos": 500,
         "yPos": 0
     },
@@ -94,7 +69,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/i.png",
-        "positioning": "positioned_on_top",
         "xPos": 0,
         "yPos": 200
     },
@@ -104,7 +78,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/v.png",
-        "positioning": "positioned_on_top",
         "xPos": 500,
         "yPos": 500
     },
@@ -114,7 +87,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/h.png",
-        "positioning": "positioned_on_top",
         "xPos": 100,
         "yPos": 200
     },
@@ -124,7 +96,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/j.png",
-        "positioning": "positioned_on_top",
         "xPos": -100,
         "yPos": 200
     },
@@ -134,7 +105,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/w.png",
-        "positioning": "positioned_on_top",
         "xPos": 0,
         "yPos": 500
     },
@@ -144,7 +114,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/x.png",
-        "positioning": "positioned_on_top",
         "xPos": -500,
         "yPos": 500
     },
@@ -154,7 +123,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/q.png",
-        "positioning": "positioned_on_top",
         "xPos": -300,
         "yPos": 300
     },
@@ -164,7 +132,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/k.png",
-        "positioning": "positioned_on_top",
         "xPos": -200,
         "yPos": 100
     },
@@ -174,7 +141,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/l.png",
-        "positioning": "positioned_on_top",
         "xPos": -200,
         "yPos": 0
     },
@@ -184,7 +150,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/m.png",
-        "positioning": "positioned_on_top",
         "xPos": -200,
         "yPos": -100
     },
@@ -194,7 +159,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/b.png",
-        "positioning": "positioned_on_top",
         "xPos": -100,
         "yPos": -200
     },
@@ -204,7 +168,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/c.png",
-        "positioning": "positioned_on_top",
         "xPos": 0,
         "yPos": -200
     },
@@ -214,7 +177,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/d.png",
-        "positioning": "positioned_on_top",
         "xPos": 100,
         "yPos": -200
     },
@@ -224,7 +186,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/s.png",
-        "positioning": "positioned_on_top",
         "xPos": 0,
         "yPos": -500
     },
@@ -234,7 +195,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/n.png",
-        "positioning": "positioned_on_top",
         "xPos": -300,
         "yPos": -300
     },
@@ -244,7 +204,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/r.png",
-        "positioning": "positioned_on_top",
         "xPos": -500,
         "yPos": -500
     },
@@ -254,7 +213,6 @@ const points = [
         "related_images" : [],
         "category": "Satellite Dishes",
         "icon": "./icons/y.png",
-        "positioning": "positioned_on_top",
         "xPos": -500,
         "yPos": 0
     },
@@ -265,7 +223,6 @@ const points = [
         "related_images" : ['./images/furfur1_1.png', './images/furfur1_2.png'],
         "category": "Furfur Totems",
         "icon": "./icons/furfurA_0.png",
-        "positioning": "positioned_on_top",
         "xPos": -671.8,
         "yPos": -563.7
     },
@@ -275,7 +232,6 @@ const points = [
         "related_images" : ['./images/furfur2_1.png'],
         "category": "Furfur Totems",
         "icon": "./icons/furfurA_1.png",
-        "positioning": "positioned_on_top",
         "xPos": 253,
         "yPos": 585.1
     },
@@ -285,7 +241,6 @@ const points = [
         "related_images" : ['./images/furfur3_1.png'],
         "category": "Furfur Totems",
         "icon": "./icons/furfurA_2.png",
-        "positioning": "positioned_on_top",
         "xPos": 391.1,
         "yPos": -383.7
     },
@@ -296,7 +251,6 @@ const points = [
         "related_images" : ['./images/tile1_1.png', './images/tile1_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": -9,
         "yPos": 3
     },
@@ -306,7 +260,6 @@ const points = [
         "related_images" : ['./images/tile2_1.png', './images/tile2_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": -77.3,
         "yPos": 15.1
     },
@@ -316,7 +269,6 @@ const points = [
         "related_images" : ['./images/tile3_1.png', './images/tile3_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": -464.3,
         "yPos": 173.5
     },
@@ -326,7 +278,6 @@ const points = [
         "related_images" : ['./images/tile4_1.png', './images/tile4_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": -525.3,
         "yPos": -48
     },
@@ -336,7 +287,6 @@ const points = [
         "related_images" : ['./images/tile5_1.png', './images/tile5_2.png', './images/tile5_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": -615,
         "yPos": -23
     },
@@ -346,7 +296,6 @@ const points = [
         "related_images" : ['./images/tile6_1.png', './images/tile6_2.png', './images/tile6_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": -372,
         "yPos": 702.6
     },
@@ -356,7 +305,6 @@ const points = [
         "related_images" : ['./images/tile7_1.png', './images/tile7_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": 616,
         "yPos": 621
     },
@@ -366,7 +314,6 @@ const points = [
         "related_images" : ['./images/tile8_1.png', './images/tile8_2.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": 500.37,
         "yPos": -2.7
     },
@@ -376,7 +323,6 @@ const points = [
         "related_images" : ['./images/tile9_1.png', './images/tile9_2.png', './images/tile9_3.png'],
         "category": "Metal Tiles",
         "icon": "./icons/metal_tile.png",
-        "positioning": "positioned_on_top",
         "xPos": 874,
         "yPos": -874
     },
@@ -387,7 +333,6 @@ const points = [
         "related_images" : ['./images/greenArgemia1_1.png', './images/greenArgemia1_2.png', './images/greenArgemia1_3.png'],
         "category": "Plushes",
         "icon": "./icons/green_argemia.png",
-        "positioning": "positioned_on_top",
         "xPos": 239,
         "yPos": 828
     },
@@ -397,7 +342,6 @@ const points = [
         "related_images" : ['./images/redArgemia1_1.png', './images/redArgemia1_2.png', './images/redArgemia1_3.png'],
         "category": "Plushes",
         "icon": "./icons/red_argemia.png",
-        "positioning": "positioned_on_top",
         "xPos": 626,
         "yPos": -128
     },
@@ -407,7 +351,6 @@ const points = [
         "related_images" : ['./images/blueArgemia1_1.png', './images/blueArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/blue_argemia.png",
-        "positioning": "positioned_on_top",
         "xPos": -315,
         "yPos": 398
     },
@@ -417,7 +360,6 @@ const points = [
         "related_images" : ['./images/glowingBlueArgemia1_1.png', './images/glowingBlueArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_blue_argemia.png",
-        "positioning": "positioned_on_top",
         "xPos": 872,
         "yPos": -792
     },
@@ -427,19 +369,17 @@ const points = [
         "related_images" : ['./images/glowingCyanArgemia1_1.png', './images/glowingCyanArgemia1_2.png', './images/glowingCyanArgemia1_3.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_cyan_argemia.png",
-        "positioning": "positioned_on_top",
         "xPos": -634,
         "yPos": 181.4
     },
     {
         "name": "Glowing Magenta Argemia",
-        "description": "The plush's spawn location is located around the top of the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter that spawning location's hitbox. The usual method is placing a drone around (35.18, -36.85) and then having the drone straight fly up. Make sure to use your digital map to get the most accurate coordinates.<br><br>When the plush spawns, it will fall and you may not notice it. Good luck.",
+        "description": "The plush's spawn location is located in the sky near the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter the spawning location's hitbox. The usual method is placing a drone around (35.22, -37.23) and then having the drone straight fly up. You can use a digital map to place the drone accurately.<br>When the plush spawns, it will fall. Make sure to watch the drone's camera and check outside often so you don't miss it.",
         "related_images" : ['./images/glowingMagentaArgemia1_1.png', './images/glowingMagentaArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_magenta_argemia.png",
-        "positioning": "positioned_on_top",
-        "xPos": 35.18,
-        "yPos": -36.85
+        "xPos": 35.22,
+        "yPos": -37.23
     },
     {
         "name": "Antibreather Plush",
@@ -447,7 +387,6 @@ const points = [
         "related_images" : ['./images/antibreatherPlush1_1.png', './images/antibreatherPlush1_2.png'],
         "category": "Plushes",
         "icon": "./icons/antibreather_plush.png",
-        "positioning": "positioned_on_top",
         "xPos": -672.7,
         "yPos": -567
     },
@@ -458,7 +397,6 @@ const points = [
         "related_images" : ['./images/rozitalTech1_1.png', './images/rozitalTech1_2.png', './images/rozitalTech1_3.png', './images/rozitalTech1_4.png'],
         "category": "Points of Interest",
         "icon": "./icons/rozital.png",
-        "positioning": "positioned_on_top",
         "xPos": 637,
         "yPos": 44
     },
@@ -468,7 +406,6 @@ const points = [
         "related_images" : ['./images/basaltPillars1_1.png', './images/basaltPillars1_2.png'],
         "category": "",
         "icon": "./icons/basalt_pillar.png",
-        "positioning": "positioned_on_top",
         "xPos": 465.5,
         "yPos": -86.1
     },
@@ -478,7 +415,6 @@ const points = [
         "related_images" : ['./images/greenLocker1_1.png'],
         "category": "Points of Interest",
         "icon": "./icons/green_locker.png",
-        "positioning": "positioned_on_top",
         "xPos": 614.8,
         "yPos": 627.5
     },
@@ -488,7 +424,6 @@ const points = [
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/shack.png",
-        "positioning": "positioned_on_top",
         "xPos": 408.5,
         "yPos": 24.3
     },
@@ -498,7 +433,6 @@ const points = [
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/house.png",
-        "positioning": "positioned_on_top",
         "xPos": 662.5,
         "yPos": -655.5
     },
@@ -508,7 +442,6 @@ const points = [
         "related_images" : ['./images/well1_1.png','./images/well1_2.png'],
         "category": "Points of Interest",
         "icon": "./icons/well.png",
-        "positioning": "positioned_on_top",
         "xPos": 564.4,
         "yPos": 265.7
     },
@@ -518,7 +451,6 @@ const points = [
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/bunker.png",
-        "positioning": "positioned_on_top",
         "xPos": 60.25,
         "yPos": 625.5
     },
@@ -528,7 +460,6 @@ const points = [
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/picnic_blanket.png",
-        "positioning": "positioned_on_top",
         "xPos": -199,
         "yPos": -483
     },
@@ -538,7 +469,6 @@ const points = [
         "related_images" : [],
         "category": "Points of Interest",
         "icon": "./icons/grave.png",
-        "positioning": "positioned_on_top",
         "xPos": -347.4,
         "yPos": -565.4
     },
@@ -549,7 +479,6 @@ const points = [
         "related_images" : ["./images/burger1_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -8.4,
         "yPos": 27.5
     },
@@ -559,7 +488,6 @@ const points = [
         "related_images" : ["./images/burger2_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -14.7,
         "yPos": 8.8
     },
@@ -569,7 +497,6 @@ const points = [
         "related_images" : ["./images/burger3_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -12,
         "yPos": -0.1
     },
@@ -579,7 +506,6 @@ const points = [
         "related_images" : ["./images/burger4_1.png", "./images/burger4_2.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 21.7,
         "yPos": -29.5
     },
@@ -589,7 +515,6 @@ const points = [
         "related_images" : ["./images/burger5_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -20.4,
         "yPos": 27.1
     },
@@ -599,7 +524,6 @@ const points = [
         "related_images" : ["./images/burger6_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -2.6,
         "yPos": 27.3
     },
@@ -609,7 +533,6 @@ const points = [
         "related_images" : ["./images/burger7_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -10.8,
         "yPos": 6.4
     },
@@ -619,7 +542,6 @@ const points = [
         "related_images" : ["./images/burger8_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -14.8,
         "yPos": 9.7
     },
@@ -629,7 +551,6 @@ const points = [
         "related_images" : ['./images/burger9_1.png'],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 216,
         "yPos": 541.1
     },
@@ -639,7 +560,6 @@ const points = [
         "related_images" : ["./images/burger10_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -62.9,
         "yPos": 12
     },
@@ -649,7 +569,6 @@ const points = [
         "related_images" : ['./images/burger11_1.png', './images/burger11_2.png'],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 349.1,
         "yPos": -344.5
     },
@@ -659,7 +578,6 @@ const points = [
         "related_images" : ["./images/burger12_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 518.5,
         "yPos": -213.4
     },
@@ -669,7 +587,6 @@ const points = [
         "related_images" : ["./images/burger13_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 408.95,
         "yPos": 24.1
     },
@@ -679,7 +596,6 @@ const points = [
         "related_images" : ["./images/burger14_1.png", "./images/burger14_2.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -553.4,
         "yPos": 236.6
     },
@@ -689,7 +605,6 @@ const points = [
         "related_images" : ["./images/burger15_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -100.2,
         "yPos": 203.5
     },
@@ -699,7 +614,6 @@ const points = [
         "related_images" : ["./images/burger16_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -623,
         "yPos": -25.7
     },
@@ -709,7 +623,6 @@ const points = [
         "related_images" : ["./images/burger17_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -651.1,
         "yPos": -587.6
     },
@@ -719,7 +632,6 @@ const points = [
         "related_images" : ["./images/burger18_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": -683.7,
         "yPos": -581.8
     },
@@ -729,7 +641,6 @@ const points = [
         "related_images" : ["./images/burger19_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 639.2,
         "yPos": 44
     },
@@ -739,7 +650,6 @@ const points = [
         "related_images" : ["./images/burger20_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 157,
         "yPos": -584.7
     },
@@ -749,7 +659,6 @@ const points = [
         "related_images" : ["./images/burger21_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
-        "positioning": "positioned_on_top",
         "xPos": 18.14,
         "yPos": 529.37
     },
@@ -760,7 +669,6 @@ const points = [
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/generator.png",
-        "positioning": "positioned_on_top",
         "xPos": 64,
         "yPos": 64.3
     },
@@ -770,7 +678,6 @@ const points = [
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer1.png",
-        "positioning": "positioned_on_top",
         "xPos": 396.1,
         "yPos": 200
     },
@@ -780,7 +687,6 @@ const points = [
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer2.png",
-        "positioning": "positioned_on_top",
         "xPos": -546,
         "yPos": 234
     },
@@ -790,7 +696,6 @@ const points = [
         "related_images" : [],
         "category": "Transformers",
         "icon": "./icons/transformer3.png",
-        "positioning": "positioned_on_top",
         "xPos": -396.5,
         "yPos": -480.1
     },
@@ -801,7 +706,6 @@ const points = [
         "related_images" : ['./images/skull1_1.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "positioning": "positioned_on_top",
         "xPos": -7.25,
         "yPos": 19.74
     },
@@ -811,7 +715,6 @@ const points = [
         "related_images" : ['./images/skull2_1.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "positioning": "positioned_on_top",
         "xPos": 637.54,
         "yPos": 44.2
     },
@@ -821,7 +724,6 @@ const points = [
         "related_images" : ['./images/skull3_1.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "positioning": "positioned_on_top",
         "xPos": 212.27,
         "yPos": 541.1
     },
@@ -831,7 +733,6 @@ const points = [
         "related_images" : ['./images/skull4_1.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "positioning": "positioned_on_top",
         "xPos": -352,
         "yPos": 47.4
     },
@@ -841,7 +742,6 @@ const points = [
         "related_images" : ['./images/boneBox1_3.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "positioning": "positioned_on_top",
         "xPos": 262,
         "yPos": -6.5
     },
@@ -851,7 +751,6 @@ const points = [
         "related_images" : ['./images/skull5_1.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "positioning": "positioned_on_top",
         "xPos": -570,
         "yPos": 302.76
     },
@@ -861,7 +760,6 @@ const points = [
         "related_images" : ['./images/skull6_1.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "positioning": "positioned_on_top",
         "xPos": -655.93,
         "yPos": -600.3
     },
@@ -872,7 +770,6 @@ const points = [
         "related_images" : ['./images/pumpkin1_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": -21.53,
         "yPos": 22.07
     },
@@ -882,7 +779,6 @@ const points = [
         "related_images" : ['./images/pumpkin2_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": -651.53,
         "yPos": -588.92
     },
@@ -892,7 +788,6 @@ const points = [
         "related_images" : ['./images/pumpkin3_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 118.4,
         "yPos": -420.7
     },
@@ -902,7 +797,6 @@ const points = [
         "related_images" : ['./images/pumpkin4_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 671.74,
         "yPos": -280.42
     },
@@ -912,7 +806,6 @@ const points = [
         "related_images" : [],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 394.22,
         "yPos": -496
     },
@@ -922,7 +815,6 @@ const points = [
         "related_images" : ['./images/pumpkin6_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 660.86,
         "yPos": -654.4
     },
@@ -932,7 +824,6 @@ const points = [
         "related_images" : ['./images/pumpkin7_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 349.45,
         "yPos": -344.64
     },
@@ -942,7 +833,6 @@ const points = [
         "related_images" : ['./images/pumpkin8_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": -400.8,
         "yPos": -481.9
     },
@@ -952,7 +842,6 @@ const points = [
         "related_images" : ['./images/pumpkin9_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 210.44,
         "yPos": 542.5
     },
@@ -962,7 +851,6 @@ const points = [
         "related_images" : ['./images/pumpkin10_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 564.35,
         "yPos": 265.7
     },
@@ -972,7 +860,6 @@ const points = [
         "related_images" : ['./images/pumpkin11_1.png', './images/pumpkin11_2.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 12.63,
         "yPos": 580.9
     },
@@ -982,7 +869,6 @@ const points = [
         "related_images" : ['./images/pumpkin12_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": -547,
         "yPos": -56.6
     },
@@ -992,7 +878,6 @@ const points = [
         "related_images" : ['./images/pumpkin13_1.png'],
         "category": "Halloween Pumpkins",
         "icon": "./icons/pumpkin.png",
-        "positioning": "positioned_on_top",
         "xPos": 173.9,
         "yPos": 51.96
     },
@@ -1003,7 +888,6 @@ const points = [
         "related_images" : ['./images/shovel1_1.png'],
         "category": "",
         "icon": "./icons/shovel.png",
-        "positioning": "positioned_on_top",
         "xPos": 209.2,
         "yPos": 535.2
     },
@@ -1013,7 +897,6 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/shovel.png",
-        "positioning": "positioned_on_top",
         "xPos": 408.36,
         "yPos": 20.95
     },
@@ -1023,7 +906,6 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/shovel.png",
-        "positioning": "positioned_on_top",
         "xPos": -369.12,
         "yPos": 702.32
     },
@@ -1033,7 +915,6 @@ const points = [
         "related_images" : ['./images/axe1_1.png'],
         "category": "",
         "icon": "./icons/axe.png",
-        "positioning": "positioned_on_top",
         "xPos": 406.5,
         "yPos": 22.5
     },
@@ -1043,7 +924,6 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/safe.png",
-        "positioning": "positioned_on_top",
         "xPos": 404.8,
         "yPos": -406
     },
@@ -1053,7 +933,6 @@ const points = [
         "related_images" : ['./images/cacti1_1.png'],
         "category": "",
         "icon": "./icons/cacti.png",
-        "positioning": "positioned_on_top",
         "xPos": 149.2,
         "yPos": -10.5
     },
@@ -1063,7 +942,6 @@ const points = [
         "related_images" : ['./images/driveBox1_1.png'],
         "category": "",
         "icon": "./icons/drive_box.png",
-        "positioning": "positioned_on_top",
         "xPos": -118.8,
         "yPos": -42.1
     },
@@ -1073,7 +951,6 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/drive.png",
-        "positioning": "positioned_on_top",
         "xPos": 15.9,
         "yPos": 23.5
     },
@@ -1083,7 +960,6 @@ const points = [
         "related_images" : ['./images/boneBox1_1.png', './images/boneBox1_2.png', './images/boneBox1_3.png'],
         "category": "",
         "icon": "./icons/old_wooden_box.png",
-        "positioning": "positioned_on_top",
         "xPos": 262,
         "yPos": -6.5
     },
@@ -1093,7 +969,6 @@ const points = [
         "related_images" : ['./images/radioactiveCapsule1_1.png', './images/radioactiveCapsule1_2.png', './images/radioactiveCapsule1_3.png'],
         "category": "",
         "icon": "./icons/radioactive_canister.png",
-        "positioning": "positioned_on_top",
         "xPos": -569.5,
         "yPos": 303.3
     },
@@ -1103,7 +978,6 @@ const points = [
         "related_images" : ['./images/emfDetector1_1.png'],
         "category": "",
         "icon": "./icons/emf_detector.png",
-        "positioning": "positioned_on_top",
         "xPos": -623,
         "yPos": -33.8
     },
@@ -1113,7 +987,6 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/pickaxe.png",
-        "positioning": "positioned_on_top",
         "xPos": 391.6,
         "yPos": -384.3
     },
@@ -1123,7 +996,6 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/candle.png",
-        "positioning": "positioned_on_top",
         "xPos": 378.5,
         "yPos": -461
     },
@@ -1133,7 +1005,6 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/argemug.png",
-        "positioning": "positioned_on_top",
         "xPos": -62.2,
         "yPos": -304.58
     },
@@ -1143,7 +1014,6 @@ const points = [
         "related_images" : ['./images/fishingSupplies1_1.png'],
         "category": "",
         "icon": "./icons/fishermans_box.png",
-        "positioning": "positioned_on_top",
         "xPos": 175.8,
         "yPos": -460.6
     },
@@ -1153,7 +1023,6 @@ const points = [
         "related_images" : ['./images/helmet1_1.png', './images/helmet1_2.png', './images/helmet1_3.png'],
         "category": "",
         "icon": "./icons/helmet.png",
-        "positioning": "positioned_on_top",
         "xPos": -50.6,
         "yPos": 630
     }

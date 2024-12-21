@@ -72,3 +72,47 @@ document.addEventListener('keydown', (event) => {
         }
     }
 })
+
+
+
+
+
+
+
+
+
+var paneVisibility = 0
+function togglesidebarvis(event) {
+    if (paneVisibility == 0) {
+        // change page
+        map_pane.classList.add('fullflex')
+        information_pane.classList.add('zeroflex')
+        paneVisibility = 1
+        // change buttons
+        expanded_horizontal_button.classList.add('hidden')
+        expanded_vertical_button.classList.add('hidden')
+        collapsed_horizontal_button.classList.remove('hidden')
+        collapsed_vertical_button.classList.remove('hidden')
+    } else {
+        // change page
+        map_pane.classList.remove('fullflex')
+        information_pane.classList.remove('zeroflex')
+        paneVisibility = 0
+        // change buttons
+        expanded_horizontal_button.classList.remove('hidden')
+        expanded_vertical_button.classList.remove('hidden')
+        collapsed_horizontal_button.classList.add('hidden')
+        collapsed_vertical_button.classList.add('hidden')
+    }
+
+}
+expanded_horizontal_button.addEventListener('click', togglesidebarvis)
+collapsed_horizontal_button.addEventListener('click', togglesidebarvis)
+expanded_vertical_button.addEventListener('click', togglesidebarvis)
+collapsed_vertical_button.addEventListener('click', togglesidebarvis)
+
+
+
+
+
+
