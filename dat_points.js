@@ -374,7 +374,7 @@ const points = [
     },
     {
         "name": "Glowing Magenta Argemia",
-        "description": "The plush's spawn location is located in the sky near the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter the spawning location's hitbox. The usual method is placing a drone around (35.22, -37.23) and then having the drone straight fly up. You can use a digital map to place the drone accurately.<br>When the plush spawns, it will fall. Make sure to watch the drone's camera and check outside often so you don't miss it.",
+        "description": "The plush's spawn location is located near the top of the tower. In order for the plush to spawn, something (a piece of trash, a drone, etc.) needs to enter the spawning location's hitbox. The usual method is placing a drone around (35.22, -37.23) and then having the drone fly straight up. You can use a digital map to place the drone accurately.<br>When the plush spawns, it will fall. Make sure to watch the drone's camera and check outside often so you don't miss it.",
         "related_images" : ['./images/glowingMagentaArgemia1_1.png', './images/glowingMagentaArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/glowing_magenta_argemia.png",
