@@ -181,6 +181,7 @@ body {
     margin: 12px;
     margin-top: 6px;
     padding-top: 6px;
+    overflow: auto;
 }
 
 @media (max-width: 650px) {
