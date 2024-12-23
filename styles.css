@@ -158,26 +158,13 @@ body {
     background-color: rgba(0, 128, 0, 0.19);
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Information pane collapse/expand buttons */
 #information_pane_menu {
     position: absolute;
     z-index: 900;
     font-family: monospace;
-    /* line-height: 0; */
     background-color: #121212;
-    /* background-color: inherit; */
     display: flex;
-
     top: 16px;
     right: 0;
     border: green solid 1px;
@@ -201,7 +188,6 @@ body {
 #collapsed_vertical_button {
     display: none;
 }
-
 .paneshrunken {
     /* Using !important is bad practice but I could not imagine a better way to do this */
     flex: 0 !important;
@@ -210,19 +196,6 @@ body {
 .paneexpanded {
     flex: 1 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Points content */
 .category_parent {

@@ -75,7 +75,7 @@ document.addEventListener('keydown', (event) => {
 
 // Information sidebar menu
 var paneVisibility = 0
-function togglesidebarvis(event) {
+function toggleSidebarVis() {
     if (paneVisibility == 0) {
         // change page
         map_pane.classList.add('paneexpanded')
@@ -99,4 +99,4 @@ function togglesidebarvis(event) {
     }
 
 }
-information_collapse_button.addEventListener('click', togglesidebarvis)
+information_collapse_button.addEventListener('click', toggleSidebarVis)
