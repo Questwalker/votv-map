@@ -73,20 +73,13 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-
-
-
-
-
-
-
-
+// Information sidebar menu
 var paneVisibility = 0
 function togglesidebarvis(event) {
     if (paneVisibility == 0) {
         // change page
-        map_pane.classList.add('fullflex')
-        information_pane.classList.add('zeroflex')
+        map_pane.classList.add('paneexpanded')
+        information_pane.classList.add('paneshrunken')
         paneVisibility = 1
         // change buttons
         expanded_horizontal_button.classList.add('hidden')
@@ -95,8 +88,8 @@ function togglesidebarvis(event) {
         collapsed_vertical_button.classList.remove('hidden')
     } else {
         // change page
-        map_pane.classList.remove('fullflex')
-        information_pane.classList.remove('zeroflex')
+        map_pane.classList.remove('paneexpanded')
+        information_pane.classList.remove('paneshrunken')
         paneVisibility = 0
         // change buttons
         expanded_horizontal_button.classList.remove('hidden')
@@ -106,13 +99,4 @@ function togglesidebarvis(event) {
     }
 
 }
-expanded_horizontal_button.addEventListener('click', togglesidebarvis)
-collapsed_horizontal_button.addEventListener('click', togglesidebarvis)
-expanded_vertical_button.addEventListener('click', togglesidebarvis)
-collapsed_vertical_button.addEventListener('click', togglesidebarvis)
-
-
-
-
-
-
+information_collapse_button.addEventListener('click', togglesidebarvis)

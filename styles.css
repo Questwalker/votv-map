@@ -169,7 +169,7 @@ body {
 
 
 /* Information pane collapse/expand buttons */
-#testingtab {
+#information_pane_menu {
     position: absolute;
     z-index: 900;
     font-family: monospace;
@@ -185,47 +185,29 @@ body {
     border-right: 0;
     flex-direction: column;
 }
-#testingtab > svg {
+.pane_menu_child {
     border-top: solid green 1px;
     cursor: pointer;
     padding: 6px;
 }
-
+.chevron_styling {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    stroke-width: 48px
+}
 #expanded_vertical_button,
 #collapsed_vertical_button {
     display: none;
 }
 
-@media (max-width: 650px) {
-    #testingtab {
-        top: unset;
-        right: 16px;
-        bottom: 0;
-        border: green solid 1px;
-        border-left: 0;
-        border-bottom: 0;
-        flex-direction: row-reverse;
-    }
-    #testingtab > svg {
-        border-top: 0;
-        border-left: solid green 1px;
-    }
-    #expanded_horizontal_button,
-    #collapsed_horizontal_button {
-        display: none;
-    }
-    #expanded_vertical_button,
-    #collapsed_vertical_button {
-        display: block;
-    }
-}
-
-.zeroflex {
+.paneshrunken {
+    /* Using !important is bad practice but I could not imagine a better way to do this */
     flex: 0 !important;
     display: none !important;
 }
-
-.fullflex {
+.paneexpanded {
     flex: 1 !important;
 }
 
@@ -287,6 +269,28 @@ body {
         border-top: 1px solid green;
         border-left: 0;
         flex: 0.35;
+    }
+    /* Information pane collapse/expand buttons */
+    #information_pane_menu {
+        top: unset;
+        right: 16px;
+        bottom: 0;
+        border: green solid 1px;
+        border-left: 0;
+        border-bottom: 0;
+        flex-direction: row-reverse;
+    }
+    .pane_menu_child {
+        border-top: 0;
+        border-left: solid green 1px;
+    }
+    #expanded_horizontal_button,
+    #collapsed_horizontal_button {
+        display: none;
+    }
+    #expanded_vertical_button,
+    #collapsed_vertical_button {
+        display: block;
     }
 }
 
