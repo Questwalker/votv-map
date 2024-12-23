@@ -19,8 +19,18 @@
         <img id="display_image"/>
     </div>
     <div id="page_container">
-        <div id="map_pane"></div>
-        <div id="information_pane">
+        <div id="map_pane" class>
+            <div id="information_pane_menu">
+                <svg class="pane_menu_child" id="information_collapse_button" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+                    <path d="M184,112,328,256,184,400" id="expanded_horizontal_button" class="chevron_styling"/>
+                    <path d="M328,112,184,256,328,400" id="collapsed_horizontal_button" class="chevron_styling hidden"/>
+                    <path d="M112,184,256,328,400,184" id="expanded_vertical_button" class="chevron_styling"/>
+                    <path d="M112,328,256,184,400,328" id="collapsed_vertical_button" class="chevron_styling hidden"/>
+                </svg>
+            </div>
+            <div id="map_element"></div>
+        </div>
+        <div id="information_pane" class>
             <div id="information_tabs">
                 <div id="information_infotab" class="information_tab unselectable selected_tab" data-index="0">Info</div>
                 <div id="information_pointstab" class="information_tab unselectable" data-index="1">Points</div>

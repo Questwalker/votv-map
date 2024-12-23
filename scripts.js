@@ -72,3 +72,31 @@ document.addEventListener('keydown', (event) => {
         }
     }
 })
+
+// Information sidebar menu
+var paneVisibility = 0
+function toggleSidebarVis() {
+    if (paneVisibility == 0) {
+        // change page
+        map_pane.classList.add('paneexpanded')
+        information_pane.classList.add('paneshrunken')
+        paneVisibility = 1
+        // change buttons
+        expanded_horizontal_button.classList.add('hidden')
+        expanded_vertical_button.classList.add('hidden')
+        collapsed_horizontal_button.classList.remove('hidden')
+        collapsed_vertical_button.classList.remove('hidden')
+    } else {
+        // change page
+        map_pane.classList.remove('paneexpanded')
+        information_pane.classList.remove('paneshrunken')
+        paneVisibility = 0
+        // change buttons
+        expanded_horizontal_button.classList.remove('hidden')
+        expanded_vertical_button.classList.remove('hidden')
+        collapsed_horizontal_button.classList.add('hidden')
+        collapsed_vertical_button.classList.add('hidden')
+    }
+
+}
+information_collapse_button.addEventListener('click', toggleSidebarVis)
