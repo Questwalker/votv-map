@@ -881,7 +881,7 @@ const points = [
         "xPos": 173.9,
         "yPos": 51.96
     },
-    // Items of interest
+    // Items of Interest
     {
         "name": "Shovel",
         "description": "Found leaning on 3 supply boxes next to stonehenge.",
@@ -1025,5 +1025,96 @@ const points = [
         "icon": "./icons/helmet.png",
         "xPos": -50.6,
         "yPos": 630
+    },
+    {
+        "name": "Hiking Boots",
+        "description": "Wearing the hiking boots allows you to walk up steeper surfaces without slipping, and allows you to fall farther distances without collapsing or taking damage.",
+        "related_images" : ['./images/hikingBoots1_1.png'],
+        "category": "",
+        "icon": "./icons/hiking_boots.png",
+        "xPos": -402.4,
+        "yPos": -478.67
+    },
+    {
+        "name": "Knee Joints",
+        "description": "Found in TR_1. In the office, inside a bucket.",
+        "related_images" : ['./images/kneeJoints1_1.png'],
+        "category": "Kerfur Parts",
+        "icon": "./icons/knee_joint.png",
+        "xPos": 390.47,
+        "yPos": 198.27
+    },
+    {
+        "name": "Knee Joints",
+        "description": "Found in TR_2. In the office, on a box under a workbench.",
+        "related_images" : ['./images/kneeJoints2_1.png'],
+        "category": "Kerfur Parts",
+        "icon": "./icons/knee_joint.png",
+        "xPos": -550.22,
+        "yPos": 235.5
+    },
+    {
+        "name": "Knee Joints",
+        "description": "Found in TR_3. In the office, on the shelf.",
+        "related_images" : ['./images/kneeJoints3_1.png'],
+        "category": "Kerfur Parts",
+        "icon": "./icons/knee_joint.png",
+        "xPos": -400.55,
+        "yPos": -477.15
+    },
+    // Buried Kerfur Part Boxes
+    {
+        "name": "Buried Kerfur Parts",
+        "description": "Contains two ball joints.",
+        "related_images" : [],
+        "category": "Kerfur Parts",
+        "icon": "./icons/old_wooden_box.png",
+        "xPos": -541.07,
+        "yPos": -475.35
+    },
+    {
+        "name": "Buried Kerfur Parts",
+        "description": "Contains two ball joints.",
+        "related_images" : [],
+        "category": "Kerfur Parts",
+        "icon": "./icons/old_wooden_box.png",
+        "xPos": -529.78,
+        "yPos": -462.75
+    },
+    {
+        "name": "Buried Kerfur Parts",
+        "description": "Contains two ball joints.",
+        "related_images" : [],
+        "category": "Kerfur Parts",
+        "icon": "./icons/old_wooden_box.png",
+        "xPos": -532.58,
+        "yPos": -481.11
+    },
+    {
+        "name": "Buried Kerfur Parts",
+        "description": "Contains two ball joints.",
+        "related_images" : [],
+        "category": "Kerfur Parts",
+        "icon": "./icons/old_wooden_box.png",
+        "xPos": -524.08,
+        "yPos": -471.09
+    },
+    {
+        "name": "Buried Kerfur Parts",
+        "description": "Contains two ball joints.",
+        "related_images" : [],
+        "category": "Kerfur Parts",
+        "icon": "./icons/old_wooden_box.png",
+        "xPos": -531.98,
+        "yPos": -472.44
+    },
+    {
+        "name": "Buried Kerfur Parts",
+        "description": "Contains two ball joints.",
+        "related_images" : [],
+        "category": "Kerfur Parts",
+        "icon": "./icons/old_wooden_box.png",
+        "xPos": -524.14,
+        "yPos": -479.11
     }
 ]
