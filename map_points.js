@@ -74,7 +74,7 @@ points.forEach((data, pointindex) => {
     // If the category hasn't been loaded before, create it and add some basic data
     if (!references[categoryname]) {
         //TODO/DEBUG, Needs to be set based on user settings
-        categoryvisible = (categoryname != 'category_halloween_pumpkins' && categoryname != 'category_chicken_burgers')
+        categoryvisible = (categoryname != 'category_halloween_pumpkins' && categoryname != 'category_chicken_burgers' && categoryname != 'category_kerfur_parts')
 
         // Create generic category container element
         let categorycontainer = document.createElement('div')
