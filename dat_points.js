@@ -742,8 +742,8 @@ const points = [
         "related_images" : ['./images/boneBox1_3.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
-        "xPos": 262,
-        "yPos": -6.5
+        "xPos": 263.6,
+        "yPos": -7.3
     },
     {
         "name": "Skull",
