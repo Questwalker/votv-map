@@ -960,8 +960,8 @@ const points = [
         "related_images" : ['./images/boneBox1_1.png', './images/boneBox1_2.png', './images/boneBox1_3.png'],
         "category": "",
         "icon": "./icons/old_wooden_box.png",
-        "xPos": 262,
-        "yPos": -6.5
+        "xPos": 263.6,
+        "yPos": -7.3
     },
     {
         "name": "Radioactive Capsule",
