@@ -274,7 +274,7 @@ body {
 }
 
 /* Image viewer */
-#image_viewer {
+#overlay_screen {
     position: fixed;
     width: 100%;
     height: 100%;

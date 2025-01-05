@@ -39,22 +39,22 @@ function previewImage(element) {
     display_image.src = element.src
     display_image.dataset.pointindex = element.dataset.pointindex
     display_image.dataset.imageindex = element.dataset.imageindex
-    image_viewer.classList.remove('hidden')
+    overlay_screen.classList.remove('hidden')
 }
 
-function hidePreview() {
+function hidePreview(event) {
     display_image.src = ''
     display_image.dataset.pointindex = undefined
     display_image.dataset.imageindex = undefined
-    image_viewer.classList.add('hidden')
+    overlay_screen.classList.add('hidden')
 }
-image_viewer.addEventListener('click', hidePreview)
+overlay_screen.addEventListener('click', hidePreview)
 // display_image.addEventListener('click', (event) => { event.stopPropagation() }) // TODO: Add image zooming
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
     if (!event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
-        if (!image_viewer.classList.contains('hidden')) {
+        if (!overlay_screen.classList.contains('hidden')) {
             // An image is currently being viewed
             if (event.key == 'Escape') {
                 hidePreview()
