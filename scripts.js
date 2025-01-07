@@ -1,3 +1,17 @@
+var references = {'icons': {}, 'tabsystems': []}
+// var references = {
+//     "category__satellite_dishes": {
+//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
+//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
+//     },
+//     "icons": {
+//         "burger": `<leaflet icon reference>`
+//     },
+//     "tabsystems": [
+//         { "tabs": [], "sections": [] }
+//     ]
+// }
+
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
 function convertGameToUnreal([x,y]) {return [x * 100, y * 100]}
@@ -9,30 +23,63 @@ function roundNumber(number, digit=0) {return Math.round((number * Math.pow(10, 
 
 // Center map button
 function centerMap() {
-    map.panTo([mapSize/2,mapSize/2])
+    map.panTo([mapSize/2, mapSize/2])
 }
 center_button.addEventListener('click', centerMap)
 
 // Tabs functionality
-function tabClickedEvent() {
-    selectTab(this.dataset.index)
+function tabCallback() {
+    selectTab(this.dataset.system, this.dataset.index)
 }
-information_infotab.addEventListener('click', tabClickedEvent)
-information_pointstab.addEventListener('click', tabClickedEvent)
 
-function selectTab(tab=0) {
-    if (tab == 0) {
-        information_infotab.classList.add('selected_tab')
-        information_info.classList.remove('hidden')
-        information_pointstab.classList.remove('selected_tab')
-        information_points.classList.add('hidden')
-    } else if (tab == 1) {
-        information_pointstab.classList.add('selected_tab')
-        information_points.classList.remove('hidden')
-        information_infotab.classList.remove('selected_tab')
-        information_info.classList.add('hidden')
-    }
+function selectTab(system=0, tab=0) {
+    references.tabsystems[system].tabs.forEach((element, index) => {
+        if (index == tab) element.classList.add('selected_tab')
+        else element.classList.remove('selected_tab')
+    })
+    references.tabsystems[system].sections.forEach((element, index) => {
+        if (index == tab) element.classList.remove('hidden')
+        else element.classList.add('hidden')
+    })
+    //  My magical function that looks cool but preforms horribly:
+    // zip = (...rows) => [...rows[0]].map((_,c) => rows.map(row => row[c]))
+    // Array.from(zip(
+    //     references.tabsystems[system].tabs,
+    //     references.tabsystems[system].sections
+    // ), ([tabelement, sectionelement], index) => {
+    //     if (index == tab) {
+    //         tabelement.classList.add('selected_tab')
+    //         sectionelement.classList.remove('hidden')
+    //     } else {
+    //         tabelement.classList.remove('selected_tab')
+    //         sectionelement.classList.add('hidden')
+    //     }
+    // })
 }
+
+function bindTabs(tabassociations) {
+    let system = references['tabsystems'].length
+    references.tabsystems[system] = {'tabs': [], 'sections': []}
+    tabassociations.forEach(([tab, section], index) => {
+        tab.dataset.system = system
+        tab.dataset.index = index
+        tab.addEventListener('click', tabCallback)
+        references.tabsystems[system].tabs.push(tab)
+        references.tabsystems[system].sections.push(section)
+    })
+}
+
+bindTabs([
+    [information_infotab, information_info],
+    [information_pointstab, information_points],
+])
+bindTabs([
+    [settings_generaltab, settings_general],
+    [settings_appearancetab, settings_appearance],
+    [settings_advancedtab, settings_advanced],
+    [settings_abouttab, settings_about]
+])
+// selectTab(1, 2) // DEBUG
 
 // Image viewer functionality
 function previewImage(element) {
@@ -43,13 +90,14 @@ function previewImage(element) {
 }
 
 function hidePreview(event) {
-    display_image.src = ''
-    display_image.dataset.pointindex = undefined
-    display_image.dataset.imageindex = undefined
-    overlay_screen.classList.add('hidden')
+    if (overlay_screen == event.target) {
+        display_image.src = ''
+        display_image.dataset.pointindex = undefined
+        display_image.dataset.imageindex = undefined
+        overlay_screen.classList.add('hidden')
+    }
 }
 overlay_screen.addEventListener('click', hidePreview)
-// display_image.addEventListener('click', (event) => { event.stopPropagation() }) // TODO: Add image zooming
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
@@ -72,6 +120,47 @@ document.addEventListener('keydown', (event) => {
         }
     }
 })
+
+
+
+
+
+
+
+
+
+// Upon the settings button being pressed,
+//  All settings options in the settings menu will be changed to reflect their current values in storage
+//  The overlay_screen and settings_container are then unhidden
+// (A counter is created that counts the amount of options that are changed)
+// Every button in the options menu has a "input" event listener that will trigger whenever they are changed
+//  On the event call, all setting elements will be compared with the current settings. If they are different, show unsaved settings text
+
+
+
+
+testingbox.addEventListener('change', (event) => {
+    console.log('change')
+    return false
+})
+testingbox.addEventListener('input', (event) => {
+    console.log(event)
+    return false
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Information sidebar menu
 var paneVisibility = 0

@@ -1,14 +1,3 @@
-var references = {'icons': {}}
-// var references = {
-//     "category__satellite_dishes": {
-//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
-//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
-//     },
-//     'icons': {
-//         'burger': `<leaflet icon reference>`
-//     }
-// }
-
 function mapClickEvent() {
     // Reset information text when user clicks off a point
     information_header.innerHTML = 'Select a Point'
