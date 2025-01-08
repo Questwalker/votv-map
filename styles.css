@@ -158,6 +158,34 @@ body {
     background-color: rgba(0, 128, 0, 0.19);
 }
 
+
+
+
+
+#testingsettingtabs {
+    height: 100%;
+    border-right: 1px solid green;
+}
+.settings_tab {
+    border-bottom: 1px solid green;
+    padding: 8px;
+    cursor: pointer;
+}
+.selected_tab {
+    background-color: rgba(0, 128, 0, 0.25);
+}
+.settings_tab:hover {
+    background-color: rgba(0, 128, 0, 0.12);
+}
+.selected_tab:hover {
+    background-color: rgba(0, 128, 0, 0.19);
+}
+
+
+
+
+
+
 /* Information pane collapse/expand buttons */
 #information_pane_menu {
     position: absolute;

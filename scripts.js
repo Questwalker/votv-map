@@ -41,20 +41,6 @@ function selectTab(system=0, tab=0) {
         if (index == tab) element.classList.remove('hidden')
         else element.classList.add('hidden')
     })
-    //  My magical function that looks cool but preforms horribly:
-    // zip = (...rows) => [...rows[0]].map((_,c) => rows.map(row => row[c]))
-    // Array.from(zip(
-    //     references.tabsystems[system].tabs,
-    //     references.tabsystems[system].sections
-    // ), ([tabelement, sectionelement], index) => {
-    //     if (index == tab) {
-    //         tabelement.classList.add('selected_tab')
-    //         sectionelement.classList.remove('hidden')
-    //     } else {
-    //         tabelement.classList.remove('selected_tab')
-    //         sectionelement.classList.add('hidden')
-    //     }
-    // })
 }
 
 function bindTabs(tabassociations) {
@@ -86,35 +72,54 @@ function previewImage(element) {
     display_image.src = element.src
     display_image.dataset.pointindex = element.dataset.pointindex
     display_image.dataset.imageindex = element.dataset.imageindex
+    settings_container.classList.add('hidden')
+    display_image.classList.remove('hidden')
     overlay_screen.classList.remove('hidden')
 }
 
-function hidePreview(event) {
-    if (overlay_screen == event.target) {
-        display_image.src = ''
-        display_image.dataset.pointindex = undefined
-        display_image.dataset.imageindex = undefined
-        overlay_screen.classList.add('hidden')
+function settingsClick(event) {
+    display_image.classList.add('hidden')
+    settings_container.classList.remove('hidden')
+    overlay_screen.classList.remove('hidden')
+}
+
+function overlayClick(event) {
+    if (event.target == overlay_screen || event.target == display_image) {
+        closeOverlay()
     }
 }
-overlay_screen.addEventListener('click', hidePreview)
+
+function closeOverlay() {
+    display_image.src = ''
+    display_image.dataset.pointindex = undefined
+    display_image.dataset.imageindex = undefined
+    overlay_screen.classList.add('hidden')
+    display_image.classList.add('hidden')
+    settings_container.classList.add('hidden')
+}
+overlay_screen.addEventListener('click', overlayClick)
+settings_menu_button.addEventListener('click', settingsClick)
+overlay_close_button.addEventListener('click', closeOverlay)
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
     if (!event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
         if (!overlay_screen.classList.contains('hidden')) {
-            // An image is currently being viewed
+            // An overlay is currently being viewed
             if (event.key == 'Escape') {
-                hidePreview()
-            } else if (event.key == 'ArrowLeft' || event.key == 'a') {
-                if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
-                    display_image.dataset.imageindex = Number(display_image.dataset.imageindex) - 1
-                    display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
-                }
-            } else if (event.key == 'ArrowRight' || event.key == 'd') {
-                if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
-                    display_image.dataset.imageindex = Number(display_image.dataset.imageindex) + 1
-                    display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                closeOverlay()
+            } else if (!display_image.classList.contains('hidden')) {
+                // An image is currently being viewed
+                if (event.key == 'ArrowLeft' || event.key == 'a') {
+                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
+                        display_image.dataset.imageindex = Number(display_image.dataset.imageindex) - 1
+                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                    }
+                } else if (event.key == 'ArrowRight' || event.key == 'd') {
+                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
+                        display_image.dataset.imageindex = Number(display_image.dataset.imageindex) + 1
+                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                    }
                 }
             }
         }
@@ -139,14 +144,14 @@ document.addEventListener('keydown', (event) => {
 
 
 
-testingbox.addEventListener('change', (event) => {
-    console.log('change')
-    return false
-})
-testingbox.addEventListener('input', (event) => {
-    console.log(event)
-    return false
-})
+// testingbox.addEventListener('change', (event) => {
+//     console.log('change')
+//     return false
+// })
+// testingbox.addEventListener('input', (event) => {
+//     console.log(event)
+//     return false
+// })
 
 
 
