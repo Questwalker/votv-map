@@ -109,7 +109,7 @@ body {
 	color: #a7a7a7;
 }
 
-/*  Information pane and tabs  */
+/* Information pane and tabs */
 #information_pane {
     border-left: 1px solid green;
     flex: 0.215;
@@ -148,21 +148,17 @@ body {
     padding-left: 4px;
     margin-bottom: 4px;
 }
-.selected_tab {
-    background-color: rgba(0, 128, 0, 0.25);
+
+/* Settings container and tabs */
+#settings_container {
+    width: 512px;
+    height: 512px;
+    background-color: #121212;
+    border: green solid 1px;
+    display: flex;
+    flex-direction: row;
 }
-.information_tab:hover {
-    background-color: rgba(0, 128, 0, 0.12);
-}
-.selected_tab:hover {
-    background-color: rgba(0, 128, 0, 0.19);
-}
-
-
-
-
-
-#testingsettingtabs {
+#settings_tabs {
     height: 100%;
     border-right: 1px solid green;
 }
@@ -171,8 +167,26 @@ body {
     padding: 8px;
     cursor: pointer;
 }
+#settings_content {
+    height: 100%;
+    flex-grow: 1;
+    padding: 8px;
+    position: relative;
+    box-sizing: border-box;
+}
+#overlay_close_button {
+    cursor: pointer;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+/* Tabs, continued.. */
 .selected_tab {
     background-color: rgba(0, 128, 0, 0.25);
+}
+.information_tab:hover {
+    background-color: rgba(0, 128, 0, 0.12);
 }
 .settings_tab:hover {
     background-color: rgba(0, 128, 0, 0.12);
@@ -180,11 +194,6 @@ body {
 .selected_tab:hover {
     background-color: rgba(0, 128, 0, 0.19);
 }
-
-
-
-
-
 
 /* Information pane collapse/expand buttons */
 #information_pane_menu {

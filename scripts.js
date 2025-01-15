@@ -11,6 +11,8 @@ var references = {'icons': {}, 'tabsystems': []}
 //         { "tabs": [], "sections": [] }
 //     ]
 // }
+var settings = {}
+const storageSupported = typeof(Storage) !== 'undefined'
 
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
@@ -65,7 +67,7 @@ bindTabs([
     [settings_advancedtab, settings_advanced],
     [settings_abouttab, settings_about]
 ])
-// selectTab(1, 2) // DEBUG
+selectTab(1, 2) // DEBUG
 
 // Image viewer functionality
 function previewImage(element) {
@@ -77,7 +79,7 @@ function previewImage(element) {
     overlay_screen.classList.remove('hidden')
 }
 
-function settingsClick(event) {
+function settingsClick() {
     display_image.classList.add('hidden')
     settings_container.classList.remove('hidden')
     overlay_screen.classList.remove('hidden')
@@ -100,6 +102,7 @@ function closeOverlay() {
 overlay_screen.addEventListener('click', overlayClick)
 settings_menu_button.addEventListener('click', settingsClick)
 overlay_close_button.addEventListener('click', closeOverlay)
+settingsClick() // DEBUG
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
@@ -125,47 +128,6 @@ document.addEventListener('keydown', (event) => {
         }
     }
 })
-
-
-
-
-
-
-
-
-
-// Upon the settings button being pressed,
-//  All settings options in the settings menu will be changed to reflect their current values in storage
-//  The overlay_screen and settings_container are then unhidden
-// (A counter is created that counts the amount of options that are changed)
-// Every button in the options menu has a "input" event listener that will trigger whenever they are changed
-//  On the event call, all setting elements will be compared with the current settings. If they are different, show unsaved settings text
-
-
-
-
-// testingbox.addEventListener('change', (event) => {
-//     console.log('change')
-//     return false
-// })
-// testingbox.addEventListener('input', (event) => {
-//     console.log(event)
-//     return false
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Information sidebar menu
 var paneVisibility = 0
@@ -194,3 +156,41 @@ function toggleSidebarVis() {
 
 }
 information_collapse_button.addEventListener('click', toggleSidebarVis)
+
+// Settings
+if (storageSupported) {
+    if (localStorage.getItem('sitesettings')) {
+        // Settings exist
+        loadSettings()
+    } else {
+        // Settings do not exist
+        updateStorage()
+    }
+}
+
+function loadSettings() {
+    try {
+        settings = JSON.parse(localStorage.getItem('sitesettings'))
+    } catch {
+        console.log('Error! Settings in Storage failed to parse. Resetting..')
+        updateStorage()
+    }
+}
+
+function updateStorage() {
+    console.log('storage update')
+    let dat = JSON.stringify(settings)
+    localStorage.setItem('sitesettings', dat)
+}
+selectTab(0, 1) // DEBUG
+
+
+
+
+// option_rawsettingsdata.addEventListener('change', (event) => {
+//     console.log('change')
+// })
+// option_rawsettingsdata.addEventListener('input', (event) => {
+//     console.log(event)
+// })
+

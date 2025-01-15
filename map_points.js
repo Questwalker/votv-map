@@ -41,12 +41,15 @@ function setCategoryVisibility(categoryname, setting=false, button=undefined) {
         button.classList.remove('gray')
         button.innerText = '[S]'
         button.dataset.visible = 1
+        settings[`${categoryname}_visible`] = true
     } else {
         map.removeLayer(layer)
         button.classList.add('gray')
         button.innerText = '[H]'
         button.dataset.visible = 0
+        settings[`${categoryname}_visible`] = false
     }
+    updateStorage()
 }
 
 // Create markers and categories for each when nessessary
@@ -62,8 +65,20 @@ points.forEach((data, pointindex) => {
     }
     // If the category hasn't been loaded before, create it and add some basic data
     if (!references[categoryname]) {
-        //TODO/DEBUG, Needs to be set based on user settings
-        categoryvisible = (categoryname != 'category_halloween_pumpkins' && categoryname != 'category_chicken_burgers' && categoryname != 'category_kerfur_parts')
+        // Prepare settings
+        let settingname = `${categoryname}_visible`
+        if (settings[settingname] == undefined) {
+            // Setting does not exist
+            if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts') {
+                // Hardcoded categories hidden by default
+                var categoryvisible = false
+            } else {
+                var categoryvisible = true
+            }
+            settings[settingname] = categoryvisible
+        } else {
+            var categoryvisible = settings[settingname]
+        }
 
         // Create generic category container element
         let categorycontainer = document.createElement('div')
@@ -100,6 +115,7 @@ points.forEach((data, pointindex) => {
         // layercontrol.addOverlay(references[categoryname].leafletgroup, categoryname) //DEBUG
         if (categoryvisible) references[categoryname].leafletgroup.addTo(map)
     }
+    
     // Create the marker
     let marker = L.marker(
         convertGameToLeaflet([data.xPos,data.yPos]), 
@@ -117,6 +133,9 @@ points.forEach((data, pointindex) => {
     // }))
     marker.addTo(references[categoryname].leafletgroup)
 })
+
+// Edit storage
+if (storageSupported) updateStorage()
 
 // Create lines
 lines.forEach((data, lineindex) => {

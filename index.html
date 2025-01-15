@@ -18,21 +18,85 @@
 <body>
     <div id="overlay_screen" class="hidden">
         <img id="display_image" class="unselectable hidden" src="http://10.0.0.113:5501/images/glowingBlueArgemia1_2.png" data-pointindex="39" data-imageindex="1"/>
-        <div id="settings_container" class="hidden" style="width: 512px; height: 512px; background-color: #121212; border: green solid 1px; display: flex; flex-direction: row;">
-            <div id="testingsettingtabs">
+        <div id="settings_container" class="hidden">
+            <div id="settings_tabs">
                 <div id="settings_generaltab" class="settings_tab unselectable">General</div>
                 <div id="settings_appearancetab" class="settings_tab unselectable">Appearance</div>
                 <div id="settings_advancedtab" class="settings_tab unselectable">Advanced</div>
                 <div id="settings_abouttab" class="settings_tab unselectable">About</div>
             </div>
-            <div style="height: 100%; flex-grow: 1; padding: 8px; position: relative; box-sizing: border-box;">
-                <svg id="overlay_close_button" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="#fff" style="cursor: pointer; position: absolute; right: 2px; top: 2px;">
+            <div id="settings_content">
+                <svg id="overlay_close_button" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="#fff">
                     <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/>
                 </svg>
                 <!-- setting tabs -->
-                <div id="settings_general" class="hidden"></div>
-                <div id="settings_appearance" class="hidden"></div>
-                <div id="settings_advanced" class="hidden"></div>
+                <div id="settings_general" class="hidden">
+                    Marker popups
+                </div>
+                <div id="settings_appearance" class="hidden">
+                    Grayscale map<br><br>
+
+                    Something special is coming soon!
+                </div>
+                <div id="settings_advanced" class="hidden">
+
+
+
+
+
+
+
+                    <script>
+                        function testingfunc1() {
+                            console.log(`Content: "${option_rawsettingsdata.value}"`)
+                            try {
+                                data = JSON.parse(option_rawsettingsdata.value)
+                                console.log(data)
+                            } catch {
+                                // Failure notifier, stop function early
+                                option_rawsettingsindicator.classList.remove('specialcss2')
+                                option_rawsettingsindicator.textContent = 'Failure.'
+                                option_rawsettingsindicator.style.color = 'red'
+                                void option_rawsettingsindicator.offsetWidth // black magic
+                                option_rawsettingsindicator.classList.add('specialcss2')
+                                return
+                            }
+                            // Success notifier
+                            option_rawsettingsindicator.classList.remove('specialcss2')
+                            option_rawsettingsindicator.textContent = 'Success!'
+                            option_rawsettingsindicator.style.color = 'lime'
+                            void option_rawsettingsindicator.offsetWidth
+                            option_rawsettingsindicator.classList.add('specialcss2')
+                        }
+                    </script>
+                    <style>
+                        .specialcss1 {
+                            transition: none;
+                            opacity: 1;
+                        }
+                        .specialcss2 {
+                            transition-delay: 600ms;
+                            transition-property: opacity;
+                            transition-duration: 1s;
+                            opacity: 0;
+                        }
+                    </style>
+
+                    <label for="option_rawsettingsdata">Raw Settings:</label><br>
+                    <textarea id="option_rawsettingsdata" rows="5" cols="33" style="resize: none;">{}</textarea><br>
+                    <button id="option_rawsettingsupdate" type="submit" onclick="testingfunc1()">Load</button>
+                    <span id="option_rawsettingsindicator" class="specialcss1 specialcss2">Success</span>
+
+
+
+
+
+
+
+
+
+
+                </div>
                 <div id="settings_about" class="hidden"></div>
             </div>
         </div>
