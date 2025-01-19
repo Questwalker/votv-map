@@ -102,7 +102,7 @@ function closeOverlay() {
 overlay_screen.addEventListener('click', overlayClick)
 settings_menu_button.addEventListener('click', settingsClick)
 overlay_close_button.addEventListener('click', closeOverlay)
-settingsClick() // DEBUG
+// settingsClick() // DEBUG
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
@@ -179,18 +179,39 @@ function loadSettings() {
 
 function updateStorage() {
     console.log('storage update')
-    let dat = JSON.stringify(settings)
-    localStorage.setItem('sitesettings', dat)
+    localStorage.setItem('sitesettings', JSON.stringify(settings))
+    updateSettingsbox()
 }
 selectTab(0, 1) // DEBUG
 
+function updateRawSettings() {
+    try {
+        settings = JSON.parse(option_rawsettingsdata.value)
+    } catch {
+        // Failure notifier, stop function early
+        option_rawsettingsindicator.classList.remove('specialcss2')
+        option_rawsettingsindicator.textContent = 'Failure.'
+        option_rawsettingsindicator.style.color = 'red'
+        void option_rawsettingsindicator.offsetWidth // black magic
+        option_rawsettingsindicator.classList.add('specialcss2')
+        return
+    }
+    updateStorage()
+    // Success notifier
+    option_rawsettingsindicator.classList.remove('specialcss2')
+    option_rawsettingsindicator.textContent = 'Success!'
+    option_rawsettingsindicator.style.color = 'lime'
+    void option_rawsettingsindicator.offsetWidth
+    option_rawsettingsindicator.classList.add('specialcss2')
+}
+
+function updateSettingsbox() {
+    option_rawsettingsdata.value = JSON.stringify(settings, null, 2)
+}
+
+option_rawsettingsupdate.addEventListener('click', updateRawSettings)
 
 
 
-// option_rawsettingsdata.addEventListener('change', (event) => {
-//     console.log('change')
-// })
-// option_rawsettingsdata.addEventListener('input', (event) => {
-//     console.log(event)
-// })
+
 

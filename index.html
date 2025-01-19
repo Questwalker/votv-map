@@ -31,71 +31,24 @@
                 </svg>
                 <!-- setting tabs -->
                 <div id="settings_general" class="hidden">
-                    Marker popups
+                    Coming soon!
+                    <!-- Marker popups -->
                 </div>
                 <div id="settings_appearance" class="hidden">
-                    Grayscale map<br><br>
-
-                    Something special is coming soon!
+                    Coming soon!
+                    <!-- Grayscale map -->
+                    <!-- Snow map -->
+                    <!-- Color customization -->
                 </div>
                 <div id="settings_advanced" class="hidden">
-
-
-
-
-
-
-
-                    <script>
-                        function testingfunc1() {
-                            console.log(`Content: "${option_rawsettingsdata.value}"`)
-                            try {
-                                data = JSON.parse(option_rawsettingsdata.value)
-                                console.log(data)
-                            } catch {
-                                // Failure notifier, stop function early
-                                option_rawsettingsindicator.classList.remove('specialcss2')
-                                option_rawsettingsindicator.textContent = 'Failure.'
-                                option_rawsettingsindicator.style.color = 'red'
-                                void option_rawsettingsindicator.offsetWidth // black magic
-                                option_rawsettingsindicator.classList.add('specialcss2')
-                                return
-                            }
-                            // Success notifier
-                            option_rawsettingsindicator.classList.remove('specialcss2')
-                            option_rawsettingsindicator.textContent = 'Success!'
-                            option_rawsettingsindicator.style.color = 'lime'
-                            void option_rawsettingsindicator.offsetWidth
-                            option_rawsettingsindicator.classList.add('specialcss2')
-                        }
-                    </script>
-                    <style>
-                        .specialcss1 {
-                            transition: none;
-                            opacity: 1;
-                        }
-                        .specialcss2 {
-                            transition-delay: 600ms;
-                            transition-property: opacity;
-                            transition-duration: 1s;
-                            opacity: 0;
-                        }
-                    </style>
-
-                    <label for="option_rawsettingsdata">Raw Settings:</label><br>
-                    <textarea id="option_rawsettingsdata" rows="5" cols="33" style="resize: none;">{}</textarea><br>
-                    <button id="option_rawsettingsupdate" type="submit" onclick="testingfunc1()">Load</button>
-                    <span id="option_rawsettingsindicator" class="specialcss1 specialcss2">Success</span>
-
-
-
-
-
-
-
-
-
-
+                    <div>Careful! Messing around with these settings could cause the website to fail to load properly!</div>
+                    <br>
+                    <div>
+                        <label for="option_rawsettingsdata">Raw Settings:</label><br>
+                        <textarea id="option_rawsettingsdata" rows="16" style="resize: none; width: 95%;" wrap="off">{}</textarea><br>
+                        <button id="option_rawsettingsupdate" type="submit">Load</button>
+                        <span id="option_rawsettingsindicator" class="specialcss1 specialcss2">Success</span>
+                    </div>
                 </div>
                 <div id="settings_about" class="hidden"></div>
             </div>

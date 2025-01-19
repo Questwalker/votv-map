@@ -67,8 +67,9 @@ points.forEach((data, pointindex) => {
     if (!references[categoryname]) {
         // Prepare settings
         let settingname = `${categoryname}_visible`
-        if (settings[settingname] == undefined) {
+        if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
             // Setting does not exist
+            console.log(`writing key ${settingname}`)
             if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts') {
                 // Hardcoded categories hidden by default
                 var categoryvisible = false

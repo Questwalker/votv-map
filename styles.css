@@ -171,6 +171,7 @@ body {
     height: 100%;
     flex-grow: 1;
     padding: 8px;
+    padding-right: 16px;
     position: relative;
     box-sizing: border-box;
 }
@@ -179,6 +180,17 @@ body {
     position: absolute;
     right: 2px;
     top: 2px;
+    background-color: #121212;
+}
+.specialcss1 {
+    transition: none;
+    opacity: 1;
+}
+.specialcss2 {
+    transition-delay: 600ms;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 0;
 }
 
 /* Tabs, continued.. */
