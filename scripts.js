@@ -1,3 +1,19 @@
+var references = {'icons': {}, 'tabsystems': []}
+// var references = {
+//     "category__satellite_dishes": {
+//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
+//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
+//     },
+//     "icons": {
+//         "burger": `<leaflet icon reference>`
+//     },
+//     "tabsystems": [
+//         { "tabs": [], "sections": [] }
+//     ]
+// }
+var settings = {}
+const storageSupported = typeof(Storage) !== 'undefined'
+
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
 function convertGameToUnreal([x,y]) {return [x * 100, y * 100]}
@@ -9,64 +25,102 @@ function roundNumber(number, digit=0) {return Math.round((number * Math.pow(10, 
 
 // Center map button
 function centerMap() {
-    map.panTo([mapSize/2,mapSize/2])
+    map.panTo([mapSize/2, mapSize/2])
 }
 center_button.addEventListener('click', centerMap)
 
 // Tabs functionality
-function tabClickedEvent() {
-    selectTab(this.dataset.index)
+function tabCallback() {
+    selectTab(this.dataset.system, this.dataset.index)
 }
-information_infotab.addEventListener('click', tabClickedEvent)
-information_pointstab.addEventListener('click', tabClickedEvent)
 
-function selectTab(tab=0) {
-    if (tab == 0) {
-        information_infotab.classList.add('selected_tab')
-        information_info.classList.remove('hidden')
-        information_pointstab.classList.remove('selected_tab')
-        information_points.classList.add('hidden')
-    } else if (tab == 1) {
-        information_pointstab.classList.add('selected_tab')
-        information_points.classList.remove('hidden')
-        information_infotab.classList.remove('selected_tab')
-        information_info.classList.add('hidden')
-    }
+function selectTab(system=0, tab=0) {
+    references.tabsystems[system].tabs.forEach((element, index) => {
+        if (index == tab) element.classList.add('selected_tab')
+        else element.classList.remove('selected_tab')
+    })
+    references.tabsystems[system].sections.forEach((element, index) => {
+        if (index == tab) element.classList.remove('hidden')
+        else element.classList.add('hidden')
+    })
 }
+
+function bindTabs(tabassociations) {
+    let system = references['tabsystems'].length
+    references.tabsystems[system] = {'tabs': [], 'sections': []}
+    tabassociations.forEach(([tab, section], index) => {
+        tab.dataset.system = system
+        tab.dataset.index = index
+        tab.addEventListener('click', tabCallback)
+        references.tabsystems[system].tabs.push(tab)
+        references.tabsystems[system].sections.push(section)
+    })
+}
+
+bindTabs([
+    [information_infotab, information_info],
+    [information_pointstab, information_points],
+])
+bindTabs([
+    [settings_generaltab, settings_general],
+    [settings_appearancetab, settings_appearance],
+    [settings_advancedtab, settings_advanced],
+    [settings_abouttab, settings_about]
+])
 
 // Image viewer functionality
 function previewImage(element) {
     display_image.src = element.src
     display_image.dataset.pointindex = element.dataset.pointindex
     display_image.dataset.imageindex = element.dataset.imageindex
-    image_viewer.classList.remove('hidden')
+    settings_container.classList.add('hidden')
+    display_image.classList.remove('hidden')
+    overlay_screen.classList.remove('hidden')
 }
 
-function hidePreview() {
+function settingsClick() {
+    display_image.classList.add('hidden')
+    settings_container.classList.remove('hidden')
+    overlay_screen.classList.remove('hidden')
+}
+
+function overlayClick(event) {
+    if (event.target == overlay_screen || event.target == display_image) {
+        closeOverlay()
+    }
+}
+
+function closeOverlay() {
     display_image.src = ''
     display_image.dataset.pointindex = undefined
     display_image.dataset.imageindex = undefined
-    image_viewer.classList.add('hidden')
+    overlay_screen.classList.add('hidden')
+    display_image.classList.add('hidden')
+    settings_container.classList.add('hidden')
 }
-image_viewer.addEventListener('click', hidePreview)
-// display_image.addEventListener('click', (event) => { event.stopPropagation() }) // TODO: Add image zooming
+overlay_screen.addEventListener('click', overlayClick)
+settings_menu_button.addEventListener('click', settingsClick)
+overlay_close_button.addEventListener('click', closeOverlay)
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
     if (!event.shiftKey && !event.altKey && !event.ctrlKey && !event.metaKey) {
-        if (!image_viewer.classList.contains('hidden')) {
-            // An image is currently being viewed
+        if (!overlay_screen.classList.contains('hidden')) {
+            // An overlay is currently being viewed
             if (event.key == 'Escape') {
-                hidePreview()
-            } else if (event.key == 'ArrowLeft' || event.key == 'a') {
-                if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
-                    display_image.dataset.imageindex = Number(display_image.dataset.imageindex) - 1
-                    display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
-                }
-            } else if (event.key == 'ArrowRight' || event.key == 'd') {
-                if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
-                    display_image.dataset.imageindex = Number(display_image.dataset.imageindex) + 1
-                    display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                closeOverlay()
+            } else if (!display_image.classList.contains('hidden')) {
+                // An image is currently being viewed
+                if (event.key == 'ArrowLeft' || event.key == 'a') {
+                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
+                        display_image.dataset.imageindex = Number(display_image.dataset.imageindex) - 1
+                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                    }
+                } else if (event.key == 'ArrowRight' || event.key == 'd') {
+                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
+                        display_image.dataset.imageindex = Number(display_image.dataset.imageindex) + 1
+                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                    }
                 }
             }
         }
@@ -100,3 +154,53 @@ function toggleSidebarVis() {
 
 }
 information_collapse_button.addEventListener('click', toggleSidebarVis)
+
+// Settings
+if (storageSupported) {
+    if (localStorage.getItem('sitesettings')) {
+        loadSettings()
+    } else {
+        updateStorage()
+    }
+}
+
+function loadSettings() {
+    try {
+        settings = JSON.parse(localStorage.getItem('sitesettings'))
+    } catch {
+        console.log('Error! Settings in Storage failed to parse. Resetting..')
+        updateStorage()
+    }
+}
+
+function updateStorage() {
+    localStorage.setItem('sitesettings', JSON.stringify(settings))
+    updateSettingsbox()
+}
+
+function updateRawSettings() {
+    try {
+        settings = JSON.parse(option_rawsettingsdata.value)
+    } catch {
+        // Failure notifier
+        option_rawsettingsindicator.classList.remove('settingsindicator_animation')
+        option_rawsettingsindicator.textContent = 'Failure.'
+        option_rawsettingsindicator.style.color = 'red'
+        void option_rawsettingsindicator.offsetWidth // black magic
+        option_rawsettingsindicator.classList.add('settingsindicator_animation')
+        return
+    }
+    updateStorage()
+    // Success notifier
+    option_rawsettingsindicator.classList.remove('settingsindicator_animation')
+    option_rawsettingsindicator.textContent = 'Success!'
+    option_rawsettingsindicator.style.color = 'lime'
+    void option_rawsettingsindicator.offsetWidth
+    option_rawsettingsindicator.classList.add('settingsindicator_animation')
+}
+
+function updateSettingsbox() {
+    option_rawsettingsdata.value = JSON.stringify(settings, null, 2)
+}
+
+option_rawsettingsupdate.addEventListener('click', updateRawSettings)
