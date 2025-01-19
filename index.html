@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="overlay_screen" class="hidden">
-        <img id="display_image" class="unselectable hidden" src="http://10.0.0.113:5501/images/glowingBlueArgemia1_2.png" data-pointindex="39" data-imageindex="1"/>
+        <img id="display_image" class="unselectable hidden"/>
         <div id="settings_container" class="hidden">
             <div id="settings_tabs">
                 <div id="settings_generaltab" class="settings_tab unselectable">General</div>
@@ -47,10 +47,12 @@
                         <label for="option_rawsettingsdata">Raw Settings:</label><br>
                         <textarea id="option_rawsettingsdata" rows="16" style="resize: none; width: 95%;" wrap="off">{}</textarea><br>
                         <button id="option_rawsettingsupdate" type="submit">Load</button>
-                        <span id="option_rawsettingsindicator" class="specialcss1 specialcss2">Success</span>
+                        <span id="option_rawsettingsindicator" class="settingsindicator_base settingsindicator_animation">Success</span>
                     </div>
                 </div>
-                <div id="settings_about" class="hidden"></div>
+                <div id="settings_about" class="hidden">
+                    Blank for now..
+                </div>
             </div>
         </div>
     </div>

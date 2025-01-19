@@ -182,11 +182,11 @@ body {
     top: 2px;
     background-color: #121212;
 }
-.specialcss1 {
+.settingsindicator_base {
     transition: none;
     opacity: 1;
 }
-.specialcss2 {
+.settingsindicator_animation {
     transition-delay: 600ms;
     transition-property: opacity;
     transition-duration: 1s;

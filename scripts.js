@@ -189,20 +189,20 @@ function updateRawSettings() {
         settings = JSON.parse(option_rawsettingsdata.value)
     } catch {
         // Failure notifier, stop function early
-        option_rawsettingsindicator.classList.remove('specialcss2')
+        option_rawsettingsindicator.classList.remove('settingsindicator_animation')
         option_rawsettingsindicator.textContent = 'Failure.'
         option_rawsettingsindicator.style.color = 'red'
         void option_rawsettingsindicator.offsetWidth // black magic
-        option_rawsettingsindicator.classList.add('specialcss2')
+        option_rawsettingsindicator.classList.add('settingsindicator_animation')
         return
     }
     updateStorage()
     // Success notifier
-    option_rawsettingsindicator.classList.remove('specialcss2')
+    option_rawsettingsindicator.classList.remove('settingsindicator_animation')
     option_rawsettingsindicator.textContent = 'Success!'
     option_rawsettingsindicator.style.color = 'lime'
     void option_rawsettingsindicator.offsetWidth
-    option_rawsettingsindicator.classList.add('specialcss2')
+    option_rawsettingsindicator.classList.add('settingsindicator_animation')
 }
 
 function updateSettingsbox() {
@@ -210,8 +210,3 @@ function updateSettingsbox() {
 }
 
 option_rawsettingsupdate.addEventListener('click', updateRawSettings)
-
-
-
-
-
