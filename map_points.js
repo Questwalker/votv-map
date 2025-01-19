@@ -82,6 +82,8 @@ points.forEach((data, pointindex) => {
             } else {
                 categoryvisible = settings[settingname]
             }
+        } else {
+            categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts')
         }
 
         // Create generic category container element
