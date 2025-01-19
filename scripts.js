@@ -67,7 +67,7 @@ bindTabs([
     [settings_advancedtab, settings_advanced],
     [settings_abouttab, settings_about]
 ])
-selectTab(1, 2) // DEBUG
+// selectTab(1, 2) // DEBUG
 
 // Image viewer functionality
 function previewImage(element) {
@@ -182,7 +182,7 @@ function updateStorage() {
     localStorage.setItem('sitesettings', JSON.stringify(settings))
     updateSettingsbox()
 }
-selectTab(0, 1) // DEBUG
+// selectTab(0, 1) // DEBUG
 
 function updateRawSettings() {
     try {
