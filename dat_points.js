@@ -910,6 +910,42 @@ const points = [
         "yPos": 702.32
     },
     {
+        "name": "Shovel",
+        "description": "Found up in TR_2.",
+        "related_images" : ['./images/shovel4_1.png'],
+        "category": "",
+        "icon": "./icons/shovel.png",
+        "xPos": -543.53,
+        "yPos": 237.09
+    },
+    {
+        "name": "Watering Can",
+        "description": "Found on a shelf in TR_1.",
+        "related_images" : ['./images/wateringCan1_1.png'],
+        "category": "",
+        "icon": "./icons/watering_can.png",
+        "xPos": 398.72,
+        "yPos": 197.67
+    },
+    {
+        "name": "Watering Can",
+        "description": "Found up in TR_2.",
+        "related_images" : ['./images/wateringCan2_1.png'],
+        "category": "",
+        "icon": "./icons/watering_can.png",
+        "xPos": -549.13,
+        "yPos": 236.71
+    },
+    {
+        "name": "Watering Can",
+        "description": "Found in the corner of TR_3.",
+        "related_images" : ['./images/wateringCan3_1.png'],
+        "category": "",
+        "icon": "./icons/watering_can.png",
+        "xPos": -402.26,
+        "yPos": -477.54
+    },
+    {
         "name": "Axe",
         "description": "Inside the abandoned shack under the bed.",
         "related_images" : ['./images/axe1_1.png'],
@@ -1028,7 +1064,7 @@ const points = [
     },
     {
         "name": "Hiking Boots",
-        "description": "Wearing the hiking boots allows you to walk up steeper surfaces without slipping, and allows you to fall farther distances without collapsing or taking damage.",
+        "description": "Found in the corner of TR_3.<br>Wearing them allows you to walk up steeper surfaces without slipping and allows you to fall farther distances without collapsing or taking damage.",
         "related_images" : ['./images/hikingBoots1_1.png'],
         "category": "",
         "icon": "./icons/hiking_boots.png",
@@ -1055,7 +1091,7 @@ const points = [
     },
     {
         "name": "Knee Joints",
-        "description": "Found in TR_3. In the office, on the shelf.",
+        "description": "Found in TR_3. In the office corner on the shelf.",
         "related_images" : ['./images/kneeJoints3_1.png'],
         "category": "Kerfur Parts",
         "icon": "./icons/knee_joint.png",
