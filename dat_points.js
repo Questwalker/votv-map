@@ -1,31 +1,31 @@
 const points = [
     // Satellites
     {
-        "name": "Papa",
+        "name": "Bravo",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/p.png",
-        "xPos": 300,
-        "yPos": 300
+        "icon": "./icons/b.png",
+        "xPos": -100,
+        "yPos": -200
     },
     {
-        "name": "Golf",
+        "name": "Charlie",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/g.png",
-        "xPos": 200,
-        "yPos": 100
+        "icon": "./icons/c.png",
+        "xPos": 0,
+        "yPos": -200
     },
     {
-        "name": "Foxtrot",
+        "name": "Delta",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/f.png",
-        "xPos": 200,
-        "yPos": 0
+        "icon": "./icons/d.png",
+        "xPos": 100,
+        "yPos": -200
     },
     {
         "name": "Echo",
@@ -37,49 +37,22 @@ const points = [
         "yPos": -100
     },
     {
-        "name": "Oscar",
+        "name": "Foxtrot",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/o.png",
-        "xPos": 300,
-        "yPos": -300
-    },
-    {
-        "name": "Tango",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/t.png",
-        "xPos": 500,
-        "yPos": -500
-    },
-    {
-        "name": "Uniform",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/u.png",
-        "xPos": 500,
+        "icon": "./icons/f.png",
+        "xPos": 200,
         "yPos": 0
     },
     {
-        "name": "India",
+        "name": "Golf",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/i.png",
-        "xPos": 0,
-        "yPos": 200
-    },
-    {
-        "name": "Victor",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/v.png",
-        "xPos": 500,
-        "yPos": 500
+        "icon": "./icons/g.png",
+        "xPos": 200,
+        "yPos": 100
     },
     {
         "name": "Hotel",
@@ -91,6 +64,15 @@ const points = [
         "yPos": 200
     },
     {
+        "name": "India",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/i.png",
+        "xPos": 0,
+        "yPos": 200
+    },
+    {
         "name": "Juliett",
         "description": "",
         "related_images" : [],
@@ -98,33 +80,6 @@ const points = [
         "icon": "./icons/j.png",
         "xPos": -100,
         "yPos": 200
-    },
-    {
-        "name": "Whiskey",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/w.png",
-        "xPos": 0,
-        "yPos": 500
-    },
-    {
-        "name": "Xray",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/x.png",
-        "xPos": -500,
-        "yPos": 500
-    },
-    {
-        "name": "Quebec",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/q.png",
-        "xPos": -300,
-        "yPos": 300
     },
     {
         "name": "Kilo",
@@ -154,42 +109,6 @@ const points = [
         "yPos": -100
     },
     {
-        "name": "Bravo",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/b.png",
-        "xPos": -100,
-        "yPos": -200
-    },
-    {
-        "name": "Charlie",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/c.png",
-        "xPos": 0,
-        "yPos": -200
-    },
-    {
-        "name": "Delta",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/d.png",
-        "xPos": 100,
-        "yPos": -200
-    },
-    {
-        "name": "Sierra",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/s.png",
-        "xPos": 0,
-        "yPos": -500
-    },
-    {
         "name": "November",
         "description": "",
         "related_images" : [],
@@ -197,6 +116,33 @@ const points = [
         "icon": "./icons/n.png",
         "xPos": -300,
         "yPos": -300
+    },
+    {
+        "name": "Oscar",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/o.png",
+        "xPos": 300,
+        "yPos": -300
+    },
+    {
+        "name": "Papa",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/p.png",
+        "xPos": 300,
+        "yPos": 300
+    },
+    {
+        "name": "Quebec",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/q.png",
+        "xPos": -300,
+        "yPos": 300
     },
     {
         "name": "Romeo",
@@ -208,6 +154,60 @@ const points = [
         "yPos": -500
     },
     {
+        "name": "Sierra",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/s.png",
+        "xPos": 0,
+        "yPos": -500
+    },
+    {
+        "name": "Tango",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/t.png",
+        "xPos": 500,
+        "yPos": -500
+    },
+    {
+        "name": "Uniform",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/u.png",
+        "xPos": 500,
+        "yPos": 0
+    },
+    {
+        "name": "Victor",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/v.png",
+        "xPos": 500,
+        "yPos": 500
+    },
+    {
+        "name": "Whiskey",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/w.png",
+        "xPos": 0,
+        "yPos": 500
+    },
+    {
+        "name": "Xray",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/x.png",
+        "xPos": -500,
+        "yPos": 500
+    },
+    {
         "name": "Yankee",
         "description": "",
         "related_images" : [],
@@ -215,6 +215,15 @@ const points = [
         "icon": "./icons/y.png",
         "xPos": -500,
         "yPos": 0
+    },
+    {
+        "name": "Zulu",
+        "description": "Shh...",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/z.png",
+        "xPos": 10000,
+        "yPos": 10000
     },
     // Furfur Totems
     {
@@ -328,15 +337,6 @@ const points = [
     },
     // Argemia Plushes
     {
-        "name": "Green Argemia",
-        "description": "Outside of the fence, located on the top of the mountain",
-        "related_images" : ['./images/greenArgemia1_1.png', './images/greenArgemia1_2.png', './images/greenArgemia1_3.png'],
-        "category": "Plushes",
-        "icon": "./icons/green_argemia.png",
-        "xPos": 239,
-        "yPos": 828
-    },
-    {
         "name": "Red Argemia",
         "description": "Located in a steep pit next to a donut. Interacting with the donut will teleport you back home.<br>NOTE: The walls of the pit are too steep to allow you to walk out, so you can bring your ATV into the pit or interact with the donut to get out.",
         "related_images" : ['./images/redArgemia1_1.png', './images/redArgemia1_2.png', './images/redArgemia1_3.png'],
@@ -346,13 +346,49 @@ const points = [
         "yPos": -128
     },
     {
+        "name": "Green Argemia",
+        "description": "Outside of the fence, located on the top of the mountain",
+        "related_images" : ['./images/greenArgemia1_1.png', './images/greenArgemia1_2.png', './images/greenArgemia1_3.png'],
+        "category": "Plushes",
+        "icon": "./icons/green_argemia.png",
+        "xPos": 239,
+        "yPos": 828
+    },
+    {
         "name": "Blue Argemia",
-        "description": "In the river near quebec.<br><br><u>Note</u>: Due to the map changes in v8.0, the plushie may have been pulled down the river by the current. Make sure to inspect a good distance up-stream if you can't find it.",
-        "related_images" : ['./images/blueArgemia1_1.png', './images/blueArgemia1_2.png'],
+        "description": "In the river near quebec.",
+        "related_images" : ['./images/blueArgemia1_1.png'],
         "category": "Plushes",
         "icon": "./icons/blue_argemia.png",
         "xPos": -315,
         "yPos": 398
+    },
+    {
+        "name": "Cyan Argemia",
+        "description": "To summon, put exactly 12 shrimp packs in the pool, and then trigger an explosion in the water. A gas can is a good way to create an explosion.",
+        "related_images" : ['./images/cyanArgemia1_1.png'],
+        "category": "Plushes",
+        "icon": "./icons/cyan_argemia.png",
+        "xPos": -8.5,
+        "yPos": 23.5
+    },
+    {
+        "name": "Magenta Argemia",
+        "description": "Spawns after you pick up the lifecrystal signal.",
+        "related_images" : ['./images/magentaArgemia1_1.png'],
+        "category": "Plushes",
+        "icon": "./icons/magenta_argemia.png",
+        "xPos": 637.5,
+        "yPos": 46.8
+    },
+    {
+        "name": "Yellow Argemia",
+        "description": "The yellow Argemia plush requires a ritual to spawn.<br>- First, place a shrimp pack (or multiple) at each corner of the map's fence.<br>- Next, place a shrimp pack on the sewer drain in the basement.<br>- Then, nearing 12:50 at night, stand in a corner of the basement and face away from the shrimp. Around 00:00, a wooshing sound will play, and you can turn to find the argemia summoned. It might take a couple minutes to spawn, so do not turn until you hear it spawn or at least 00:15.<br><br>You can use a clock/watch to help keep track of time. This ritual can be difficult to preform due to cockroaches or Arirals eating the shrimp you've placed.",
+        "related_images" : ['./images/yellowArgemia1_1.png', './images/yellowArgemia1_2.png'],
+        "category": "Plushes",
+        "icon": "./icons/yellow_argemia.png",
+        "xPos": -11,
+        "yPos": 23
     },
     {
         "name": "Glowing Blue Argemia",
@@ -393,7 +429,7 @@ const points = [
     // Points of interest
     {
         "name": "Unknown Rozital Technology",
-        "description": "Found situated between two rocks, and will do nothing until you discover a signal.<br>Once the <i>lifecrystal</i> signal has been downloaded and processed to level 3, an event will occur the next night that features a purple laser coming down from the sky onto the technology. After the event, the technology will glow a subtle pink, and after approaching, will begin to spin and click before flying into the air and disappearing in a flash of light.<br>Whether the technology was supposed to originate from the laser, or that the laser simply \'activated\' the technology is unknown.",
+        "description": "Found situated between two rocks, and will do nothing until you discover a certain signal.",
         "related_images" : ['./images/rozitalTech1_1.png', './images/rozitalTech1_2.png', './images/rozitalTech1_3.png', './images/rozitalTech1_4.png'],
         "category": "Points of Interest",
         "icon": "./icons/rozital.png",
@@ -556,7 +592,7 @@ const points = [
     },
     {
         "name": "Burger #10",
-        "description": "Under the bridge near the base.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
+        "description": "Under the bridge near the base.",
         "related_images" : ["./images/burger10_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
@@ -655,7 +691,7 @@ const points = [
     },
     {
         "name": "Burger #21",
-        "description": "In a group of rocks behind Wiskey.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
+        "description": "In a group of rocks behind Wiskey.",
         "related_images" : ["./images/burger21_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
@@ -711,8 +747,8 @@ const points = [
     },
     {
         "name": "Skull",
-        "description": "Dug up from under the Unknown Rozital Technology.",
-        "related_images" : ['./images/skull2_1.png'],
+        "description": "Dug up from under the Unknown Rozital Technology.<br>It can also be dug up while the Technology is still there if you shovel a specific point",
+        "related_images" : ['./images/skull2_1.png', './images/skull2_2.png'],
         "category": "Skulls",
         "icon": "./icons/skull.png",
         "xPos": 637.54,
@@ -955,15 +991,6 @@ const points = [
         "yPos": 22.5
     },
     {
-        "name": "Safe",
-        "description": "Found at the bottom of the lake, it's quite hard to get it out of the water.<br><br>Cracking into the safe is easy.<br>First, grab onto the safe's door and start scrolling in a direction. Go slowly as your mouse wheel can go. As you spin the dial, you will hear clicking. Once you hear a click that is very slightly different, reverse the direction you are scrolling and start spinning in the opposite direction. Continue going back and forth, reversing your scrolling until the safe unlock.<br><br>Inside is a Omega AI Module.",
-        "related_images" : [],
-        "category": "",
-        "icon": "./icons/safe.png",
-        "xPos": 404.8,
-        "yPos": -406
-    },
-    {
         "name": "Cacti",
         "description": "Dug up next to the light post",
         "related_images" : ['./images/cacti1_1.png'],
@@ -1072,6 +1099,16 @@ const points = [
         "yPos": -478.67
     },
     {
+        "name": "MRE Barrel",
+        "description": "Inside an upright log in the river. Has 50 MREs in it.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/barrel.png",
+        "xPos": 233.36,
+        "yPos": -329.2
+    },
+    // KerfurO parts
+    {
         "name": "Knee Joints",
         "description": "Found in TR_1. In the office, inside a bucket.",
         "related_images" : ['./images/kneeJoints1_1.png'],
@@ -1098,7 +1135,6 @@ const points = [
         "xPos": -400.55,
         "yPos": -477.15
     },
-    // Buried Kerfur Part Boxes
     {
         "name": "Buried Kerfur Parts",
         "description": "Contains two ball joints.",
@@ -1152,5 +1188,14 @@ const points = [
         "icon": "./icons/old_wooden_box.png",
         "xPos": -524.14,
         "yPos": -479.11
+    },
+    {
+        "name": "Safe",
+        "description": "Found at the bottom of the lake, it's quite hard to get it out of the water.<br><br>Cracking into the safe is easy.<br>First, grab onto the safe's door and start turning your scroll wheel in a direction. Go slowly as your mouse wheel can go. As you spin the dial, you will hear clicking. Once you hear a click that is very slightly different, reverse the direction you are scrolling and start spinning in the opposite direction. Continue going back and forth, reversing your scrolling until the safe unlocks.<br><br>Inside is an Omega AI Module.",
+        "related_images" : [],
+        "category": "Kerfur Parts",
+        "icon": "./icons/safe.png",
+        "xPos": 404.8,
+        "yPos": -406
     }
 ]
