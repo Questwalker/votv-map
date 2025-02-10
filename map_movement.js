@@ -27,7 +27,7 @@ var map = L.map('map_element', {
     renderer: renderer
 })
 
-L.imageOverlay('map-264888.png', bounds).addTo(map)
+L.imageOverlay('map-264888.webp', bounds).addTo(map)
 
 // Hacky fix for the max zoom being not enough to work on smaller devices
 //  Changes min zoom to of the map to -2 if the viewport gets too small
