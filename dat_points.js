@@ -1,31 +1,31 @@
 const points = [
     // Satellites
     {
-        "name": "Papa",
+        "name": "Bravo",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/p.png",
-        "xPos": 300,
-        "yPos": 300
+        "icon": "./icons/b.png",
+        "xPos": -100,
+        "yPos": -200
     },
     {
-        "name": "Golf",
+        "name": "Charlie",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/g.png",
-        "xPos": 200,
-        "yPos": 100
+        "icon": "./icons/c.png",
+        "xPos": 0,
+        "yPos": -200
     },
     {
-        "name": "Foxtrot",
+        "name": "Delta",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/f.png",
-        "xPos": 200,
-        "yPos": 0
+        "icon": "./icons/d.png",
+        "xPos": 100,
+        "yPos": -200
     },
     {
         "name": "Echo",
@@ -37,49 +37,22 @@ const points = [
         "yPos": -100
     },
     {
-        "name": "Oscar",
+        "name": "Foxtrot",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/o.png",
-        "xPos": 300,
-        "yPos": -300
-    },
-    {
-        "name": "Tango",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/t.png",
-        "xPos": 500,
-        "yPos": -500
-    },
-    {
-        "name": "Uniform",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/u.png",
-        "xPos": 500,
+        "icon": "./icons/f.png",
+        "xPos": 200,
         "yPos": 0
     },
     {
-        "name": "India",
+        "name": "Golf",
         "description": "",
         "related_images" : [],
         "category": "Satellite Dishes",
-        "icon": "./icons/i.png",
-        "xPos": 0,
-        "yPos": 200
-    },
-    {
-        "name": "Victor",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/v.png",
-        "xPos": 500,
-        "yPos": 500
+        "icon": "./icons/g.png",
+        "xPos": 200,
+        "yPos": 100
     },
     {
         "name": "Hotel",
@@ -91,6 +64,15 @@ const points = [
         "yPos": 200
     },
     {
+        "name": "India",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/i.png",
+        "xPos": 0,
+        "yPos": 200
+    },
+    {
         "name": "Juliett",
         "description": "",
         "related_images" : [],
@@ -98,33 +80,6 @@ const points = [
         "icon": "./icons/j.png",
         "xPos": -100,
         "yPos": 200
-    },
-    {
-        "name": "Whiskey",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/w.png",
-        "xPos": 0,
-        "yPos": 500
-    },
-    {
-        "name": "Xray",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/x.png",
-        "xPos": -500,
-        "yPos": 500
-    },
-    {
-        "name": "Quebec",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/q.png",
-        "xPos": -300,
-        "yPos": 300
     },
     {
         "name": "Kilo",
@@ -154,42 +109,6 @@ const points = [
         "yPos": -100
     },
     {
-        "name": "Bravo",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/b.png",
-        "xPos": -100,
-        "yPos": -200
-    },
-    {
-        "name": "Charlie",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/c.png",
-        "xPos": 0,
-        "yPos": -200
-    },
-    {
-        "name": "Delta",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/d.png",
-        "xPos": 100,
-        "yPos": -200
-    },
-    {
-        "name": "Sierra",
-        "description": "",
-        "related_images" : [],
-        "category": "Satellite Dishes",
-        "icon": "./icons/s.png",
-        "xPos": 0,
-        "yPos": -500
-    },
-    {
         "name": "November",
         "description": "",
         "related_images" : [],
@@ -197,6 +116,33 @@ const points = [
         "icon": "./icons/n.png",
         "xPos": -300,
         "yPos": -300
+    },
+    {
+        "name": "Oscar",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/o.png",
+        "xPos": 300,
+        "yPos": -300
+    },
+    {
+        "name": "Papa",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/p.png",
+        "xPos": 300,
+        "yPos": 300
+    },
+    {
+        "name": "Quebec",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/q.png",
+        "xPos": -300,
+        "yPos": 300
     },
     {
         "name": "Romeo",
@@ -208,6 +154,60 @@ const points = [
         "yPos": -500
     },
     {
+        "name": "Sierra",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/s.png",
+        "xPos": 0,
+        "yPos": -500
+    },
+    {
+        "name": "Tango",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/t.png",
+        "xPos": 500,
+        "yPos": -500
+    },
+    {
+        "name": "Uniform",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/u.png",
+        "xPos": 500,
+        "yPos": 0
+    },
+    {
+        "name": "Victor",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/v.png",
+        "xPos": 500,
+        "yPos": 500
+    },
+    {
+        "name": "Whiskey",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/w.png",
+        "xPos": 0,
+        "yPos": 500
+    },
+    {
+        "name": "Xray",
+        "description": "",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/x.png",
+        "xPos": -500,
+        "yPos": 500
+    },
+    {
         "name": "Yankee",
         "description": "",
         "related_images" : [],
@@ -215,6 +215,15 @@ const points = [
         "icon": "./icons/y.png",
         "xPos": -500,
         "yPos": 0
+    },
+    {
+        "name": "Zulu",
+        "description": "Shh...",
+        "related_images" : [],
+        "category": "Satellite Dishes",
+        "icon": "./icons/z.png",
+        "xPos": 10000,
+        "yPos": 10000
     },
     // Furfur Totems
     {
@@ -1088,6 +1097,15 @@ const points = [
         "icon": "./icons/hiking_boots.png",
         "xPos": -402.4,
         "yPos": -478.67
+    },
+    {
+        "name": "MRE Barrel",
+        "description": "Inside an upright log in the river. Has 50 MREs in it.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/barrel.png",
+        "xPos": 233.36,
+        "yPos": -329.2
     },
     // KerfurO parts
     {
