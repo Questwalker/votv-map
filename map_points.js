@@ -53,6 +53,7 @@ function setCategoryVisibility(categoryname, setting=false, button=undefined) {
 }
 
 // Create markers and categories for each when nessessary
+var markerzoffset = 0
 points.forEach((data, pointindex) => {
     let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
 
@@ -72,7 +73,7 @@ points.forEach((data, pointindex) => {
             if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
                 // Setting does not exist
                 console.log(`writing key ${settingname}`)
-                if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts') {
+                if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls') {
                     // Hardcoded categories hidden by default
                     categoryvisible = false
                 } else {
@@ -83,7 +84,7 @@ points.forEach((data, pointindex) => {
                 categoryvisible = settings[settingname]
             }
         } else {
-            categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts')
+            categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls')
         }
 
         // Create generic category container element
@@ -127,9 +128,11 @@ points.forEach((data, pointindex) => {
         convertGameToLeaflet([data.xPos,data.yPos]), 
         {
             icon: references.icons[data.icon],
+            'zIndexOffset': markerzoffset,
             'pointindex': pointindex
         }
     )
+    markerzoffset += 1
     // Bind click event, add popup, add to category layer
     marker.on('click', pointClickEvent)
     // marker.bindPopup(L.popup({ // Make enable/disableable in user settings?
