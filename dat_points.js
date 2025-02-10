@@ -356,8 +356,8 @@ const points = [
     },
     {
         "name": "Blue Argemia",
-        "description": "In the river near quebec.<br><br><u>Note</u>: Due to the map changes in v8.0, the plushie may have been pulled down the river by the current. Make sure to inspect a good distance up-stream if you can't find it.",
-        "related_images" : ['./images/blueArgemia1_1.png', './images/blueArgemia1_2.png'],
+        "description": "In the river near quebec.",
+        "related_images" : ['./images/blueArgemia1_1.png'],
         "category": "Plushes",
         "icon": "./icons/blue_argemia.png",
         "xPos": -315,
@@ -592,7 +592,7 @@ const points = [
     },
     {
         "name": "Burger #10",
-        "description": "Under the bridge near the base.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
+        "description": "Under the bridge near the base.",
         "related_images" : ["./images/burger10_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
@@ -691,7 +691,7 @@ const points = [
     },
     {
         "name": "Burger #21",
-        "description": "In a group of rocks behind Wiskey.<br>Depending on your graphics settings, the burger might look like it's under the ground.",
+        "description": "In a group of rocks behind Wiskey.",
         "related_images" : ["./images/burger21_1.png"],
         "category": "Chicken Burgers",
         "icon": "./icons/burger.png",
