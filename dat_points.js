@@ -1107,6 +1107,15 @@ const points = [
         "xPos": 233.36,
         "yPos": -329.2
     },
+    {
+        "name": "Maid Outfit",
+        "description": "It's a maid outfit. Located in a safe that can be dug up near the lightpost. Omega Kerfur can wear it, or you can.<br>Be careful to not stand on where the safe is while you are digging it up, or you might get stuck in it.",
+        "related_images" : ['./images/maidOutfit1_1.png', './images/maidOutfit1_2.png'],
+        "category": "",
+        "icon": "./icons/maid_outfit.png",
+        "xPos": -357.4,
+        "yPos": -488.95
+    },
     // KerfurO parts
     {
         "name": "Knee Joints",
@@ -1190,11 +1199,11 @@ const points = [
         "yPos": -479.11
     },
     {
-        "name": "Safe",
-        "description": "Found at the bottom of the lake, it's quite hard to get it out of the water.<br><br>Cracking into the safe is easy.<br>First, grab onto the safe's door and start turning your scroll wheel in a direction. Go slowly as your mouse wheel can go. As you spin the dial, you will hear clicking. Once you hear a click that is very slightly different, reverse the direction you are scrolling and start spinning in the opposite direction. Continue going back and forth, reversing your scrolling until the safe unlocks.<br><br>Inside is an Omega AI Module.",
+        "name": "Omega AI Module",
+        "description": "Located in a safe found at the bottom of the lake, it's quite hard to get it out of the water.<br><br>Cracking the safe is easy.<br>First, grab onto the safe's door and start turning your scroll wheel in a direction. Go slowly as your mouse wheel can go. As you spin the dial, you will hear clicking. Once you hear a click that is very slightly different, reverse the direction you are scrolling and start spinning in the opposite direction. Continue going back and forth, reversing your scrolling until the safe unlocks.",
         "related_images" : [],
         "category": "Kerfur Parts",
-        "icon": "./icons/safe.png",
+        "icon": "./icons/omega_ai_module.png",
         "xPos": 404.8,
         "yPos": -406
     }

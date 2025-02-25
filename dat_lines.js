@@ -42,32 +42,6 @@ const lines = [
         "linethickness": 1,
         "coordinates": [[875, 875], [-875, 875], [-875, -875], [875, -875], [875, 875]]
     },
-    // Bridges
-    {
-        "color": "#080000",
-        "linethickness": 2,
-        "coordinates": [[-400.2, 497.7], [-376.6, 508.7]]
-    },
-    {
-        "color": "#080000",
-        "linethickness": 2,
-        "coordinates": [[-223.2, 285.1], [-197.3, 282.8]]
-    },
-    {
-        "color": "#080000",
-        "linethickness": 2,
-        "coordinates": [[-76.9, 11.7], [-51, 11.8]]
-    },
-    {
-        "color": "#080000",
-        "linethickness": 2,
-        "coordinates": [[116.2, -121.9], [120.7, -96.3]]
-    },
-    {
-        "color": "#080000",
-        "linethickness": 2,
-        "coordinates": [[274.2, -360], [295.5, -345]]
-    },
     // Ritual Area
     { // Small island
         "color": "maroon",
