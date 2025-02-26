@@ -121,7 +121,7 @@ function settingsMenuInput() {
     }
 }
 
-function applySettings() {
+function applySettings({updateStorage=true}) {
     let restartNeeded = false
     let callbacks = []
     Object.entries(tempsettings).forEach(([settings_id, value]) => {
@@ -135,15 +135,27 @@ function applySettings() {
             }
         }
     })
-    pushToStorage()
+    if (updateStorage) pushToStorage()
     if (restartNeeded) {
         window.location.reload()
         return
+    } else {
+        syncWidgets()
     }
+    // Execute callbacks
     callbacks.forEach(([callback, settings_id, value]) => {
         callback(settings_id, value)
     })
 }
+
+function outsideStorageChange() {
+    console.log(colors.cyan, 'OUTSIDE UPDATE')
+    // load data from localstorage into tempsettings?
+    // then call
+    Object.assign(tempsettings, JSON.parse(localStorage.getItem('sitesettings')))
+    applySettings({updateStorage: false})
+}
+window.addEventListener('storage', outsideStorageChange)
 
 function syncWidgets() {
     // Sets the values of all widgets to their values in settings
@@ -210,11 +222,10 @@ function registerSetting(settings_id, default_value, datatype, {category='genera
         }
     }
 }
-registerSetting('category_plushes_visible', false, 'boolean', {callback: (settings_id, value)=>{console.log('HELLO', settings_id, value)}})
 registerSetting('category_satellite_dishes_visible', false, 'boolean', {widget: true, callback: (settings_id, value)=>{console.log('HELLO', settings_id, value)}})
 registerSetting('asd', true, 'boolean', {widget: {description: 'hello'}, restart_required: true})
 syncWidgets()
-pushToStorage()
+// pushToStorage()
 
 
 
@@ -254,12 +265,6 @@ pushToStorage()
 
 
 
-// function outsideStorageChange() {
-//     // load data from localstorage into tempsettings?
-//     // then call
-//     applySettings()
-// }
-// window.addEventListener('storage', outsideStorageChange)
 
 
 
