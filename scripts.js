@@ -102,7 +102,7 @@ function closeOverlay() {
 overlay_screen.addEventListener('click', overlayClick)
 settings_menu_button.addEventListener('click', settingsClick)
 overlay_close_button.addEventListener('click', closeOverlay)
-// settingsClick() // DEBUG
+settingsClick() // DEBUG
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
@@ -182,7 +182,7 @@ function updateStorage() {
     localStorage.setItem('sitesettings', JSON.stringify(settings))
     updateSettingsbox()
 }
-// selectTab(0, 1) // DEBUG
+selectTab(1, 1) // DEBUG
 
 function updateRawSettings() {
     try {
