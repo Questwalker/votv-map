@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>:root { color-scheme: dark } #controls > button { font-size: larger }</style>
+    <!-- <style>table, td, tr { border: 1px solid red; border-collapse: collapse } </style> -->
+    <style>.settings_mainlabel {} .settings_desclabel { display: block; } </style>
+</head>
+<body>
+    <button style="display: block;" onclick="applySettings()">Apply</button>
+    <div id="container" style="background-color: rgb(128, 128, 128, 0.25); width: 25%; margin-bottom: 64px;"></div>
+    <table style="width: 90%; position: absolute; top: 175px; height: 300px;">
+        <tr>
+            <th>tempsettings</th>
+            <th>settings</th>
+            <th>localStorage</th>
+        </tr>
+        <tr>
+            <td><textarea id="liveview1" rows="16" style="resize: none; width: 100%; box-sizing: border-box;"></textarea></td>
+            <td rowspan="2"><textarea id="liveview2" rows="20" style="resize: none; width: 100%; box-sizing: border-box;"></textarea></td>
+            <td><textarea id="liveview3" rows="16" style="resize: none; width: 100%; box-sizing: border-box;"></textarea></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><button style="margin-bottom: 35px;" onclick="tempsettings = {}">reset</button></td>
+            <td style="text-align: center;"><button style="margin-bottom: 35px;" onclick="newStorage()">reset</button></td>
+        </tr>
+    </table>
+    <!-- controls -->
+    <div id="controls" style="position: absolute; right: 8px; top: 8px; display: flex; flex-direction: column; gap: 8px;">
+        <button id="fancbut" onclick="console.log(JSON.stringify(settings, null, 2)); console.log(JSON.stringify(tempsettings, null, 2)); console.log(JSON.stringify(localStorage, null, 2))">Fancy print</button>
+        <button onclick="localStorage.clear(); console.log(colors.magenta, 'localStorage cleared')">Clear</button>
+    </div>
+    <script src="settings.js"></script>
+    <!-- <script src="debug.js"></script> -->
+</body>
+</html>
+
+
+
+
+<!-- <div>
+    <input id="stinker" type="checkbox">
+    <label for="stinker">Stinker</label>
+    <label for="stinker" style="display: block;">Button that stinks</label>
+</div> -->
+
