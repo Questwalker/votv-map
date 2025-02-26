@@ -2,54 +2,54 @@ const colors = { 'reset': '\x1b[0m%s', 'bright': '\x1b[1m%s', 'dim': '\x1b[2m%s'
     'hidden': '\x1b[8m%s', 'black': '\x1b[30m%s', 'red': '\x1b[31m%s', 'green': '\x1b[32m%s', 'yellow': '\x1b[33m%s', 'blue': '\x1b[34m%s', 'magenta': '\x1b[35m%s', 
     'cyan': '\x1b[36m%s', 'white': '\x1b[37m%s' }
 
-function snippet() {
-    // Prepare settings
-    if (storageSupported) {
-        var categoryvisible
-        let settingname = `${categoryname}_visible`
-        if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
-            // Setting does not exist
-            console.log(`writing key ${settingname}`)
-            if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts') {
-                // Hardcoded categories hidden by default
-                categoryvisible = false
-            } else {
-                categoryvisible = true
-            }
-            settings[settingname] = categoryvisible
-        } else {
-            categoryvisible = settings[settingname]
-        }
-    } else {
-        categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts')
-    }
-}
-var settings_ = {
-    'registered': {
-        'category_satellite_dishes_visible': {
-            'datatype': 'boolean',
-            'requiresRestart': false,
-            'widget': Object
-        },
-        'grayscale_map': {
-            'datatype': 'boolean',
-            'requiresRestart': false,
-            'callback': function(){}
-        },
-        'marker_popups': {
-            'datatype': 'boolean',
-            'requiresRestart': true
-        }
-    },
-    'settings': {
-        'category_satellite_dishes_visible': true,
-        'marker_popups': false
-    }
-}
-var tempsettings_ = {
-    'category_satellite_dishes_visible': true,
-    'marker_popups': true
-}
+// function snippet() {
+//     // Prepare settings
+//     if (storageSupported) {
+//         var categoryvisible
+//         let settingname = `${categoryname}_visible`
+//         if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
+//             // Setting does not exist
+//             console.log(`writing key ${settingname}`)
+//             if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts') {
+//                 // Hardcoded categories hidden by default
+//                 categoryvisible = false
+//             } else {
+//                 categoryvisible = true
+//             }
+//             settings[settingname] = categoryvisible
+//         } else {
+//             categoryvisible = settings[settingname]
+//         }
+//     } else {
+//         categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts')
+//     }
+// }
+// var settings_ = {
+//     'registered': {
+//         'category_satellite_dishes_visible': {
+//             'datatype': 'boolean',
+//             'requiresRestart': false,
+//             'widget': Object
+//         },
+//         'grayscale_map': {
+//             'datatype': 'boolean',
+//             'requiresRestart': false,
+//             'callback': function(){}
+//         },
+//         'marker_popups': {
+//             'datatype': 'boolean',
+//             'requiresRestart': true
+//         }
+//     },
+//     'settings': {
+//         'category_satellite_dishes_visible': true,
+//         'marker_popups': false
+//     }
+// }
+// var tempsettings_ = {
+//     'category_satellite_dishes_visible': true,
+//     'marker_popups': true
+// }
 
 // ============================================================================================================================================================================
 
@@ -125,7 +125,7 @@ function applySettings({updateStorage=true}) {
     let restartNeeded = false
     let callbacks = []
     Object.entries(tempsettings).forEach(([settings_id, value]) => {
-        if (value != settings.settings[settings_id]) {
+        if (value != settings.settings[settings_id] && settings.registered[settings_id] != undefined) {
             let registry = settings.registered[settings_id]
             restartNeeded = registry.requiresRestart || restartNeeded
             settings.settings[settings_id] = value
@@ -150,9 +150,14 @@ function applySettings({updateStorage=true}) {
 
 function outsideStorageChange() {
     console.log(colors.cyan, 'OUTSIDE UPDATE')
-    // load data from localstorage into tempsettings?
-    // then call
-    Object.assign(tempsettings, JSON.parse(localStorage.getItem('sitesettings')))
+    // Object.assign(tempsettings, JSON.parse(localStorage.getItem('sitesettings')))
+    tempsettings = {}
+    var currentStorageValues = JSON.parse(localStorage.getItem('sitesettings'))
+    for (let settings_id in currentStorageValues) {
+        if (settings.registered[settings_id] != undefined) {
+            tempsettings[settings_id] = currentStorageValues[settings_id]
+        }
+    }
     applySettings({updateStorage: false})
 }
 window.addEventListener('storage', outsideStorageChange)
@@ -222,7 +227,7 @@ function registerSetting(settings_id, default_value, datatype, {category='genera
         }
     }
 }
-registerSetting('category_satellite_dishes_visible', false, 'boolean', {widget: true, callback: (settings_id, value)=>{console.log('HELLO', settings_id, value)}})
+registerSetting('category_satellite_dishes_visible', false, 'boolean', {widget: {displayname: 'Satellite Dishes Visible'}, callback: (settings_id, value)=>{console.log('this callback has been called!', settings_id, 'set to', value)}})
 registerSetting('asd', true, 'boolean', {widget: {description: 'hello'}, restart_required: true})
 syncWidgets()
 // pushToStorage()
