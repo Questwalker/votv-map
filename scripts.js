@@ -11,8 +11,6 @@ var references = {'icons': {}, 'tabsystems': []}
 //         { "tabs": [], "sections": [] }
 //     ]
 // }
-var settings = {}
-const storageSupported = typeof(Storage) !== 'undefined'
 
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
@@ -67,7 +65,6 @@ bindTabs([
     [settings_advancedtab, settings_advanced],
     [settings_abouttab, settings_about]
 ])
-// selectTab(1, 2) // DEBUG
 
 // Image viewer functionality
 function previewImage(element) {
@@ -102,7 +99,6 @@ function closeOverlay() {
 overlay_screen.addEventListener('click', overlayClick)
 settings_menu_button.addEventListener('click', settingsClick)
 overlay_close_button.addEventListener('click', closeOverlay)
-settingsClick() // DEBUG
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
@@ -158,55 +154,10 @@ function toggleSidebarVis() {
 information_collapse_button.addEventListener('click', toggleSidebarVis)
 
 // Settings
-if (storageSupported) {
-    if (localStorage.getItem('sitesettings')) {
-        // Settings exist
-        loadSettings()
-    } else {
-        // Settings do not exist
-        updateStorage()
-    }
-}
+registerSetting('marker_popup_labels', true, 'boolean', {category: 'settings_general', widget: {title: 'Marker Popup Labels', description: 'A label that will pop up when clicking a marker'}, restart_required: true})
+registerSetting('grayscale_map', true, 'boolean', {category: 'settings_appearance', widget: {title: 'Grayscale Map', description: 'Reduce saturation of the map'}})
+registerSetting('show_radar_circle', true, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
+syncWidgets()
 
-function loadSettings() {
-    try {
-        settings = JSON.parse(localStorage.getItem('sitesettings'))
-    } catch {
-        console.log('Error! Settings in Storage failed to parse. Resetting..')
-        updateStorage()
-    }
-}
-
-function updateStorage() {
-    console.log('storage update')
-    localStorage.setItem('sitesettings', JSON.stringify(settings))
-    updateSettingsbox()
-}
-selectTab(1, 1) // DEBUG
-
-function updateRawSettings() {
-    try {
-        settings = JSON.parse(option_rawsettingsdata.value)
-    } catch {
-        // Failure notifier, stop function early
-        option_rawsettingsindicator.classList.remove('settingsindicator_animation')
-        option_rawsettingsindicator.textContent = 'Failure.'
-        option_rawsettingsindicator.style.color = 'red'
-        void option_rawsettingsindicator.offsetWidth // black magic
-        option_rawsettingsindicator.classList.add('settingsindicator_animation')
-        return
-    }
-    updateStorage()
-    // Success notifier
-    option_rawsettingsindicator.classList.remove('settingsindicator_animation')
-    option_rawsettingsindicator.textContent = 'Success!'
-    option_rawsettingsindicator.style.color = 'lime'
-    void option_rawsettingsindicator.offsetWidth
-    option_rawsettingsindicator.classList.add('settingsindicator_animation')
-}
-
-function updateSettingsbox() {
-    option_rawsettingsdata.value = JSON.stringify(settings, null, 2)
-}
-
-option_rawsettingsupdate.addEventListener('click', updateRawSettings)
+settingsClick() // DEBUG
+selectTab(1, 0) // DEBUG

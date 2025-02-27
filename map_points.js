@@ -67,25 +67,38 @@ points.forEach((data, pointindex) => {
     // If the category hasn't been loaded before, create it and add some basic data
     if (!references[categoryname]) {
         // Prepare settings
-        if (storageSupported) {
-            var categoryvisible
-            let settingname = `${categoryname}_visible`
-            if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
-                // Setting does not exist
-                console.log(`writing key ${settingname}`)
-                if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls') {
-                    // Hardcoded categories hidden by default
-                    categoryvisible = false
-                } else {
-                    categoryvisible = true
-                }
-                settings[settingname] = categoryvisible
-            } else {
-                categoryvisible = settings[settingname]
-            }
-        } else {
+        setting_id = `${categoryname}_visible`
+        registerSetting(
+            setting_id, 
+            (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls'), 
+            'boolean', {callback: (settings_id, value)=>{console.log('this callback has been called!', settings_id, 'set to', value)},
+            // widget: {title: (data.category != '' && data.category != undefined) ? data.category : 'Miscellaneous', description: 'Hello World'}
+        })
+        var categoryvisible
+        if (settings.settings[setting_id] == undefined) {
             categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls')
+        } else {
+            categoryvisible = settings.settings[setting_id]
         }
+        // if (storageSupported) {
+        //     var categoryvisible
+        //     let settingname = `${categoryname}_visible`
+        //     if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
+        //         // Setting does not exist
+        //         console.log(`writing key ${settingname}`)
+        //         if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls') {
+        //             // Hardcoded categories hidden by default
+        //             categoryvisible = false
+        //         } else {
+        //             categoryvisible = true
+        //         }
+        //         settings[settingname] = categoryvisible
+        //     } else {
+        //         categoryvisible = settings[settingname]
+        //     }
+        // } else {
+        //     categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls')
+        // }
 
         // Create generic category container element
         let categorycontainer = document.createElement('div')
@@ -122,7 +135,7 @@ points.forEach((data, pointindex) => {
         // layercontrol.addOverlay(references[categoryname].leafletgroup, categoryname) //DEBUG
         if (categoryvisible) references[categoryname].leafletgroup.addTo(map)
     }
-    
+
     // Create the marker
     let marker = L.marker(
         convertGameToLeaflet([data.xPos,data.yPos]), 
@@ -143,8 +156,8 @@ points.forEach((data, pointindex) => {
     marker.addTo(references[categoryname].leafletgroup)
 })
 
-// Edit storage
-if (storageSupported) updateStorage()
+// Sync UI
+syncWidgets()
 
 // Create lines
 lines.forEach((data, lineindex) => {

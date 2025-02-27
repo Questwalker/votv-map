@@ -1,80 +1,55 @@
-const colors = { 'reset': '\x1b[0m%s', 'bright': '\x1b[1m%s', 'dim': '\x1b[2m%s', 'underscore': '\x1b[4m%s', 'blink': '\x1b[5m%s', 'reverse': '\x1b[7m%s', 
-    'hidden': '\x1b[8m%s', 'black': '\x1b[30m%s', 'red': '\x1b[31m%s', 'green': '\x1b[32m%s', 'yellow': '\x1b[33m%s', 'blue': '\x1b[34m%s', 'magenta': '\x1b[35m%s', 
-    'cyan': '\x1b[36m%s', 'white': '\x1b[37m%s' }
 
-// function snippet() {
-//     // Prepare settings
-//     if (storageSupported) {
-//         var categoryvisible
-//         let settingname = `${categoryname}_visible`
-//         if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
-//             // Setting does not exist
-//             console.log(`writing key ${settingname}`)
-//             if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts') {
-//                 // Hardcoded categories hidden by default
-//                 categoryvisible = false
-//             } else {
-//                 categoryvisible = true
-//             }
-//             settings[settingname] = categoryvisible
-//         } else {
-//             categoryvisible = settings[settingname]
-//         }
+// if (storageSupported) {
+//     if (localStorage.getItem('sitesettings')) {
+//         // Settings exist
+//         loadSettings()
 //     } else {
-//         categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts')
+//         // Settings do not exist
+//         updateStorage()
 //     }
 // }
-// var settings_ = {
-//     'registered': {
-//         'category_satellite_dishes_visible': {
-//             'datatype': 'boolean',
-//             'requiresRestart': false,
-//             'widget': Object
-//         },
-//         'grayscale_map': {
-//             'datatype': 'boolean',
-//             'requiresRestart': false,
-//             'callback': function(){}
-//         },
-//         'marker_popups': {
-//             'datatype': 'boolean',
-//             'requiresRestart': true
-//         }
-//     },
-//     'settings': {
-//         'category_satellite_dishes_visible': true,
-//         'marker_popups': false
+
+// function loadSettings() {
+//     try {
+//         settings = JSON.parse(localStorage.getItem('sitesettings'))
+//     } catch {
+//         console.log('Error! Settings in Storage failed to parse. Resetting..')
+//         updateStorage()
 //     }
 // }
-// var tempsettings_ = {
-//     'category_satellite_dishes_visible': true,
-//     'marker_popups': true
+
+// function updateStorage() {
+//     console.log('storage update')
+//     localStorage.setItem('sitesettings', JSON.stringify(settings))
+//     updateSettingsbox()
+// }
+// selectTab(1, 1) // DEBUG
+
+// function updateRawSettings() {
+//     try {
+//         settings = JSON.parse(option_rawsettingsdata.value)
+//     } catch {
+//         // Failure notifier, stop function early
+//         option_rawsettingsindicator.classList.remove('settingsindicator_animation')
+//         option_rawsettingsindicator.textContent = 'Failure.'
+//         option_rawsettingsindicator.style.color = 'red'
+//         void option_rawsettingsindicator.offsetWidth // black magic
+//         option_rawsettingsindicator.classList.add('settingsindicator_animation')
+//         return
+//     }
+//     updateStorage()
+//     // Success notifier
+//     option_rawsettingsindicator.classList.remove('settingsindicator_animation')
+//     option_rawsettingsindicator.textContent = 'Success!'
+//     option_rawsettingsindicator.style.color = 'lime'
+//     void option_rawsettingsindicator.offsetWidth
+//     option_rawsettingsindicator.classList.add('settingsindicator_animation')
 // }
 
-// ============================================================================================================================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function updateSettingsbox() {
+//     option_rawsettingsdata.value = JSON.stringify(settings, null, 2)
+// }
+// option_rawsettingsupdate.addEventListener('click', updateRawSettings)
 
 var settings = {'registered': {}, 'settings': {}}
 var tempsettings = {}
@@ -88,7 +63,7 @@ function pushToStorage() {
 }
 
 function newStorage() {
-    console.log(colors.green, 'new user')
+    console.log('new user')
     localStorage.setItem('sitesettings', '{}')
 }
 
@@ -105,7 +80,7 @@ function accessWidget(element, {edit=false, newvalue}) {
             if (edit) element.checked = newvalue
             return element.checked
         default:
-            console.log(colors.red, 'cannot access element with unknown type')
+            console.log('cannot access element with unknown type')
             break
     }
 }
@@ -116,7 +91,7 @@ function settingsMenuInput() {
             tempsettings[this.dataset.id] = this.checked
             break
         default:
-            console.log(colors.red, 'event from element with invalid datatype')
+            console.log('event from element with invalid datatype')
             break
     }
 }
@@ -149,7 +124,7 @@ function applySettings({updateStorage=true}) {
 }
 
 function outsideStorageChange() {
-    console.log(colors.cyan, 'OUTSIDE UPDATE')
+    console.log('OUTSIDE UPDATE')
     // Object.assign(tempsettings, JSON.parse(localStorage.getItem('sitesettings')))
     tempsettings = {}
     var currentStorageValues = JSON.parse(localStorage.getItem('sitesettings'))
@@ -171,16 +146,16 @@ function syncWidgets() {
     })
 }
 
-function registerSetting(settings_id, default_value, datatype, {category='general', widget=undefined, restart_required=false, callback}) {
+function registerSetting(settings_id, default_value, datatype, {category='settings_general', widget=undefined, restart_required=false, callback}) {
     //  Sanity checks
     // Check if setting already registered
     if (settings.registered[settings_id] != undefined) {
-        console.log(colors.red, 'setting already registered!')
+        console.log('setting already registered!')
         return
     }
     // Check that datatype is correct
     if (typeof default_value != datatype) {
-        console.log(colors.red, 'settings value mismatch')
+        console.log('settings value mismatch')
         return
     }
 
@@ -189,7 +164,6 @@ function registerSetting(settings_id, default_value, datatype, {category='genera
     settings.registered[settings_id].datatype = datatype
     settings.registered[settings_id].requiresRestart = restart_required
     if (callback != undefined) {
-        // console.log(colors.cyan, 'callback included')
         settings.registered[settings_id].callback = callback
     }
 
@@ -201,100 +175,33 @@ function registerSetting(settings_id, default_value, datatype, {category='genera
     // Generate generic UI
     if (widget && widget != undefined) {
         if (datatype == 'boolean') {
-            let minicontainer = document.createElement('div')
+            let maincontainer = document.createElement('div')
+            let topcontainer = document.createElement('div')
+            topcontainer.classList.add('settings_topcontainer')
             let checkbox = document.createElement('input')
-            checkbox.id = `checkbox_${settings_id}`
+            checkbox.id = `settingwidget_${settings_id}`
             checkbox.dataset.id = settings_id
             checkbox.dataset.datatype = datatype
             settings.registered[settings_id].widget = checkbox
             checkbox.addEventListener('input', settingsMenuInput)
             checkbox.type = 'checkbox'
-            minicontainer.appendChild(checkbox)
-            let mainlabel = document.createElement('label')
-            mainlabel.innerText = (widget.title == undefined) ? settings_id : widget.title
-            mainlabel.htmlFor = `checkbox_${settings_id}`
-            mainlabel.classList.add('settings_mainlabel')
-            minicontainer.appendChild(mainlabel)
+            checkbox.classList.add('settings_checkbox')
+            topcontainer.appendChild(checkbox)
+            let titlelabel = document.createElement('label')
+            titlelabel.innerText = (widget.title == undefined) ? settings_id : widget.title
+            titlelabel.htmlFor = `settingwidget_${settings_id}`
+            titlelabel.classList.add('settings_mainlabel')
+            topcontainer.appendChild(titlelabel)
+            maincontainer.appendChild(topcontainer)
             if (widget.description != undefined) {
                 let desclabel = document.createElement('label')
                 desclabel.innerText = `${widget.description}${(restart_required ? ' (requires reload)' : '')}`
-                desclabel.for = `checkbox_${settings_id}`
                 desclabel.classList.add('settings_desclabel')
-                desclabel.htmlFor = `checkbox_${settings_id}`
-                minicontainer.appendChild(desclabel)
+                desclabel.htmlFor = `settingwidget_${settings_id}`
+                maincontainer.appendChild(desclabel)
             }
-            container.appendChild(minicontainer)
+            maincontainer.appendChild(document.createElement('br'))
+            document.getElementById(category).appendChild(maincontainer)
         }
     }
 }
-registerSetting('category_satellite_dishes_visible', false, 'boolean', {widget: {title: 'Satellite Dishes Visible'}, callback: (settings_id, value)=>{console.log('this callback has been called!', settings_id, 'set to', value)}})
-registerSetting('asd', true, 'boolean', {widget: {description: 'hello'}, restart_required: true})
-syncWidgets()
-// pushToStorage()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-setInterval(function() {
-    liveview1.value = JSON.stringify(tempsettings, null, 2)
-    liveview2.value = JSON.stringify(settings, null, 2)
-    liveview3.value = JSON.stringify(JSON.parse(localStorage.sitesettings), null, 2)
-}, 100)
-// setTimeout(function() { fancbut.click() }, 100)

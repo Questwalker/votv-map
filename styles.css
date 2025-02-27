@@ -170,10 +170,10 @@ body {
 #settings_content {
     height: 100%;
     flex-grow: 1;
-    padding: 8px;
-    padding-right: 16px;
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 .settings_pane {
     box-sizing: border-box;
@@ -197,6 +197,47 @@ body {
     transition-property: opacity;
     transition-duration: 1s;
     opacity: 0;
+}
+#settings_maincontainer {
+    padding: 8px;
+    padding-right: 16px;
+    flex: 1;
+    overflow: auto;
+}
+#settings_buttonsfooter {
+    border-top: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+}
+#settingsbutton_reset, #settingsbutton_apply {
+    font-family: monospace;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+}
+#settingsbutton_reset {
+    border-right: 1px solid green;
+}
+#settingsbutton_apply {
+    border-left: 1px solid green;
+}
+.settings_topcontainer {
+    display: flex;
+    align-items: center;
+}
+.settings_checkbox {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    margin-right: 5px;
+}
+.settings_mainlabel {
+    font-size: 1.05em;
+}
+.settings_desclabel {
+    display: block;
+    color: lightgray;
 }
 
 /* Tabs, continued.. */
