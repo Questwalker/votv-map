@@ -339,7 +339,7 @@ const points = [
     {
         "name": "Red Argemia",
         "description": "Located in a steep pit next to a donut. Interacting with the donut will teleport you back home.<br>NOTE: The walls of the pit are too steep to allow you to walk out, so you can bring your ATV into the pit or interact with the donut to get out.",
-        "related_images" : ['./images/redArgemia1_1.png', './images/redArgemia1_2.png', './images/redArgemia1_3.png'],
+        "related_images" : ['./images/redArgemia1_1.png', './images/redArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/red_argemia.png",
         "xPos": 626,
@@ -475,7 +475,7 @@ const points = [
     {
         "name": "Well",
         "description": "",
-        "related_images" : ['./images/well1_1.png','./images/well1_2.png'],
+        "related_images" : ['./images/well1_1.png'],
         "category": "Points of Interest",
         "icon": "./icons/well.png",
         "xPos": 564.4,
@@ -1014,8 +1014,8 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/drive.png",
-        "xPos": 15.9,
-        "yPos": 23.5
+        "xPos": 16.5,
+        "yPos": 22.4
     },
     {
         "name": "Box of bones",
