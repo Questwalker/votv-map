@@ -1064,7 +1064,7 @@ const points = [
     },
     {
         "name": "Argemia Mug",
-        "description": "Located on top of the power pole, a basic white mug with a portrait of Argemia Armuntela on the side. The item is fixed so only player interaction can move it. You can use a hook to climb the pole.",
+        "description": "Located on top of the utility pole, a basic white mug with a portrait of Argemia Armuntela on the side. The item is fixed so only player interaction can move it. You can use a hook to climb the pole.",
         "related_images" : [],
         "category": "",
         "icon": "./icons/argemug.png",
@@ -1115,6 +1115,15 @@ const points = [
         "icon": "./icons/maid_outfit.png",
         "xPos": -357.4,
         "yPos": -488.95
+    },
+    {
+        "name": "Jar of honey",
+        "description": "A jar of honey. On top of the utility pole, restores 10 food and 100 health on consumption.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/jar_of_honey.png",
+        "xPos": -352.5,
+        "yPos": -438.7
     },
     // KerfurO parts
     {

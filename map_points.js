@@ -120,7 +120,7 @@ points.forEach((data, pointindex) => {
         }
         if (categoryvisible) references[categoryname].leafletgroup.addTo(map)
     }
-    
+
     // Create the marker
     let marker = L.marker(
         convertGameToLeaflet([data.xPos,data.yPos]), 
