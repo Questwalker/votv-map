@@ -111,13 +111,11 @@ function accessWidget(element, {edit=false, newvalue}) {
 }
 
 function settingsMenuInput() {
-    switch (this.dataset.datatype) {
-        case 'boolean':
-            tempsettings[this.dataset.id] = this.checked
-            break
-        default:
-            console.log(colors.red, 'event from element with invalid datatype')
-            break
+    let currentvalue = accessWidget(this, {})
+    if (currentvalue != settings.settings[this.dataset.id]) {
+        tempsettings[this.dataset.id] = currentvalue
+    } else {
+        delete tempsettings[this.dataset.id]
     }
 }
 
@@ -146,6 +144,8 @@ function applySettings({updateStorage=true}) {
     callbacks.forEach(([callback, settings_id, value]) => {
         callback(settings_id, value)
     })
+    // Clear temp
+    tempsettings = {}
 }
 
 function outsideStorageChange() {
@@ -154,11 +154,13 @@ function outsideStorageChange() {
     tempsettings = {}
     var currentStorageValues = JSON.parse(localStorage.getItem('sitesettings'))
     for (let settings_id in currentStorageValues) {
-        if (settings.registered[settings_id] != undefined) {
+        if (settings.registered[settings_id] != undefined && currentStorageValues[settings_id] != settings.settings[settings_id]) {
             tempsettings[settings_id] = currentStorageValues[settings_id]
         }
     }
-    applySettings({updateStorage: false})
+    if (Object.keys(tempsettings).length != 0) {
+        applySettings({updateStorage: false})
+    }
 }
 window.addEventListener('storage', outsideStorageChange)
 
