@@ -148,6 +148,20 @@ function applySettings({updateStorage=true}) {
     tempsettings = {}
 }
 
+function hotApply() {
+    let settings_id = this.dataset.id
+    let currentvalue = accessWidget(this, {})
+    if (currentvalue != settings.settings[settings_id]) {
+        settings.settings[settings_id] = currentvalue
+        let callback = settings.registered[settings_id].callback
+        if (typeof callback == 'function') {
+            callback(settings_id, currentvalue)
+        }
+    }
+    pushToStorage()
+    syncWidgets()
+}
+
 function outsideStorageChange() {
     console.log(colors.cyan, 'OUTSIDE UPDATE')
     // Object.assign(tempsettings, JSON.parse(localStorage.getItem('sitesettings')))

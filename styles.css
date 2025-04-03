@@ -209,6 +209,12 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+
+
+
+
+
 #settingsbutton_reset, #settingsbutton_apply {
     font-family: monospace;
     font-size: 1.1em;
@@ -222,6 +228,18 @@ body {
 #settingsbutton_apply {
     border-left: 1px solid green;
 }
+#settingsbutton_reset:hover, #settingsbutton_apply:hover {
+    background-color: rgba(0, 128, 0, 0.12);
+}
+
+
+
+
+
+
+
+
+
 .settings_topcontainer {
     display: flex;
     align-items: center;

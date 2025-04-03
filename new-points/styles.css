@@ -68,7 +68,7 @@ body {
 
 .itembutton_description {
     overflow: hidden;
-    text-overflow: clip;
+    text-overflow: ellipsis;
     padding-left: 5px;
     padding-top: 1px;
     white-space: nowrap;
@@ -84,7 +84,7 @@ body {
 }
 
 .selectiontext {
-    line-height: 130%;
+    line-height: 150%;
     text-align: left;
     font-size: 105%;
     flex: 1;
