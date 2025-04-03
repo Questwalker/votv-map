@@ -1,4 +1,16 @@
 var references = {'icons': {}, 'tabsystems': []}
+// var references = {
+//     "category__satellite_dishes": {
+//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
+//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
+//     },
+//     "icons": {
+//         "burger": `<leaflet icon reference>`
+//     },
+//     "tabsystems": [
+//         { "tabs": [], "sections": [] }
+//     ]
+// }
 
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
@@ -147,5 +159,5 @@ registerSetting('grayscale_map', true, 'boolean', {category: 'settings_appearanc
 registerSetting('show_radar_circle', true, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
 syncWidgets()
 
-// settingsClick() // DEBUG
-// selectTab(1, 0) // DEBUG
+settingsClick() // DEBUG
+selectTab(1, 0) // DEBUG

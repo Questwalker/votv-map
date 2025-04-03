@@ -70,7 +70,7 @@ points.forEach((data, pointindex) => {
         setting_id = `${categoryname}_visible`
         registerSetting(
             setting_id, 
-            !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls'), 
+            (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls'), 
             'boolean', {callback: (settings_id, value)=>{console.log('this callback has been called!', settings_id, 'set to', value)},
             // widget: {title: (data.category != '' && data.category != undefined) ? data.category : 'Miscellaneous', description: 'Hello World'}
         })

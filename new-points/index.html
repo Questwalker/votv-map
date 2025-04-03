@@ -7,28 +7,67 @@
 </head>
 <body>
     <div style="box-sizing: border-box; border: 1px solid green; height: 100%; width: 500px; padding: 5px; overflow-y: auto;">
-        <div style="line-height: 160%; font-size: 105%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; padding-left: 8px; padding-top: 1px; margin-right: 5px;">Plushes</div>
+        <div style="display: flex; align-items: center; width: 100%;">
+            <div style="line-height: 130%; text-align: left; font-size: 105%; flex: 1; text-overflow: clip; white-space: nowrap; overflow: hidden; padding-left: 8px; padding-top: 1px; margin-right: 5px;">Argemia Plushes</div>
+            <div style="box-sizing: border-box; border: 1px solid green; text-align: center; margin-right: 5px; padding: 5px; cursor: pointer; text-overflow: clip; white-space: nowrap; overflow: hidden;">Check all</div>
+            <div style="box-sizing: border-box; border: 1px solid green; text-align: center; margin-right: 5px; padding: 5px; cursor: pointer; text-overflow: clip; white-space: nowrap; overflow: hidden;">Uncheck all</div>
+        </div>
         <div style="display: flex; flex-direction: row; justify-content: flex-start; box-sizing: border-box; flex-wrap: wrap;">
+            <div class="item">
+                <div class="itembutton itembuttonactive" title="Green Argemia">
+                    <div class="itembutton_imagecontainer">
+                        <img class="itembutton_image" src="./icons/green_argemia.png">
+                    </div>
+                    <div class="itembutton_description">Green Argemia</div>
+                </div>
+            </div>
             <div class="item">
                 <div class="itembutton itembuttonactive" title="Red Argemia">
                     <div class="itembutton_imagecontainer">
-                        <img class="itembutton_image" height="25" width="25" src="./icons/red_argemia.png">
+                        <img class="itembutton_image" src="./icons/red_argemia.png">
                     </div>
-                    <div class="itembutton_description">Argemia Plushes</div>
+                    <div class="itembutton_description">Red Argemia</div>
                 </div>
             </div>
-            <div style="height: 45px; box-sizing: border-box; max-width: 50%; flex: 1 1 50%; padding: 5px;">
-                <div style="background-color: transparent; box-sizing: border-box; border: 1px solid green; height: 100%; width: 100%; cursor: pointer; padding: 4px; display: flex; align-items: center;" title="Nuclear Argemia Plushes">
-                    <div style="height: 100%; aspect-ratio: 1; display: inline-flex; justify-content: center;">
-                        <img style="max-height: 100%; max-width: 100%; margin: auto;" src="./icons/glowing_cyan_argemia.png">
+            <div class="item">
+                <div class="itembutton itembuttonactive" title="Blue Argemia">
+                    <div class="itembutton_imagecontainer">
+                        <img class="itembutton_image" src="./icons/blue_argemia.png">
                     </div>
-                    <div style="overflow: hidden; text-overflow: ellipsis; padding-left: 5px; padding-top: 1px; white-space: nowrap;">Nuclear Argemia Plushes</div>
+                    <div class="itembutton_description">Blue Argemia</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="itembutton itembuttonactive" title="Glowing Blue Argemia">
+                    <div class="itembutton_imagecontainer">
+                        <img class="itembutton_image" src="./icons/glowing_blue_argemia.png">
+                    </div>
+                    <div class="itembutton_description">Glowing Blue Argemia</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="itembutton itembuttonactive" title="Glowing Magenta Argemia">
+                    <div class="itembutton_imagecontainer">
+                        <img class="itembutton_image" src="./icons/glowing_magenta_argemia.png">
+                    </div>
+                    <div class="itembutton_description">Glowing Magenta Argemia</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="itembutton itembuttonactive" title="Glowing Cyan Argemia">
+                    <div class="itembutton_imagecontainer">
+                        <img class="itembutton_image" src="./icons/glowing_cyan_argemia.png">
+                    </div>
+                    <div class="itembutton_description">Glowing Cyan Argemia</div>
                 </div>
             </div>
         </div>
         <br>
+        <br>
         <div class="selectionheader">
-            <div class="selectiontext">Kerfur-Related</div>
+            <div class="selectiontext">Argemia Plushes</div>
+            <div class="selectionbuttons" title="Check all">&nbsp;+</div>
+            <div class="selectionbuttons" title="Uncheck all">-</div>
         </div>
         <div class="container">
             <div class="item"><div class="itembutton">1</div></div>
@@ -55,8 +94,11 @@
             <div class="item"><div class="itembutton">9</div></div>
         </div>
         <br>
+        <br>
         <div class="selectionheader">
             <div class="selectiontext">Argemia Plushes</div>
+            <div class="selectionbuttons">Check all</div>
+            <div class="selectionbuttons">Uncheck all</div>
         </div>
         <div class="container">
             <div class="item"><div class="itembutton">1</div></div>
