@@ -86,13 +86,11 @@ function accessWidget(element, {edit=false, newvalue}) {
 }
 
 function settingsMenuInput() {
-    switch (this.dataset.datatype) {
-        case 'boolean':
-            tempsettings[this.dataset.id] = this.checked
-            break
-        default:
-            console.log('event from element with invalid datatype')
-            break
+    let currentvalue = accessWidget(this, {})
+    if (currentvalue != settings.settings[this.dataset.id]) {
+        tempsettings[this.dataset.id] = currentvalue
+    } else {
+        delete tempsettings[this.dataset.id]
     }
 }
 
@@ -121,6 +119,22 @@ function applySettings({updateStorage=true}) {
     callbacks.forEach(([callback, settings_id, value]) => {
         callback(settings_id, value)
     })
+    // Clear temp
+    tempsettings = {}
+}
+
+function hotApply() {
+    let settings_id = this.dataset.id
+    let currentvalue = accessWidget(this, {})
+    if (currentvalue != settings.settings[settings_id]) {
+        settings.settings[settings_id] = currentvalue
+        let callback = settings.registered[settings_id].callback
+        if (typeof callback == 'function') {
+            callback(settings_id, currentvalue)
+        }
+    }
+    pushToStorage()
+    syncWidgets()
 }
 
 function outsideStorageChange() {
@@ -129,11 +143,13 @@ function outsideStorageChange() {
     tempsettings = {}
     var currentStorageValues = JSON.parse(localStorage.getItem('sitesettings'))
     for (let settings_id in currentStorageValues) {
-        if (settings.registered[settings_id] != undefined) {
+        if (settings.registered[settings_id] != undefined && currentStorageValues[settings_id] != settings.settings[settings_id]) {
             tempsettings[settings_id] = currentStorageValues[settings_id]
         }
     }
-    applySettings({updateStorage: false})
+    if (Object.keys(tempsettings).length != 0) {
+        applySettings({updateStorage: false})
+    }
 }
 window.addEventListener('storage', outsideStorageChange)
 
@@ -146,7 +162,7 @@ function syncWidgets() {
     })
 }
 
-function registerSetting(settings_id, default_value, datatype, {category='settings_general', widget=undefined, restart_required=false, callback}) {
+function registerSetting(settings_id, default_value, datatype, {category='general', widget=undefined, restart_required=false, callback}) {
     //  Sanity checks
     // Check if setting already registered
     if (settings.registered[settings_id] != undefined) {
@@ -164,6 +180,7 @@ function registerSetting(settings_id, default_value, datatype, {category='settin
     settings.registered[settings_id].datatype = datatype
     settings.registered[settings_id].requiresRestart = restart_required
     if (callback != undefined) {
+        // console.log('callback included')
         settings.registered[settings_id].callback = callback
     }
 
