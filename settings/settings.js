@@ -187,7 +187,7 @@ function syncWidgets() {
     })
 }
 
-function registerSetting(settings_id, default_value, datatype, {category='general', widget=undefined, restart_required=false, callback}) {
+function registerSetting(settings_id, default_value, datatype, {category='general', widget=undefined, restart_required=false, callback=undefined, executeoninit=false}) {
     //  Sanity checks
     // Check if setting already registered
     if (settings.registered[settings_id] != undefined) {
@@ -242,9 +242,27 @@ function registerSetting(settings_id, default_value, datatype, {category='genera
             container.appendChild(minicontainer)
         }
     }
+    
+    // Execute callback on completed creation
+    if (callback != undefined && executeoninit) {
+        if (settings.registered[settings_id].callback != undefined && typeof settings.registered[settings_id].callback == 'function') {
+            settings.registered[settings_id].callback(settings_id, settings.settings[settings_id])
+        }
+    }
 }
 registerSetting('category_satellite_dishes_visible', false, 'boolean', {widget: {title: 'Satellite Dishes Visible'}, callback: (settings_id, value)=>{console.log('this callback has been called!', settings_id, 'set to', value)}})
 registerSetting('asd', true, 'boolean', {widget: {description: 'hello'}, restart_required: true})
+registerSetting(
+    'runsoninit', 
+    true, 
+    'boolean', 
+    {widget: {description: ''}, 
+    restart_required: true,
+    callback: (settings_id, value) => {
+        console.log(`callback called, ${settings_id} is at ${value}`)
+    },
+    executeoninit: true
+})
 syncWidgets()
 // pushToStorage()
 
