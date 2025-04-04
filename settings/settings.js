@@ -187,7 +187,7 @@ function syncWidgets() {
     })
 }
 
-function registerSetting(settings_id, default_value, datatype, {category='general', widget=undefined, restart_required=false, callback=undefined, executeoninit=false}) {
+function registerSetting(settings_id, default_value, datatype, {category='settings_general', widget=undefined, restart_required=false, callback=undefined, executeoninit=false}) {
     //  Sanity checks
     // Check if setting already registered
     if (settings.registered[settings_id] != undefined) {

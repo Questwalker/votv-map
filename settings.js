@@ -162,7 +162,7 @@ function syncWidgets() {
     })
 }
 
-function registerSetting(settings_id, default_value, datatype, {category='general', widget=undefined, restart_required=false, callback}) {
+function registerSetting(settings_id, default_value, datatype, {category='settings_general', widget=undefined, restart_required=false, callback=undefined, executeoninit=false}) {
     //  Sanity checks
     // Check if setting already registered
     if (settings.registered[settings_id] != undefined) {
@@ -219,6 +219,13 @@ function registerSetting(settings_id, default_value, datatype, {category='genera
             }
             maincontainer.appendChild(document.createElement('br'))
             document.getElementById(category).appendChild(maincontainer)
+        }
+    }
+    
+    // Execute callback on completed creation
+    if (callback != undefined && executeoninit) {
+        if (settings.registered[settings_id].callback != undefined && typeof settings.registered[settings_id].callback == 'function') {
+            settings.registered[settings_id].callback(settings_id, settings.settings[settings_id])
         }
     }
 }
