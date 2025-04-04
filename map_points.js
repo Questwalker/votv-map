@@ -148,11 +148,13 @@ points.forEach((data, pointindex) => {
     markerzoffset += 1
     // Bind click event, add popup, add to category layer
     marker.on('click', pointClickEvent)
-    // marker.bindPopup(L.popup({ // Make enable/disableable in user settings?
-    //     'content': data.name,
-    //     'offset': [0,3],
-    //     'autoPan': false
-    // }))
+    if (settings.settings.marker_popup_labels != undefined && settings.settings.marker_popup_labels == true) {
+        marker.bindPopup(L.popup({ // Make enable/disableable in user settings?
+            'content': data.name,
+            'offset': [0,3],
+            'autoPan': false
+        }))
+    }
     marker.addTo(references[categoryname].leafletgroup)
 })
 

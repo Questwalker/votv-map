@@ -77,6 +77,8 @@ function previewImage(element) {
 }
 
 function settingsClick() {
+    syncWidgets()
+    tempsettings = {}
     display_image.classList.add('hidden')
     settings_container.classList.remove('hidden')
     overlay_screen.classList.remove('hidden')
@@ -154,10 +156,17 @@ function toggleSidebarVis() {
 information_collapse_button.addEventListener('click', toggleSidebarVis)
 
 // Settings
-registerSetting('marker_popup_labels', true, 'boolean', {category: 'settings_general', widget: {title: 'Marker Popup Labels', description: 'A label that will pop up when clicking a marker'}, restart_required: true})
-registerSetting('grayscale_map', true, 'boolean', {category: 'settings_appearance', widget: {title: 'Grayscale Map', description: 'Reduce saturation of the map'}})
-registerSetting('show_radar_circle', true, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
+registerSetting('marker_popup_labels', false, 'boolean', {category: 'settings_general', widget: {title: 'Marker Popup Labels', description: 'A label that will pop up when clicking a marker'}, restart_required: true})
+registerSetting('grayscale_map', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Grayscale Map', description: 'Reduce saturation of the map'}, callback: (settings_id, currentvalue) => {
+    if (currentvalue) {
+        mapoverlay.getElement().classList.add('grayscale_effect')
+    } else {
+        mapoverlay.getElement().classList.remove('grayscale_effect')
+    }
+}})
+registerSetting('show_radar_circle', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
 syncWidgets()
 
-settingsClick() // DEBUG
-selectTab(1, 0) // DEBUG
+// settingsClick() // DEBUG
+// selectTab(1, 1) // DEBUG
+// toggleSidebarVis() // DEBUG
