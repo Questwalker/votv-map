@@ -63,7 +63,7 @@ function pushToStorage() {
 }
 
 function newStorage() {
-    console.log('new user')
+    console.log('New user')
     localStorage.setItem('sitesettings', '{}')
 }
 
@@ -80,7 +80,7 @@ function accessWidget(element, {edit=false, newvalue}) {
             if (edit) element.checked = newvalue
             return element.checked
         default:
-            console.log('cannot access element with unknown type')
+            console.log('Cannot access element with unknown type')
             break
     }
 }
@@ -123,22 +123,8 @@ function applySettings({updateStorage=true}) {
     tempsettings = {}
 }
 
-function hotApply() {
-    let settings_id = this.dataset.id
-    let currentvalue = accessWidget(this, {})
-    if (currentvalue != settings.settings[settings_id]) {
-        settings.settings[settings_id] = currentvalue
-        let callback = settings.registered[settings_id].callback
-        if (typeof callback == 'function') {
-            callback(settings_id, currentvalue)
-        }
-    }
-    pushToStorage()
-    syncWidgets()
-}
-
 function outsideStorageChange() {
-    console.log('OUTSIDE UPDATE')
+    console.log('Outside update!')
     // Object.assign(tempsettings, JSON.parse(localStorage.getItem('sitesettings')))
     tempsettings = {}
     var currentStorageValues = JSON.parse(localStorage.getItem('sitesettings'))
@@ -166,12 +152,12 @@ function registerSetting(settings_id, default_value, datatype, {category='settin
     //  Sanity checks
     // Check if setting already registered
     if (settings.registered[settings_id] != undefined) {
-        console.log('setting already registered!')
+        console.log('Setting already registered!')
         return
     }
     // Check that datatype is correct
     if (typeof default_value != datatype) {
-        console.log('settings value mismatch')
+        console.log('Settings value type mismatch')
         return
     }
 
@@ -180,7 +166,6 @@ function registerSetting(settings_id, default_value, datatype, {category='settin
     settings.registered[settings_id].datatype = datatype
     settings.registered[settings_id].requiresRestart = restart_required
     if (callback != undefined) {
-        // console.log('callback included')
         settings.registered[settings_id].callback = callback
     }
 
