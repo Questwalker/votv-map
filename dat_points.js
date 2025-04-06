@@ -339,7 +339,7 @@ const points = [
     {
         "name": "Red Argemia",
         "description": "Located in a steep pit next to a donut. Interacting with the donut will teleport you back home.<br>NOTE: The walls of the pit are too steep to allow you to walk out, so you can bring your ATV into the pit or interact with the donut to get out.",
-        "related_images" : ['./images/redArgemia1_1.png', './images/redArgemia1_2.png', './images/redArgemia1_3.png'],
+        "related_images" : ['./images/redArgemia1_1.png', './images/redArgemia1_2.png'],
         "category": "Plushes",
         "icon": "./icons/red_argemia.png",
         "xPos": 626,
@@ -475,7 +475,7 @@ const points = [
     {
         "name": "Well",
         "description": "",
-        "related_images" : ['./images/well1_1.png','./images/well1_2.png'],
+        "related_images" : ['./images/well1_1.png'],
         "category": "Points of Interest",
         "icon": "./icons/well.png",
         "xPos": 564.4,
@@ -1014,8 +1014,8 @@ const points = [
         "related_images" : [],
         "category": "",
         "icon": "./icons/drive.png",
-        "xPos": 15.9,
-        "yPos": 23.5
+        "xPos": 16.5,
+        "yPos": 22.4
     },
     {
         "name": "Box of bones",
@@ -1064,7 +1064,7 @@ const points = [
     },
     {
         "name": "Argemia Mug",
-        "description": "Located on top of the power pole, a basic white mug with a portrait of Argemia Armuntela on the side. The item is fixed so only player interaction can move it. You can use a hook to climb the pole.",
+        "description": "Located on top of the utility pole, a basic white mug with a portrait of Argemia Armuntela on the side. The item is fixed so only player interaction can move it. You can use a hook to climb the pole.",
         "related_images" : [],
         "category": "",
         "icon": "./icons/argemug.png",
@@ -1115,6 +1115,15 @@ const points = [
         "icon": "./icons/maid_outfit.png",
         "xPos": -357.4,
         "yPos": -488.95
+    },
+    {
+        "name": "Jar of honey",
+        "description": "A jar of honey. On top of the utility pole, restores 10 food and 100 health on consumption.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/jar_of_honey.png",
+        "xPos": -352.5,
+        "yPos": -438.7
     },
     // KerfurO parts
     {
