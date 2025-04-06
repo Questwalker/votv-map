@@ -29,10 +29,10 @@ function pointClickEvent() {
 
 function toggleCategoryButton() {
     // Parse and pass information to function
-    setCategoryVisibility(this.parentElement.id, !parseInt(this.dataset.visible), this)
+    setCategoryVisibility(this.parentElement.id, !parseInt(this.dataset.visible), {button: this})
 }
 
-function setCategoryVisibility(categoryname, setting=false, button=undefined) {
+function setCategoryVisibility(categoryname, setting, {button=undefined, updatestorage=true}) {
     // Hide or show layer and change visibility button (button must exist in the page)
     if (button == undefined) button = references[categoryname].menuparent.querySelector('.category_parentbutton')
     let layer = references[categoryname].leafletgroup
@@ -41,15 +41,23 @@ function setCategoryVisibility(categoryname, setting=false, button=undefined) {
         button.classList.remove('gray')
         button.innerText = '[S]'
         button.dataset.visible = 1
-        settings[`${categoryname}_visible`] = true
     } else {
         map.removeLayer(layer)
         button.classList.add('gray')
         button.innerText = '[H]'
         button.dataset.visible = 0
-        settings[`${categoryname}_visible`] = false
     }
-    updateStorage()
+    // Update storage
+    if (updatestorage && Boolean(setting) != settings.settings[`${categoryname}_visible`]) {
+        settings.settings[`${categoryname}_visible`] = Boolean(setting)
+        pushToStorage()
+    }
+}
+
+function categoryVisibilityCallback(settings_id, value) {
+    if (settings[settings_id.replace('_visible', '')] != undefined) { // Sanity Check
+        setCategoryVisibility(settings_id.replace('_visible', ''), value, {updatestorage: false})
+    }
 }
 
 // Create markers and categories for each when nessessary
@@ -67,38 +75,12 @@ points.forEach((data, pointindex) => {
     // If the category hasn't been loaded before, create it and add some basic data
     if (!references[categoryname]) {
         // Prepare settings
-        setting_id = `${categoryname}_visible`
-        registerSetting(
-            setting_id, 
-            !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls'), 
-            'boolean', {callback: (settings_id, value)=>{console.log('this callback has been called!', settings_id, 'set to', value)},
-            // widget: {title: (data.category != '' && data.category != undefined) ? data.category : 'Miscellaneous', description: 'Hello World'}
-        })
-        var categoryvisible
-        if (settings.settings[setting_id] == undefined) {
-            categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls')
-        } else {
+        let categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls')
+        let setting_id = `${categoryname}_visible`
+        registerSetting(setting_id, categoryvisible, 'boolean', {callback: categoryVisibilityCallback})
+        if (settings.settings[setting_id] != undefined) {
             categoryvisible = settings.settings[setting_id]
         }
-        // if (storageSupported) {
-        //     var categoryvisible
-        //     let settingname = `${categoryname}_visible`
-        //     if (settings[settingname] == undefined || typeof settings[settingname] !== 'boolean') {
-        //         // Setting does not exist
-        //         console.log(`writing key ${settingname}`)
-        //         if (categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls') {
-        //             // Hardcoded categories hidden by default
-        //             categoryvisible = false
-        //         } else {
-        //             categoryvisible = true
-        //         }
-        //         settings[settingname] = categoryvisible
-        //     } else {
-        //         categoryvisible = settings[settingname]
-        //     }
-        // } else {
-        //     categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls')
-        // }
 
         // Create generic category container element
         let categorycontainer = document.createElement('div')
