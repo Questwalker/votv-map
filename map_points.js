@@ -52,6 +52,7 @@ function setCategoryVisibility(categoryname, setting, {button=undefined, updates
         settings.settings[`${categoryname}_visible`] = Boolean(setting)
         pushToStorage()
     }
+    syncWidgets()
 }
 
 function categoryVisibilityCallback(settings_id, value) {

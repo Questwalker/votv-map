@@ -165,6 +165,7 @@ registerSetting('grayscale_map', false, 'boolean', {category: 'settings_appearan
     }
 }})
 // registerSetting('show_radar_circle', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
+option_rawsettingsupdate.addEventListener('click', updateRawSettingsBox)
 syncWidgets()
 
 // settingsClick() // DEBUG

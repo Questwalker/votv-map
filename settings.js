@@ -1,56 +1,3 @@
-
-// if (storageSupported) {
-//     if (localStorage.getItem('sitesettings')) {
-//         // Settings exist
-//         loadSettings()
-//     } else {
-//         // Settings do not exist
-//         updateStorage()
-//     }
-// }
-
-// function loadSettings() {
-//     try {
-//         settings = JSON.parse(localStorage.getItem('sitesettings'))
-//     } catch {
-//         console.log('Error! Settings in Storage failed to parse. Resetting..')
-//         updateStorage()
-//     }
-// }
-
-// function updateStorage() {
-//     console.log('storage update')
-//     localStorage.setItem('sitesettings', JSON.stringify(settings))
-//     updateSettingsbox()
-// }
-// selectTab(1, 1) // DEBUG
-
-// function updateRawSettings() {
-//     try {
-//         settings = JSON.parse(option_rawsettingsdata.value)
-//     } catch {
-//         // Failure notifier, stop function early
-//         option_rawsettingsindicator.classList.remove('settingsindicator_animation')
-//         option_rawsettingsindicator.textContent = 'Failure.'
-//         option_rawsettingsindicator.style.color = 'red'
-//         void option_rawsettingsindicator.offsetWidth // black magic
-//         option_rawsettingsindicator.classList.add('settingsindicator_animation')
-//         return
-//     }
-//     updateStorage()
-//     // Success notifier
-//     option_rawsettingsindicator.classList.remove('settingsindicator_animation')
-//     option_rawsettingsindicator.textContent = 'Success!'
-//     option_rawsettingsindicator.style.color = 'lime'
-//     void option_rawsettingsindicator.offsetWidth
-//     option_rawsettingsindicator.classList.add('settingsindicator_animation')
-// }
-
-// function updateSettingsbox() {
-//     option_rawsettingsdata.value = JSON.stringify(settings, null, 2)
-// }
-// option_rawsettingsupdate.addEventListener('click', updateRawSettings)
-
 var settings = {'registered': {}, 'settings': {}}
 var tempsettings = {}
 
@@ -146,6 +93,32 @@ function syncWidgets() {
             accessWidget(registry.widget, {edit: true, newvalue: settings.settings[settings_id]})
         }
     })
+    option_rawsettingsdata.value = JSON.stringify(settings.settings, null, 2)
+}
+
+function updateRawSettingsBox() {
+    let rawsettings
+    try {
+        rawsettings = JSON.parse(option_rawsettingsdata.value)
+    } catch {
+        // Failure notifier, stop function early
+        option_rawsettingsindicator.classList.remove('settingsindicator_animation')
+        option_rawsettingsindicator.textContent = 'Failure.'
+        option_rawsettingsindicator.style.color = 'red'
+        void option_rawsettingsindicator.offsetWidth // black magic
+        option_rawsettingsindicator.classList.add('settingsindicator_animation')
+        return
+    }
+    console.log(rawsettings)
+    settings.settings = rawsettings // Dangerous
+    pushToStorage()
+    syncWidgets()
+    // Success notifier
+    option_rawsettingsindicator.classList.remove('settingsindicator_animation')
+    option_rawsettingsindicator.textContent = 'Success!'
+    option_rawsettingsindicator.style.color = 'lime'
+    void option_rawsettingsindicator.offsetWidth
+    option_rawsettingsindicator.classList.add('settingsindicator_animation')
 }
 
 function registerSetting(settings_id, default_value, datatype, {category='settings_general', widget=undefined, restart_required=false, callback=undefined, executeoninit=false}) {
