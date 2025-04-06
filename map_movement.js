@@ -27,7 +27,7 @@ var map = L.map('map_element', {
     renderer: renderer
 })
 
-L.imageOverlay('map-264888.webp', bounds).addTo(map)
+var mapOverlay = L.imageOverlay('map-264888.webp', bounds).addTo(map)
 
 // Hacky fix for the max zoom being not enough to work on smaller devices
 //  Changes min zoom to of the map to -2 if the viewport gets too small
@@ -41,3 +41,7 @@ function mapsizecheck() {
 window.addEventListener('resize', mapsizecheck)
 mapsizecheck()
 map.fitBounds(bounds, {padding: [19.5, 19.5]})
+
+// Grayscale effect
+if (settings.settings.grayscale_map != undefined && settings.settings.grayscale_map == true) mapOverlay.getElement().classList.add('grayscale_effect')
+

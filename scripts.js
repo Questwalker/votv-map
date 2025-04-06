@@ -1,18 +1,4 @@
 var references = {'icons': {}, 'tabsystems': []}
-// var references = {
-//     "category__satellite_dishes": {
-//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
-//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
-//     },
-//     "icons": {
-//         "burger": `<leaflet icon reference>`
-//     },
-//     "tabsystems": [
-//         { "tabs": [], "sections": [] }
-//     ]
-// }
-var settings = {}
-const storageSupported = typeof(Storage) !== 'undefined'
 
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
@@ -79,6 +65,8 @@ function previewImage(element) {
 }
 
 function settingsClick() {
+    syncWidgets()
+    tempsettings = {}
     display_image.classList.add('hidden')
     settings_container.classList.remove('hidden')
     overlay_screen.classList.remove('hidden')
@@ -156,51 +144,14 @@ function toggleSidebarVis() {
 information_collapse_button.addEventListener('click', toggleSidebarVis)
 
 // Settings
-if (storageSupported) {
-    if (localStorage.getItem('sitesettings')) {
-        loadSettings()
+registerSetting('marker_popup_labels', false, 'boolean', {category: 'settings_general', widget: {title: 'Marker Popup Labels', description: 'A label that will pop up when clicking a marker'}, restart_required: true})
+registerSetting('grayscale_map', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Grayscale Map', description: 'Reduce saturation of the map'}, callback: (settings_id, currentvalue) => {
+    if (currentvalue) {
+        mapOverlay.getElement().classList.add('grayscale_effect')
     } else {
-        updateStorage()
+        mapOverlay.getElement().classList.remove('grayscale_effect')
     }
-}
-
-function loadSettings() {
-    try {
-        settings = JSON.parse(localStorage.getItem('sitesettings'))
-    } catch {
-        console.log('Error! Settings in Storage failed to parse. Resetting..')
-        updateStorage()
-    }
-}
-
-function updateStorage() {
-    localStorage.setItem('sitesettings', JSON.stringify(settings))
-    updateSettingsbox()
-}
-
-function updateRawSettings() {
-    try {
-        settings = JSON.parse(option_rawsettingsdata.value)
-    } catch {
-        // Failure notifier
-        option_rawsettingsindicator.classList.remove('settingsindicator_animation')
-        option_rawsettingsindicator.textContent = 'Failure.'
-        option_rawsettingsindicator.style.color = 'red'
-        void option_rawsettingsindicator.offsetWidth // black magic
-        option_rawsettingsindicator.classList.add('settingsindicator_animation')
-        return
-    }
-    updateStorage()
-    // Success notifier
-    option_rawsettingsindicator.classList.remove('settingsindicator_animation')
-    option_rawsettingsindicator.textContent = 'Success!'
-    option_rawsettingsindicator.style.color = 'lime'
-    void option_rawsettingsindicator.offsetWidth
-    option_rawsettingsindicator.classList.add('settingsindicator_animation')
-}
-
-function updateSettingsbox() {
-    option_rawsettingsdata.value = JSON.stringify(settings, null, 2)
-}
-
-option_rawsettingsupdate.addEventListener('click', updateRawSettings)
+}})
+// registerSetting('show_radar_circle', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
+option_rawsettingsupdate.addEventListener('click', updateRawSettingsBox)
+syncWidgets()
