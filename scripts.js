@@ -164,7 +164,7 @@ registerSetting('grayscale_map', false, 'boolean', {category: 'settings_appearan
         mapoverlay.getElement().classList.remove('grayscale_effect')
     }
 }})
-registerSetting('show_radar_circle', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
+// registerSetting('show_radar_circle', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
 syncWidgets()
 
 // settingsClick() // DEBUG

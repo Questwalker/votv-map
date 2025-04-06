@@ -155,6 +155,8 @@ body {
 
 /* Settings container and tabs */
 #settings_container {
+    max-width: 95%;
+    max-height: 95%;
     width: 512px;
     height: 512px;
     background-color: #121212;
@@ -210,38 +212,22 @@ body {
 }
 #settings_buttonsfooter {
     border-top: 1px solid green;
-    display: flex;
-    justify-content: space-between;
 }
-
-
-
-
-#settingsbutton_reset, #settingsbutton_apply {
+#settingsbutton_apply {
     font-family: monospace;
     font-size: 1.1em;
     cursor: pointer;
     border-style: none;
     background-color: transparent;
-}
-#settingsbutton_reset {
-    border-right: 1px solid green;
-}
-#settingsbutton_apply {
+    overflow: auto;
     border-left: 1px solid green;
+    float: right;
+    padding: 3px 5px;
+    overflow: hidden;
 }
 #settingsbutton_reset:hover, #settingsbutton_apply:hover {
     background-color: rgba(0, 128, 0, 0.12);
 }
-
-
-
-
-
-
-
-
-
 .settings_topcontainer {
     display: flex;
     align-items: center;
