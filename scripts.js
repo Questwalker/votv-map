@@ -1,16 +1,4 @@
 var references = {'icons': {}, 'tabsystems': []}
-// var references = {
-//     "category__satellite_dishes": {
-//         "menuparent": Object, // The base container that holds the button and text (has class .category_parent)
-//         "leafletgroup": Object // The layergroup that contains all leaflet markers in the category 
-//     },
-//     "icons": {
-//         "burger": `<leaflet icon reference>`
-//     },
-//     "tabsystems": [
-//         { "tabs": [], "sections": [] }
-//     ]
-// }
 
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
@@ -159,9 +147,9 @@ information_collapse_button.addEventListener('click', toggleSidebarVis)
 registerSetting('marker_popup_labels', false, 'boolean', {category: 'settings_general', widget: {title: 'Marker Popup Labels', description: 'A label that will pop up when clicking a marker'}, restart_required: true})
 registerSetting('grayscale_map', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Grayscale Map', description: 'Reduce saturation of the map'}, callback: (settings_id, currentvalue) => {
     if (currentvalue) {
-        mapoverlay.getElement().classList.add('grayscale_effect')
+        mapOverlay.getElement().classList.add('grayscale_effect')
     } else {
-        mapoverlay.getElement().classList.remove('grayscale_effect')
+        mapOverlay.getElement().classList.remove('grayscale_effect')
     }
 }})
 // registerSetting('show_radar_circle', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
