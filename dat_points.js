@@ -500,6 +500,15 @@ const points = [
         "yPos": -483
     },
     {
+        "name": "Ariral Campsite",
+        "description": "Their new \"home\".",
+        "related_images" : [],
+        "category": "Points of Interest",
+        "icon": "./icons/warp_arrow.png",
+        "xPos": 371.69,
+        "yPos": 388.55
+    },
+    {
         "name": "Gravesite",
         "description": "",
         "related_images" : [],
@@ -1054,6 +1063,24 @@ const points = [
         "yPos": -384.3
     },
     {
+        "name": "Geiger Counter",
+        "description": "A tool for detecting radiation.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/geiger_counter.png",
+        "xPos": 62.9,
+        "yPos": 627.77
+    },
+    {
+        "name": "Gravity Gun",
+        "description": "Spawns once you catch a certain signal.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/gravgun.png",
+        "xPos": -651.9,
+        "yPos": -236.7
+    },
+    {
         "name": "Candle Holder",
         "description": "An old style candle holder you can dig up from inside a log. It is a Youtuber easter egg created in reference to the Youtuber <a href=\"https://www.youtube.com/channel/UCnCmb1vpv90EeSX5g7K4UYQ\" target=\"_blank\" rel=\"noopener noreferrer\">The Librarian</a>. You can light it with a lighter!",
         "related_images" : [],
@@ -1108,6 +1135,42 @@ const points = [
         "yPos": -329.2
     },
     {
+        "name": "Jackets",
+        "description": "Two jackets, equippable on Omega Kerfur.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/jacket.png",
+        "xPos": -622.3,
+        "yPos": -30
+    },
+    {
+        "name": "Bowties",
+        "description": "Two bowties, equippable on Omega Kerfur.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/bowtie.png",
+        "xPos": 518.7,
+        "yPos": -212.8
+    },
+    {
+        "name": "Large Glasses",
+        "description": "Two large pairs of glasses, equippable on Omega Kerfur.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/kerf_glasses.png",
+        "xPos": 62.25,
+        "yPos": 625.5
+    },
+    {
+        "name": "Badge",
+        "description": "Two badges, equippable on Omega Kerfur.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/badge.png",
+        "xPos": -621.15,
+        "yPos": -28.2
+    },
+    {
         "name": "Maid Outfit",
         "description": "It's a maid outfit. Located in a safe that can be dug up near the lightpost. Omega Kerfur can wear it, or you can.<br>Be careful to not stand on where the safe is while you are digging it up, or you might get stuck in it.",
         "related_images" : ['./images/maidOutfit1_1.png', './images/maidOutfit1_2.png'],
@@ -1124,6 +1187,43 @@ const points = [
         "icon": "./icons/jar_of_honey.png",
         "xPos": -352.5,
         "yPos": -438.7
+    },
+    {
+        "name": "Massive Limestone Cube",
+        "description": "A diggable Massive Limestone Cube",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/limestone_block.png",
+        "xPos": 566.74,
+        "yPos": 236.66
+    },
+    {
+        "name": "Wasp Nest",
+        "description": "A diggable Wasp Nest",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/wasp_nest.png",
+        "xPos": 420.7,
+        "yPos": 266.3
+    },
+    {
+        "name": "Thingy Seeds",
+        "description": "Seeds for growing a special type of plant.",
+        "related_images" : ['./images/thingySeeds1_1.png', './images/thingySeeds1_2.png'],
+        "category": "",
+        "icon": "./icons/thingy_seeds.png",
+        "xPos": 411.9,
+        "yPos": 25.6
+    },
+    // Blueprints
+    {
+        "name": "Radioactive Capsule Blueprint",
+        "description": "A blueprint for making radioactive capsules. Including it on the bench along with 4 Compressed radioactive material, 4 Metal Scrap, and a gas welder allows you to craft a radioactive capsule.",
+        "related_images" : [],
+        "category": "",
+        "icon": "./icons/blueprint.png",
+        "xPos": 62.45,
+        "yPos": 627.27
     },
     // KerfurO parts
     {
