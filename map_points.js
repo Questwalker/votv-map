@@ -70,12 +70,7 @@ points.forEach((data, pointindex) => {
     if (!references.icons[data.icon]) {
         references.icons[data.icon] = L.icon({
             iconUrl: data.icon,
-            iconSize: [24, 24],
-            // ...(true) && {
-            //     shadowUrl: data.icon, 
-            //     shadowSize: [28, 28], 
-            //     shadowAnchor: [12, 12]
-            // }
+            iconSize: [24, 24]
         })
     }
     // If the category hasn't been loaded before, create it and add some basic data
