@@ -83,6 +83,14 @@ body {
     width: 100%;
 }
 
+.leaflet-marker-shadow {
+    filter: contrast(0%) brightness(0%) blur(2px) opacity(0.3);
+    /* transform: skew(10deg, 10deg); */
+}
+.leaflet-marker-icon {
+    filter: drop-shadow(2px 2px 4px #0000004c);
+}
+
 .leaflet-popup-content-wrapper {
     border-radius: 0 !important;
     background: #121212;
