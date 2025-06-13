@@ -59,7 +59,7 @@ body {
 }
 
 .rainbow_link {
-    background: linear-gradient(90deg, #9191ff, #18a3ff , #19ff19, #ff51a8, #7e7eff);
+    background: linear-gradient(45deg, #9191ff, #18a3ff , #19ff19, #ff51a8, #7e7eff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
