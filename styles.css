@@ -83,6 +83,9 @@ body {
     width: 100%;
 }
 
+.leaflet-marker-icon {
+    filter: drop-shadow(2px 2px 4px #0000004c);
+}
 .leaflet-popup-content-wrapper {
     border-radius: 0 !important;
     background: #121212;
