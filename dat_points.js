@@ -495,7 +495,7 @@ const points = [
         description: "Appears on day 8",
         related_images: [],
         category: "Points of Interest",
-        icon: "./icons/picnic_blanket.png",
+        icon: "./icons/heater.png",
         xPos: -199,
         yPos: -483
     },
