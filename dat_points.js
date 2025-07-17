@@ -1227,29 +1227,29 @@ const points = [
     },
     // KerfurO parts
     {
-        name: "Knee Joints",
+        name: "Limb Joints",
         description: "Found in TR_1. In the office, inside a bucket.",
-        related_images: ['./images/kneeJoints1_1.png'],
+        related_images: ['./images/limbJoints1_1.png'],
         category: "Kerfur Parts",
-        icon: "./icons/knee_joint.png",
+        icon: "./icons/limb_joint.png",
         xPos: 390.47,
         yPos: 198.27
     },
     {
-        name: "Knee Joints",
+        name: "Limb Joints",
         description: "Found in TR_2. In the office, on a box under a workbench.",
-        related_images: ['./images/kneeJoints2_1.png'],
+        related_images: ['./images/limbJoints2_1.png'],
         category: "Kerfur Parts",
-        icon: "./icons/knee_joint.png",
+        icon: "./icons/limb_joint.png",
         xPos: -550.22,
         yPos: 235.5
     },
     {
-        name: "Knee Joints",
+        name: "Limb Joints",
         description: "Found in TR_3. In the office corner on the shelf.",
-        related_images: ['./images/kneeJoints3_1.png'],
+        related_images: ['./images/limbJoints3_1.png'],
         category: "Kerfur Parts",
-        icon: "./icons/knee_joint.png",
+        icon: "./icons/limb_joint.png",
         xPos: -400.55,
         yPos: -477.15
     },
