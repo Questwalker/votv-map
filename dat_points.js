@@ -392,7 +392,7 @@ const points = [
     },
     {
         name: "Glowing Blue Argemia",
-        description: "Found on top of an invisible cube in the sky. The item is fixed so only player interaction can move it. You can reach it by climbing the invisible wall with a hook.",
+        description: "Found on top of an invisible cube in the sky. The item is fixed so only player interaction can move it. You can reach it by climbing the invisible wall with a hook. Z: 250",
         related_images: ['./images/glowingBlueArgemia1_1.png', './images/glowingBlueArgemia1_2.png'],
         category: "Plushes",
         icon: "./icons/glowing_blue_argemia.png",
