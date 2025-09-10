@@ -143,12 +143,12 @@ body {
 }
 #information_content {
     flex: 1;
-    margin-left: 12px;
-    margin-right: 12px;
+    margin: 8px;
     overflow-x: auto;
 }
 .information_image {
-    width: calc(100% - 8px);
+    width: 100%;
+    box-sizing: border-box;
     height: auto;
     cursor: pointer;
     padding-right: 4px;
@@ -229,7 +229,8 @@ body {
     overflow: hidden;
 }
 #settingsbutton_apply:hover {
-    background-color: rgba(0, 128, 0, 0.12);
+    /* background-color: rgba(0, 128, 0, 0.12); */
+    background-color: rgba(80, 80, 80, 0.5);
 }
 .settings_topcontainer {
     display: flex;
@@ -253,11 +254,9 @@ body {
 .selected_tab {
     background-color: rgba(0, 128, 0, 0.25);
 }
-.information_tab:hover {
-    background-color: rgba(0, 128, 0, 0.12);
-}
-.settings_tab:hover {
-    background-color: rgba(0, 128, 0, 0.12);
+.information_tab:hover, .settings_tab:hover {
+    /* background-color: rgba(0, 128, 0, 0.12); */
+    background-color: rgba(80, 80, 80, 0.5);
 }
 .selected_tab:hover {
     background-color: rgba(0, 128, 0, 0.19);
@@ -282,6 +281,9 @@ body {
     cursor: pointer;
     padding: 6px;
 }
+.pane_menu_child:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+}
 .chevron_styling {
     fill: none;
     stroke: #fff;
@@ -294,7 +296,7 @@ body {
     display: none;
 }
 .paneshrunken {
-    /* Using !important is bad practice but I could not imagine a better way to do this */
+    /* Using !important is bad practice but its necessary to override ID specificity */
     flex: 0 !important;
     display: none !important;
 }
@@ -302,27 +304,102 @@ body {
     flex: 1 !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Points content */
-.category_parent {
-    display: flex;
-    border: 1px solid green;
+.points_categoryheader {
+    text-overflow: ellipsis;
     white-space: nowrap;
-    margin-top: 12px;
-    padding: 8px;
-    align-items: center;
+    overflow: hidden;
+    padding: 8px 5px;
+    padding-top: 2px;
 }
-.category_parentbutton {
-    cursor: pointer;
+.points_categorysection {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: calc(50% - 2.5px) calc(50% - 2.5px);
+    grid-gap: 5px;
+}
+.points_sectionbutton {
+    border: 1px solid green;
     padding: 4px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    background-color: transparent;
+    font-family: monospace;
+    font-size: 1em;
+    cursor: pointer;
+    min-width: 0;
 }
-.category_parentname {
-    flex: 1;
-    padding-left: 4px;
-    padding-right: 8px;
+.points_sectionbutton:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+}
+.points_secbuttonimg {
+    height: 100%;
+}
+@media (max-width: 1200px) {
+    .points_secbuttonimg {
+        display: none;
+    }
+}
+.points_secbuttontext {
     overflow: hidden;
     text-overflow: ellipsis;
-    text-wrap: nowrap;
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-right: 2px;
+    white-space: nowrap;
 }
+/* .category_parent {
+} */
+/* .category_parentbutton {
+} */
+/* .category_parentname {
+} */
+
+
+
+
+
+.selected_tab {
+    background-color: rgba(0, 128, 0, 0.25);
+}
+/* .points_sectionbutton:hover {
+    background-color: rgba(0, 128, 0, 0.12);
+} */
+.selected_tab:hover {
+    background-color: rgba(0, 128, 0, 0.19);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Information footer */
 #information_footer {
@@ -369,6 +446,9 @@ body {
     #expanded_vertical_button,
     #collapsed_vertical_button {
         display: block;
+    }
+    .points_secbuttonimg {
+        display: unset;
     }
 }
 
