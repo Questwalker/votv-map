@@ -22,8 +22,8 @@ function tabCallback() {
 
 function selectTab(system=0, tab=0) {
     references.tabsystems[system].tabs.forEach((element, index) => {
-        if (index == tab) element.classList.add('selected_tab')
-        else element.classList.remove('selected_tab')
+        if (index == tab) element.classList.add('highlighted_element')
+        else element.classList.remove('highlighted_element')
     })
     references.tabsystems[system].sections.forEach((element, index) => {
         if (index == tab) element.classList.remove('hidden')
