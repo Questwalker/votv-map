@@ -9,7 +9,7 @@ function mapClickEvent() {
 function pointClickEvent() {
     // Update information text when point is clicked, and focus on info tab
     selectTab(0)
-    let data = points[this.options.pointindex]
+    let data = markers[this.options.pointindex]
     information_header.innerHTML = data.name
     information_coords.innerHTML = `x: <u>${data.xPos}</u>, y: <u>${data.yPos}</u>`
     information_text.innerHTML = data.description
@@ -29,22 +29,20 @@ function pointClickEvent() {
 
 function toggleCategoryButton() {
     // Parse and pass information to function
-    setCategoryVisibility(this.parentElement.id, !parseInt(this.dataset.visible), {button: this})
+    setCategoryVisibility(this.dataset.id, !parseInt(this.dataset.visible), {button: this})
 }
 
 function setCategoryVisibility(categoryname, setting, {button=undefined, updatestorage=true}) {
     // Hide or show layer and change visibility button (button must exist in the page)
-    if (button == undefined) button = references[categoryname].menuparent.querySelector('.category_parentbutton')
+    // if (button == undefined) button = references[categoryname].menuparent.querySelector('.category_parentbutton')
     let layer = references[categoryname].leafletgroup
     if (setting) {
         layer.addTo(map)
-        button.classList.remove('gray')
-        button.innerText = '[S]'
+        button.classList.add('selected_tab')
         button.dataset.visible = 1
     } else {
         map.removeLayer(layer)
-        button.classList.add('gray')
-        button.innerText = '[H]'
+        button.classList.remove('selected_tab')
         button.dataset.visible = 0
     }
     // Update storage
@@ -63,9 +61,7 @@ function categoryVisibilityCallback(settings_id, value) {
 
 // Create markers and categories for each when nessessary
 var markerzoffset = 0
-points.forEach((data, pointindex) => {
-    let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
-
+markers.forEach((data, pointindex) => {
     // If the icon hasn't been loaded before, load it into ref.icons
     if (!references.icons[data.icon]) {
         references.icons[data.icon] = L.icon({
@@ -73,50 +69,77 @@ points.forEach((data, pointindex) => {
             iconSize: [24, 24]
         })
     }
-    // If the category hasn't been loaded before, create it and add some basic data
-    if (!references[categoryname]) {
+
+    let categoryid = data.category ? data.category : 'miscellaneous'
+    let categoryname = categories[categoryid] && categories[categoryid].displayname ? categories[categoryid].displayname : categoryid
+    let formattedid = `category_${categoryid.toLowerCase().replace(/\s+/g, '_')}`
+    if (!references[formattedid]) {
         // Prepare settings
-        let categoryvisible = !(categoryname == 'category_halloween_pumpkins' || categoryname == 'category_chicken_burgers' || categoryname == 'category_kerfur_parts' || categoryname == 'category_skulls')
-        let setting_id = `${categoryname}_visible`
+        let categoryvisible = !(formattedid == 'category_halloween_pumpkins' || formattedid == 'category_chicken_burgers' || formattedid == 'category_kerfur_parts' || formattedid == 'category_skulls')
+        let setting_id = `${formattedid}_visible`
         registerSetting(setting_id, categoryvisible, 'boolean', {callback: categoryVisibilityCallback})
         if (settings.settings[setting_id] != undefined) {
             categoryvisible = settings.settings[setting_id]
         }
 
         // Create generic category container element
-        let categorycontainer = document.createElement('div')
-        categorycontainer.id = categoryname
-        categorycontainer.classList.add('category_parent')
-        information_points.appendChild(categorycontainer)
-
-        // Show/Hide button
-        let visibilitybutton = document.createElement('div')
-        visibilitybutton.classList.add('category_parentbutton')
-        visibilitybutton.classList.add('unselectable')
+        let categorybutton = document.createElement('button')
+        categorybutton.title = categoryname
+        categorybutton.classList.add('points_sectionbutton')
+        categorybutton.dataset.id = formattedid
+        categorybutton.addEventListener('click', toggleCategoryButton)
         if (!categoryvisible) {
-            visibilitybutton.classList.add('gray')
-            visibilitybutton.innerText = '[H]'
-            visibilitybutton.dataset.visible = 0
+            categorybutton.dataset.visible = 0
         } else {
-            visibilitybutton.innerText = '[S]'
-            visibilitybutton.dataset.visible = 1
+            categorybutton.classList.add('selected_tab')
+            categorybutton.dataset.visible = 1
         }
-        visibilitybutton.addEventListener('click', toggleCategoryButton)
-        categorycontainer.appendChild(visibilitybutton)
+
+        // Icon
+        let categoryicon = document.createElement('img')
+        //categoryicon.src = '../icons/glowing_cyan_argemia.png'
+        categoryicon.src = (categories[categoryid] && categories[categoryid].icon ? categories[categoryid].icon : data.icon)
+        // categoryicon.src = 'new-points/autogenerated/1085967092072845463.webp'
+        categoryicon.classList.add('points_secbuttonimg')
+        categorybutton.appendChild(categoryicon)
 
         // Text label
-        let textlabel = document.createElement('div')
-        textlabel.classList.add('category_parentname')
-        textlabel.innerText = (data.category != '' && data.category != undefined) ? data.category : 'Miscellaneous'
-        categorycontainer.appendChild(textlabel)
+        let categorylabel = document.createElement('span')
+        categorylabel.innerHTML = categoryname
+        categorylabel.classList.add('points_secbuttontext')
+        categorybutton.appendChild(categorylabel)
 
         // Add references
-        references[categoryname] = {
-            'menuparent': categorycontainer,
+        references[formattedid] = {
+            'element': categorybutton,
             'leafletgroup': L.layerGroup()
         }
+
+        // Group stuff
+        let groupname = categories[categoryid] && categories[categoryid].group ? categories[categoryid].group : 'Miscellaneous'
+        let groupid = groupname.toLowerCase().replace(' ', '_')
+        if (!references[`categorygroup_${groupid}`]) {
+            // Create group header
+            let groupheader = document.createElement('div')
+            groupheader.innerHTML = groupname
+            groupheader.classList.add('points_categoryheader')
+            information_points.appendChild(groupheader)
+
+            // Create group container
+            let groupcontainer = document.createElement('div')
+            groupcontainer.id = `categorygroup_${groupid}`
+            groupcontainer.classList.add('points_categorysection')
+            information_points.appendChild(groupcontainer)
+
+            // Add group to references
+            references[`categorygroup_${groupid}`] = {
+                'element': groupcontainer
+            }
+        }
+        references[`categorygroup_${groupid}`].element.appendChild(categorybutton)
+
         // layercontrol.addOverlay(references[categoryname].leafletgroup, categoryname) //DEBUG
-        if (categoryvisible) references[categoryname].leafletgroup.addTo(map)
+        if (categoryvisible) references[formattedid].leafletgroup.addTo(map)
     }
 
     // Create the marker
@@ -138,7 +161,7 @@ points.forEach((data, pointindex) => {
             'autoPan': false
         }))
     }
-    marker.addTo(references[categoryname].leafletgroup)
+    marker.addTo(references[formattedid].leafletgroup)
 })
 
 // Sync UI
@@ -146,7 +169,7 @@ syncWidgets()
 
 // Create lines
 lines.forEach((data, lineindex) => {
-    let categoryname = `category_${(data.category != '' && data.category != undefined) ? data.category.toLowerCase().replaceAll(' ','_') : 'miscellaneous'}`
+    let categoryid = data.category ? data.category : 'miscellaneous'
     let polygon = L.polyline(data.coordinates.map(convertGameToLeaflet),
         {
             'smoothFactor': 0.5,
@@ -161,7 +184,7 @@ lines.forEach((data, lineindex) => {
     )
     if (data.category) {
         // limitation: the line can only add itself to layers that already exist, otherwise it will error
-        polygon.addTo(references[categoryname].leafletgroup)
+        polygon.addTo(references[`category_${categoryid.toLowerCase().replace(/\s+/g, '_')}`].leafletgroup)
     } else {
         polygon.addTo(map)
     }

@@ -100,14 +100,14 @@ document.addEventListener('keydown', (event) => {
             } else if (!display_image.classList.contains('hidden')) {
                 // An image is currently being viewed
                 if (event.key == 'ArrowLeft' || event.key == 'a') {
-                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
+                    if (!(markers[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
                         display_image.dataset.imageindex = Number(display_image.dataset.imageindex) - 1
-                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                        display_image.src = markers[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
                     }
                 } else if (event.key == 'ArrowRight' || event.key == 'd') {
-                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
+                    if (!(markers[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
                         display_image.dataset.imageindex = Number(display_image.dataset.imageindex) + 1
-                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                        display_image.src = markers[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
                     }
                 }
             }
