@@ -88,11 +88,11 @@ body {
 }
 .leaflet-popup-content-wrapper {
     border-radius: 0 !important;
-    background: #121212;
+    background-color: #121212;
     border: 1px solid green;
 }
 .leaflet-popup-tip {
-    background: #121212;
+    background-color: #121212;
     border: 2px solid green;
     padding: 0;
 }
@@ -228,10 +228,6 @@ body {
     padding: 3px 5px;
     overflow: hidden;
 }
-#settingsbutton_apply:hover {
-    /* background-color: rgba(0, 128, 0, 0.12); */
-    background-color: rgba(80, 80, 80, 0.5);
-}
 .settings_topcontainer {
     display: flex;
     align-items: center;
@@ -248,18 +244,6 @@ body {
 .settings_desclabel {
     display: block;
     color: lightgray;
-}
-
-/* Tabs, continued.. */
-.selected_tab {
-    background-color: rgba(0, 128, 0, 0.25);
-}
-.information_tab:hover, .settings_tab:hover {
-    /* background-color: rgba(0, 128, 0, 0.12); */
-    background-color: rgba(80, 80, 80, 0.5);
-}
-.selected_tab:hover {
-    background-color: rgba(0, 128, 0, 0.19);
 }
 
 /* Information pane collapse/expand buttons */
@@ -281,9 +265,6 @@ body {
     cursor: pointer;
     padding: 6px;
 }
-.pane_menu_child:hover {
-    background-color: rgba(80, 80, 80, 0.5);
-}
 .chevron_styling {
     fill: none;
     stroke: #fff;
@@ -304,40 +285,22 @@ body {
     flex: 1 !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Points content */
-.points_categoryheader {
+.points_groupheader {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     padding: 8px 5px;
     padding-top: 2px;
 }
-.points_categorysection {
+.points_categorygroup {
     box-sizing: border-box;
     margin-bottom: 10px;
     display: grid;
     grid-template-columns: calc(50% - 2.5px) calc(50% - 2.5px);
     grid-gap: 5px;
 }
-.points_sectionbutton {
+.points_categorybutton {
     border: 1px solid green;
     padding: 4px;
     box-sizing: border-box;
@@ -350,18 +313,15 @@ body {
     cursor: pointer;
     min-width: 0;
 }
-.points_sectionbutton:hover {
-    background-color: rgba(80, 80, 80, 0.5);
-}
-.points_secbuttonimg {
+.points_catbuttonimg {
     height: 100%;
 }
 @media (max-width: 1200px) {
-    .points_secbuttonimg {
+    .points_catbuttonimg {
         display: none;
     }
 }
-.points_secbuttontext {
+.points_catbuttonlabel {
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 5px;
@@ -369,37 +329,6 @@ body {
     padding-right: 2px;
     white-space: nowrap;
 }
-/* .category_parent {
-} */
-/* .category_parentbutton {
-} */
-/* .category_parentname {
-} */
-
-
-
-
-
-.selected_tab {
-    background-color: rgba(0, 128, 0, 0.25);
-}
-/* .points_sectionbutton:hover {
-    background-color: rgba(0, 128, 0, 0.12);
-} */
-.selected_tab:hover {
-    background-color: rgba(0, 128, 0, 0.19);
-}
-
-
-
-
-
-
-
-
-
-
-
 
 /* Information footer */
 #information_footer {
@@ -447,7 +376,7 @@ body {
     #collapsed_vertical_button {
         display: block;
     }
-    .points_secbuttonimg {
+    .points_catbuttonimg {
         display: unset;
     }
 }
@@ -475,4 +404,15 @@ body {
     max-height: 80%;
     max-width: 80%;
     background-color: rgba(30, 30, 30, 0.4);
+}
+
+/* Interaction Effects */
+.highlight_on_hover:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+}
+.highlighted_element {
+    background-color: rgba(0, 128, 0, 0.25);
+}
+.highlighted_element:hover {
+    background-color: rgba(0, 128, 0, 0.12);
 }
