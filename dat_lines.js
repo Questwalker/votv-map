@@ -17,6 +17,7 @@ const lines = [
     { // Between-Mountain Cave
         "color": "#727d90",
         "linethickness": 2,
+        "category": "Miscellaneous",
         "coordinates": [[21, -599], [212, -408.9]]
     },
     { // TR_1

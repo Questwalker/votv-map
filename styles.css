@@ -143,8 +143,11 @@ body {
 }
 #information_content {
     flex: 1;
-    margin: 8px;
+    margin: 0 8px;
     overflow-x: auto;
+}
+#information_points {
+    margin: 8px 0;
 }
 .information_image {
     width: 100%;
