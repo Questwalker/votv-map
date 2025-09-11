@@ -8,6 +8,7 @@ function convertLeafletToGame([y,x]) {return [x - mapSize/2, -(y - mapSize/2)]}
 function convertUnrealToLeaflet([x,y]) {return convertGameToLeaflet(convertUnrealToGame([x,y]))}
 function convertLeafletToUnreal([y,x]) {return convertGameToUnreal(convertLeafletToGame([y,x]))}
 function roundNumber(number, digit=0) {return Math.round((number * Math.pow(10, digit)) * (1 + Number.EPSILON)) / Math.pow(10, digit)}
+function sanitizeString(str) {return str.toLowerCase().replace(/[^a-z0-9_\s]/g, '').replace(/\s+/g, '_')}
 
 // Center map button
 function centerMap() {
@@ -22,8 +23,8 @@ function tabCallback() {
 
 function selectTab(system=0, tab=0) {
     references.tabsystems[system].tabs.forEach((element, index) => {
-        if (index == tab) element.classList.add('selected_tab')
-        else element.classList.remove('selected_tab')
+        if (index == tab) element.classList.add('highlighted_element')
+        else element.classList.remove('highlighted_element')
     })
     references.tabsystems[system].sections.forEach((element, index) => {
         if (index == tab) element.classList.remove('hidden')
@@ -100,14 +101,14 @@ document.addEventListener('keydown', (event) => {
             } else if (!display_image.classList.contains('hidden')) {
                 // An image is currently being viewed
                 if (event.key == 'ArrowLeft' || event.key == 'a') {
-                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
+                    if (!(markers[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) - 1] === undefined)) {
                         display_image.dataset.imageindex = Number(display_image.dataset.imageindex) - 1
-                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                        display_image.src = markers[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
                     }
                 } else if (event.key == 'ArrowRight' || event.key == 'd') {
-                    if (!(points[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
+                    if (!(markers[display_image.dataset.pointindex].related_images[Number(display_image.dataset.imageindex) + 1] === undefined)) {
                         display_image.dataset.imageindex = Number(display_image.dataset.imageindex) + 1
-                        display_image.src = points[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
+                        display_image.src = markers[display_image.dataset.pointindex].related_images[display_image.dataset.imageindex]
                     }
                 }
             }

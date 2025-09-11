@@ -1,4 +1,33 @@
-const points = [
+const categories = {
+    'Satellite Dishes': {
+        // displayname: 'Satellite Dishes', // if key doesn't exist, fallback to category id
+        icon: './icons/votv.png', // if key doesn't exist, fallback to icon of first ever marker requesting this category
+        group: 'Locations' // if key doesn't exist, fallback to Misc group
+    },
+    'KerfurO Accessories': {
+        group: 'Collectables'
+    },
+    'Plushes': {
+        group: 'Collectables'
+    },
+    'Furfur Totems': {
+        group: 'Collectables'
+    },
+    'Metal Tiles': {
+        group: 'Collectables'
+    },
+    'Points of Interest': {
+        group: 'Locations'
+    },
+    'Transformers': {
+        group: 'Locations'
+    },
+    'miscellaneous': { // Category for automatic fallback.
+        displayname: 'Miscellaneouas',
+    }
+}
+
+const markers = [
     // Satellites
     {
         name: "Bravo",
@@ -338,7 +367,7 @@ const points = [
     // Argemia Plushes
     {
         name: "Red Argemia",
-        description: "Located in a steep pit next to a donut. Interacting with the donut will teleport you back home.<br>NOTE: The walls of the pit are too steep to allow you to walk out, so you can bring your ATV into the pit or interact with the donut to get out.",
+        description: "Located in a steep pit next to a donut. Interacting with the donut will teleport you back home.<br>NOTE: The walls of the pit are too steep to allow you to walk out, so you can bring your ATV/a hook into the pit or interact with the donut to get out.",
         related_images: ['./images/redArgemia1_1.png', './images/redArgemia1_2.png'],
         category: "Plushes",
         icon: "./icons/red_argemia.png",
@@ -438,7 +467,7 @@ const points = [
     },
     {
         name: "Basalt Pillars",
-        description: "<div style=\"color: red;\">WARNING: THIS CAN RUIN YOUR SAVE</div><br>Can be found with the metal detector. Once dug up, it'll slowly grow out of the ground and start spreading. They will slowly spread in your direction. <u>The pillars have high durability, but they can be destroyed with a crowbar or shovel.</u>",
+        description: "<div style=\"color: red;\">Warning: This could ruin your save</div><br>Can be found with the metal detector. Once dug up, it'll slowly grow out of the ground and start spreading. They will slowly spread in your direction. <u>The pillars have high durability, but they can be destroyed with a crowbar or shovel.</u>",
         related_images: ['./images/basaltPillars1_1.png', './images/basaltPillars1_2.png'],
         category: "",
         icon: "./icons/basalt_pillar.png",
@@ -931,7 +960,7 @@ const points = [
         name: "Shovel",
         description: "Found leaning on 3 supply boxes next to stonehenge.",
         related_images: ['./images/shovel1_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/shovel.png",
         xPos: 209.2,
         yPos: 535.2
@@ -940,7 +969,7 @@ const points = [
         name: "Shovel",
         description: "Leaning against the wall, next to the red tree.",
         related_images: [],
-        category: "",
+        category: "Tools",
         icon: "./icons/shovel.png",
         xPos: 408.36,
         yPos: 20.95
@@ -949,7 +978,7 @@ const points = [
         name: "Shovel",
         description: "Inside the building. You can break the door by hitting it with a crowbar, shovel, etc.",
         related_images: [],
-        category: "",
+        category: "Tools",
         icon: "./icons/shovel.png",
         xPos: -369.12,
         yPos: 702.32
@@ -958,7 +987,7 @@ const points = [
         name: "Shovel",
         description: "Found up in TR_2.",
         related_images: ['./images/shovel4_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/shovel.png",
         xPos: -543.53,
         yPos: 237.09
@@ -967,7 +996,7 @@ const points = [
         name: "Watering Can",
         description: "Found on a shelf in TR_1.",
         related_images: ['./images/wateringCan1_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/watering_can.png",
         xPos: 398.72,
         yPos: 197.67
@@ -976,7 +1005,7 @@ const points = [
         name: "Watering Can",
         description: "Found up in TR_2.",
         related_images: ['./images/wateringCan2_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/watering_can.png",
         xPos: -549.13,
         yPos: 236.71
@@ -985,7 +1014,7 @@ const points = [
         name: "Watering Can",
         description: "Found in the corner of TR_3.",
         related_images: ['./images/wateringCan3_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/watering_can.png",
         xPos: -402.26,
         yPos: -477.54
@@ -994,7 +1023,7 @@ const points = [
         name: "Axe",
         description: "Inside the abandoned shack under the bed.",
         related_images: ['./images/axe1_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/axe.png",
         xPos: 406.5,
         yPos: 22.5
@@ -1048,7 +1077,7 @@ const points = [
         name: "EMF Detector",
         description: "Buried close to a floodlight. Toggle on with right click while holding. 5 lights on it indicate how strong the emf is. Example locations for strong EMF is the basement, stonehenge, and the old shack.",
         related_images: ['./images/emfDetector1_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/emf_detector.png",
         xPos: -623,
         yPos: -33.8
@@ -1057,7 +1086,7 @@ const points = [
         name: "Pickaxe",
         description: "Stuck in the ground next to a underwater root. You may need scuba gear to reach it.",
         related_images: [],
-        category: "",
+        category: "Tools",
         icon: "./icons/pickaxe.png",
         xPos: 391.6,
         yPos: -384.3
@@ -1066,7 +1095,7 @@ const points = [
         name: "Geiger Counter",
         description: "A tool for detecting radiation.",
         related_images: [],
-        category: "",
+        category: "Tools",
         icon: "./icons/geiger_counter.png",
         xPos: 62.9,
         yPos: 627.77
@@ -1075,7 +1104,7 @@ const points = [
         name: "Gravity Gun",
         description: "Spawns once you catch a certain signal.",
         related_images: [],
-        category: "",
+        category: "Tools",
         icon: "./icons/gravgun.png",
         xPos: -651.9,
         yPos: -236.7
@@ -1102,7 +1131,7 @@ const points = [
         name: "Fishing Supplies",
         description: "Needs to be dug up with a shovel.<br>Located to the right of the wind turbine, an old box containing some fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.",
         related_images: ['./images/fishingSupplies1_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/fishermans_box.png",
         xPos: 175.8,
         yPos: -460.6
@@ -1111,7 +1140,7 @@ const points = [
         name: "Bike Helmet",
         description: "The bike helmet protects your head, which can decrease your damage taken from impacts. You can reach it by climbing up or grappling down the cliff using a hook, or by very carefully sliding down.",
         related_images: ['./images/helmet1_1.png', './images/helmet1_2.png', './images/helmet1_3.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/helmet.png",
         xPos: -50.6,
         yPos: 630
@@ -1120,7 +1149,7 @@ const points = [
         name: "Hiking Boots",
         description: "Found in the corner of TR_3.<br>Wearing them allows you to walk up steeper surfaces without slipping and allows you to fall farther distances without collapsing or taking damage.",
         related_images: ['./images/hikingBoots1_1.png'],
-        category: "",
+        category: "Tools",
         icon: "./icons/hiking_boots.png",
         xPos: -402.4,
         yPos: -478.67
@@ -1138,7 +1167,7 @@ const points = [
         name: "Jackets",
         description: "Two jackets, equippable on Omega Kerfur.",
         related_images: [],
-        category: "",
+        category: "KerfurO Accessories",
         icon: "./icons/jacket.png",
         xPos: -622.3,
         yPos: -30
@@ -1147,7 +1176,7 @@ const points = [
         name: "Bowties",
         description: "Two bowties, equippable on Omega Kerfur.",
         related_images: [],
-        category: "",
+        category: "KerfurO Accessories",
         icon: "./icons/bowtie.png",
         xPos: 518.7,
         yPos: -212.8
@@ -1156,7 +1185,7 @@ const points = [
         name: "Large Glasses",
         description: "Two large pairs of glasses, equippable on Omega Kerfur.",
         related_images: [],
-        category: "",
+        category: "KerfurO Accessories",
         icon: "./icons/kerf_glasses.png",
         xPos: 62.25,
         yPos: 625.5
@@ -1165,7 +1194,7 @@ const points = [
         name: "Badge",
         description: "Two badges, equippable on Omega Kerfur.",
         related_images: [],
-        category: "",
+        category: "KerfurO Accessories",
         icon: "./icons/badge.png",
         xPos: -621.15,
         yPos: -28.2
@@ -1174,7 +1203,7 @@ const points = [
         name: "Maid Outfit",
         description: "It's a maid outfit. Located in a safe that can be dug up near the lightpost. Omega Kerfur can wear it, or you can.<br>Be careful to not stand on where the safe is while you are digging it up, or you might get stuck in it.",
         related_images: ['./images/maidOutfit1_1.png', './images/maidOutfit1_2.png'],
-        category: "",
+        category: "KerfurO Accessories",
         icon: "./icons/maid_outfit.png",
         xPos: -357.4,
         yPos: -488.95
@@ -1230,7 +1259,7 @@ const points = [
         name: "Limb Joints",
         description: "Found in TR_1. In the office, inside a bucket.",
         related_images: ['./images/limbJoints1_1.png'],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/limb_joint.png",
         xPos: 390.47,
         yPos: 198.27
@@ -1239,7 +1268,7 @@ const points = [
         name: "Limb Joints",
         description: "Found in TR_2. In the office, on a box under a workbench.",
         related_images: ['./images/limbJoints2_1.png'],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/limb_joint.png",
         xPos: -550.22,
         yPos: 235.5
@@ -1248,7 +1277,7 @@ const points = [
         name: "Limb Joints",
         description: "Found in TR_3. In the office corner on the shelf.",
         related_images: ['./images/limbJoints3_1.png'],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/limb_joint.png",
         xPos: -400.55,
         yPos: -477.15
@@ -1257,7 +1286,7 @@ const points = [
         name: "Buried Kerfur Parts",
         description: "Contains two ball joints.",
         related_images: [],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/old_wooden_box.png",
         xPos: -541.07,
         yPos: -475.35
@@ -1266,7 +1295,7 @@ const points = [
         name: "Buried Kerfur Parts",
         description: "Contains two ball joints.",
         related_images: [],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/old_wooden_box.png",
         xPos: -529.78,
         yPos: -462.75
@@ -1275,7 +1304,7 @@ const points = [
         name: "Buried Kerfur Parts",
         description: "Contains two ball joints.",
         related_images: [],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/old_wooden_box.png",
         xPos: -532.58,
         yPos: -481.11
@@ -1284,7 +1313,7 @@ const points = [
         name: "Buried Kerfur Parts",
         description: "Contains two ball joints.",
         related_images: [],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/old_wooden_box.png",
         xPos: -524.08,
         yPos: -471.09
@@ -1293,7 +1322,7 @@ const points = [
         name: "Buried Kerfur Parts",
         description: "Contains two ball joints.",
         related_images: [],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/old_wooden_box.png",
         xPos: -531.98,
         yPos: -472.44
@@ -1302,7 +1331,7 @@ const points = [
         name: "Buried Kerfur Parts",
         description: "Contains two ball joints.",
         related_images: [],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/old_wooden_box.png",
         xPos: -524.14,
         yPos: -479.11
@@ -1311,7 +1340,7 @@ const points = [
         name: "Omega AI Module",
         description: "Located in a safe found at the bottom of the lake, it's quite hard to get it out of the water.<br><br>Cracking the safe is easy.<br>First, grab onto the safe's door and start turning your scroll wheel in a direction. Go slowly as your mouse wheel can go. As you spin the dial, you will hear clicking. Once you hear a click that is very slightly different, reverse the direction you are scrolling and start spinning in the opposite direction. Continue going back and forth, reversing your scrolling until the safe unlocks.",
         related_images: [],
-        category: "Kerfur Parts",
+        category: "KerfurO Parts",
         icon: "./icons/omega_ai_module.png",
         xPos: 404.8,
         yPos: -406
