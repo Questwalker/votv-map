@@ -1,4 +1,4 @@
-var references = {'icons': {}, 'tabsystems': []}
+var references = {'icons': {}, 'tabsystems': {}}
 
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
@@ -21,7 +21,7 @@ function tabCallback() {
     selectTab(this.dataset.system, this.dataset.index)
 }
 
-function selectTab(system=0, tab=0) {
+function selectTab(system, tab=0) {
     references.tabsystems[system].tabs.forEach((element, index) => {
         if (index == tab) element.classList.add('highlighted_element')
         else element.classList.remove('highlighted_element')
@@ -32,8 +32,7 @@ function selectTab(system=0, tab=0) {
     })
 }
 
-function bindTabs(tabassociations) {
-    let system = references['tabsystems'].length
+function bindTabs(system, tabassociations) {
     references.tabsystems[system] = {'tabs': [], 'sections': []}
     tabassociations.forEach(([tab, section], index) => {
         tab.dataset.system = system
@@ -44,11 +43,11 @@ function bindTabs(tabassociations) {
     })
 }
 
-bindTabs([
+bindTabs('panetabs', [
     [information_infotab, information_info],
     [information_pointstab, information_points],
 ])
-bindTabs([
+bindTabs('settingstabs', [
     [settings_generaltab, settings_general],
     [settings_appearancetab, settings_appearance],
     [settings_advancedtab, settings_advanced],
@@ -65,7 +64,7 @@ function previewImage(element) {
     overlay_screen.classList.remove('hidden')
 }
 
-function settingsClick() {
+function openSettings() {
     syncWidgets()
     tempsettings = {}
     display_image.classList.add('hidden')
@@ -79,17 +78,27 @@ function overlayClick(event) {
     }
 }
 
-function closeOverlay() {
+function closeOverlay(event) {
     display_image.src = ''
     display_image.dataset.pointindex = undefined
     display_image.dataset.imageindex = undefined
     overlay_screen.classList.add('hidden')
     display_image.classList.add('hidden')
     settings_container.classList.add('hidden')
+    event.stopPropagation()
 }
 overlay_screen.addEventListener('click', overlayClick)
-settings_menu_button.addEventListener('click', settingsClick)
+settings_menu_button.addEventListener('click', () => {
+    selectTab('settingstabs', 0)
+    openSettings()
+})
 overlay_close_button.addEventListener('click', closeOverlay)
+
+// Info Button
+info_pane_menu_button.addEventListener('click', () => {
+    selectTab('settingstabs', 3)
+    openSettings()
+})
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
@@ -97,7 +106,7 @@ document.addEventListener('keydown', (event) => {
         if (!overlay_screen.classList.contains('hidden')) {
             // An overlay is currently being viewed
             if (event.key == 'Escape') {
-                closeOverlay()
+                closeOverlay(event)
             } else if (!display_image.classList.contains('hidden')) {
                 // An image is currently being viewed
                 if (event.key == 'ArrowLeft' || event.key == 'a') {

@@ -264,9 +264,12 @@ body {
     flex-direction: column;
 }
 .pane_menu_child {
+    line-height: 0;
+    border: none;
     border-top: solid green 1px;
     cursor: pointer;
     padding: 6px;
+    background-color: transparent;
 }
 .chevron_styling {
     fill: none;

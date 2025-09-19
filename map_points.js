@@ -8,7 +8,7 @@ function mapClickEvent() {
 
 function pointClickEvent() {
     // Update information text when point is clicked, and focus on info tab
-    selectTab(0)
+    selectTab('panetabs')
     let data = markers[this.options.pointindex]
     information_header.innerHTML = data.name
     information_coords.innerHTML = `x: <u>${data.xPos}</u>, y: <u>${data.yPos}</u>`
