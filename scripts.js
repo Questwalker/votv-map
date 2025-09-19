@@ -78,13 +78,14 @@ function overlayClick(event) {
     }
 }
 
-function closeOverlay() {
+function closeOverlay(event) {
     display_image.src = ''
     display_image.dataset.pointindex = undefined
     display_image.dataset.imageindex = undefined
     overlay_screen.classList.add('hidden')
     display_image.classList.add('hidden')
     settings_container.classList.add('hidden')
+    event.stopPropagation()
 }
 overlay_screen.addEventListener('click', overlayClick)
 settings_menu_button.addEventListener('click', () => {
@@ -105,7 +106,7 @@ document.addEventListener('keydown', (event) => {
         if (!overlay_screen.classList.contains('hidden')) {
             // An overlay is currently being viewed
             if (event.key == 'Escape') {
-                closeOverlay()
+                closeOverlay(event)
             } else if (!display_image.classList.contains('hidden')) {
                 // An image is currently being viewed
                 if (event.key == 'ArrowLeft' || event.key == 'a') {
