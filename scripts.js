@@ -1,4 +1,4 @@
-var references = {'icons': {}, 'tabsystems': []}
+var references = {'icons': {}, 'tabsystems': {}}
 
 // Util functions
 function convertUnrealToGame([x,y]) {return [x / 100, y / 100]}
@@ -21,7 +21,7 @@ function tabCallback() {
     selectTab(this.dataset.system, this.dataset.index)
 }
 
-function selectTab(system=0, tab=0) {
+function selectTab(system, tab=0) {
     references.tabsystems[system].tabs.forEach((element, index) => {
         if (index == tab) element.classList.add('highlighted_element')
         else element.classList.remove('highlighted_element')
@@ -32,8 +32,7 @@ function selectTab(system=0, tab=0) {
     })
 }
 
-function bindTabs(tabassociations) {
-    let system = references['tabsystems'].length
+function bindTabs(system, tabassociations) {
     references.tabsystems[system] = {'tabs': [], 'sections': []}
     tabassociations.forEach(([tab, section], index) => {
         tab.dataset.system = system
@@ -44,11 +43,11 @@ function bindTabs(tabassociations) {
     })
 }
 
-bindTabs([
+bindTabs('panetabs', [
     [information_infotab, information_info],
     [information_pointstab, information_points],
 ])
-bindTabs([
+bindTabs('settingstabs', [
     [settings_generaltab, settings_general],
     [settings_appearancetab, settings_appearance],
     [settings_advancedtab, settings_advanced],
@@ -65,7 +64,7 @@ function previewImage(element) {
     overlay_screen.classList.remove('hidden')
 }
 
-function settingsClick() {
+function openSettings() {
     syncWidgets()
     tempsettings = {}
     display_image.classList.add('hidden')
@@ -88,8 +87,17 @@ function closeOverlay() {
     settings_container.classList.add('hidden')
 }
 overlay_screen.addEventListener('click', overlayClick)
-settings_menu_button.addEventListener('click', settingsClick)
+settings_menu_button.addEventListener('click', () => {
+    selectTab('settingstabs', 0)
+    openSettings()
+})
 overlay_close_button.addEventListener('click', closeOverlay)
+
+// Info Button
+info_pane_menu_button.addEventListener('click', () => {
+    selectTab('settingstabs', 3)
+    openSettings()
+})
 
 // Hotkeys
 document.addEventListener('keydown', (event) => {
@@ -157,6 +165,6 @@ registerSetting('grayscale_map', false, 'boolean', {category: 'settings_appearan
 option_rawsettingsupdate.addEventListener('click', updateRawSettingsBox)
 syncWidgets()
 
-// settingsClick() // DEBUG
-// selectTab(1, 1) // DEBUG
+// openSettings() // DEBUG
+// selectTab('settingstabs', 1) // DEBUG
 // toggleSidebarVis() // DEBUG
