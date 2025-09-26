@@ -74,7 +74,7 @@ function openSettings() {
 
 function overlayClick(event) {
     if (event.target == overlay_screen || event.target == display_image) {
-        closeOverlay()
+        closeOverlay(event)
     }
 }
 
@@ -85,7 +85,7 @@ function closeOverlay(event) {
     overlay_screen.classList.add('hidden')
     display_image.classList.add('hidden')
     settings_container.classList.add('hidden')
-    event.stopPropagation()
+    if (event) event.stopPropagation()
 }
 overlay_screen.addEventListener('click', overlayClick)
 settings_menu_button.addEventListener('click', () => {
