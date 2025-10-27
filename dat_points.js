@@ -23,7 +23,7 @@ const categories = {
         group: 'Locations'
     },
     'miscellaneous': { // Category for automatic fallback.
-        displayname: 'Miscellaneouas',
+        displayname: 'Miscellaneous',
     }
 }
 
