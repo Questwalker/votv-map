@@ -841,7 +841,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>On top of the incinerator.",
-        related_images: ['./images/pumpkin/pumpkin1_1.png'],
+        related_images: ['./images/pumpkin1_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: -21.53,
@@ -850,7 +850,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>In front of the cave entrance.",
-        related_images: ['./images/pumpkin/pumpkin2_1.png'],
+        related_images: ['./images/pumpkin2_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: -651.53,
@@ -859,7 +859,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>At the top of the ladder, inside the wind turbine's nacelle.",
-        related_images: ['./images/pumpkin/pumpkin3_1.png'],
+        related_images: ['./images/pumpkin3_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 118.4,
@@ -868,7 +868,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>On top of the drain leading into the river.",
-        related_images: ['./images/pumpkin/pumpkin4_1.png'],
+        related_images: ['./images/pumpkin4_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 671.74,
@@ -886,7 +886,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>On the barrier going over the river.",
-        related_images: ['./images/pumpkin/pumpkin6_1.png'],
+        related_images: ['./images/pumpkin6_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 543.1,
@@ -895,7 +895,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>Inside the large log under some rocks.",
-        related_images: ['./images/pumpkin/pumpkin7_1.png'],
+        related_images: ['./images/pumpkin7_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 349.45,
@@ -904,7 +904,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>On the roof of TR_3.",
-        related_images: ['./images/pumpkin/pumpkin8_1.png'],
+        related_images: ['./images/pumpkin8_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: -400.8,
@@ -913,7 +913,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>On top of Stonehenge.",
-        related_images: ['./images/pumpkin/pumpkin9_1.png'],
+        related_images: ['./images/pumpkin9_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 210.44,
@@ -922,7 +922,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>At the bottom of the well.",
-        related_images: ['./images/pumpkin/pumpkin10_1.png'],
+        related_images: ['./images/pumpkin10_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 564.35,
@@ -931,7 +931,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>Under the William Statue.",
-        related_images: ['./images/pumpkin/pumpkin11_1.png'],
+        related_images: ['./images/pumpkin11_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 12.63,
@@ -940,7 +940,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>Outside the construction site cabins.",
-        related_images: ['./images/pumpkin/pumpkin12_1.png'],
+        related_images: ['./images/pumpkin12_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: -547,
@@ -949,7 +949,7 @@ const markers = [
     {
         name: "Pumpkin",
         description: "Exclusive to the Halloween gamemode.<br><br>On top of the utility pole's light.",
-        related_images: ['./images/pumpkin/pumpkin13_1.png'],
+        related_images: ['./images/pumpkin13_1.png'],
         category: "Halloween Pumpkins",
         icon: "./icons/pumpkin.png",
         xPos: 173.9,
