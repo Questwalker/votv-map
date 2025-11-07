@@ -2,7 +2,7 @@ function mapClickEvent() {
     // Reset information text when user clicks off a point
     information_header.innerHTML = 'Select a Point'
     information_coords.innerHTML = ''
-    information_text.innerHTML = 'Click on a point on the map to see some information about what it is and where it\'s located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.'
+    information_text.innerHTML = 'Click on a point on the map to see some information about what it is and where it\'s located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.<br><BR><span style="color: magenta;">NOTE: This map is currently updating for version 0.9. Some parts are incomplete and may have outdated info, positions, or images.<br>Some markers may be missing if they have not been found in the new update yet.<br>(The Halloween pumpkins are up-to-date, so feel free to rely on them!)</span>'
     information_images.replaceChildren()
 }
 
@@ -192,5 +192,5 @@ lines.forEach((data, lineindex) => {
 })
 
 map.on('click', mapClickEvent)
-mapClickEvent()
+mapClickEvent() // Setup points panel
 

@@ -254,6 +254,43 @@ const markers = [
         xPos: 10000,
         yPos: 10000
     },
+    // Transformers
+    {
+        name: "Power Station",
+        description: "",
+        related_images: [],
+        category: "Transformers",
+        icon: "./icons/generator.png",
+        xPos: 64,
+        yPos: 64.3
+    },
+    {
+        name: "Transformer #1",
+        description: "Target with <i>sv.target TF_1</i>.<br>Supplies and explosive items are strewn throughout the building. Inside, you can find some partially-filled gas cans and a toolbox, and you can find a lighter and instructions on how to make molotovs on the desk.",
+        related_images: [],
+        category: "Transformers",
+        icon: "./icons/transformer1.png",
+        xPos: 396.1,
+        yPos: 200
+    },
+    {
+        name: "Transformer #2",
+        description: "Target with <i>sv.target TF_2</i>.<br>Some trash lays around. You can find scrap and some almost-full gas cans inside. There are two benches outside.",
+        related_images: [],
+        category: "Transformers",
+        icon: "./icons/transformer2.png",
+        xPos: -546,
+        yPos: 234
+    },
+    {
+        name: "Transformer #3",
+        description: "Target with <i>sv.target TF_3</i>.<br>Garbage litters the area and the door is boarded up, which forces you to enter with a carefully-placed crouch jump, a crowbar, or by using the vent on the side of the building. A full gas can and some batteries can be found in the supply room, and there's instructions on how to make a cooler under some of the garbage. A cat bed for Maxwell can be found behind a pallet.",
+        related_images: [],
+        category: "Transformers",
+        icon: "./icons/transformer3.png",
+        xPos: -396.5,
+        yPos: -480.1
+    },
     // Furfur Totems
     {
         name: "Furfur Totem",
@@ -735,43 +772,6 @@ const markers = [
         icon: "./icons/burger.png",
         xPos: 18.14,
         yPos: 529.37
-    },
-    // Transformers
-    {
-        name: "Power Station",
-        description: "",
-        related_images: [],
-        category: "Transformers",
-        icon: "./icons/generator.png",
-        xPos: 64,
-        yPos: 64.3
-    },
-    {
-        name: "Transformer #1",
-        description: "Target with <i>sv.target TF_1</i>.<br>Supplies and explosive items are strewn throughout the building. Inside, you can find some partially-filled gas cans and a toolbox, and you can find a lighter and instructions on how to make molotovs on the desk.",
-        related_images: [],
-        category: "Transformers",
-        icon: "./icons/transformer1.png",
-        xPos: 396.1,
-        yPos: 200
-    },
-    {
-        name: "Transformer #2",
-        description: "Target with <i>sv.target TF_2</i>.<br>Some trash lays around. You can find scrap and some almost-full gas cans inside. There are two benches outside.",
-        related_images: [],
-        category: "Transformers",
-        icon: "./icons/transformer2.png",
-        xPos: -546,
-        yPos: 234
-    },
-    {
-        name: "Transformer #3",
-        description: "Target with <i>sv.target TF_3</i>.<br>Garbage litters the area and the door is boarded up, which forces you to enter with a carefully-placed crouch jump, a crowbar, or by using the vent on the side of the building. A full gas can and some batteries can be found in the supply room, and there's instructions on how to make a cooler under some of the garbage. A cat bed for Maxwell can be found behind a pallet.",
-        related_images: [],
-        category: "Transformers",
-        icon: "./icons/transformer3.png",
-        xPos: -396.5,
-        yPos: -480.1
     },
     // Skulls
     {
