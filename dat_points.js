@@ -4,6 +4,14 @@ const categories = {
         icon: './icons/votv.png', // if key doesn't exist, fallback to icon of first ever marker requesting this category
         group: 'Locations' // if key doesn't exist, fallback to Misc group
     },
+    'Transformers': {
+        group: 'Locations'
+    },
+    'CR': {
+        displayname: 'Coordinate Radars',
+        icon: './icons/cr.png',
+        group: 'Locations'
+    },
     'KerfurO Accessories': {
         group: 'Collectables'
     },
@@ -17,9 +25,6 @@ const categories = {
         group: 'Collectables'
     },
     'Points of Interest': {
-        group: 'Locations'
-    },
-    'Transformers': {
         group: 'Locations'
     },
     'miscellaneous': { // Category for automatic fallback.
@@ -290,6 +295,34 @@ const markers = [
         icon: "./icons/transformer3.png",
         xPos: -396.5,
         yPos: -480.1
+    },
+    // CR Towers
+    {
+        name: "Coordinate Radar #1",
+        description: "Target with <i>sv.target CR1</i>.",
+        related_images: [],
+        category: "CR",
+        icon: "./icons/cr1.png",
+        xPos: 103.9,
+        yPos: 446
+    },
+    {
+        name: "Coordinate Radar #2",
+        description: "Target with <i>sv.target CR2</i>.",
+        related_images: [],
+        category: "CR",
+        icon: "./icons/cr2.png",
+        xPos: 540,
+        yPos: -326.54
+    },
+    {
+        name: "Coordinate Radar #3",
+        description: "Target with <i>sv.target CR3</i>.",
+        related_images: [],
+        category: "CR",
+        icon: "./icons/cr3.png",
+        xPos: -624.47,
+        yPos: -369.8
     },
     // Furfur Totems
     {
@@ -1039,22 +1072,22 @@ const markers = [
     },
     {
         name: "Box of Drives",
-        description: "A box containing 8 drives with level 3 signals can be dug up near the pole in the middle of the grassy circle. You can send the drives off for some points or you can keep them, but make sure to check them out on your console at some point :)",
+        description: "A box containing 8 drives with level 3 signals can be dug up near the pole in the middle of the grassy circle. You won't get any points for selling them, but make sure to check them out on your console at some point :)",
         related_images: ['./images/driveBox1_1.png'],
         category: "",
         icon: "./icons/drive_box.png",
         xPos: -118.8,
         yPos: -42.1
     },
-    {
-        name: "Drive",
-        description: "Can be dug up on the gravel between the bunker and the parking lot.",
-        related_images: [],
-        category: "",
-        icon: "./icons/drive.png",
-        xPos: 16.5,
-        yPos: 22.4
-    },
+    // { // Inaccessible, again
+    //     name: "Drive",
+    //     description: "Can be dug up on the gravel between the bunker and the parking lot.",
+    //     related_images: [],
+    //     category: "",
+    //     icon: "./icons/drive.png",
+    //     xPos: 16.5,
+    //     yPos: 22.4
+    // },
     {
         name: "Box of bones",
         description: "Can be dug up next to the boulder in the middle of the grassy circle. An old wooden box containing a some bones and a skull. The box is breakable.",
@@ -1133,8 +1166,8 @@ const markers = [
         related_images: ['./images/fishingSupplies1_1.png'],
         category: "Tools",
         icon: "./icons/fishermans_box.png",
-        xPos: 175.8,
-        yPos: -460.6
+        xPos: 176.0,
+        yPos: -460.46
     },
     {
         name: "Bike Helmet",
