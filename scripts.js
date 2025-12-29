@@ -74,7 +74,7 @@ function openSettings() {
 
 function overlayClick(event) {
     if (event.target == overlay_screen || event.target == display_image) {
-        closeOverlay()
+        closeOverlay(event)
     }
 }
 

@@ -616,195 +616,195 @@ const markers = [
         xPos: -347.4,
         yPos: -565.4
     },
-    // Chicken Burgers
+    // Chicken Sandwiches
     {
-        name: "Burger #1",
+        name: "Sandwich #1",
         description: "On top of the servers.",
-        related_images: ["./images/burger1_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -8.4,
-        yPos: 27.5
+        related_images: ['./images/sandwhich1_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -8.73,
+        yPos: 27.75
     },
     {
-        name: "Burger #2",
+        name: "Sandwich #2",
         description: "Inside the oven.",
-        related_images: ["./images/burger2_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -14.7,
-        yPos: 8.8
+        related_images: ['./images/sandwhich2_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -14.6,
+        yPos: 8.75
     },
     {
-        name: "Burger #3",
-        description: "On top of the toilet.",
-        related_images: ["./images/burger3_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -12,
-        yPos: -0.1
+        name: "Sandwich #3",
+        description: "On top of the toilet in the corner.",
+        related_images: ['./images/sandwhich3_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -9.45,
+        yPos: -0.12
     },
     {
-        name: "Burger #4",
-        description: "On the radio tower of top of one of the antennas. You can climb the pole with a hook to reach it.",
-        related_images: ["./images/burger4_1.png", "./images/burger4_2.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: 21.7,
-        yPos: -29.5
+        name: "Sandwich #4",
+        description: "On the radio tower of top of one of the antennas. You can climb the pole with a hook to reach it.<br>Note that the light mounted on top doesn't have a hitbox, so the sandwhich and you can fall right through it.",
+        related_images: ['./images/sandwhich4_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: 22.8,
+        yPos: -28.4
     },
     {
-        name: "Burger #5",
+        name: "Sandwich #5",
         description: "Under the basement stairs.",
-        related_images: ["./images/burger5_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
+        related_images: ['./images/sandwhich5_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
         xPos: -20.4,
-        yPos: 27.1
+        yPos: 27.2
     },
     {
-        name: "Burger #6",
-        description: "On the roof, on top of the air conditioning system.",
-        related_images: ["./images/burger6_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -2.6,
-        yPos: 27.3
+        name: "Sandwich #6",
+        description: "On the roof, on top of the air conditioning system and under the small radio tower",
+        related_images: ['./images/sandwhich6_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -2.5,
+        yPos: 27.98
     },
     {
-        name: "Burger #7",
+        name: "Sandwich #7",
         description: "On top of the Radome.",
-        related_images: ["./images/burger7_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -10.8,
-        yPos: 6.4
+        related_images: ['./images/sandwhich7_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -17.04,
+        yPos: 14.58
     },
     {
-        name: "Burger #8",
-        description: "On the roof of the garage in a corner.",
-        related_images: ["./images/burger8_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -14.8,
-        yPos: 9.7
+        name: "Sandwich #8",
+        description: "On the roof of the garage.",
+        related_images: ['./images/sandwhich8_1.png', './images/sandwhich8_2.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -19.58,
+        yPos: 7.39
     },
     {
-        name: "Burger #9",
+        name: "Sandwich #9",
         description: "On top of one of the stone arches.",
-        related_images: ['./images/burger9_1.png'],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
+        related_images: ['./images/sandwhich9_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
         xPos: 216,
         yPos: 541.1
     },
     {
-        name: "Burger #10",
+        name: "Sandwich #10",
         description: "Under the bridge near the base.",
-        related_images: ["./images/burger10_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -62.9,
-        yPos: 12
+        related_images: ['./images/sandwhich10_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -65.16,
+        yPos: -12.78
     },
     {
-        name: "Burger #11",
-        description: "Inside the large log under some rocks.",
-        related_images: ['./images/burger11_1.png', './images/burger11_2.png'],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: 349.1,
-        yPos: -344.5
+        name: "Sandwich #11",
+        description: "Inside the large log under a bunch of rocks.",
+        related_images: ['./images/sandwhich11_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: 349.5,
+        yPos: -344.6
     },
     {
-        name: "Burger #12",
-        description: "On top of some supply crates in the poly testing area.",
-        related_images: ["./images/burger12_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: 518.5,
-        yPos: -213.4
+        name: "Sandwich #12",
+        description: "Under a supply crate in the poly testing area.",
+        related_images: ['./images/sandwhich12_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: 518,
+        yPos: -211.65
     },
     {
-        name: "Burger #13",
+        name: "Sandwich #13",
         description: "Inside the old shack, in a corner under a table.",
-        related_images: ["./images/burger13_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: 408.95,
+        related_images: ['./images/sandwhich13_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: 409,
         yPos: 24.1
     },
     {
-        name: "Burger #14",
-        description: "Behind transformer 2, on the roof. Crammed between the wall and some machinery.",
-        related_images: ["./images/burger14_1.png", "./images/burger14_2.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -553.4,
-        yPos: 236.6
+        name: "Sandwich #14",
+        description: "Behind transformer 2 on the roof. Crammed between the wall and some machinery.",
+        related_images: ['./images/sandwhich14_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -549.8,
+        yPos: 234.58
     },
     {
-        name: "Burger #15",
+        name: "Sandwich #15",
         description: "Located on the metal walkways that go around Juliett.",
-        related_images: ["./images/burger15_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -100.2,
-        yPos: 203.5
+        related_images: ['./images/sandwhich15_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -99.97,
+        yPos: 203.2
     },
     {
-        name: "Burger #16",
+        name: "Sandwich #16",
         description: "On the ground under the generator.",
-        related_images: ["./images/burger16_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -623,
-        yPos: -25.7
+        related_images: ['./images/sandwhich16_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -623.1,
+        yPos: -25.8
     },
     {
-        name: "Burger #17",
+        name: "Sandwich #17",
         description: "On the ground outside of the cave.",
-        related_images: ["./images/burger17_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
+        related_images: ['./images/sandwhich17_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
         xPos: -651.1,
         yPos: -587.6
     },
     {
-        name: "Burger #18",
+        name: "Sandwich #18",
         description: "Inside the cave, in the middle of a pile of mushrooms.",
-        related_images: ["./images/burger18_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: -683.7,
-        yPos: -581.8
+        related_images: ['./images/sandwhich18_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: -683.8,
+        yPos: -582.0
     },
     {
-        name: "Burger #19",
+        name: "Sandwich #19",
         description: "On the ground next to the <i>Unknown Rozital Technology</i>.",
-        related_images: ["./images/burger19_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
+        related_images: ['./images/sandwhich19_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
         xPos: 639.2,
         yPos: 44
     },
     {
-        name: "Burger #20",
+        name: "Sandwich #20",
         description: "Needs to be dug up with a shovel. A metal detector can help in finding it.",
-        related_images: ["./images/burger20_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: 157,
-        yPos: -584.7
+        related_images: ['./images/sandwhich20_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: 157.1,
+        yPos: -583.95
     },
     {
-        name: "Burger #21",
+        name: "Sandwich #21",
         description: "In a group of rocks behind Wiskey.",
-        related_images: ["./images/burger21_1.png"],
-        category: "Chicken Burgers",
-        icon: "./icons/burger.png",
-        xPos: 18.14,
-        yPos: 529.37
+        related_images: ['./images/sandwhich21_1.png'],
+        category: "Chicken Sandwiches",
+        icon: "./icons/chickensandwich.png",
+        xPos: 18.07,
+        yPos: 529.25
     },
     // Skulls
     {
@@ -1189,7 +1189,7 @@ const markers = [
     },
     {
         name: "MRE Barrel",
-        description: "Inside an upright log in the river. Has 50 MREs in it.",
+        description: "Inside an upright log in the river. Has 38 MREs in it.",
         related_images: [],
         category: "",
         icon: "./icons/barrel.png",
@@ -1216,12 +1216,12 @@ const markers = [
     },
     {
         name: "Large Glasses",
-        description: "Two large pairs of glasses, equippable on Omega Kerfur.",
+        description: "A large pairs of glasses, equippable on Omega Kerfur.",
         related_images: [],
         category: "KerfurO Accessories",
         icon: "./icons/kerf_glasses.png",
-        xPos: 62.25,
-        yPos: 625.5
+        xPos: 61.39,
+        yPos: 625.86
     },
     {
         name: "Badge",
