@@ -459,8 +459,8 @@ const markers = [
         related_images: ['./images/blueArgemia1_1.png'],
         category: "Plushes",
         icon: "./icons/blue_argemia.png",
-        xPos: -315,
-        yPos: 398
+        xPos: -309.6,
+        yPos: 394.1
     },
     {
         name: "Cyan Argemia",
@@ -577,8 +577,8 @@ const markers = [
         related_images: ['./images/well1_1.png'],
         category: "Points of Interest",
         icon: "./icons/well.png",
-        xPos: 564.4,
-        yPos: 265.7
+        xPos: 564.31,
+        yPos: 265.66
     },
     {
         name: "Bunker",
@@ -1010,7 +1010,7 @@ const markers = [
     {
         name: "Shovel",
         description: "Inside the building. You can break the door by hitting it with a crowbar, shovel, etc.",
-        related_images: [],
+        related_images: ['./images/shovel3_1.png'],
         category: "Tools",
         icon: "./icons/shovel.png",
         xPos: -369.12,
