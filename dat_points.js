@@ -353,61 +353,61 @@ const markers = [
         yPos: -383.7
     },
     // Metal Tiles
-    {
+    { // moved to roof above living quarters, next to skylight window
         name: "Metal Tile #1",
         description: "Hidden in an outdoor alcove on the side of the base. You can get it by dropping down from the roof.",
         related_images: ['./images/tile1_1.png', './images/tile1_2.png'],
         category: "Metal Tiles",
         icon: "./icons/metal_tile.png",
-        xPos: -9,
-        yPos: 3
+        xPos: -4.16,
+        yPos: 9.87
     },
-    {
+    { // still on top of the bridge, will need new pictures
         name: "Metal Tile #2",
         description: "On top of the post of the bridge.",
         related_images: ['./images/tile2_1.png', './images/tile2_2.png'],
         category: "Metal Tiles",
         icon: "./icons/metal_tile.png",
-        xPos: -77.3,
-        yPos: 15.1
+        xPos: -69.67,
+        yPos: -10.9
     },
-    {
-        name: "Metal Tile #3",
-        description: "Found at the base of a tree in the wilderness.",
-        related_images: ['./images/tile3_1.png', './images/tile3_2.png'],
-        category: "Metal Tiles",
-        icon: "./icons/metal_tile.png",
-        xPos: -464.3,
-        yPos: 173.5
-    },
-    {
-        name: "Metal Tile #4",
-        description: "Found around the rim of the cliff to the north of Yankee.",
-        related_images: ['./images/tile4_1.png', './images/tile4_2.png'],
-        category: "Metal Tiles",
-        icon: "./icons/metal_tile.png",
-        xPos: -525.3,
-        yPos: -48
-    },
-    {
-        name: "Metal Tile #5",
-        description: "Between two supply boxes at the hole.",
-        related_images: ['./images/tile5_1.png', './images/tile5_2.png', './images/tile5_3.png'],
-        category: "Metal Tiles",
-        icon: "./icons/metal_tile.png",
-        xPos: -615,
-        yPos: -23
-    },
-    {
-        name: "Metal Tile #6",
-        description: "On the roof of the guard's booth. You can get on top by parkouring on the metal poles nearby.",
-        related_images: ['./images/tile6_1.png', './images/tile6_2.png', './images/tile6_3.png'],
-        category: "Metal Tiles",
-        icon: "./icons/metal_tile.png",
-        xPos: -372,
-        yPos: 702.6
-    },
-    {
+    // { // moved, no longer in the area
+    //     name: "Metal Tile #3",
+    //     description: "Found at the base of a tree in the wilderness.",
+    //     related_images: ['./images/tile3_1.png', './images/tile3_2.png'],
+    //     category: "Metal Tiles",
+    //     icon: "./icons/metal_tile.png",
+    //     xPos: -464.3,
+    //     yPos: 173.5
+    // },
+    // { // moved? no longer on the cliff
+    //     name: "Metal Tile #4",
+    //     description: "Found around the rim of the cliff to the north of Yankee.",
+    //     related_images: ['./images/tile4_1.png', './images/tile4_2.png'],
+    //     category: "Metal Tiles",
+    //     icon: "./icons/metal_tile.png",
+    //     xPos: -525.3,
+    //     yPos: -48
+    // },
+    // { // not there
+    //     name: "Metal Tile #5",
+    //     description: "Between two supply boxes at the hole.",
+    //     related_images: ['./images/tile5_1.png', './images/tile5_2.png', './images/tile5_3.png'],
+    //     category: "Metal Tiles",
+    //     icon: "./icons/metal_tile.png",
+    //     xPos: -615,
+    //     yPos: -23
+    // },
+    // { // missing
+    //     name: "Metal Tile #6",
+    //     description: "On the roof of the guard's booth. You can get on top by parkouring on the metal poles nearby.",
+    //     related_images: ['./images/tile6_1.png', './images/tile6_2.png', './images/tile6_3.png'],
+    //     category: "Metal Tiles",
+    //     icon: "./icons/metal_tile.png",
+    //     xPos: -372,
+    //     yPos: 702.6
+    // },
+    { // still exists, photo doesn't need to be updated
         name: "Metal Tile #7",
         description: "Found on the ground next to the green locker.",
         related_images: ['./images/tile7_1.png', './images/tile7_2.png'],
@@ -416,24 +416,24 @@ const markers = [
         xPos: 616,
         yPos: 621
     },
-    {
-        name: "Metal Tile #8",
-        description: "Found behind the server room of uniform. Once you are near the doors, crouch under the railing and walk around the platform to find it.",
-        related_images: ['./images/tile8_1.png', './images/tile8_2.png'],
-        category: "Metal Tiles",
-        icon: "./icons/metal_tile.png",
-        xPos: 500.37,
-        yPos: -2.7
-    },
-    {
-        name: "Metal Tile #9",
-        description: "This marker isn't placed wrong. Go past the fence and keep going until you hit the corner between the northern and eastern invisible walls.",
-        related_images: ['./images/tile9_1.png', './images/tile9_2.png', './images/tile9_3.png'],
-        category: "Metal Tiles",
-        icon: "./icons/metal_tile.png",
-        xPos: 874,
-        yPos: -874
-    },
+    // { // missing
+    //     name: "Metal Tile #8",
+    //     description: "Found behind the server room of uniform. Once you are near the doors, crouch under the railing and walk around the platform to find it.",
+    //     related_images: ['./images/tile8_1.png', './images/tile8_2.png'],
+    //     category: "Metal Tiles",
+    //     icon: "./icons/metal_tile.png",
+    //     xPos: 500.37,
+    //     yPos: -2.7
+    // },
+    // { // missing.
+    //     name: "Metal Tile #9",
+    //     description: "This marker isn't placed wrong. Go past the fence and keep going until you hit the corner between the northern and eastern invisible walls.",
+    //     related_images: ['./images/tile9_1.png', './images/tile9_2.png', './images/tile9_3.png'],
+    //     category: "Metal Tiles",
+    //     icon: "./icons/metal_tile.png",
+    //     xPos: 874,
+    //     yPos: -874
+    // },
     // Argemia Plushes
     {
         name: "Red Argemia",
@@ -524,6 +524,15 @@ const markers = [
         icon: "./icons/antibreather_plush.png",
         xPos: -672.7,
         yPos: -567
+    },
+    {
+        name: "Dream Plush",
+        description: "A rainbow flower teddy bear plush.",
+        related_images: ['./images/dreamPlush1_1.png'],
+        category: "Plushes",
+        icon: "./icons/dream_plush.png",
+        xPos: 353,
+        yPos: -311.8
     },
     // Points of interest
     {
@@ -1162,7 +1171,7 @@ const markers = [
     },
     {
         name: "Fishing Supplies",
-        description: "Needs to be dug up with a shovel.<br>Located to the right of the wind turbine, an old box containing some fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.",
+        description: "Needs to be dug up with a shovel.<br>Located to the right of the wind turbine, an old box containing some fishing rod parts and some bait. Put all the fishing rod parts together on a workbench to create a fishing rod.<br>Note that this digging spot requires more precision compared to other buried objects.",
         related_images: ['./images/fishingSupplies1_1.png'],
         category: "Tools",
         icon: "./icons/fishermans_box.png",
