@@ -629,7 +629,7 @@ const markers = [
     {
         name: "Sandwich #1",
         description: "On top of the servers.",
-        related_images: ['./images/sandwhich1_1.png'],
+        related_images: ['./images/sandwich1_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -8.73,
@@ -638,7 +638,7 @@ const markers = [
     {
         name: "Sandwich #2",
         description: "Inside the oven.",
-        related_images: ['./images/sandwhich2_1.png'],
+        related_images: ['./images/sandwich2_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -14.6,
@@ -647,7 +647,7 @@ const markers = [
     {
         name: "Sandwich #3",
         description: "On top of the toilet in the corner.",
-        related_images: ['./images/sandwhich3_1.png'],
+        related_images: ['./images/sandwich3_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -9.45,
@@ -655,8 +655,8 @@ const markers = [
     },
     {
         name: "Sandwich #4",
-        description: "On the radio tower of top of one of the antennas. You can climb the pole with a hook to reach it.<br>Note that the light mounted on top doesn't have a hitbox, so the sandwhich and you can fall right through it.",
-        related_images: ['./images/sandwhich4_1.png'],
+        description: "On the radio tower of top of one of the antennas. You can climb the pole with a hook to reach it.<br>Note that the light mounted on top doesn't have a hitbox, so the sandwich and you can fall right through it.",
+        related_images: ['./images/sandwich4_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 22.8,
@@ -665,7 +665,7 @@ const markers = [
     {
         name: "Sandwich #5",
         description: "Under the basement stairs.",
-        related_images: ['./images/sandwhich5_1.png'],
+        related_images: ['./images/sandwich5_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -20.4,
@@ -674,7 +674,7 @@ const markers = [
     {
         name: "Sandwich #6",
         description: "On the roof, on top of the air conditioning system and under the small radio tower",
-        related_images: ['./images/sandwhich6_1.png'],
+        related_images: ['./images/sandwich6_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -2.5,
@@ -683,7 +683,7 @@ const markers = [
     {
         name: "Sandwich #7",
         description: "On top of the Radome.",
-        related_images: ['./images/sandwhich7_1.png'],
+        related_images: ['./images/sandwich7_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -17.04,
@@ -692,7 +692,7 @@ const markers = [
     {
         name: "Sandwich #8",
         description: "On the roof of the garage.",
-        related_images: ['./images/sandwhich8_1.png', './images/sandwhich8_2.png'],
+        related_images: ['./images/sandwich8_1.png', './images/sandwich8_2.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -19.58,
@@ -701,7 +701,7 @@ const markers = [
     {
         name: "Sandwich #9",
         description: "On top of one of the stone arches.",
-        related_images: ['./images/sandwhich9_1.png'],
+        related_images: ['./images/sandwich9_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 216,
@@ -710,7 +710,7 @@ const markers = [
     {
         name: "Sandwich #10",
         description: "Under the bridge near the base.",
-        related_images: ['./images/sandwhich10_1.png'],
+        related_images: ['./images/sandwich10_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -65.16,
@@ -719,7 +719,7 @@ const markers = [
     {
         name: "Sandwich #11",
         description: "Inside the large log under a bunch of rocks.",
-        related_images: ['./images/sandwhich11_1.png'],
+        related_images: ['./images/sandwich11_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 349.5,
@@ -728,7 +728,7 @@ const markers = [
     {
         name: "Sandwich #12",
         description: "Under a supply crate in the poly testing area.",
-        related_images: ['./images/sandwhich12_1.png'],
+        related_images: ['./images/sandwich12_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 518,
@@ -737,7 +737,7 @@ const markers = [
     {
         name: "Sandwich #13",
         description: "Inside the old shack, in a corner under a table.",
-        related_images: ['./images/sandwhich13_1.png'],
+        related_images: ['./images/sandwich13_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 409,
@@ -746,7 +746,7 @@ const markers = [
     {
         name: "Sandwich #14",
         description: "Behind transformer 2 on the roof. Crammed between the wall and some machinery.",
-        related_images: ['./images/sandwhich14_1.png'],
+        related_images: ['./images/sandwich14_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -549.8,
@@ -755,7 +755,7 @@ const markers = [
     {
         name: "Sandwich #15",
         description: "Located on the metal walkways that go around Juliett.",
-        related_images: ['./images/sandwhich15_1.png'],
+        related_images: ['./images/sandwich15_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -99.97,
@@ -764,7 +764,7 @@ const markers = [
     {
         name: "Sandwich #16",
         description: "On the ground under the generator.",
-        related_images: ['./images/sandwhich16_1.png'],
+        related_images: ['./images/sandwich16_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -623.1,
@@ -773,7 +773,7 @@ const markers = [
     {
         name: "Sandwich #17",
         description: "On the ground outside of the cave.",
-        related_images: ['./images/sandwhich17_1.png'],
+        related_images: ['./images/sandwich17_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -651.1,
@@ -782,7 +782,7 @@ const markers = [
     {
         name: "Sandwich #18",
         description: "Inside the cave, in the middle of a pile of mushrooms.",
-        related_images: ['./images/sandwhich18_1.png'],
+        related_images: ['./images/sandwich18_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: -683.8,
@@ -791,7 +791,7 @@ const markers = [
     {
         name: "Sandwich #19",
         description: "On the ground next to the <i>Unknown Rozital Technology</i>.",
-        related_images: ['./images/sandwhich19_1.png'],
+        related_images: ['./images/sandwich19_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 639.2,
@@ -800,7 +800,7 @@ const markers = [
     {
         name: "Sandwich #20",
         description: "Needs to be dug up with a shovel. A metal detector can help in finding it.",
-        related_images: ['./images/sandwhich20_1.png'],
+        related_images: ['./images/sandwich20_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 157.1,
@@ -809,7 +809,7 @@ const markers = [
     {
         name: "Sandwich #21",
         description: "In a group of rocks behind Wiskey.",
-        related_images: ['./images/sandwhich21_1.png'],
+        related_images: ['./images/sandwich21_1.png'],
         category: "Chicken Sandwiches",
         icon: "./icons/chickensandwich.png",
         xPos: 18.07,
