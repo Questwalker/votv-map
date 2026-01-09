@@ -571,15 +571,15 @@ const markers = [
         xPos: 408.5,
         yPos: 24.3
     },
-    {
-        name: "Abandoned House",
-        description: "",
-        related_images: [],
-        category: "Points of Interest",
-        icon: "./icons/house.png",
-        xPos: 662.5,
-        yPos: -655.5
-    },
+    // { // disabled as area has changed signifigantly
+    //     name: "",
+    //     description: "",
+    //     related_images: [],
+    //     category: "Points of Interest",
+    //     icon: "./icons/debug.png",
+    //     xPos: 655,
+    //     yPos: -618.26
+    // },
     {
         name: "Well",
         description: "",
@@ -1225,7 +1225,7 @@ const markers = [
     },
     {
         name: "Large Glasses",
-        description: "A large pairs of glasses, equippable on Omega Kerfur.",
+        description: "Two large pairs of glasses, equippable on Omega Kerfur.",
         related_images: [],
         category: "KerfurO Accessories",
         icon: "./icons/kerf_glasses.png",
@@ -1386,5 +1386,204 @@ const markers = [
         icon: "./icons/omega_ai_module.png",
         xPos: 404.8,
         yPos: -406
+    },
+    // Notes
+    {
+        name: "Note",
+        description: "<blockquote>\"password: 1111\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 1.43,
+        yPos: 5.49
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"1234 pass\"</blockquote>The password for the admin room.",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -15.28,
+        yPos: 11.9
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"Do not enter\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 20.35,
+        yPos: 23.32
+    },
+    {
+        name: "Note",
+        description: "Inside a basement locker with some rocks.<blockquote>\"tools to break the boxes with\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -14.94,
+        yPos: 19.38
+    },
+    {
+        name: "Note",
+        description: "Attached to the face of the drive eraser.<blockquote>\"This machine erases the data from the drive.<br>Insert the drive into the drive slot, press the button, wait a few minutes, then take the empty drive.\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 1.27,
+        yPos: 11.76
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"ATV maintenance:<br><br>You must keep the ATV at the maximum efficiancy, this is the quick recap of what you should and should not to do.<br><br>1) The Fuel<br>You must refuel your ATV if you don't want to get stuck in the middle of nowhere.<br><br>2) The Battery<br>The battry drains whenever you use the functions of the atv such as turbo of lights, do not forget to turn them off if youre not using them.<br><br>3) Wheels<br>Keep an eye on the wheels and keep them in the good state, otherwise they will break apart and need a replacement. Use the wrench to detach the wheels and fix them by using the tools you can find.<br><br>4) Cleaning<br>Keep your ATV clean and nice. Use the sponge or any other cleaning tools and scrub the dirt away. To clean the wheels they should be detached first.\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -23.1,
+        yPos: 9.8
+    },
+    {
+        name: "Note",
+        description: "Attached to the face of the tape machine.<blockquote>\"Tapes are a cruicial part of the daily task! You must send a both tapes every day to complete the daily task.<br>Make sure they are both full of data!\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 0,
+        yPos: 23.76
+    },
+    {
+        name: "Note",
+        description: "Attached to the wall next to the drone panel.<blockquote>Drone can be used to send off the daily task items and sell items for points.<br><br>Open the Delivery Drone Access Panel, then use the keyboard to call or send the drone.<br>Put items in the drone sack, then use the keyboard again to send off the drone.<br><br>To put items in the sack - you can use it as a normal container, for big items like the drive box - hold Shift and LMB on the sack to put the item into the container.</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -24,
+        yPos: 2.47
+    },
+    {
+        name: "Note",
+        description: "Attached to the face of the console.<blockquote>You can do sv.target with different types of objects such as:<br>ATV - atv, car, vehicle<br>Coordinate radars - cr1, cr2, cr3<br>Alpha Base - base, home<br>Different satellites by their name<br>Misc objects</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 1.13,
+        yPos: 25.57
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"23:11<br>Taking a note for whoever reading this, saw that one figure standing next to the concrete pole. Could not get a good look, my eyes were blurry from the lack of sleep, maybe hallucination who knows. Keep your eye on this.<br><br>Update 8:40<br>Came out investigating the place, saw footprints at the exact same place where the figure was last night.<br><br>Update 17:09<br>i do not feel safe here i want to leave\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -1.9,
+        yPos: 27.06
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"...do-it-yourself kinda thing...<br><br>...green crystals, a couple of them...<br><br>...your hands on welding apparatus...\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperWhite.png",
+        xPos: 61.56,
+        yPos: 623.33
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"Ich habe keine Familie oder Freunde, also niemanden, der bereit wäre, an einem solchen Leben teilzunehmen, also wer auch immer das ist. Ich übertrage Ihnen das Eigentum an meiner wertvollen Ausrüstung. Sie finden es möglicherweise bei 175:-460. Viel Glück.<br><br>Ludwig Handschuch.\"</blockquote>This note describes the fishing box at x: 176, y: -460.46.",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 58.36,
+        yPos: 627.51
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"Day 41<br><br>We finally got more financial support for out mission<br>We can get deeper this time.<br><br>But today i noticed something interesting, the hole made one deep bassy sound.<br>Couldnt record it and i dont know if it was naturally made sound, but it sounds like really deep metal squeek<br><br>This hole is pretty weird\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -622.15,
+        yPos: -30.43
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"Day 14<br><br>Is this thing infinite? I dont know! It keeps going down and down and down we have no rope already!<br>At least these yellow metal walls have ridges on them so we dont have to climb on dry ass concrete walls.<br><br>We dont give up, we are going down for answers.\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -351.5,
+        yPos: 46.9
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"...and do NOT forget the coolers! They are quite expensive so i found a way how to assemble them by yourself...<br><br>...and you will need: 2 accumulators, 4 metal parts and 4 sets of electronics...<br><br>...scrap of metal, you can find some for gpus...<br><br>...you will figure out how to assemble...<br><br>...metal scrap as slot...\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: -394.4,
+        yPos: -482.27
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"Diaboli campestribus<br><br>Redi ad unde venistis<br><br>Noli redire, et huius loci obliviscere<br><br>Non hic es receptus<br><br>Diaboli campestribus\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 213.44,
+        yPos: 541.83
+    },
+    {
+        name: "Note",
+        description: "There are 3 pieces of paper here, stacked on top of eachother:<blockquote>\"...pour gasoline in an empty bottle, 2 pieces of paper...<br><br>...craft...<br><br>...enough damage...<br><br>...collapsed into pieces...<br><br>...more this night, they keep...\"</blockquote><br>Paper 2:<blockquote>\"...from the ground, like an undead!<br><br>It was chasing me all the way up to the booth, tried to lock...<br><br>...bones, glowing eye, making weird ungodly sounds...\"</blockquote><br>Paper 3:<blockquote>\"...hammer, this thing does not care! The bite felt like a hydraulic press, kicked its leg...<br><br>...and they keep the money, this is a cursed place, no wonder they drop less and less people...<br><br>...the fence, i do not care if they shoot me from these towers, the forest is dense enough...\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 390.5,
+        yPos: 201.7
+    },
+    {
+        name: "Note",
+        description: "<blockquote>\"WIP<br>New trees test polygon<br>Take some food\"</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 517.5,
+        yPos: -212.6
+    },
+    {
+        name: "Notebook",
+        description: "<blockquote>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH<br>IT\"S RAINING FLESH</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/notebook.png",
+        xPos: 774.79,
+        yPos: -478.15
+    },
+    {
+        name: "Note",
+        description: "<blockquote>if you hear music in a forest - run</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 388.44,
+        yPos: 531.22
+    },
+    {
+        name: "Notebook",
+        description: "<blockquote>...this shit is ridiculous, we told you pack everything and leave ASAP, but you would not do...<br><br>..and buy as much [gas] as possible, you got it? It is easier to get and we do not have much time, use [bottles] to pour the right amount. After all it is...</blockquote><br><blockquote>...metal pipe, look in the [metal] pile under my workstation, you should find something as a tube substitute, and make...</blockquote><br><blockquote>..seal with [plastic], look at the scrap pile again, right next to my table in the workshop...<br><br>...improve, by [gluing] together an [electronic] part to the tube, fix it with [plastic], and strap it to the tube...</blockquote><br><blockquote>...NOT a joke alright? I hope this piece will reach your destination, best of...</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/notebook.png",
+        xPos: 526.93,
+        yPos: -699.31
+    },
+    {
+        name: "Note",
+        description: "<blockquote>68454731694g766s6o74306i46334764686649776t75437b6q704932695n49306e4x437b504s73326o446536504j4761504w47324675726f68454731694t766r684j737s504g59646p44646r68454731694j766w6c74306s4644397n6f4s49776c75437o6p704932695e49306s4g437o504r73326f446536504x4761504f6t676n6649776f75437s6d704932695o49306n4j437s504f73326p446536504s4761504i55326s4f7o6r68454731694j766w6c74306s6o4j4931694s49776c75437o6p704932695e49746t745135504f73326p446536504r6j35694s49306b4t437n504i73326t446536504g4761504s4q63694j586w68454731694g766s6o74306i6t4g4931694o49776o75437e6u704932695b49766o33546r68454731694j766w6c74306s6o4j4931694s49776c75437o6p704932695e49716t754979504f73326p446536504s4761504j59646t44646f68454731694t766r6f74306w477547706d5o49776o75437e6u7049766d44646s6o4j4931694s49776c75437o6p704932695e496x69326530504f73326p446536504s4761504j59646t44646f68454731694t766r6f74306w684g5567504s73326o446536504j4761504x59646c44646s68454731694s766i6t74306f46334764686649776p75437n6g704932695s49306b4t437n504i73326t446536504g4761504s47324675726r68454731694j766w684g737o504s59646f44646w68454731694g766s6o74306i4644397s6c4o49776o75437e6u704932695b49306o4s437e504w73326c446536504t4761504r6j676s6649776c75437o6p704932695e49306s4g437o504r73326f446536504x4761504f55326o4r7e6w68454731694g766s6o74306i6t4g4931694o49776o75437e6u704932695b49746p745135504r73326f446536504w6g35694o49306n4j437s504f73326p446536504s4761504i4v63694g586s68454731694s766i6t74306f6p4s4931694e49776t75437b6q704932695n49766e33546w68454731694g766s6o74306i6t4g4931694o49776o75437e6u704932695b49716p754979504r73326f446536504x4761504g59646p44646r68454731694j766w6c74306s477547706p5e49776t75437b6q7049766p44646i6t4g4931694o49776o75437e6u704932695b496t69326530504r73326f446536504x4761504g59646p44646r68454731694j766w6c74306s684s5567504i73326t446536504g4761504t59646o44646i68454731694x766f6p74306r46334764686649776f75437s6d704932695o49306n4j437s504f73326p446536504s4761504i47324675726w68454731694g766s684s737e504x59646c44646s68454731694s766i6t74306f4644397o6o4e49776t75437b6q704932695n49306e4x437b504s73326o446536504j4761504w6g676o6649776o75437e6u704932695b49306o4s437e504w73326c446536504t4761504r55326e4w7b6s68454731694s766i6t74306f6p4s4931694e49776t75437b6q704932695n49746f745135504w73326c446536504s6s35694e49306s4g437o504r73326f446536504x4761504f4r63694s586i68454731694x766f6p74306r6f4x4931694b49776p75437n6g704932695s49766b33546s68454731694s766i6t74306f6p4s4931694e49776t75437b6q704932695n49716f754979504w73326c446536504t4761504s59646f44646w68454731694g766s6o74306i477547706u5b49776p75437n6g7049766u44646f6p4s4931694e49776t75437b6q704932695n496j69326530504w73326c446536504t4761504s59646f44646w68454731694g766s6o74306i684x5567504f73326p446536504s4761504j59646t44646f68454731694t766r6f74306w46334764686649776c75437o6p704932695e49306s4g437o504r73326f446536504x4761504f47324675726s68454731694s766i684x737b504t59646o44646i68454731694x766f6p74306r4644397e6t4b49776p75437n6g704932695s49306b4t437n504i73326t446536504g4761504s6s676e6649776t75437b6q704932695n49306e4x437b504s73326o446536504j4761504w55326b4s7n6i68454731694x766f6p74306r6f4x4931694b49776p75437n6g704932695s49746c745135504s73326o446536504i6x35694b49306o4s437e504w73326c446536504t4761504r4h63694x586f68454731694t766r6f74306w6c4t4931694n49776f75437s6d704932695o49766n33546i68454731694x766f6p74306r6f4x4931694b49776p75437n6g704932695s49716c754979504s73326o446536504j4761504x59646c44646s68454731694s766i6t74306f477547706q5n49776f75437s6d7049766q44646r6f4x4931694b49776p75437n6g704932695s496g69326530504s73326o446536504j4761504x59646c44646s68454731694s766i6t74306f684t5567504r73326f446536504x4761504g59646p44646r68454731694j766w6c74306s46334764686649776o75437e6u704932695b49306o4s437e504w73326c446536504t4761504r47324675726i68454731694x766f684t737n504j59646t44646f68454731694t766r6f74306w4644397b6p4n49776f75437s6d704932695o49306n4j437s504f73326p446536504s4761504i6x676b6649776p75437n6g704932695s49306b4t437n5048</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperWhite.png",
+        xPos: -1908.67,
+        yPos: 1731.12
     }
 ]

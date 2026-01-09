@@ -158,6 +158,12 @@ body {
     padding-left: 4px;
     margin-bottom: 4px;
 }
+#information_text blockquote {
+    border: 1px solid green;
+    padding: 2px;
+    margin: 6px 1px;
+    overflow-wrap: anywhere;
+}
 
 /* Settings container and tabs */
 #settings_container {
