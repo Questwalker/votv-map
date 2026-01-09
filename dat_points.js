@@ -1163,7 +1163,7 @@ const markers = [
     {
         name: "Argemia Mug",
         description: "Located on top of the utility pole, a basic white mug with a portrait of Argemia Armuntela on the side. The item is fixed so only player interaction can move it. You can use a hook to climb the pole.",
-        related_images: [],
+        related_images: ['./images/argemug1_1.png'],
         category: "",
         icon: "./icons/argemug.png",
         xPos: -62.2,
