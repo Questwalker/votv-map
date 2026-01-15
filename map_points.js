@@ -75,7 +75,7 @@ markers.forEach((data, pointindex) => {
     let formattedid = `category_${sanitizeString(categoryid)}`
     if (!references[formattedid]) {
         // Prepare settings
-        let categoryvisible = (formattedid == 'category_satellite_dishes' || formattedid == 'category_transformers' || formattedid == 'category_points_of_interest') // The default shown/hidden categories
+        let categoryvisible = (formattedid == 'category_satellite_dishes' || formattedid == 'category_transformers' || formattedid == 'category_points_of_interest' || formattedid == 'category_cr') // The default shown/hidden categories
         let setting_id = `${formattedid}_visible`
         registerSetting(setting_id, categoryvisible, 'boolean', {callback: categoryVisibilityCallback})
         if (settings.settings[setting_id] != undefined) {
@@ -192,7 +192,7 @@ lines.forEach((data, lineindex) => {
 })
 
 map.on('click', mapClickEvent)
-mapClickEvent()
+mapClickEvent() // Setup points panel
 
 
 
