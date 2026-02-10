@@ -5,7 +5,7 @@ const bounds = [[0, 0], [mapSize, mapSize]]
 // Change based on advanced settings?
 //  Can use L.Browser.canvas and L.Browser.svg to check browser support for renderers
 if (L.Browser.svg) {
-    // Change padding on rederer so that polylines don't unload when out of sight
+    // Change padding on renderer so that polylines don't unload when out of sight
     //  There really isn't a better way of doing this..
     var renderer = L.svg({padding: 5})
 } else if (L.Browser.canvas) {

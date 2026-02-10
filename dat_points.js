@@ -1286,6 +1286,15 @@ const markers = [
         xPos: 411.9,
         yPos: 25.6
     },
+    {
+        name: "Car Battery Charger",
+        description: "Found on top of the workbench in the side room.<br><br>To use it, plug it into a nearby outlet, and then bring a car battery close (you can extract it from your ATV with a wrench).<br>When you bring a car battery close, the charger will automatically conenct to it and start charging it. Make sure the correct color clamps are connected to the correct color contacts, otherwise it'll spark and eventually explode. (Rotate the battery to change what contacts the battery charger connects to)",
+        related_images: [],
+        category: "",
+        icon: "./icons/carbatterycharger.png",
+        xPos: -550.11,
+        yPos: 235.97
+    },
     // Blueprints
     {
         name: "Radioactive Capsule Blueprint",
