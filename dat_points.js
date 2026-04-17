@@ -1594,5 +1594,23 @@ const markers = [
         icon: "./icons/paperWhite.png",
         xPos: -1908.67,
         yPos: 1731.12
+    },
+    {
+        name: "Notebook",
+        description: "<blockquote>DO NOT OPEN<br>BEES INSIDE</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 539.03,
+        yPos: -329.13
+    },
+    {
+        name: "Notebook",
+        description: "<blockquote>Electrical engineering | Vol2<br>139. =======================<br><br><br>...fixed, or in case of the emergency - assembled using whatever is available.<br><br><br>==============<br>- Copper wire<br>- Metal scrap<br>- Glass scrap<br>- Electric scrap<br>==============<br><br><br>Must be noted that....</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 538.10,
+        yPos: -329.02
     }
 ]
