@@ -25,10 +25,10 @@
         <img id="display_image" class="unselectable hidden"/>
         <div id="settings_container" class="hidden">
             <div id="settings_tabs">
-                <div id="settings_generaltab" class="settings_tab unselectable highlighted_element">General</div>
-                <div id="settings_appearancetab" class="settings_tab unselectable">Appearance</div>
-                <div id="settings_advancedtab" class="settings_tab unselectable">Advanced</div>
-                <div id="settings_abouttab" class="settings_tab unselectable">About</div>
+                <div id="settings_generaltab" class="settings_tab highlight_on_hover unselectable highlighted_element">General</div>
+                <div id="settings_appearancetab" class="settings_tab highlight_on_hover unselectable">Appearance</div>
+                <div id="settings_advancedtab" class="settings_tab highlight_on_hover unselectable">Advanced</div>
+                <div id="settings_abouttab" class="settings_tab highlight_on_hover unselectable">About</div>
             </div>
             <div id="settings_content">
                 <svg id="overlay_close_button" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 512 512" fill="#fff">
@@ -48,7 +48,17 @@
                         </div>
                     </div>
                     <div id="settings_about" class="settings_pane hidden">
-                        <div>Blank for now..</div>
+                        <div id="credits">Thanks for checking out my map!
+
+                            You can check me out / find me at:
+                            GitHub:&nbsp;<a class="link" href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a>
+                            Discord:&nbsp;@questwalker
+                            Email:&nbsp;<a class="link" href="mailto:questwalkerko@gmail.com">questwalkerko@gmail.com</a>
+
+                            <a class="link" href="./changelog" target="_blank" rel="noopener noreferrer">Check out this map's changelog here.</a>
+
+                            <a class="rainbow_link" href="https://forms.gle/3swU2hcG6GxEVFAh7" target="_blank" rel="noopener noreferrer">You can also anonymously send feedback/bug reports/feature requests0k here!</a>
+                        </div>
                     </div>
                 </div>
                 <div id="settings_buttonsfooter">
@@ -62,16 +72,21 @@
             <div id="information_pane_menu">
                 <button id="information_collapse_button" class="highlight_on_hover pane_menu_child">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                    <path d="M184,112,328,256,184,400" id="expanded_horizontal_button" class="chevron_styling"/>
-                    <path d="M328,112,184,256,328,400" id="collapsed_horizontal_button" class="chevron_styling hidden"/>
-                    <path d="M112,184,256,328,400,184" id="expanded_vertical_button" class="chevron_styling"/>
-                    <path d="M112,328,256,184,400,328" id="collapsed_vertical_button" class="chevron_styling hidden"/>
-                </svg>
+                        <path d="M184,112,328,256,184,400" id="expanded_horizontal_button" class="chevron_styling"/>
+                        <path d="M328,112,184,256,328,400" id="collapsed_horizontal_button" class="chevron_styling hidden"/>
+                        <path d="M112,184,256,328,400,184" id="expanded_vertical_button" class="chevron_styling"/>
+                        <path d="M112,328,256,184,400,328" id="collapsed_vertical_button" class="chevron_styling hidden"/>
+                    </svg>
                 </button>
                 <button id="settings_menu_button" class="highlight_on_hover pane_menu_child">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
-                    <path style="fill:#fff;stroke:#fff;" d="M413.967,276.8c1.06-6.235,1.06-13.518,1.06-20.8s-1.06-13.518-1.06-20.8l44.667-34.318c4.26-3.118,5.319-8.317,2.13-13.518L418.215,115.6c-2.129-4.164-8.507-6.235-12.767-4.164l-53.186,20.801c-10.638-8.318-23.394-15.601-36.16-20.801l-7.448-55.117c-1.06-4.154-5.319-8.318-10.638-8.318h-85.098c-5.318,0-9.577,4.164-10.637,8.318l-8.508,55.117c-12.767,5.2-24.464,12.482-36.171,20.801l-53.186-20.801c-5.319-2.071-10.638,0-12.767,4.164l-42.549,71.765c-2.119,4.153-1.061,10.399,2.129,13.518L96.97,235.2c0,7.282-1.06,13.518-1.06,20.8s1.06,13.518,1.06,20.8l-44.668,34.318c-4.26,3.118-5.318,8.317-2.13,13.518L92.721,396.4c2.13,4.164,8.508,6.235,12.767,4.164l53.187-20.801c10.637,8.318,23.394,15.601,36.16,20.801l8.508,55.117c1.069,5.2,5.318,8.318,10.637,8.318h85.098c5.319,0,9.578-4.164,10.638-8.318l8.518-55.117c12.757-5.2,24.464-12.482,36.16-20.801l53.187,20.801c5.318,2.071,10.637,0,12.767-4.164l42.549-71.765c2.129-4.153,1.06-10.399-2.13-13.518L413.967,276.8zM255.468,328.8c-41.489,0-74.46-32.235-74.46-72.8s32.971-72.8,74.46-72.8s74.461,32.235,74.461,72.8S296.957,328.8,255.468,328.8z"/>
-                </svg>
+                        <path style="fill:#fff;stroke:#fff;" d="M413.967,276.8c1.06-6.235,1.06-13.518,1.06-20.8s-1.06-13.518-1.06-20.8l44.667-34.318c4.26-3.118,5.319-8.317,2.13-13.518L418.215,115.6c-2.129-4.164-8.507-6.235-12.767-4.164l-53.186,20.801c-10.638-8.318-23.394-15.601-36.16-20.801l-7.448-55.117c-1.06-4.154-5.319-8.318-10.638-8.318h-85.098c-5.318,0-9.577,4.164-10.637,8.318l-8.508,55.117c-12.767,5.2-24.464,12.482-36.171,20.801l-53.186-20.801c-5.319-2.071-10.638,0-12.767,4.164l-42.549,71.765c-2.119,4.153-1.061,10.399,2.129,13.518L96.97,235.2c0,7.282-1.06,13.518-1.06,20.8s1.06,13.518,1.06,20.8l-44.668,34.318c-4.26,3.118-5.318,8.317-2.13,13.518L92.721,396.4c2.13,4.164,8.508,6.235,12.767,4.164l53.187-20.801c10.637,8.318,23.394,15.601,36.16,20.801l8.508,55.117c1.069,5.2,5.318,8.318,10.637,8.318h85.098c5.319,0,9.578-4.164,10.638-8.318l8.518-55.117c12.757-5.2,24.464-12.482,36.16-20.801l53.187,20.801c5.318,2.071,10.637,0,12.767-4.164l42.549-71.765c2.129-4.153,1.06-10.399-2.13-13.518L413.967,276.8zM255.468,328.8c-41.489,0-74.46-32.235-74.46-72.8s32.971-72.8,74.46-72.8s74.461,32.235,74.461,72.8S296.957,328.8,255.468,328.8z"/>
+                    </svg>
+                </button>
+                <button id="center_map_button" class="highlight_on_hover pane_menu_child">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+                        <path style="fill:#fff;stroke:#fff;" d="M432 320v112H320M421.8 421.77 304 304M80 192V80h112M90.2 90.23 208 208M320 80h112v112M421.77 90.2 304 208M192 432H80V320M90.23 421.8 208 304" stroke-linecap="round" stroke-linejoin="round" stroke-width="32px"/>
+                    </svg>
                 </button>
                 <button id="info_pane_menu_button" class="highlight_on_hover pane_menu_child">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
@@ -94,17 +109,6 @@
                     <div id="information_images"></div>
                 </div>
                 <div id="information_points" class="hidden"></div>
-            </div>
-            <div id="information_footer">
-                <div id="credits">Check me out / Contact me at:
-                <span title="GitHub">G:</span>&nbsp;<a class="link" href="https://github.com/Questwalker" target="_blank" rel="noopener noreferrer">https://github.com/Questwalker</a><br>
-                <span title="Discord">D:</span>&nbsp;questwalker<br>
-                <span title="Email">E:</span>&nbsp;questwalkerko@gmail.com<br>
-                <br>
-                <a class="link" href="./changelog" target="_blank" rel="noopener noreferrer">Check out the changelog here.</a><br>
-                <a class="rainbow_link" href="https://forms.gle/3swU2hcG6GxEVFAh7" target="_blank" rel="noopener noreferrer">You can also send me feedback here!</a><br>
-                <br></div>
-                <div id="center_button"><u>[Click here]</u> to center the map.</div>
             </div>
         </div>
     </div>

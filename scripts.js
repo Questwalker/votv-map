@@ -14,7 +14,7 @@ function sanitizeString(str) {return str.toLowerCase().replace(/[^a-z0-9_\s]/g, 
 function centerMap() {
     map.panTo([mapSize/2, mapSize/2])
 }
-center_button.addEventListener('click', centerMap)
+center_map_button.addEventListener('click', centerMap)
 
 // Tabs functionality
 function tabCallback() {
