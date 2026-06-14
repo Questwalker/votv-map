@@ -353,61 +353,61 @@ const markers = [
         yPos: -383.7
     },
     // Metal Tiles
-    { // moved to roof above living quarters, next to skylight window
+    {
         name: "Metal Tile #1",
-        description: "Hidden in an outdoor alcove on the side of the base. You can get it by dropping down from the roof.",
+        description: "On the roof above the living quarters, sitting next to the skylight.",
         related_images: ['./images/tile1_1.png', './images/tile1_2.png'],
         category: "Metal Tiles",
         icon: "./icons/metal_tile.png",
         xPos: -4.16,
         yPos: 9.87
     },
-    { // still on top of the bridge, will need new pictures
+    {
         name: "Metal Tile #2",
-        description: "On top of the post of the bridge.",
-        related_images: ['./images/tile2_1.png', './images/tile2_2.png'],
+        description: "On top of the truss of the bridge.",
+        related_images: ['./images/tile2_1.png'],
         category: "Metal Tiles",
         icon: "./icons/metal_tile.png",
         xPos: -69.67,
         yPos: -10.9
     },
-    // { // moved, no longer in the area
-    //     name: "Metal Tile #3",
-    //     description: "Found at the base of a tree in the wilderness.",
-    //     related_images: ['./images/tile3_1.png', './images/tile3_2.png'],
-    //     category: "Metal Tiles",
-    //     icon: "./icons/metal_tile.png",
-    //     xPos: -464.3,
-    //     yPos: 173.5
-    // },
-    // { // moved? no longer on the cliff
-    //     name: "Metal Tile #4",
-    //     description: "Found around the rim of the cliff to the north of Yankee.",
-    //     related_images: ['./images/tile4_1.png', './images/tile4_2.png'],
-    //     category: "Metal Tiles",
-    //     icon: "./icons/metal_tile.png",
-    //     xPos: -525.3,
-    //     yPos: -48
-    // },
-    // { // not there
-    //     name: "Metal Tile #5",
-    //     description: "Between two supply boxes at the hole.",
-    //     related_images: ['./images/tile5_1.png', './images/tile5_2.png', './images/tile5_3.png'],
-    //     category: "Metal Tiles",
-    //     icon: "./icons/metal_tile.png",
-    //     xPos: -615,
-    //     yPos: -23
-    // },
-    // { // missing
-    //     name: "Metal Tile #6",
-    //     description: "On the roof of the guard's booth. You can get on top by parkouring on the metal poles nearby.",
-    //     related_images: ['./images/tile6_1.png', './images/tile6_2.png', './images/tile6_3.png'],
-    //     category: "Metal Tiles",
-    //     icon: "./icons/metal_tile.png",
-    //     xPos: -372,
-    //     yPos: 702.6
-    // },
-    { // still exists, photo doesn't need to be updated
+    {
+        name: "Metal Tile #3",
+        description: "Found at the base of a tree in the wilderness, near TR_2.",
+        related_images: ['./images/tile3_1.png', './images/tile3_2.png'],
+        category: "Metal Tiles",
+        icon: "./icons/metal_tile.png",
+        xPos: -530.06,
+        yPos: 306.84
+    },
+    {
+        name: "Metal Tile #4",
+        description: "Behind the ladder on the third story of CR_3.",
+        related_images: ['./images/tile4_1.png', './images/tile4_2.png'],
+        category: "Metal Tiles",
+        icon: "./icons/metal_tile.png",
+        xPos: -624.5,
+        yPos: -371.7
+    },
+    {
+        name: "Metal Tile #5",
+        description: "Between some rocks behind the hole.",
+        related_images: ['./images/tile5_1.png', './images/tile5_2.png'],
+        category: "Metal Tiles",
+        icon: "./icons/metal_tile.png",
+        xPos: -658.5,
+        yPos: -29.9
+    },
+    {
+        name: "Metal Tile #6",
+        description: "On top of the lightning tower close to Xray.",
+        related_images: ['./images/tile6_1.png'],
+        category: "Metal Tiles",
+        icon: "./icons/metal_tile.png",
+        xPos: -509.8,
+        yPos: 418.14
+    },
+    {
         name: "Metal Tile #7",
         description: "Found on the ground next to the green locker.",
         related_images: ['./images/tile7_1.png', './images/tile7_2.png'],
@@ -416,24 +416,24 @@ const markers = [
         xPos: 616,
         yPos: 621
     },
-    // { // missing
-    //     name: "Metal Tile #8",
-    //     description: "Found behind the server room of uniform. Once you are near the doors, crouch under the railing and walk around the platform to find it.",
-    //     related_images: ['./images/tile8_1.png', './images/tile8_2.png'],
-    //     category: "Metal Tiles",
-    //     icon: "./icons/metal_tile.png",
-    //     xPos: 500.37,
-    //     yPos: -2.7
-    // },
-    // { // missing.
-    //     name: "Metal Tile #9",
-    //     description: "This marker isn't placed wrong. Go past the fence and keep going until you hit the corner between the northern and eastern invisible walls.",
-    //     related_images: ['./images/tile9_1.png', './images/tile9_2.png', './images/tile9_3.png'],
-    //     category: "Metal Tiles",
-    //     icon: "./icons/metal_tile.png",
-    //     xPos: 874,
-    //     yPos: -874
-    // },
+    {
+        name: "Metal Tile #8",
+        description: "Found to the right the server room of Sierra. Once you are near the doors, crouch under the railing and walk around the platform to find it.",
+        related_images: ['./images/tile8_1.png', './images/tile8_2.png'],
+        category: "Metal Tiles",
+        icon: "./icons/metal_tile.png",
+        xPos: 2.8,
+        yPos: -499.29
+    },
+    {
+        name: "Metal Tile #9",
+        description: "Sitting in the top window of the church.",
+        related_images: ['./images/tile9_1.png', './images/tile9_2.png', './images/tile9_3.png'],
+        category: "Metal Tiles",
+        icon: "./icons/metal_tile.png",
+        xPos: 654.58,
+        yPos: -600.4
+    },
     // Argemia Plushes
     {
         name: "Red Argemia",
@@ -1286,6 +1286,15 @@ const markers = [
         xPos: 411.9,
         yPos: 25.6
     },
+    {
+        name: "Car Battery Charger",
+        description: "Found on top of the workbench in the side room.<br><br>To use it, plug it into a nearby outlet, and then grab a car battery (you can extract it from your ATV with a wrench).<br>When you bring a car battery close, the charger will automatically connect to it and start charging it. Make sure the correct color clamps are connected to the correct color contacts, otherwise it'll spark and eventually explode. (Rotate the battery to change what contacts the battery charger connects to)",
+        related_images: [],
+        category: "Tools",
+        icon: "./icons/carbatterycharger.png",
+        xPos: -550.11,
+        yPos: 235.97
+    },
     // Blueprints
     {
         name: "Radioactive Capsule Blueprint",
@@ -1585,5 +1594,23 @@ const markers = [
         icon: "./icons/paperWhite.png",
         xPos: -1908.67,
         yPos: 1731.12
+    },
+    {
+        name: "Notebook",
+        description: "<blockquote>DO NOT OPEN<br>BEES INSIDE</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 539.03,
+        yPos: -329.13
+    },
+    {
+        name: "Notebook",
+        description: "<blockquote>Electrical engineering | Vol2<br>139. =======================<br><br><br>...fixed, or in case of the emergency - assembled using whatever is available.<br><br><br>==============<br>- Copper wire<br>- Metal scrap<br>- Glass scrap<br>- Electric scrap<br>==============<br><br><br>Must be noted that....</blockquote>",
+        related_images: [],
+        category: "Notes",
+        icon: "./icons/paperBrown.png",
+        xPos: 538.10,
+        yPos: -329.02
     }
 ]
