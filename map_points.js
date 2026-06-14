@@ -1,14 +1,20 @@
 function mapClickEvent() {
     // Reset information text when user clicks off a point
+    information_content.dataset.viewedindex = 'none'
     information_header.innerHTML = 'Select a Point'
     information_coords.innerHTML = ''
-    information_text.innerHTML = 'Click on a point on the map to see some information about what it is and where it\'s located, along with some additional pictures that can help you pinpoint <i>exactly</i> it is or what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.'
+    information_text.innerHTML = 'Click on a point on the map to see some information about what it is and where it\'s located, along with some additional pictures that can help you pinpoint <i>exactly</i> where it is and what it looks like.<br><br>Use the <i>Points</i> tab to hide and show certain points on the map.'
     information_images.replaceChildren()
 }
 
 function pointClickEvent() {
     // Update information text when point is clicked, and focus on info tab
     selectTab('panetabs')
+    if (this.options.pointindex == information_content.dataset.viewedindex) {
+        // we've already selected this marker, no need to update
+        return
+    }
+    information_content.dataset.viewedindex = this.options.pointindex
     let data = markers[this.options.pointindex]
     information_header.innerHTML = data.name
     information_coords.innerHTML = `x: <u>${data.xPos}</u>, y: <u>${data.yPos}</u>`
@@ -69,7 +75,7 @@ markers.forEach((data, pointindex) => {
             iconSize: [24, 24]
         })
     }
-    
+
     let categoryid = data.category ? data.category : 'miscellaneous'
     let categoryname = categories[categoryid] && categories[categoryid].displayname ? categories[categoryid].displayname : categoryid
     let formattedid = `category_${sanitizeString(categoryid)}`

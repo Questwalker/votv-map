@@ -47,6 +47,10 @@ body {
     cursor: pointer;
 }
 
+#credits {
+    white-space-collapse: preserve-breaks;
+}
+
 /* Effects */
 @keyframes rainbow_animation {
     0%, 100% {
@@ -342,21 +346,10 @@ body {
     white-space: nowrap;
 }
 
-/* Information footer */
-#information_footer {
-    border-top: 1px solid green;
-    margin: 12px;
-    margin-top: 6px;
-    padding-top: 6px;
-    overflow: auto;
-}
-
+/* Behavior changes for different resolutions */
 @media (max-width: 650px) {
     #page_container {
         flex-flow: column;
-    }
-    #credits {
-        display: none;
     }
     #map_pane {
         flex: 0.65;
@@ -390,12 +383,6 @@ body {
     }
     .points_catbuttonimg {
         display: unset;
-    }
-}
-
-@media (max-height: 600px) {
-    #credits {
-        display: none;
     }
 }
 
