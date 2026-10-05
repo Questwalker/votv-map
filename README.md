@@ -26,7 +26,6 @@ Disclaimer: Not all tools used are listed here
 * [Thunderstore](https://thunderstore.io/c/voices-of-the-void/) (for mod hosting)
 * [r2modman](https://r2modman.net/) (for mod managing/launching)
 * Public Mods: (for modding frameworks/utilities)
-  * [VoidMod](https://thunderstore.io/c/voices-of-the-void/p/Gatohost/VoidMod/) by Gato
   * [Fusion](https://thunderstore.io/c/voices-of-the-void/p/NynrahGhost/Fusion/) by NynrahGhost
   * [unreal shimloader](https://thunderstore.io/c/voices-of-the-void/p/Thunderstore/unreal_shimloader/) by Thunderstore
 * [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) (for modding support and documentation [included in shimloader])

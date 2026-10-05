@@ -44,7 +44,3 @@ map.fitBounds(bounds, {padding: [19.5, 19.5]})
 
 // Grayscale effect
 if (settings.settings.grayscale_map != undefined && settings.settings.grayscale_map == true) mapOverlay.getElement().classList.add('grayscale_effect')
-
-// var layercontrol = L.control.layers().addTo(map) //DEBUG
-
-
