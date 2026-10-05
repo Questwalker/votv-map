@@ -997,6 +997,115 @@ const markers = [
         xPos: 173.9,
         yPos: 51.96
     },
+    // Easter Eggs
+    {
+        name: "Easter Egg #1",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"A cosmic egg, hidden away atop the tower that maps the Star of William\"</blockquote><br>On the top of coordinate radar 1.<br><br>Art the arirals flying amongst the cosmos.",
+        related_images: ['./images/easterEgg1_1.png', './images/easterEgg1_2.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg1.png",
+        xPos: 104.36,
+        yPos: 444.4
+    },
+    {
+        name: "Easter Egg #2",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"The egg by friends beyond the stars, found near their home amongst the trees\"</blockquote><br>At the base of a tree close to the Arirals.<br><b>WARNING: Due to a bug, the egg usually gets deleted when the arirals build their treehouse.</b><br><br>Features art of the ariral ships.",
+        related_images: ['./images/easterEgg2_1.png', './images/easterEgg2_2.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg2.png",
+        xPos: 358.66,
+        yPos: 418.47
+    },
+    {
+        name: "Easter Egg #3",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"A very funny egg, nestled close to the cave where the Bladehand sleeps\"</blockquote><br>Located to the left of the cave entrance at the foot of a plant.<br><br>Features art of the walking mushroom creature.",
+        related_images: ['./images/easterEgg3_1.png', './images/easterEgg3_2.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg3.png",
+        xPos: -667.58,
+        yPos: -577.89
+    },
+    {
+        name: "Easter Egg #4",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"This egg is marked with the rune of the Prince, found within the ancient disaster near His monument\"</blockquote><br>Tucked behind the statue.<br><br>A blue-striped egg, featuring a simple lineup of planets drawn around it.",
+        related_images: ['./images/easterEgg4_1.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg4.png",
+        xPos: 655,
+        yPos: -588.22
+    },
+    {
+        name: "Easter Egg #5",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"The egg of the nostalgic Early Watcher, under where the Dreaming World is entered\"</blockquote><br>Under the bed in the base.<br><br>A pink-striped egg, with some cute faces on it.",
+        related_images: ['./images/easterEgg5_1.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg5.png",
+        xPos: -5.92,
+        yPos: 1.57
+    },
+    {
+        name: "Easter Egg #6",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"A fiery egg marked of the Prince, found at the Gateway where this Journey began\"</blockquote><br>Located on the driveway of the checkpoint.<br><br>Features art of orange flowers and a particular bird.",
+        related_images: ['./images/easterEgg6_1.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg6.png",
+        xPos: -376.93,
+        yPos: 696.86
+    },
+    {
+        name: "Easter Egg #7",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"This wondrous egg, plucked from the Garden, was laid to rest atop the Third Engine of Light\"</blockquote><br>On the roof of transformer 3, sitting atop some machinery.<br><br>A green and white-striped egg.",
+        related_images: ['./images/easterEgg7_1.png', './images/easterEgg7_2.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg7.png",
+        xPos: -400.46,
+        yPos: -478.75
+    },
+    {
+        name: "Easter Egg #8",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"An egg marked of the Prince, flesh red with Dreams, stowed where the Construction has commenced\"</blockquote><br>On top of the broken-down excavator near the hole.<br><br>A red and white-striped egg, featuring the Stolas logo.",
+        related_images: ['./images/easterEgg8_1.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg8.png",
+        xPos: -558.36,
+        yPos: -41.28
+    },
+    {
+        name: "Easter Egg #9",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"An egg born of the Void itself, placed upon the tallest Metallic Flower of the Winds\"</blockquote><br>Inside the wind turbine's nacelle. Note that the egg does not rotate along with the room, so its location may be very slightly different than pictured (just look anywhere around the ladder).<br><br>Features art of space, with the Sun on the bottom and the Earth on the top.",
+        related_images: ['./images/easterEgg9_1.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg9.png",
+        xPos: 5.85,
+        yPos: -340.47
+    },
+    {
+        name: "Easter Egg #10",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"A rare egg attuned to the Queen of Cheeses, located near where She is buried\"</blockquote><br>Next to a rock uphill of Sierra.<br><br>Features art of Erie in a bunny outfit.",
+        related_images: ['./images/easterEgg10_1.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg10.png",
+        xPos: 0.33,
+        yPos: -470.12
+    },
+    {
+        name: "Easter Egg #11",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"Egg of the Builders, found near a strange device from another realm\"</blockquote><br>Sitting among a line of rocks.<br><br>Features the classic gray alien face.",
+        related_images: ['./images/easterEgg11_1.png', './images/easterEgg11_2.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg11.png",
+        xPos: 651.62,
+        yPos: 71.67
+    },
+    {
+        name: "Easter Egg #12",
+        description: "Exclusive to the Easter holiday.<br><blockquote>\"A curious number-adoring egg, hidden at the metallic corners at the edge of the World where South and West meet\"</blockquote><br>In the southwest corner of the fenceline.<br><br>A purple egg with the face of Nubby from the game <i>Nubby's Number Factory</i>.",
+        related_images: ['./images/easterEgg12_1.png'],
+        category: "Easter Eggs",
+        icon: "./icons/easter_egg12.png",
+        xPos: -699.63,
+        yPos: 699.58
+    },
     // Items of Interest
     {
         name: "Shovel",
