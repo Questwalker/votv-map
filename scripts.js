@@ -154,15 +154,15 @@ function toggleSidebarVis() {
 information_collapse_button.addEventListener('click', toggleSidebarVis)
 
 // Settings
-registerSetting('marker_popup_labels', false, 'boolean', {category: 'settings_general', widget: {title: 'Marker Popup Labels', description: 'A label that will pop up when clicking a marker'}, restart_required: true})
-registerSetting('grayscale_map', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Grayscale Map', description: 'Reduce saturation of the map'}, callback: (settings_id, currentvalue) => {
+registerSetting('marker_popup_labels', 'checkbox', false, {category: 'settings_general', widget: {title: 'Marker Popup Labels', description: 'A label that will pop up when clicking a marker'}, restart_required: true})
+registerSetting('grayscale_map', 'checkbox', false, {category: 'settings_appearance', widget: {title: 'Grayscale Map', description: 'Reduce saturation of the map'}, callback: (settings_id, currentvalue) => {
     if (currentvalue) {
         mapOverlay.getElement().classList.add('grayscale_effect')
     } else {
         mapOverlay.getElement().classList.remove('grayscale_effect')
     }
 }})
-// registerSetting('show_radar_circle', false, 'boolean', {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
+// registerSetting('show_radar_circle', 'checkbox', false, {category: 'settings_appearance', widget: {title: 'Show Radar Range', description: 'Shows a circle that displays the approximate range of the radar'}})
 option_rawsettingsupdate.addEventListener('click', updateRawSettingsBox)
 syncWidgets()
 

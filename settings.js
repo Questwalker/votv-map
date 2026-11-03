@@ -1,4 +1,4 @@
-var settings = {'registered': {}, 'settings': {}}
+var settings = {registered: {}, settings: {}}
 var tempsettings = {}
 
 function pullToSettings() {
@@ -20,18 +20,25 @@ if (localStorage.getItem('sitesettings')) {
     newStorage()
 }
 
-function accessWidget(element, {edit=false, newvalue}) {
-    // Abstracts away different methods for reading/writing various input elements
-    switch (element.type) {
+/**
+Abstracts away different methods for reading/writing various input elements, based on datatype\
+Return value could be anything based on what datatype it is accessing
+*/
+function accessWidget(element, {edit=false, newvalue=undefined}) {
+    switch (element.dataset.datatype) {
         case 'checkbox':
             if (edit) element.checked = newvalue
             return element.checked
         default:
-            console.log('Cannot access element with unknown type')
+            console.warn(`Cannot access element with unknown type ${element.type}`)
             break
     }
 }
 
+// Settings menu functions
+/**
+All settings buttons use this, saves their values into tempsettings
+*/
 function settingsMenuInput() {
     let currentvalue = accessWidget(this, {})
     if (currentvalue != settings.settings[this.dataset.id]) {
@@ -41,6 +48,9 @@ function settingsMenuInput() {
     }
 }
 
+/**
+Applies all settings in tempsettings
+*/
 function applySettings({updateStorage=true}) {
     let restartNeeded = false
     let callbacks = []
@@ -70,14 +80,18 @@ function applySettings({updateStorage=true}) {
     tempsettings = {}
 }
 
+/**
+Runs if another tab updates the localStorage\
+Loops through the new values in localStorage, if it differs from the current settings, we save it into tempsettings and call applySettings
+*/
 function outsideStorageChange() {
     console.log('Outside update!')
     // Object.assign(tempsettings, JSON.parse(localStorage.getItem('sitesettings')))
     tempsettings = {}
-    var currentStorageValues = JSON.parse(localStorage.getItem('sitesettings'))
-    for (let settings_id in currentStorageValues) {
-        if (settings.registered[settings_id] != undefined && currentStorageValues[settings_id] != settings.settings[settings_id]) {
-            tempsettings[settings_id] = currentStorageValues[settings_id]
+    var newStorageValues = JSON.parse(localStorage.getItem('sitesettings'))
+    for (let settings_id in newStorageValues) {
+        if (settings.registered[settings_id] != undefined && settings.settings[settings_id] != newStorageValues[settings_id]) {
+            tempsettings[settings_id] = newStorageValues[settings_id]
         }
     }
     if (Object.keys(tempsettings).length != 0) {
@@ -86,8 +100,10 @@ function outsideStorageChange() {
 }
 window.addEventListener('storage', outsideStorageChange)
 
+/**
+Sets the values of all widgets to their values in settings
+*/
 function syncWidgets() {
-    // Sets the values of all widgets to their values in settings
     Object.entries(settings.registered).forEach(([settings_id, registry]) => {
         if (registry.widget != undefined) {
             accessWidget(registry.widget, {edit: true, newvalue: settings.settings[settings_id]})
@@ -121,16 +137,22 @@ function updateRawSettingsBox() {
     option_rawsettingsindicator.classList.add('settingsindicator_animation')
 }
 
-function registerSetting(settings_id, default_value, datatype, {category='settings_general', widget=undefined, restart_required=false, callback=undefined, executeoninit=false}) {
+/**
+Registers a setting to exist
+@param settings_id the unique id of the setting.
+@param datatype a controlling setting for what the setting will be storing. a custom value that defines how the setting is created and accessed
+@param default_value the default value for that setting (note that the datatype will be expected to be known)
+@param category its setting menu location
+@param widget if defined, creates a settings menu item with the name/desc/etc information contained
+@param restart_required if applying the setting requires the page to reload
+@param callback a function to call if applysettings occurs (check docs for more info)
+@param executeoninit whether to call the callback once the setting is done being registered
+*/
+function registerSetting(settings_id, datatype, default_value, {category='settings_general', widget=undefined, restart_required=false, callback=undefined, executeoninit=false}) {
     //  Sanity checks
     // Check if setting already registered
     if (settings.registered[settings_id] != undefined) {
         console.log('Setting already registered!')
-        return
-    }
-    // Check that datatype is correct
-    if (typeof default_value != datatype) {
-        console.log('Settings value type mismatch')
         return
     }
 
@@ -143,13 +165,13 @@ function registerSetting(settings_id, default_value, datatype, {category='settin
     }
 
     // Add setting
-    if (settings.settings[settings_id] == undefined || typeof settings.settings[settings_id] != datatype) {
+    if (settings.settings[settings_id] == undefined) {
         settings.settings[settings_id] = default_value
     }
 
     // Generate generic UI
     if (widget && widget != undefined) {
-        if (datatype == 'boolean') {
+        if (datatype == 'checkbox') {
             let maincontainer = document.createElement('div')
             let topcontainer = document.createElement('div')
             topcontainer.classList.add('settings_topcontainer')
@@ -177,6 +199,9 @@ function registerSetting(settings_id, default_value, datatype, {category='settin
             }
             maincontainer.appendChild(document.createElement('br'))
             document.getElementById(category).appendChild(maincontainer)
+        }
+        else {
+            console.warn(`Unrecognized setting datatype '${datatype}'`)
         }
     }
     
