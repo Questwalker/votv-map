@@ -33,11 +33,7 @@ function pointClickEvent() {
     }
 }
 
-function toggleCategoryButton() {
-    // Parse and pass information to function
-    setCategoryVisibility(this.dataset.id, !parseInt(this.dataset.visible), {button: this})
-}
-
+// Category visibility functions
 function setCategoryVisibility(categoryname, setting, {button=undefined, updatestorage=true}) {
     // Hide or show layer and change visibility button (button must exist in the page)
     // if (button == undefined) button = references[categoryname].menuparent.querySelector('.category_parentbutton')
@@ -58,10 +54,15 @@ function setCategoryVisibility(categoryname, setting, {button=undefined, updates
     }
     syncWidgets()
 }
-
+function toggleCategoryButton() {
+    // The button was pressed, parse and pass information to function
+    setCategoryVisibility(this.dataset.id, !parseInt(this.dataset.visible), {button: this})
+}
 function categoryVisibilityCallback(settings_id, value) {
-    if (settings[settings_id.replace('_visible', '')] != undefined) { // Sanity Check
-        setCategoryVisibility(settings_id.replace('_visible', ''), value, {updatestorage: false})
+    // This should usually only be called only if an outside storage change occurs
+    let categoryname = settings_id.replace('_visible', '')
+    if (settings.registered[settings_id] != undefined) { // Sanity Check
+        setCategoryVisibility(categoryname, value, {button: document.querySelector(`[data-id="${categoryname}"]`), updatestorage: false})
     }
 }
 
@@ -83,7 +84,7 @@ markers.forEach((data, pointindex) => {
         // Prepare settings
         let categoryvisible = (formattedid == 'category_satellite_dishes' || formattedid == 'category_transformers' || formattedid == 'category_points_of_interest' || formattedid == 'category_cr') // The default shown/hidden categories
         let setting_id = `${formattedid}_visible`
-        registerSetting(setting_id, categoryvisible, 'boolean', {callback: categoryVisibilityCallback})
+        registerSetting(setting_id, '', categoryvisible, {callback: categoryVisibilityCallback})
         if (settings.settings[setting_id] != undefined) {
             categoryvisible = settings.settings[setting_id]
         }

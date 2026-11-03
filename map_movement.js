@@ -7,9 +7,9 @@ const bounds = [[0, 0], [mapSize, mapSize]]
 if (L.Browser.svg) {
     // Change padding on renderer so that polylines don't unload when out of sight
     //  There really isn't a better way of doing this..
-    var renderer = L.svg({padding: 5})
+    var renderer = L.svg({ padding: 5 })
 } else if (L.Browser.canvas) {
-    var renderer = L.canvas({padding: 5})
+    var renderer = L.canvas({ padding: 5 })
 } else {
     renderer = undefined
 }
@@ -40,7 +40,7 @@ function mapsizecheck() {
 }
 window.addEventListener('resize', mapsizecheck)
 mapsizecheck()
-map.fitBounds(bounds, {padding: [19.5, 19.5]})
+map.fitBounds(bounds, { padding: [19.5, 19.5] })
 
 // Grayscale effect
 if (settings.settings.grayscale_map != undefined && settings.settings.grayscale_map == true) mapOverlay.getElement().classList.add('grayscale_effect')
