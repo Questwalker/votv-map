@@ -29,18 +29,32 @@ function accessWidget(element, {edit=false, newvalue=undefined}) {
         case 'checkbox':
             if (edit) element.checked = newvalue
             return element.checked
+        case 'mapselector':
+            if (edit) {
+                // remove selected
+                document.querySelector('[settingwidget_map].highlighted_element').classList.remove('highlighted_element')
+                // add selected
+                document.querySelector(`#settingwidget_map_${newvalue}`).classList.add('highlighted_element')
+            }
+            // gets name by currently selected element
+            return document.querySelector('[settingwidget_map].highlighted_element').id.replace('settingwidget_map_','')
         default:
-            console.warn(`Cannot access element with unknown type ${element.type}`)
+            console.warn(`Cannot access element with unknown type '${element.dataset.datatype}'`)
             break
     }
 }
 
 // Settings menu functions
 /**
-All settings buttons use this, saves their values into tempsettings
+All settings buttons use this, saves their values into tempsettings\
+Expect to bind this to every interactable widget or whatever customizable widget
 */
 function settingsMenuInput() {
     let currentvalue = accessWidget(this, {})
+    if (this.dataset.id == undefined) {
+        console.error('Widget id is undefined')
+        return
+    }
     if (currentvalue != settings.settings[this.dataset.id]) {
         tempsettings[this.dataset.id] = currentvalue
     } else {
@@ -125,7 +139,6 @@ function updateRawSettingsBox() {
         option_rawsettingsindicator.classList.add('settingsindicator_animation')
         return
     }
-    console.log(rawsettings)
     settings.settings = rawsettings // Dangerous
     pushToStorage()
     syncWidgets()
@@ -172,6 +185,7 @@ function registerSetting(settings_id, datatype, default_value, {category='settin
     // Generate generic UI
     if (widget && widget != undefined) {
         if (datatype == 'checkbox') {
+            // widget is a dict with 'title' and 'description' keys
             let maincontainer = document.createElement('div')
             let topcontainer = document.createElement('div')
             topcontainer.classList.add('settings_topcontainer')
@@ -199,6 +213,16 @@ function registerSetting(settings_id, datatype, default_value, {category='settin
             }
             maincontainer.appendChild(document.createElement('br'))
             document.getElementById(category).appendChild(maincontainer)
+        }
+        else if (datatype == 'mapselector') {
+            // widget is a list of all map image buttons
+            widget.forEach(element => {
+                element.dataset.id = settings_id
+                element.dataset.datatype = datatype
+                element.addEventListener('click', mapImageButtonClick)
+                element.addEventListener('click', settingsMenuInput)
+            })
+            settings.registered[settings_id].widget = widget[0]
         }
         else {
             console.warn(`Unrecognized setting datatype '${datatype}'`)

@@ -512,6 +512,28 @@ body {
     background-color: rgba(30, 30, 30, 0.4); /* leave it for now, doesn't need to be changed */
 }
 
+/* Map Image Selector */
+.map_selectors_container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.selectorContainer {
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    padding: 4px;
+    margin: 4px 0;
+    margin-right: 8px;
+    cursor: pointer;
+    outline: none;
+    border-style: solid;
+    display: flex;
+    flex-flow: column;
+}
+.selectorContainer > img {
+    padding-top: 4px;
+}
+
 /* Interaction Effects */
 .highlight_on_hover:hover {
     background-color: var(--background-color-dim);
