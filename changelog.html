@@ -181,6 +181,14 @@ Changed it so that when looking at an image, clicking the image will no longer c
 <span class="time">1781427715209</span>: Removed the box at the bottom of the info panel, and moved its credits to the About section in the settings. The center map button was also moved to a dedicated button on the sidebar.
 Once again, feel free to provide your feedback about this change in the form, or just @ me in the discord :). The links to this changelog and the feedback form can now be found along with the rest of the credits in the About section of the settings.
 
+<span class="time">1786907133000</span>: Added the easter eggs from the easter event to the map, along with images.
+
+<span class="time">1791225786000</span>: Overhauled the css of the website, so everything is now controlled with css variables instead of having hardcoded values. This includes a configuration for a light theme too, though I've disabled the css that makes it automatically activate on users with light system themes, since I didn't want to force it on people until they are able to manually enable/disable it with a setting. Nothing much should have changed visually, but this now paves the road for allowing the entire site's colors to be customizable!
+If you want to try out some of the new themes I've added in the code, you can manually force them by inspect element &gt; adding the attribute `class="theme-light"` or `class="theme-customdark1"` to the site's &lt;html&gt; tag.
+
+<span class="time">1794118235164</span>: A new setting has been added to the settings menu that lets you select what map image you want to see! It includes the four seasons right now, and defaults to summer.
+This and some previous updates also included some improvements to my settings system, including a bit of documentation and also some tweaks to the behavior a bit.
+
 <hr>Features/bugs to consider/fix:
 > Add a favicon
 > Add next and previous buttons on the image preview (to accommodate touch screen users)
@@ -190,7 +198,7 @@ Once again, feel free to provide your feedback about this change in the form, or
 > Possibly add points for various event locations, like what I did with the picnic
 > Links to github commits in the changelog
 > Allow exporting map to an image
-> Map switching; Switch between different seasons, topographic, snowy, etc.
+> Add a topographic option to the map selector?
 > Website color customization (may need to wait until color theming rework)
 </div>
 <script>

@@ -14,7 +14,7 @@ if (L.Browser.svg) {
     renderer = undefined
 }
 
-var map = L.map('map_element', {
+const map = L.map('map_element', {
     crs: L.CRS.Simple,
     maxZoom: 2.6,
     minZoom: -1,
@@ -27,7 +27,44 @@ var map = L.map('map_element', {
     renderer: renderer
 })
 
-var mapOverlay = L.imageOverlay('map-264888-summer.webp', bounds).addTo(map)
+// Map image stuff
+var imageOverlay
+var mapOverlay
+function loadImage(mapname) {
+    if (mapname == undefined || !(mapname == 'spring' || mapname == 'summer' || mapname == 'autumn' || mapname == 'winter')) {
+        // sanity check, fallback to summer if anything goes wrong
+        mapname = 'summer'
+    }
+    if (imageOverlay && map.hasLayer(imageOverlay)) {
+        map.removeLayer(imageOverlay)
+    }
+    imageOverlay = L.imageOverlay(`map-264888-${mapname}.webp`, bounds)
+    mapOverlay = imageOverlay.addTo(map)
+}
+if (settings.settings.map_image != undefined) {
+    loadImage(settings.settings.map_image)
+} else {
+    loadImage('summer')
+}
+
+// Map image settings
+function mapImageSet(_,value) { // Is bound via the settings registerer
+    loadImage(value)
+}
+function mapImageButtonClick(event) {
+    if (!this.classList.contains('highlighted_element')) {
+        // remove selected
+        document.querySelector('[settingwidget_map].highlighted_element').classList.remove('highlighted_element')
+        // add selected
+        this.classList.add('highlighted_element')
+    }
+}
+registerSetting('map_image', 'mapselector', 'summer', {category: 'settings_appearance', widget: [
+    settingwidget_map_spring,
+    settingwidget_map_summer, // note: summer is the hardcoded default in many places, 
+    settingwidget_map_autumn,
+    settingwidget_map_winter
+], callback: mapImageSet})
 
 // Hacky fix for the max zoom being not enough to work on smaller devices
 //  Changes min zoom to of the map to -2 if the viewport gets too small
